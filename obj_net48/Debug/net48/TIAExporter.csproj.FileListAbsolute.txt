@@ -1,0 +1,5 @@
+C:\ClaudeDev\CyberSec\Dorst\Bsp_Auftragsprojekte\TIAExporter\obj_net48\Debug\net48\TIAExporter.csproj.AssemblyReference.cache
+C:\ClaudeDev\CyberSec\Dorst\Bsp_Auftragsprojekte\TIAExporter\obj_net48\Debug\net48\TIAExporter.GeneratedMSBuildEditorConfig.editorconfig
+C:\ClaudeDev\CyberSec\Dorst\Bsp_Auftragsprojekte\TIAExporter\obj_net48\Debug\net48\TIAExporter.AssemblyInfoInputs.cache
+C:\ClaudeDev\CyberSec\Dorst\Bsp_Auftragsprojekte\TIAExporter\obj_net48\Debug\net48\TIAExporter.AssemblyInfo.cs
+C:\ClaudeDev\CyberSec\Dorst\Bsp_Auftragsprojekte\TIAExporter\obj_net48\Debug\net48\TIAExporter.csproj.CoreCompileInputs.cache

@@ -1,0 +1,26 @@
+[
+  {
+    "name": "S7-1500/ET200MP-Station_1",
+    "type_identifier": "System:Device.S71500",
+    "source_path": "S7-1500/ET200MP-Station_1"
+  },
+  {
+    "name": "HMI_1",
+    "source_path": "HMI_1"
+  },
+  {
+    "name": "SINAMICS G_1",
+    "type_identifier": "System:Device.G120C-2",
+    "source_path": "SINAMICS G_1"
+  },
+  {
+    "name": "SINAMICS G_2",
+    "type_identifier": "System:Device.G120C-2",
+    "source_path": "SINAMICS G_2"
+  },
+  {
+    "name": "SINAMICS G_3",
+    "type_identifier": "System:Device.G120C-2",
+    "source_path": "SINAMICS G_3"
+  }
+]

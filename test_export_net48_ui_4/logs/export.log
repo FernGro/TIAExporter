@@ -1,0 +1,1010 @@
+2026-04-28 12:07:29.510 +02:00 [INFO] Starting export.
+2026-04-28 12:07:29.511 +02:00 [INFO] Project: C:\ClaudeDev\CyberSec\Dorst\Bsp_Auftragsprojekte\TIA_Sprühtrockner\SPT_V1_0_20251210\SPT_V1_0_20251210.ap20
+2026-04-28 12:07:29.511 +02:00 [INFO] Output:  C:\ClaudeDev\CyberSec\Dorst\Bsp_Auftragsprojekte\TIAExporter\test_export_net48_ui_4
+2026-04-28 12:07:29.512 +02:00 [INFO] Starting TIA Portal (WithUserInterface).
+2026-04-28 12:07:43.711 +02:00 [INFO] Opening project: C:\ClaudeDev\CyberSec\Dorst\Bsp_Auftragsprojekte\TIA_Sprühtrockner\SPT_V1_0_20251210\SPT_V1_0_20251210.ap20
+2026-04-28 12:07:44.194 +02:00 [WARN] Project appears to be open already. Trying to attach to the running TIA Portal process.
+2026-04-28 12:07:44.270 +02:00 [INFO] Attaching to TIA Portal process 34548.
+2026-04-28 12:07:44.383 +02:00 [INFO] Scanning device: S7-1500/ET200MP-Station_1
+2026-04-28 12:07:44.470 +02:00 [INFO] PLC software found: PLC_1 at S7-1500/ET200MP-Station_1/PLC_1
+2026-04-28 12:07:44.770 +02:00 [INFO] Scanning device: HMI_1
+2026-04-28 12:07:45.074 +02:00 [INFO] PLC software found: HMI_RT_1 at HMI_1/HMI_RT_1
+2026-04-28 12:07:45.078 +02:00 [INFO] Scanning device: SINAMICS G_1
+2026-04-28 12:07:45.373 +02:00 [INFO] Scanning device: SINAMICS G_2
+2026-04-28 12:07:45.673 +02:00 [INFO] Scanning device: SINAMICS G_3
+2026-04-28 12:07:45.951 +02:00 [INFO] Exporting PLC software: PLC_1
+2026-04-28 12:07:46.046 +02:00 [ERROR] Failed to export block PLC_1//PID_TempController: LicenseNotFoundException: Error when calling method 'Export' of type 'Siemens.Engineering.SW.Blocks.OB'.
+
+Necessary license 'STEP 7 Professional' is missing.
+2026-04-28 12:07:46.046 +02:00 [TRACE]    bei TIAExporter.Tia.TiaReflection.TryExport(Object instance, String filePath) in C:\ClaudeDev\CyberSec\Dorst\Bsp_Auftragsprojekte\TIAExporter\src\Tia\TiaReflection.cs:Zeile 101.
+   bei TIAExporter.Tia.PlcSoftwareExporter.ExportBlock(Object block, ExportState state, String plcName, String plcRoot, String groupPath, String folderName) in C:\ClaudeDev\CyberSec\Dorst\Bsp_Auftragsprojekte\TIAExporter\src\Tia\PlcSoftwareExporter.cs:Zeile 76.
+2026-04-28 12:07:46.105 +02:00 [ERROR] Failed to export block PLC_1//PID-StepController: LicenseNotFoundException: Error when calling method 'Export' of type 'Siemens.Engineering.SW.Blocks.OB'.
+
+Necessary license 'STEP 7 Professional' is missing.
+2026-04-28 12:07:46.105 +02:00 [TRACE]    bei TIAExporter.Tia.TiaReflection.TryExport(Object instance, String filePath) in C:\ClaudeDev\CyberSec\Dorst\Bsp_Auftragsprojekte\TIAExporter\src\Tia\TiaReflection.cs:Zeile 101.
+   bei TIAExporter.Tia.PlcSoftwareExporter.ExportBlock(Object block, ExportState state, String plcName, String plcRoot, String groupPath, String folderName) in C:\ClaudeDev\CyberSec\Dorst\Bsp_Auftragsprojekte\TIAExporter\src\Tia\PlcSoftwareExporter.cs:Zeile 76.
+2026-04-28 12:07:46.169 +02:00 [ERROR] Failed to export block PLC_1//MC-Interpolator: LicenseNotFoundException: Error when calling method 'Export' of type 'Siemens.Engineering.SW.Blocks.OB'.
+
+Necessary license 'STEP 7 Professional' is missing.
+2026-04-28 12:07:46.169 +02:00 [TRACE]    bei TIAExporter.Tia.TiaReflection.TryExport(Object instance, String filePath) in C:\ClaudeDev\CyberSec\Dorst\Bsp_Auftragsprojekte\TIAExporter\src\Tia\TiaReflection.cs:Zeile 101.
+   bei TIAExporter.Tia.PlcSoftwareExporter.ExportBlock(Object block, ExportState state, String plcName, String plcRoot, String groupPath, String folderName) in C:\ClaudeDev\CyberSec\Dorst\Bsp_Auftragsprojekte\TIAExporter\src\Tia\PlcSoftwareExporter.cs:Zeile 76.
+2026-04-28 12:07:46.215 +02:00 [ERROR] Failed to export block PLC_1//MC-Servo: LicenseNotFoundException: Error when calling method 'Export' of type 'Siemens.Engineering.SW.Blocks.OB'.
+
+Necessary license 'STEP 7 Professional' is missing.
+2026-04-28 12:07:46.215 +02:00 [TRACE]    bei TIAExporter.Tia.TiaReflection.TryExport(Object instance, String filePath) in C:\ClaudeDev\CyberSec\Dorst\Bsp_Auftragsprojekte\TIAExporter\src\Tia\TiaReflection.cs:Zeile 101.
+   bei TIAExporter.Tia.PlcSoftwareExporter.ExportBlock(Object block, ExportState state, String plcName, String plcRoot, String groupPath, String folderName) in C:\ClaudeDev\CyberSec\Dorst\Bsp_Auftragsprojekte\TIAExporter\src\Tia\PlcSoftwareExporter.cs:Zeile 76.
+2026-04-28 12:07:46.324 +02:00 [ERROR] Failed to export block PLC_1//Servo: LicenseNotFoundException: Error when calling method 'Export' of type 'Siemens.Engineering.SW.Blocks.FB'.
+
+Necessary license 'STEP 7 Professional' is missing.
+2026-04-28 12:07:46.324 +02:00 [TRACE]    bei TIAExporter.Tia.TiaReflection.TryExport(Object instance, String filePath) in C:\ClaudeDev\CyberSec\Dorst\Bsp_Auftragsprojekte\TIAExporter\src\Tia\TiaReflection.cs:Zeile 101.
+   bei TIAExporter.Tia.PlcSoftwareExporter.ExportBlock(Object block, ExportState state, String plcName, String plcRoot, String groupPath, String folderName) in C:\ClaudeDev\CyberSec\Dorst\Bsp_Auftragsprojekte\TIAExporter\src\Tia\PlcSoftwareExporter.cs:Zeile 76.
+2026-04-28 12:07:46.387 +02:00 [ERROR] Failed to export block PLC_1//Main: LicenseNotFoundException: Error when calling method 'Export' of type 'Siemens.Engineering.SW.Blocks.OB'.
+
+Necessary license 'STEP 7 Professional' is missing.
+2026-04-28 12:07:46.387 +02:00 [TRACE]    bei TIAExporter.Tia.TiaReflection.TryExport(Object instance, String filePath) in C:\ClaudeDev\CyberSec\Dorst\Bsp_Auftragsprojekte\TIAExporter\src\Tia\TiaReflection.cs:Zeile 101.
+   bei TIAExporter.Tia.PlcSoftwareExporter.ExportBlock(Object block, ExportState state, String plcName, String plcRoot, String groupPath, String folderName) in C:\ClaudeDev\CyberSec\Dorst\Bsp_Auftragsprojekte\TIAExporter\src\Tia\PlcSoftwareExporter.cs:Zeile 76.
+2026-04-28 12:07:46.467 +02:00 [ERROR] Failed to export block PLC_1/Datenbausteine/Konfiguration: LicenseNotFoundException: Error when calling method 'Export' of type 'Siemens.Engineering.SW.Blocks.GlobalDB'.
+
+Necessary license 'STEP 7 Professional' is missing.
+2026-04-28 12:07:46.467 +02:00 [TRACE]    bei TIAExporter.Tia.TiaReflection.TryExport(Object instance, String filePath) in C:\ClaudeDev\CyberSec\Dorst\Bsp_Auftragsprojekte\TIAExporter\src\Tia\TiaReflection.cs:Zeile 101.
+   bei TIAExporter.Tia.PlcSoftwareExporter.ExportBlock(Object block, ExportState state, String plcName, String plcRoot, String groupPath, String folderName) in C:\ClaudeDev\CyberSec\Dorst\Bsp_Auftragsprojekte\TIAExporter\src\Tia\PlcSoftwareExporter.cs:Zeile 76.
+2026-04-28 12:07:46.529 +02:00 [ERROR] Failed to export block PLC_1/Datenbausteine/Daten_Diag_backup: LicenseNotFoundException: Error when calling method 'Export' of type 'Siemens.Engineering.SW.Blocks.GlobalDB'.
+
+Necessary license 'STEP 7 Professional' is missing.
+2026-04-28 12:07:46.529 +02:00 [TRACE]    bei TIAExporter.Tia.TiaReflection.TryExport(Object instance, String filePath) in C:\ClaudeDev\CyberSec\Dorst\Bsp_Auftragsprojekte\TIAExporter\src\Tia\TiaReflection.cs:Zeile 101.
+   bei TIAExporter.Tia.PlcSoftwareExporter.ExportBlock(Object block, ExportState state, String plcName, String plcRoot, String groupPath, String folderName) in C:\ClaudeDev\CyberSec\Dorst\Bsp_Auftragsprojekte\TIAExporter\src\Tia\PlcSoftwareExporter.cs:Zeile 76.
+2026-04-28 12:07:46.590 +02:00 [ERROR] Failed to export block PLC_1/Datenbausteine/Daten_SPT_INI_10: LicenseNotFoundException: Error when calling method 'Export' of type 'Siemens.Engineering.SW.Blocks.GlobalDB'.
+
+Necessary license 'STEP 7 Professional' is missing.
+2026-04-28 12:07:46.590 +02:00 [TRACE]    bei TIAExporter.Tia.TiaReflection.TryExport(Object instance, String filePath) in C:\ClaudeDev\CyberSec\Dorst\Bsp_Auftragsprojekte\TIAExporter\src\Tia\TiaReflection.cs:Zeile 101.
+   bei TIAExporter.Tia.PlcSoftwareExporter.ExportBlock(Object block, ExportState state, String plcName, String plcRoot, String groupPath, String folderName) in C:\ClaudeDev\CyberSec\Dorst\Bsp_Auftragsprojekte\TIAExporter\src\Tia\PlcSoftwareExporter.cs:Zeile 76.
+2026-04-28 12:07:46.654 +02:00 [ERROR] Failed to export block PLC_1/Datenbausteine/GlobVar_PLC_BASE: LicenseNotFoundException: Error when calling method 'Export' of type 'Siemens.Engineering.SW.Blocks.GlobalDB'.
+
+Necessary license 'STEP 7 Professional' is missing.
+2026-04-28 12:07:46.654 +02:00 [TRACE]    bei TIAExporter.Tia.TiaReflection.TryExport(Object instance, String filePath) in C:\ClaudeDev\CyberSec\Dorst\Bsp_Auftragsprojekte\TIAExporter\src\Tia\TiaReflection.cs:Zeile 101.
+   bei TIAExporter.Tia.PlcSoftwareExporter.ExportBlock(Object block, ExportState state, String plcName, String plcRoot, String groupPath, String folderName) in C:\ClaudeDev\CyberSec\Dorst\Bsp_Auftragsprojekte\TIAExporter\src\Tia\PlcSoftwareExporter.cs:Zeile 76.
+2026-04-28 12:07:46.716 +02:00 [ERROR] Failed to export block PLC_1/Datenbausteine/Daten_SPT_INI_20: LicenseNotFoundException: Error when calling method 'Export' of type 'Siemens.Engineering.SW.Blocks.GlobalDB'.
+
+Necessary license 'STEP 7 Professional' is missing.
+2026-04-28 12:07:46.716 +02:00 [TRACE]    bei TIAExporter.Tia.TiaReflection.TryExport(Object instance, String filePath) in C:\ClaudeDev\CyberSec\Dorst\Bsp_Auftragsprojekte\TIAExporter\src\Tia\TiaReflection.cs:Zeile 101.
+   bei TIAExporter.Tia.PlcSoftwareExporter.ExportBlock(Object block, ExportState state, String plcName, String plcRoot, String groupPath, String folderName) in C:\ClaudeDev\CyberSec\Dorst\Bsp_Auftragsprojekte\TIAExporter\src\Tia\PlcSoftwareExporter.cs:Zeile 76.
+2026-04-28 12:07:46.780 +02:00 [ERROR] Failed to export block PLC_1/Datenbausteine/Daten_SPT_INI_30: LicenseNotFoundException: Error when calling method 'Export' of type 'Siemens.Engineering.SW.Blocks.GlobalDB'.
+
+Necessary license 'STEP 7 Professional' is missing.
+2026-04-28 12:07:46.780 +02:00 [TRACE]    bei TIAExporter.Tia.TiaReflection.TryExport(Object instance, String filePath) in C:\ClaudeDev\CyberSec\Dorst\Bsp_Auftragsprojekte\TIAExporter\src\Tia\TiaReflection.cs:Zeile 101.
+   bei TIAExporter.Tia.PlcSoftwareExporter.ExportBlock(Object block, ExportState state, String plcName, String plcRoot, String groupPath, String folderName) in C:\ClaudeDev\CyberSec\Dorst\Bsp_Auftragsprojekte\TIAExporter\src\Tia\PlcSoftwareExporter.cs:Zeile 76.
+2026-04-28 12:07:46.837 +02:00 [ERROR] Failed to export block PLC_1/Datenbausteine/Daten_SPT_INI_40: LicenseNotFoundException: Error when calling method 'Export' of type 'Siemens.Engineering.SW.Blocks.GlobalDB'.
+
+Necessary license 'STEP 7 Professional' is missing.
+2026-04-28 12:07:46.837 +02:00 [TRACE]    bei TIAExporter.Tia.TiaReflection.TryExport(Object instance, String filePath) in C:\ClaudeDev\CyberSec\Dorst\Bsp_Auftragsprojekte\TIAExporter\src\Tia\TiaReflection.cs:Zeile 101.
+   bei TIAExporter.Tia.PlcSoftwareExporter.ExportBlock(Object block, ExportState state, String plcName, String plcRoot, String groupPath, String folderName) in C:\ClaudeDev\CyberSec\Dorst\Bsp_Auftragsprojekte\TIAExporter\src\Tia\PlcSoftwareExporter.cs:Zeile 76.
+2026-04-28 12:07:46.888 +02:00 [ERROR] Failed to export block PLC_1/Datenbausteine/Daten_SPT_INI_50: LicenseNotFoundException: Error when calling method 'Export' of type 'Siemens.Engineering.SW.Blocks.GlobalDB'.
+
+Necessary license 'STEP 7 Professional' is missing.
+2026-04-28 12:07:46.888 +02:00 [TRACE]    bei TIAExporter.Tia.TiaReflection.TryExport(Object instance, String filePath) in C:\ClaudeDev\CyberSec\Dorst\Bsp_Auftragsprojekte\TIAExporter\src\Tia\TiaReflection.cs:Zeile 101.
+   bei TIAExporter.Tia.PlcSoftwareExporter.ExportBlock(Object block, ExportState state, String plcName, String plcRoot, String groupPath, String folderName) in C:\ClaudeDev\CyberSec\Dorst\Bsp_Auftragsprojekte\TIAExporter\src\Tia\PlcSoftwareExporter.cs:Zeile 76.
+2026-04-28 12:07:46.936 +02:00 [ERROR] Failed to export block PLC_1/Datenbausteine/Daten_SPT_INI_60: LicenseNotFoundException: Error when calling method 'Export' of type 'Siemens.Engineering.SW.Blocks.GlobalDB'.
+
+Necessary license 'STEP 7 Professional' is missing.
+2026-04-28 12:07:46.936 +02:00 [TRACE]    bei TIAExporter.Tia.TiaReflection.TryExport(Object instance, String filePath) in C:\ClaudeDev\CyberSec\Dorst\Bsp_Auftragsprojekte\TIAExporter\src\Tia\TiaReflection.cs:Zeile 101.
+   bei TIAExporter.Tia.PlcSoftwareExporter.ExportBlock(Object block, ExportState state, String plcName, String plcRoot, String groupPath, String folderName) in C:\ClaudeDev\CyberSec\Dorst\Bsp_Auftragsprojekte\TIAExporter\src\Tia\PlcSoftwareExporter.cs:Zeile 76.
+2026-04-28 12:07:46.979 +02:00 [ERROR] Failed to export block PLC_1/Datenbausteine/Daten_Recipe_HMI: LicenseNotFoundException: Error when calling method 'Export' of type 'Siemens.Engineering.SW.Blocks.GlobalDB'.
+
+Necessary license 'STEP 7 Professional' is missing.
+2026-04-28 12:07:46.979 +02:00 [TRACE]    bei TIAExporter.Tia.TiaReflection.TryExport(Object instance, String filePath) in C:\ClaudeDev\CyberSec\Dorst\Bsp_Auftragsprojekte\TIAExporter\src\Tia\TiaReflection.cs:Zeile 101.
+   bei TIAExporter.Tia.PlcSoftwareExporter.ExportBlock(Object block, ExportState state, String plcName, String plcRoot, String groupPath, String folderName) in C:\ClaudeDev\CyberSec\Dorst\Bsp_Auftragsprojekte\TIAExporter\src\Tia\PlcSoftwareExporter.cs:Zeile 76.
+2026-04-28 12:07:47.043 +02:00 [ERROR] Failed to export block PLC_1/Standardbausteine/Scaling: LicenseNotFoundException: Error when calling method 'Export' of type 'Siemens.Engineering.SW.Blocks.FC'.
+
+Necessary license 'STEP 7 Professional' is missing.
+2026-04-28 12:07:47.043 +02:00 [TRACE]    bei TIAExporter.Tia.TiaReflection.TryExport(Object instance, String filePath) in C:\ClaudeDev\CyberSec\Dorst\Bsp_Auftragsprojekte\TIAExporter\src\Tia\TiaReflection.cs:Zeile 101.
+   bei TIAExporter.Tia.PlcSoftwareExporter.ExportBlock(Object block, ExportState state, String plcName, String plcRoot, String groupPath, String folderName) in C:\ClaudeDev\CyberSec\Dorst\Bsp_Auftragsprojekte\TIAExporter\src\Tia\PlcSoftwareExporter.cs:Zeile 76.
+2026-04-28 12:07:47.090 +02:00 [ERROR] Failed to export block PLC_1/Standardbausteine/SensorScaleMonitoring: LicenseNotFoundException: Error when calling method 'Export' of type 'Siemens.Engineering.SW.Blocks.FC'.
+
+Necessary license 'STEP 7 Professional' is missing.
+2026-04-28 12:07:47.090 +02:00 [TRACE]    bei TIAExporter.Tia.TiaReflection.TryExport(Object instance, String filePath) in C:\ClaudeDev\CyberSec\Dorst\Bsp_Auftragsprojekte\TIAExporter\src\Tia\TiaReflection.cs:Zeile 101.
+   bei TIAExporter.Tia.PlcSoftwareExporter.ExportBlock(Object block, ExportState state, String plcName, String plcRoot, String groupPath, String folderName) in C:\ClaudeDev\CyberSec\Dorst\Bsp_Auftragsprojekte\TIAExporter\src\Tia\PlcSoftwareExporter.cs:Zeile 76.
+2026-04-28 12:07:47.144 +02:00 [ERROR] Failed to export block PLC_1/Standardbausteine/Motor_FC: LicenseNotFoundException: Error when calling method 'Export' of type 'Siemens.Engineering.SW.Blocks.FC'.
+
+Necessary license 'STEP 7 Professional' is missing.
+2026-04-28 12:07:47.144 +02:00 [TRACE]    bei TIAExporter.Tia.TiaReflection.TryExport(Object instance, String filePath) in C:\ClaudeDev\CyberSec\Dorst\Bsp_Auftragsprojekte\TIAExporter\src\Tia\TiaReflection.cs:Zeile 101.
+   bei TIAExporter.Tia.PlcSoftwareExporter.ExportBlock(Object block, ExportState state, String plcName, String plcRoot, String groupPath, String folderName) in C:\ClaudeDev\CyberSec\Dorst\Bsp_Auftragsprojekte\TIAExporter\src\Tia\PlcSoftwareExporter.cs:Zeile 76.
+2026-04-28 12:07:47.202 +02:00 [ERROR] Failed to export block PLC_1/Standardbausteine/Fail_FC: LicenseNotFoundException: Error when calling method 'Export' of type 'Siemens.Engineering.SW.Blocks.FC'.
+
+Necessary license 'STEP 7 Professional' is missing.
+2026-04-28 12:07:47.202 +02:00 [TRACE]    bei TIAExporter.Tia.TiaReflection.TryExport(Object instance, String filePath) in C:\ClaudeDev\CyberSec\Dorst\Bsp_Auftragsprojekte\TIAExporter\src\Tia\TiaReflection.cs:Zeile 101.
+   bei TIAExporter.Tia.PlcSoftwareExporter.ExportBlock(Object block, ExportState state, String plcName, String plcRoot, String groupPath, String folderName) in C:\ClaudeDev\CyberSec\Dorst\Bsp_Auftragsprojekte\TIAExporter\src\Tia\PlcSoftwareExporter.cs:Zeile 76.
+2026-04-28 12:07:47.251 +02:00 [ERROR] Failed to export block PLC_1/Standardbausteine/Motor_OnOff_FC: LicenseNotFoundException: Error when calling method 'Export' of type 'Siemens.Engineering.SW.Blocks.FC'.
+
+Necessary license 'STEP 7 Professional' is missing.
+2026-04-28 12:07:47.251 +02:00 [TRACE]    bei TIAExporter.Tia.TiaReflection.TryExport(Object instance, String filePath) in C:\ClaudeDev\CyberSec\Dorst\Bsp_Auftragsprojekte\TIAExporter\src\Tia\TiaReflection.cs:Zeile 101.
+   bei TIAExporter.Tia.PlcSoftwareExporter.ExportBlock(Object block, ExportState state, String plcName, String plcRoot, String groupPath, String folderName) in C:\ClaudeDev\CyberSec\Dorst\Bsp_Auftragsprojekte\TIAExporter\src\Tia\PlcSoftwareExporter.cs:Zeile 76.
+2026-04-28 12:07:47.297 +02:00 [ERROR] Failed to export block PLC_1/Standardbausteine/MotorStatus_FC: LicenseNotFoundException: Error when calling method 'Export' of type 'Siemens.Engineering.SW.Blocks.FC'.
+
+Necessary license 'STEP 7 Professional' is missing.
+2026-04-28 12:07:47.298 +02:00 [TRACE]    bei TIAExporter.Tia.TiaReflection.TryExport(Object instance, String filePath) in C:\ClaudeDev\CyberSec\Dorst\Bsp_Auftragsprojekte\TIAExporter\src\Tia\TiaReflection.cs:Zeile 101.
+   bei TIAExporter.Tia.PlcSoftwareExporter.ExportBlock(Object block, ExportState state, String plcName, String plcRoot, String groupPath, String folderName) in C:\ClaudeDev\CyberSec\Dorst\Bsp_Auftragsprojekte\TIAExporter\src\Tia\PlcSoftwareExporter.cs:Zeile 76.
+2026-04-28 12:07:47.348 +02:00 [ERROR] Failed to export block PLC_1/Standardbausteine/Warning_Monitoring: LicenseNotFoundException: Error when calling method 'Export' of type 'Siemens.Engineering.SW.Blocks.FC'.
+
+Necessary license 'STEP 7 Professional' is missing.
+2026-04-28 12:07:47.348 +02:00 [TRACE]    bei TIAExporter.Tia.TiaReflection.TryExport(Object instance, String filePath) in C:\ClaudeDev\CyberSec\Dorst\Bsp_Auftragsprojekte\TIAExporter\src\Tia\TiaReflection.cs:Zeile 101.
+   bei TIAExporter.Tia.PlcSoftwareExporter.ExportBlock(Object block, ExportState state, String plcName, String plcRoot, String groupPath, String folderName) in C:\ClaudeDev\CyberSec\Dorst\Bsp_Auftragsprojekte\TIAExporter\src\Tia\PlcSoftwareExporter.cs:Zeile 76.
+2026-04-28 12:07:47.405 +02:00 [ERROR] Failed to export block PLC_1/Standardbausteine/Timer_On_Off: LicenseNotFoundException: Error when calling method 'Export' of type 'Siemens.Engineering.SW.Blocks.FC'.
+
+Necessary license 'STEP 7 Professional' is missing.
+2026-04-28 12:07:47.405 +02:00 [TRACE]    bei TIAExporter.Tia.TiaReflection.TryExport(Object instance, String filePath) in C:\ClaudeDev\CyberSec\Dorst\Bsp_Auftragsprojekte\TIAExporter\src\Tia\TiaReflection.cs:Zeile 101.
+   bei TIAExporter.Tia.PlcSoftwareExporter.ExportBlock(Object block, ExportState state, String plcName, String plcRoot, String groupPath, String folderName) in C:\ClaudeDev\CyberSec\Dorst\Bsp_Auftragsprojekte\TIAExporter\src\Tia\PlcSoftwareExporter.cs:Zeile 76.
+2026-04-28 12:07:47.455 +02:00 [ERROR] Failed to export block PLC_1/Standardbausteine/Fail_FB: LicenseNotFoundException: Error when calling method 'Export' of type 'Siemens.Engineering.SW.Blocks.FB'.
+
+Necessary license 'STEP 7 Professional' is missing.
+2026-04-28 12:07:47.455 +02:00 [TRACE]    bei TIAExporter.Tia.TiaReflection.TryExport(Object instance, String filePath) in C:\ClaudeDev\CyberSec\Dorst\Bsp_Auftragsprojekte\TIAExporter\src\Tia\TiaReflection.cs:Zeile 101.
+   bei TIAExporter.Tia.PlcSoftwareExporter.ExportBlock(Object block, ExportState state, String plcName, String plcRoot, String groupPath, String folderName) in C:\ClaudeDev\CyberSec\Dorst\Bsp_Auftragsprojekte\TIAExporter\src\Tia\PlcSoftwareExporter.cs:Zeile 76.
+2026-04-28 12:07:47.516 +02:00 [ERROR] Failed to export block PLC_1/Standardbausteine/ScalingMonitoring: LicenseNotFoundException: Error when calling method 'Export' of type 'Siemens.Engineering.SW.Blocks.FB'.
+
+Necessary license 'STEP 7 Professional' is missing.
+2026-04-28 12:07:47.516 +02:00 [TRACE]    bei TIAExporter.Tia.TiaReflection.TryExport(Object instance, String filePath) in C:\ClaudeDev\CyberSec\Dorst\Bsp_Auftragsprojekte\TIAExporter\src\Tia\TiaReflection.cs:Zeile 101.
+   bei TIAExporter.Tia.PlcSoftwareExporter.ExportBlock(Object block, ExportState state, String plcName, String plcRoot, String groupPath, String folderName) in C:\ClaudeDev\CyberSec\Dorst\Bsp_Auftragsprojekte\TIAExporter\src\Tia\PlcSoftwareExporter.cs:Zeile 76.
+2026-04-28 12:07:47.578 +02:00 [ERROR] Failed to export block PLC_1/Standardbausteine/Motor_OnOff_FB: LicenseNotFoundException: Error when calling method 'Export' of type 'Siemens.Engineering.SW.Blocks.FB'.
+
+Necessary license 'STEP 7 Professional' is missing.
+2026-04-28 12:07:47.578 +02:00 [TRACE]    bei TIAExporter.Tia.TiaReflection.TryExport(Object instance, String filePath) in C:\ClaudeDev\CyberSec\Dorst\Bsp_Auftragsprojekte\TIAExporter\src\Tia\TiaReflection.cs:Zeile 101.
+   bei TIAExporter.Tia.PlcSoftwareExporter.ExportBlock(Object block, ExportState state, String plcName, String plcRoot, String groupPath, String folderName) in C:\ClaudeDev\CyberSec\Dorst\Bsp_Auftragsprojekte\TIAExporter\src\Tia\PlcSoftwareExporter.cs:Zeile 76.
+2026-04-28 12:07:47.621 +02:00 [ERROR] Failed to export block PLC_1/Standardbausteine/SensorData: LicenseNotFoundException: Error when calling method 'Export' of type 'Siemens.Engineering.SW.Blocks.FC'.
+
+Necessary license 'STEP 7 Professional' is missing.
+2026-04-28 12:07:47.621 +02:00 [TRACE]    bei TIAExporter.Tia.TiaReflection.TryExport(Object instance, String filePath) in C:\ClaudeDev\CyberSec\Dorst\Bsp_Auftragsprojekte\TIAExporter\src\Tia\TiaReflection.cs:Zeile 101.
+   bei TIAExporter.Tia.PlcSoftwareExporter.ExportBlock(Object block, ExportState state, String plcName, String plcRoot, String groupPath, String folderName) in C:\ClaudeDev\CyberSec\Dorst\Bsp_Auftragsprojekte\TIAExporter\src\Tia\PlcSoftwareExporter.cs:Zeile 76.
+2026-04-28 12:07:47.700 +02:00 [ERROR] Failed to export block PLC_1/Standardbausteine/Timer_On_Off_FB: LicenseNotFoundException: Error when calling method 'Export' of type 'Siemens.Engineering.SW.Blocks.FB'.
+
+Necessary license 'STEP 7 Professional' is missing.
+2026-04-28 12:07:47.700 +02:00 [TRACE]    bei TIAExporter.Tia.TiaReflection.TryExport(Object instance, String filePath) in C:\ClaudeDev\CyberSec\Dorst\Bsp_Auftragsprojekte\TIAExporter\src\Tia\TiaReflection.cs:Zeile 101.
+   bei TIAExporter.Tia.PlcSoftwareExporter.ExportBlock(Object block, ExportState state, String plcName, String plcRoot, String groupPath, String folderName) in C:\ClaudeDev\CyberSec\Dorst\Bsp_Auftragsprojekte\TIAExporter\src\Tia\PlcSoftwareExporter.cs:Zeile 76.
+2026-04-28 12:07:47.775 +02:00 [ERROR] Failed to export block PLC_1/SPT_10/GlobVar_SPT_10: LicenseNotFoundException: Error when calling method 'Export' of type 'Siemens.Engineering.SW.Blocks.GlobalDB'.
+
+Necessary license 'STEP 7 Professional' is missing.
+2026-04-28 12:07:47.775 +02:00 [TRACE]    bei TIAExporter.Tia.TiaReflection.TryExport(Object instance, String filePath) in C:\ClaudeDev\CyberSec\Dorst\Bsp_Auftragsprojekte\TIAExporter\src\Tia\TiaReflection.cs:Zeile 101.
+   bei TIAExporter.Tia.PlcSoftwareExporter.ExportBlock(Object block, ExportState state, String plcName, String plcRoot, String groupPath, String folderName) in C:\ClaudeDev\CyberSec\Dorst\Bsp_Auftragsprojekte\TIAExporter\src\Tia\PlcSoftwareExporter.cs:Zeile 76.
+2026-04-28 12:07:47.860 +02:00 [ERROR] Failed to export block PLC_1/SPT_10/APP_10_Heater_Volumen: LicenseNotFoundException: Error when calling method 'Export' of type 'Siemens.Engineering.SW.Blocks.FB'.
+
+Necessary license 'STEP 7 Professional' is missing.
+2026-04-28 12:07:47.860 +02:00 [TRACE]    bei TIAExporter.Tia.TiaReflection.TryExport(Object instance, String filePath) in C:\ClaudeDev\CyberSec\Dorst\Bsp_Auftragsprojekte\TIAExporter\src\Tia\TiaReflection.cs:Zeile 101.
+   bei TIAExporter.Tia.PlcSoftwareExporter.ExportBlock(Object block, ExportState state, String plcName, String plcRoot, String groupPath, String folderName) in C:\ClaudeDev\CyberSec\Dorst\Bsp_Auftragsprojekte\TIAExporter\src\Tia\PlcSoftwareExporter.cs:Zeile 76.
+2026-04-28 12:07:47.923 +02:00 [ERROR] Failed to export block PLC_1/SPT_10/APP_10_Hot_Air: LicenseNotFoundException: Error when calling method 'Export' of type 'Siemens.Engineering.SW.Blocks.FB'.
+
+Necessary license 'STEP 7 Professional' is missing.
+2026-04-28 12:07:47.923 +02:00 [TRACE]    bei TIAExporter.Tia.TiaReflection.TryExport(Object instance, String filePath) in C:\ClaudeDev\CyberSec\Dorst\Bsp_Auftragsprojekte\TIAExporter\src\Tia\TiaReflection.cs:Zeile 101.
+   bei TIAExporter.Tia.PlcSoftwareExporter.ExportBlock(Object block, ExportState state, String plcName, String plcRoot, String groupPath, String folderName) in C:\ClaudeDev\CyberSec\Dorst\Bsp_Auftragsprojekte\TIAExporter\src\Tia\PlcSoftwareExporter.cs:Zeile 76.
+2026-04-28 12:07:47.968 +02:00 [ERROR] Failed to export block PLC_1/SPT_10/APP_10_DiffPressure_Filter_Heating: LicenseNotFoundException: Error when calling method 'Export' of type 'Siemens.Engineering.SW.Blocks.FB'.
+
+Necessary license 'STEP 7 Professional' is missing.
+2026-04-28 12:07:47.968 +02:00 [TRACE]    bei TIAExporter.Tia.TiaReflection.TryExport(Object instance, String filePath) in C:\ClaudeDev\CyberSec\Dorst\Bsp_Auftragsprojekte\TIAExporter\src\Tia\TiaReflection.cs:Zeile 101.
+   bei TIAExporter.Tia.PlcSoftwareExporter.ExportBlock(Object block, ExportState state, String plcName, String plcRoot, String groupPath, String folderName) in C:\ClaudeDev\CyberSec\Dorst\Bsp_Auftragsprojekte\TIAExporter\src\Tia\PlcSoftwareExporter.cs:Zeile 76.
+2026-04-28 12:07:48.022 +02:00 [ERROR] Failed to export block PLC_1/SPT_10/APP_10_InLetTemp_Heating: LicenseNotFoundException: Error when calling method 'Export' of type 'Siemens.Engineering.SW.Blocks.FB'.
+
+Necessary license 'STEP 7 Professional' is missing.
+2026-04-28 12:07:48.023 +02:00 [TRACE]    bei TIAExporter.Tia.TiaReflection.TryExport(Object instance, String filePath) in C:\ClaudeDev\CyberSec\Dorst\Bsp_Auftragsprojekte\TIAExporter\src\Tia\TiaReflection.cs:Zeile 101.
+   bei TIAExporter.Tia.PlcSoftwareExporter.ExportBlock(Object block, ExportState state, String plcName, String plcRoot, String groupPath, String folderName) in C:\ClaudeDev\CyberSec\Dorst\Bsp_Auftragsprojekte\TIAExporter\src\Tia\PlcSoftwareExporter.cs:Zeile 76.
+2026-04-28 12:07:48.080 +02:00 [ERROR] Failed to export block PLC_1/SPT_10/APP_10_Gas_Rate_Analog: LicenseNotFoundException: Error when calling method 'Export' of type 'Siemens.Engineering.SW.Blocks.FB'.
+
+Necessary license 'STEP 7 Professional' is missing.
+2026-04-28 12:07:48.080 +02:00 [TRACE]    bei TIAExporter.Tia.TiaReflection.TryExport(Object instance, String filePath) in C:\ClaudeDev\CyberSec\Dorst\Bsp_Auftragsprojekte\TIAExporter\src\Tia\TiaReflection.cs:Zeile 101.
+   bei TIAExporter.Tia.PlcSoftwareExporter.ExportBlock(Object block, ExportState state, String plcName, String plcRoot, String groupPath, String folderName) in C:\ClaudeDev\CyberSec\Dorst\Bsp_Auftragsprojekte\TIAExporter\src\Tia\PlcSoftwareExporter.cs:Zeile 76.
+2026-04-28 12:07:48.142 +02:00 [ERROR] Failed to export block PLC_1/SPT_10/APP_10_Deli_Motor_Control: LicenseNotFoundException: Error when calling method 'Export' of type 'Siemens.Engineering.SW.Blocks.FB'.
+
+Necessary license 'STEP 7 Professional' is missing.
+2026-04-28 12:07:48.142 +02:00 [TRACE]    bei TIAExporter.Tia.TiaReflection.TryExport(Object instance, String filePath) in C:\ClaudeDev\CyberSec\Dorst\Bsp_Auftragsprojekte\TIAExporter\src\Tia\TiaReflection.cs:Zeile 101.
+   bei TIAExporter.Tia.PlcSoftwareExporter.ExportBlock(Object block, ExportState state, String plcName, String plcRoot, String groupPath, String folderName) in C:\ClaudeDev\CyberSec\Dorst\Bsp_Auftragsprojekte\TIAExporter\src\Tia\PlcSoftwareExporter.cs:Zeile 76.
+2026-04-28 12:07:48.193 +02:00 [ERROR] Failed to export block PLC_1/SPT_10/APP_10_Deli_Motor_Control_DB: LicenseNotFoundException: Error when calling method 'Export' of type 'Siemens.Engineering.SW.Blocks.InstanceDB'.
+
+Necessary license 'STEP 7 Professional' is missing.
+2026-04-28 12:07:48.193 +02:00 [TRACE]    bei TIAExporter.Tia.TiaReflection.TryExport(Object instance, String filePath) in C:\ClaudeDev\CyberSec\Dorst\Bsp_Auftragsprojekte\TIAExporter\src\Tia\TiaReflection.cs:Zeile 101.
+   bei TIAExporter.Tia.PlcSoftwareExporter.ExportBlock(Object block, ExportState state, String plcName, String plcRoot, String groupPath, String folderName) in C:\ClaudeDev\CyberSec\Dorst\Bsp_Auftragsprojekte\TIAExporter\src\Tia\PlcSoftwareExporter.cs:Zeile 76.
+2026-04-28 12:07:48.237 +02:00 [ERROR] Failed to export block PLC_1/SPT_10/APP_10_DiffPressure_Filter_Heating_DB: LicenseNotFoundException: Error when calling method 'Export' of type 'Siemens.Engineering.SW.Blocks.InstanceDB'.
+
+Necessary license 'STEP 7 Professional' is missing.
+2026-04-28 12:07:48.237 +02:00 [TRACE]    bei TIAExporter.Tia.TiaReflection.TryExport(Object instance, String filePath) in C:\ClaudeDev\CyberSec\Dorst\Bsp_Auftragsprojekte\TIAExporter\src\Tia\TiaReflection.cs:Zeile 101.
+   bei TIAExporter.Tia.PlcSoftwareExporter.ExportBlock(Object block, ExportState state, String plcName, String plcRoot, String groupPath, String folderName) in C:\ClaudeDev\CyberSec\Dorst\Bsp_Auftragsprojekte\TIAExporter\src\Tia\PlcSoftwareExporter.cs:Zeile 76.
+2026-04-28 12:07:48.284 +02:00 [ERROR] Failed to export block PLC_1/SPT_10/APP_10_Gas_Rate_Analog_DB: LicenseNotFoundException: Error when calling method 'Export' of type 'Siemens.Engineering.SW.Blocks.InstanceDB'.
+
+Necessary license 'STEP 7 Professional' is missing.
+2026-04-28 12:07:48.285 +02:00 [TRACE]    bei TIAExporter.Tia.TiaReflection.TryExport(Object instance, String filePath) in C:\ClaudeDev\CyberSec\Dorst\Bsp_Auftragsprojekte\TIAExporter\src\Tia\TiaReflection.cs:Zeile 101.
+   bei TIAExporter.Tia.PlcSoftwareExporter.ExportBlock(Object block, ExportState state, String plcName, String plcRoot, String groupPath, String folderName) in C:\ClaudeDev\CyberSec\Dorst\Bsp_Auftragsprojekte\TIAExporter\src\Tia\PlcSoftwareExporter.cs:Zeile 76.
+2026-04-28 12:07:48.344 +02:00 [ERROR] Failed to export block PLC_1/SPT_10/APP_10_Heater_Volumen_DB: LicenseNotFoundException: Error when calling method 'Export' of type 'Siemens.Engineering.SW.Blocks.InstanceDB'.
+
+Necessary license 'STEP 7 Professional' is missing.
+2026-04-28 12:07:48.344 +02:00 [TRACE]    bei TIAExporter.Tia.TiaReflection.TryExport(Object instance, String filePath) in C:\ClaudeDev\CyberSec\Dorst\Bsp_Auftragsprojekte\TIAExporter\src\Tia\TiaReflection.cs:Zeile 101.
+   bei TIAExporter.Tia.PlcSoftwareExporter.ExportBlock(Object block, ExportState state, String plcName, String plcRoot, String groupPath, String folderName) in C:\ClaudeDev\CyberSec\Dorst\Bsp_Auftragsprojekte\TIAExporter\src\Tia\PlcSoftwareExporter.cs:Zeile 76.
+2026-04-28 12:07:48.390 +02:00 [ERROR] Failed to export block PLC_1/SPT_10/APP_10_Hot_Air_DB: LicenseNotFoundException: Error when calling method 'Export' of type 'Siemens.Engineering.SW.Blocks.InstanceDB'.
+
+Necessary license 'STEP 7 Professional' is missing.
+2026-04-28 12:07:48.390 +02:00 [TRACE]    bei TIAExporter.Tia.TiaReflection.TryExport(Object instance, String filePath) in C:\ClaudeDev\CyberSec\Dorst\Bsp_Auftragsprojekte\TIAExporter\src\Tia\TiaReflection.cs:Zeile 101.
+   bei TIAExporter.Tia.PlcSoftwareExporter.ExportBlock(Object block, ExportState state, String plcName, String plcRoot, String groupPath, String folderName) in C:\ClaudeDev\CyberSec\Dorst\Bsp_Auftragsprojekte\TIAExporter\src\Tia\PlcSoftwareExporter.cs:Zeile 76.
+2026-04-28 12:07:48.453 +02:00 [ERROR] Failed to export block PLC_1/SPT_10/APP_10_InLetTemp_Heating_DB: LicenseNotFoundException: Error when calling method 'Export' of type 'Siemens.Engineering.SW.Blocks.InstanceDB'.
+
+Necessary license 'STEP 7 Professional' is missing.
+2026-04-28 12:07:48.453 +02:00 [TRACE]    bei TIAExporter.Tia.TiaReflection.TryExport(Object instance, String filePath) in C:\ClaudeDev\CyberSec\Dorst\Bsp_Auftragsprojekte\TIAExporter\src\Tia\TiaReflection.cs:Zeile 101.
+   bei TIAExporter.Tia.PlcSoftwareExporter.ExportBlock(Object block, ExportState state, String plcName, String plcRoot, String groupPath, String folderName) in C:\ClaudeDev\CyberSec\Dorst\Bsp_Auftragsprojekte\TIAExporter\src\Tia\PlcSoftwareExporter.cs:Zeile 76.
+2026-04-28 12:07:48.516 +02:00 [ERROR] Failed to export block PLC_1/SPT_10/APP_10_Heater: LicenseNotFoundException: Error when calling method 'Export' of type 'Siemens.Engineering.SW.Blocks.FB'.
+
+Necessary license 'STEP 7 Professional' is missing.
+2026-04-28 12:07:48.516 +02:00 [TRACE]    bei TIAExporter.Tia.TiaReflection.TryExport(Object instance, String filePath) in C:\ClaudeDev\CyberSec\Dorst\Bsp_Auftragsprojekte\TIAExporter\src\Tia\TiaReflection.cs:Zeile 101.
+   bei TIAExporter.Tia.PlcSoftwareExporter.ExportBlock(Object block, ExportState state, String plcName, String plcRoot, String groupPath, String folderName) in C:\ClaudeDev\CyberSec\Dorst\Bsp_Auftragsprojekte\TIAExporter\src\Tia\PlcSoftwareExporter.cs:Zeile 76.
+2026-04-28 12:07:48.702 +02:00 [ERROR] Failed to export block PLC_1/SPT_10/APP_10_Heater_DB: LicenseNotFoundException: Error when calling method 'Export' of type 'Siemens.Engineering.SW.Blocks.InstanceDB'.
+
+Necessary license 'STEP 7 Professional' is missing.
+2026-04-28 12:07:48.702 +02:00 [TRACE]    bei TIAExporter.Tia.TiaReflection.TryExport(Object instance, String filePath) in C:\ClaudeDev\CyberSec\Dorst\Bsp_Auftragsprojekte\TIAExporter\src\Tia\TiaReflection.cs:Zeile 101.
+   bei TIAExporter.Tia.PlcSoftwareExporter.ExportBlock(Object block, ExportState state, String plcName, String plcRoot, String groupPath, String folderName) in C:\ClaudeDev\CyberSec\Dorst\Bsp_Auftragsprojekte\TIAExporter\src\Tia\PlcSoftwareExporter.cs:Zeile 76.
+2026-04-28 12:07:48.745 +02:00 [ERROR] Failed to export block PLC_1/SPT_10/APP_10_Error: LicenseNotFoundException: Error when calling method 'Export' of type 'Siemens.Engineering.SW.Blocks.FB'.
+
+Necessary license 'STEP 7 Professional' is missing.
+2026-04-28 12:07:48.745 +02:00 [TRACE]    bei TIAExporter.Tia.TiaReflection.TryExport(Object instance, String filePath) in C:\ClaudeDev\CyberSec\Dorst\Bsp_Auftragsprojekte\TIAExporter\src\Tia\TiaReflection.cs:Zeile 101.
+   bei TIAExporter.Tia.PlcSoftwareExporter.ExportBlock(Object block, ExportState state, String plcName, String plcRoot, String groupPath, String folderName) in C:\ClaudeDev\CyberSec\Dorst\Bsp_Auftragsprojekte\TIAExporter\src\Tia\PlcSoftwareExporter.cs:Zeile 76.
+2026-04-28 12:07:48.827 +02:00 [ERROR] Failed to export block PLC_1/SPT_10/APP_10_Error_DB: LicenseNotFoundException: Error when calling method 'Export' of type 'Siemens.Engineering.SW.Blocks.InstanceDB'.
+
+Necessary license 'STEP 7 Professional' is missing.
+2026-04-28 12:07:48.827 +02:00 [TRACE]    bei TIAExporter.Tia.TiaReflection.TryExport(Object instance, String filePath) in C:\ClaudeDev\CyberSec\Dorst\Bsp_Auftragsprojekte\TIAExporter\src\Tia\TiaReflection.cs:Zeile 101.
+   bei TIAExporter.Tia.PlcSoftwareExporter.ExportBlock(Object block, ExportState state, String plcName, String plcRoot, String groupPath, String folderName) in C:\ClaudeDev\CyberSec\Dorst\Bsp_Auftragsprojekte\TIAExporter\src\Tia\PlcSoftwareExporter.cs:Zeile 76.
+2026-04-28 12:07:48.871 +02:00 [ERROR] Failed to export block PLC_1/SPT_10/APP_10_Heater_D20: LicenseNotFoundException: Error when calling method 'Export' of type 'Siemens.Engineering.SW.Blocks.FB'.
+
+Necessary license 'STEP 7 Professional' is missing.
+2026-04-28 12:07:48.871 +02:00 [TRACE]    bei TIAExporter.Tia.TiaReflection.TryExport(Object instance, String filePath) in C:\ClaudeDev\CyberSec\Dorst\Bsp_Auftragsprojekte\TIAExporter\src\Tia\TiaReflection.cs:Zeile 101.
+   bei TIAExporter.Tia.PlcSoftwareExporter.ExportBlock(Object block, ExportState state, String plcName, String plcRoot, String groupPath, String folderName) in C:\ClaudeDev\CyberSec\Dorst\Bsp_Auftragsprojekte\TIAExporter\src\Tia\PlcSoftwareExporter.cs:Zeile 76.
+2026-04-28 12:07:48.926 +02:00 [ERROR] Failed to export block PLC_1/SPT_20/GlobVar_SPT_20: LicenseNotFoundException: Error when calling method 'Export' of type 'Siemens.Engineering.SW.Blocks.GlobalDB'.
+
+Necessary license 'STEP 7 Professional' is missing.
+2026-04-28 12:07:48.926 +02:00 [TRACE]    bei TIAExporter.Tia.TiaReflection.TryExport(Object instance, String filePath) in C:\ClaudeDev\CyberSec\Dorst\Bsp_Auftragsprojekte\TIAExporter\src\Tia\TiaReflection.cs:Zeile 101.
+   bei TIAExporter.Tia.PlcSoftwareExporter.ExportBlock(Object block, ExportState state, String plcName, String plcRoot, String groupPath, String folderName) in C:\ClaudeDev\CyberSec\Dorst\Bsp_Auftragsprojekte\TIAExporter\src\Tia\PlcSoftwareExporter.cs:Zeile 76.
+2026-04-28 12:07:49.030 +02:00 [ERROR] Failed to export block PLC_1/SPT_20/APP_20_Pressure_Tower: LicenseNotFoundException: Error when calling method 'Export' of type 'Siemens.Engineering.SW.Blocks.FB'.
+
+Necessary license 'STEP 7 Professional' is missing.
+2026-04-28 12:07:49.030 +02:00 [TRACE]    bei TIAExporter.Tia.TiaReflection.TryExport(Object instance, String filePath) in C:\ClaudeDev\CyberSec\Dorst\Bsp_Auftragsprojekte\TIAExporter\src\Tia\TiaReflection.cs:Zeile 101.
+   bei TIAExporter.Tia.PlcSoftwareExporter.ExportBlock(Object block, ExportState state, String plcName, String plcRoot, String groupPath, String folderName) in C:\ClaudeDev\CyberSec\Dorst\Bsp_Auftragsprojekte\TIAExporter\src\Tia\PlcSoftwareExporter.cs:Zeile 76.
+2026-04-28 12:07:49.076 +02:00 [ERROR] Failed to export block PLC_1/SPT_20/APP_20_Temperature_Tower: LicenseNotFoundException: Error when calling method 'Export' of type 'Siemens.Engineering.SW.Blocks.FB'.
+
+Necessary license 'STEP 7 Professional' is missing.
+2026-04-28 12:07:49.076 +02:00 [TRACE]    bei TIAExporter.Tia.TiaReflection.TryExport(Object instance, String filePath) in C:\ClaudeDev\CyberSec\Dorst\Bsp_Auftragsprojekte\TIAExporter\src\Tia\TiaReflection.cs:Zeile 101.
+   bei TIAExporter.Tia.PlcSoftwareExporter.ExportBlock(Object block, ExportState state, String plcName, String plcRoot, String groupPath, String folderName) in C:\ClaudeDev\CyberSec\Dorst\Bsp_Auftragsprojekte\TIAExporter\src\Tia\PlcSoftwareExporter.cs:Zeile 76.
+2026-04-28 12:07:49.122 +02:00 [ERROR] Failed to export block PLC_1/SPT_20/APP_20_Error: LicenseNotFoundException: Error when calling method 'Export' of type 'Siemens.Engineering.SW.Blocks.FB'.
+
+Necessary license 'STEP 7 Professional' is missing.
+2026-04-28 12:07:49.122 +02:00 [TRACE]    bei TIAExporter.Tia.TiaReflection.TryExport(Object instance, String filePath) in C:\ClaudeDev\CyberSec\Dorst\Bsp_Auftragsprojekte\TIAExporter\src\Tia\TiaReflection.cs:Zeile 101.
+   bei TIAExporter.Tia.PlcSoftwareExporter.ExportBlock(Object block, ExportState state, String plcName, String plcRoot, String groupPath, String folderName) in C:\ClaudeDev\CyberSec\Dorst\Bsp_Auftragsprojekte\TIAExporter\src\Tia\PlcSoftwareExporter.cs:Zeile 76.
+2026-04-28 12:07:49.196 +02:00 [ERROR] Failed to export block PLC_1/SPT_20/APP_20_Lamp: LicenseNotFoundException: Error when calling method 'Export' of type 'Siemens.Engineering.SW.Blocks.FB'.
+
+Necessary license 'STEP 7 Professional' is missing.
+2026-04-28 12:07:49.197 +02:00 [TRACE]    bei TIAExporter.Tia.TiaReflection.TryExport(Object instance, String filePath) in C:\ClaudeDev\CyberSec\Dorst\Bsp_Auftragsprojekte\TIAExporter\src\Tia\TiaReflection.cs:Zeile 101.
+   bei TIAExporter.Tia.PlcSoftwareExporter.ExportBlock(Object block, ExportState state, String plcName, String plcRoot, String groupPath, String folderName) in C:\ClaudeDev\CyberSec\Dorst\Bsp_Auftragsprojekte\TIAExporter\src\Tia\PlcSoftwareExporter.cs:Zeile 76.
+2026-04-28 12:07:49.243 +02:00 [ERROR] Failed to export block PLC_1/SPT_20/APP_20_DoorContr: LicenseNotFoundException: Error when calling method 'Export' of type 'Siemens.Engineering.SW.Blocks.FB'.
+
+Necessary license 'STEP 7 Professional' is missing.
+2026-04-28 12:07:49.243 +02:00 [TRACE]    bei TIAExporter.Tia.TiaReflection.TryExport(Object instance, String filePath) in C:\ClaudeDev\CyberSec\Dorst\Bsp_Auftragsprojekte\TIAExporter\src\Tia\TiaReflection.cs:Zeile 101.
+   bei TIAExporter.Tia.PlcSoftwareExporter.ExportBlock(Object block, ExportState state, String plcName, String plcRoot, String groupPath, String folderName) in C:\ClaudeDev\CyberSec\Dorst\Bsp_Auftragsprojekte\TIAExporter\src\Tia\PlcSoftwareExporter.cs:Zeile 76.
+2026-04-28 12:07:49.343 +02:00 [ERROR] Failed to export block PLC_1/SPT_20/APP_20_KnockValve1: LicenseNotFoundException: Error when calling method 'Export' of type 'Siemens.Engineering.SW.Blocks.FB'.
+
+Necessary license 'STEP 7 Professional' is missing.
+2026-04-28 12:07:49.343 +02:00 [TRACE]    bei TIAExporter.Tia.TiaReflection.TryExport(Object instance, String filePath) in C:\ClaudeDev\CyberSec\Dorst\Bsp_Auftragsprojekte\TIAExporter\src\Tia\TiaReflection.cs:Zeile 101.
+   bei TIAExporter.Tia.PlcSoftwareExporter.ExportBlock(Object block, ExportState state, String plcName, String plcRoot, String groupPath, String folderName) in C:\ClaudeDev\CyberSec\Dorst\Bsp_Auftragsprojekte\TIAExporter\src\Tia\PlcSoftwareExporter.cs:Zeile 76.
+2026-04-28 12:07:49.412 +02:00 [ERROR] Failed to export block PLC_1/SPT_20/APP_20_KnockValve1_DB: LicenseNotFoundException: Error when calling method 'Export' of type 'Siemens.Engineering.SW.Blocks.InstanceDB'.
+
+Necessary license 'STEP 7 Professional' is missing.
+2026-04-28 12:07:49.412 +02:00 [TRACE]    bei TIAExporter.Tia.TiaReflection.TryExport(Object instance, String filePath) in C:\ClaudeDev\CyberSec\Dorst\Bsp_Auftragsprojekte\TIAExporter\src\Tia\TiaReflection.cs:Zeile 101.
+   bei TIAExporter.Tia.PlcSoftwareExporter.ExportBlock(Object block, ExportState state, String plcName, String plcRoot, String groupPath, String folderName) in C:\ClaudeDev\CyberSec\Dorst\Bsp_Auftragsprojekte\TIAExporter\src\Tia\PlcSoftwareExporter.cs:Zeile 76.
+2026-04-28 12:07:49.463 +02:00 [ERROR] Failed to export block PLC_1/SPT_20/APP_20_KnockValve2: LicenseNotFoundException: Error when calling method 'Export' of type 'Siemens.Engineering.SW.Blocks.FB'.
+
+Necessary license 'STEP 7 Professional' is missing.
+2026-04-28 12:07:49.464 +02:00 [TRACE]    bei TIAExporter.Tia.TiaReflection.TryExport(Object instance, String filePath) in C:\ClaudeDev\CyberSec\Dorst\Bsp_Auftragsprojekte\TIAExporter\src\Tia\TiaReflection.cs:Zeile 101.
+   bei TIAExporter.Tia.PlcSoftwareExporter.ExportBlock(Object block, ExportState state, String plcName, String plcRoot, String groupPath, String folderName) in C:\ClaudeDev\CyberSec\Dorst\Bsp_Auftragsprojekte\TIAExporter\src\Tia\PlcSoftwareExporter.cs:Zeile 76.
+2026-04-28 12:07:49.573 +02:00 [ERROR] Failed to export block PLC_1/SPT_20/APP_20_ExtClean: LicenseNotFoundException: Error when calling method 'Export' of type 'Siemens.Engineering.SW.Blocks.FB'.
+
+Necessary license 'STEP 7 Professional' is missing.
+2026-04-28 12:07:49.574 +02:00 [TRACE]    bei TIAExporter.Tia.TiaReflection.TryExport(Object instance, String filePath) in C:\ClaudeDev\CyberSec\Dorst\Bsp_Auftragsprojekte\TIAExporter\src\Tia\TiaReflection.cs:Zeile 101.
+   bei TIAExporter.Tia.PlcSoftwareExporter.ExportBlock(Object block, ExportState state, String plcName, String plcRoot, String groupPath, String folderName) in C:\ClaudeDev\CyberSec\Dorst\Bsp_Auftragsprojekte\TIAExporter\src\Tia\PlcSoftwareExporter.cs:Zeile 76.
+2026-04-28 12:07:49.638 +02:00 [ERROR] Failed to export block PLC_1/SPT_20/APP_20_DoorContr_DB: LicenseNotFoundException: Error when calling method 'Export' of type 'Siemens.Engineering.SW.Blocks.InstanceDB'.
+
+Necessary license 'STEP 7 Professional' is missing.
+2026-04-28 12:07:49.638 +02:00 [TRACE]    bei TIAExporter.Tia.TiaReflection.TryExport(Object instance, String filePath) in C:\ClaudeDev\CyberSec\Dorst\Bsp_Auftragsprojekte\TIAExporter\src\Tia\TiaReflection.cs:Zeile 101.
+   bei TIAExporter.Tia.PlcSoftwareExporter.ExportBlock(Object block, ExportState state, String plcName, String plcRoot, String groupPath, String folderName) in C:\ClaudeDev\CyberSec\Dorst\Bsp_Auftragsprojekte\TIAExporter\src\Tia\PlcSoftwareExporter.cs:Zeile 76.
+2026-04-28 12:07:49.698 +02:00 [ERROR] Failed to export block PLC_1/SPT_20/APP_20_Error_DB: LicenseNotFoundException: Error when calling method 'Export' of type 'Siemens.Engineering.SW.Blocks.InstanceDB'.
+
+Necessary license 'STEP 7 Professional' is missing.
+2026-04-28 12:07:49.698 +02:00 [TRACE]    bei TIAExporter.Tia.TiaReflection.TryExport(Object instance, String filePath) in C:\ClaudeDev\CyberSec\Dorst\Bsp_Auftragsprojekte\TIAExporter\src\Tia\TiaReflection.cs:Zeile 101.
+   bei TIAExporter.Tia.PlcSoftwareExporter.ExportBlock(Object block, ExportState state, String plcName, String plcRoot, String groupPath, String folderName) in C:\ClaudeDev\CyberSec\Dorst\Bsp_Auftragsprojekte\TIAExporter\src\Tia\PlcSoftwareExporter.cs:Zeile 76.
+2026-04-28 12:07:49.760 +02:00 [ERROR] Failed to export block PLC_1/SPT_20/APP_20_ExtClean_DB: LicenseNotFoundException: Error when calling method 'Export' of type 'Siemens.Engineering.SW.Blocks.InstanceDB'.
+
+Necessary license 'STEP 7 Professional' is missing.
+2026-04-28 12:07:49.760 +02:00 [TRACE]    bei TIAExporter.Tia.TiaReflection.TryExport(Object instance, String filePath) in C:\ClaudeDev\CyberSec\Dorst\Bsp_Auftragsprojekte\TIAExporter\src\Tia\TiaReflection.cs:Zeile 101.
+   bei TIAExporter.Tia.PlcSoftwareExporter.ExportBlock(Object block, ExportState state, String plcName, String plcRoot, String groupPath, String folderName) in C:\ClaudeDev\CyberSec\Dorst\Bsp_Auftragsprojekte\TIAExporter\src\Tia\PlcSoftwareExporter.cs:Zeile 76.
+2026-04-28 12:07:49.803 +02:00 [ERROR] Failed to export block PLC_1/SPT_20/APP_20_KnockValve2_DB: LicenseNotFoundException: Error when calling method 'Export' of type 'Siemens.Engineering.SW.Blocks.InstanceDB'.
+
+Necessary license 'STEP 7 Professional' is missing.
+2026-04-28 12:07:49.803 +02:00 [TRACE]    bei TIAExporter.Tia.TiaReflection.TryExport(Object instance, String filePath) in C:\ClaudeDev\CyberSec\Dorst\Bsp_Auftragsprojekte\TIAExporter\src\Tia\TiaReflection.cs:Zeile 101.
+   bei TIAExporter.Tia.PlcSoftwareExporter.ExportBlock(Object block, ExportState state, String plcName, String plcRoot, String groupPath, String folderName) in C:\ClaudeDev\CyberSec\Dorst\Bsp_Auftragsprojekte\TIAExporter\src\Tia\PlcSoftwareExporter.cs:Zeile 76.
+2026-04-28 12:07:49.888 +02:00 [ERROR] Failed to export block PLC_1/SPT_20/APP_20_Lamp_DB: LicenseNotFoundException: Error when calling method 'Export' of type 'Siemens.Engineering.SW.Blocks.InstanceDB'.
+
+Necessary license 'STEP 7 Professional' is missing.
+2026-04-28 12:07:49.888 +02:00 [TRACE]    bei TIAExporter.Tia.TiaReflection.TryExport(Object instance, String filePath) in C:\ClaudeDev\CyberSec\Dorst\Bsp_Auftragsprojekte\TIAExporter\src\Tia\TiaReflection.cs:Zeile 101.
+   bei TIAExporter.Tia.PlcSoftwareExporter.ExportBlock(Object block, ExportState state, String plcName, String plcRoot, String groupPath, String folderName) in C:\ClaudeDev\CyberSec\Dorst\Bsp_Auftragsprojekte\TIAExporter\src\Tia\PlcSoftwareExporter.cs:Zeile 76.
+2026-04-28 12:07:49.943 +02:00 [ERROR] Failed to export block PLC_1/SPT_20/APP_20_Pressure_Tower_DB: LicenseNotFoundException: Error when calling method 'Export' of type 'Siemens.Engineering.SW.Blocks.InstanceDB'.
+
+Necessary license 'STEP 7 Professional' is missing.
+2026-04-28 12:07:49.943 +02:00 [TRACE]    bei TIAExporter.Tia.TiaReflection.TryExport(Object instance, String filePath) in C:\ClaudeDev\CyberSec\Dorst\Bsp_Auftragsprojekte\TIAExporter\src\Tia\TiaReflection.cs:Zeile 101.
+   bei TIAExporter.Tia.PlcSoftwareExporter.ExportBlock(Object block, ExportState state, String plcName, String plcRoot, String groupPath, String folderName) in C:\ClaudeDev\CyberSec\Dorst\Bsp_Auftragsprojekte\TIAExporter\src\Tia\PlcSoftwareExporter.cs:Zeile 76.
+2026-04-28 12:07:50.010 +02:00 [ERROR] Failed to export block PLC_1/SPT_20/APP_20_Temperature_Tower_DB: LicenseNotFoundException: Error when calling method 'Export' of type 'Siemens.Engineering.SW.Blocks.InstanceDB'.
+
+Necessary license 'STEP 7 Professional' is missing.
+2026-04-28 12:07:50.010 +02:00 [TRACE]    bei TIAExporter.Tia.TiaReflection.TryExport(Object instance, String filePath) in C:\ClaudeDev\CyberSec\Dorst\Bsp_Auftragsprojekte\TIAExporter\src\Tia\TiaReflection.cs:Zeile 101.
+   bei TIAExporter.Tia.PlcSoftwareExporter.ExportBlock(Object block, ExportState state, String plcName, String plcRoot, String groupPath, String folderName) in C:\ClaudeDev\CyberSec\Dorst\Bsp_Auftragsprojekte\TIAExporter\src\Tia\PlcSoftwareExporter.cs:Zeile 76.
+2026-04-28 12:07:50.075 +02:00 [ERROR] Failed to export block PLC_1/SPT_20/APP_10_Heater_D20_DB: LicenseNotFoundException: Error when calling method 'Export' of type 'Siemens.Engineering.SW.Blocks.InstanceDB'.
+
+Necessary license 'STEP 7 Professional' is missing.
+2026-04-28 12:07:50.075 +02:00 [TRACE]    bei TIAExporter.Tia.TiaReflection.TryExport(Object instance, String filePath) in C:\ClaudeDev\CyberSec\Dorst\Bsp_Auftragsprojekte\TIAExporter\src\Tia\TiaReflection.cs:Zeile 101.
+   bei TIAExporter.Tia.PlcSoftwareExporter.ExportBlock(Object block, ExportState state, String plcName, String plcRoot, String groupPath, String folderName) in C:\ClaudeDev\CyberSec\Dorst\Bsp_Auftragsprojekte\TIAExporter\src\Tia\PlcSoftwareExporter.cs:Zeile 76.
+2026-04-28 12:07:50.139 +02:00 [ERROR] Failed to export block PLC_1/SPT_30/GlobVar_SPT_30: LicenseNotFoundException: Error when calling method 'Export' of type 'Siemens.Engineering.SW.Blocks.GlobalDB'.
+
+Necessary license 'STEP 7 Professional' is missing.
+2026-04-28 12:07:50.139 +02:00 [TRACE]    bei TIAExporter.Tia.TiaReflection.TryExport(Object instance, String filePath) in C:\ClaudeDev\CyberSec\Dorst\Bsp_Auftragsprojekte\TIAExporter\src\Tia\TiaReflection.cs:Zeile 101.
+   bei TIAExporter.Tia.PlcSoftwareExporter.ExportBlock(Object block, ExportState state, String plcName, String plcRoot, String groupPath, String folderName) in C:\ClaudeDev\CyberSec\Dorst\Bsp_Auftragsprojekte\TIAExporter\src\Tia\PlcSoftwareExporter.cs:Zeile 76.
+2026-04-28 12:07:50.195 +02:00 [ERROR] Failed to export block PLC_1/SPT_30/APP_30_Motors: LicenseNotFoundException: Error when calling method 'Export' of type 'Siemens.Engineering.SW.Blocks.FB'.
+
+Necessary license 'STEP 7 Professional' is missing.
+2026-04-28 12:07:50.195 +02:00 [TRACE]    bei TIAExporter.Tia.TiaReflection.TryExport(Object instance, String filePath) in C:\ClaudeDev\CyberSec\Dorst\Bsp_Auftragsprojekte\TIAExporter\src\Tia\TiaReflection.cs:Zeile 101.
+   bei TIAExporter.Tia.PlcSoftwareExporter.ExportBlock(Object block, ExportState state, String plcName, String plcRoot, String groupPath, String folderName) in C:\ClaudeDev\CyberSec\Dorst\Bsp_Auftragsprojekte\TIAExporter\src\Tia\PlcSoftwareExporter.cs:Zeile 76.
+2026-04-28 12:07:50.238 +02:00 [ERROR] Failed to export block PLC_1/SPT_30/APP_30_Error: LicenseNotFoundException: Error when calling method 'Export' of type 'Siemens.Engineering.SW.Blocks.FB'.
+
+Necessary license 'STEP 7 Professional' is missing.
+2026-04-28 12:07:50.238 +02:00 [TRACE]    bei TIAExporter.Tia.TiaReflection.TryExport(Object instance, String filePath) in C:\ClaudeDev\CyberSec\Dorst\Bsp_Auftragsprojekte\TIAExporter\src\Tia\TiaReflection.cs:Zeile 101.
+   bei TIAExporter.Tia.PlcSoftwareExporter.ExportBlock(Object block, ExportState state, String plcName, String plcRoot, String groupPath, String folderName) in C:\ClaudeDev\CyberSec\Dorst\Bsp_Auftragsprojekte\TIAExporter\src\Tia\PlcSoftwareExporter.cs:Zeile 76.
+2026-04-28 12:07:50.325 +02:00 [ERROR] Failed to export block PLC_1/SPT_30/APP_30_FillSys: LicenseNotFoundException: Error when calling method 'Export' of type 'Siemens.Engineering.SW.Blocks.FB'.
+
+Necessary license 'STEP 7 Professional' is missing.
+2026-04-28 12:07:50.325 +02:00 [TRACE]    bei TIAExporter.Tia.TiaReflection.TryExport(Object instance, String filePath) in C:\ClaudeDev\CyberSec\Dorst\Bsp_Auftragsprojekte\TIAExporter\src\Tia\TiaReflection.cs:Zeile 101.
+   bei TIAExporter.Tia.PlcSoftwareExporter.ExportBlock(Object block, ExportState state, String plcName, String plcRoot, String groupPath, String folderName) in C:\ClaudeDev\CyberSec\Dorst\Bsp_Auftragsprojekte\TIAExporter\src\Tia\PlcSoftwareExporter.cs:Zeile 76.
+2026-04-28 12:07:50.371 +02:00 [ERROR] Failed to export block PLC_1/SPT_30/APP_30_CoolWater: LicenseNotFoundException: Error when calling method 'Export' of type 'Siemens.Engineering.SW.Blocks.FB'.
+
+Necessary license 'STEP 7 Professional' is missing.
+2026-04-28 12:07:50.371 +02:00 [TRACE]    bei TIAExporter.Tia.TiaReflection.TryExport(Object instance, String filePath) in C:\ClaudeDev\CyberSec\Dorst\Bsp_Auftragsprojekte\TIAExporter\src\Tia\TiaReflection.cs:Zeile 101.
+   bei TIAExporter.Tia.PlcSoftwareExporter.ExportBlock(Object block, ExportState state, String plcName, String plcRoot, String groupPath, String folderName) in C:\ClaudeDev\CyberSec\Dorst\Bsp_Auftragsprojekte\TIAExporter\src\Tia\PlcSoftwareExporter.cs:Zeile 76.
+2026-04-28 12:07:50.445 +02:00 [ERROR] Failed to export block PLC_1/SPT_30/APP_30_BinFilling_1: LicenseNotFoundException: Error when calling method 'Export' of type 'Siemens.Engineering.SW.Blocks.FB'.
+
+Necessary license 'STEP 7 Professional' is missing.
+2026-04-28 12:07:50.445 +02:00 [TRACE]    bei TIAExporter.Tia.TiaReflection.TryExport(Object instance, String filePath) in C:\ClaudeDev\CyberSec\Dorst\Bsp_Auftragsprojekte\TIAExporter\src\Tia\TiaReflection.cs:Zeile 101.
+   bei TIAExporter.Tia.PlcSoftwareExporter.ExportBlock(Object block, ExportState state, String plcName, String plcRoot, String groupPath, String folderName) in C:\ClaudeDev\CyberSec\Dorst\Bsp_Auftragsprojekte\TIAExporter\src\Tia\PlcSoftwareExporter.cs:Zeile 76.
+2026-04-28 12:07:50.491 +02:00 [ERROR] Failed to export block PLC_1/SPT_30/APP_30_BinFilling_1_Dig: LicenseNotFoundException: Error when calling method 'Export' of type 'Siemens.Engineering.SW.Blocks.FB'.
+
+Necessary license 'STEP 7 Professional' is missing.
+2026-04-28 12:07:50.491 +02:00 [TRACE]    bei TIAExporter.Tia.TiaReflection.TryExport(Object instance, String filePath) in C:\ClaudeDev\CyberSec\Dorst\Bsp_Auftragsprojekte\TIAExporter\src\Tia\TiaReflection.cs:Zeile 101.
+   bei TIAExporter.Tia.PlcSoftwareExporter.ExportBlock(Object block, ExportState state, String plcName, String plcRoot, String groupPath, String folderName) in C:\ClaudeDev\CyberSec\Dorst\Bsp_Auftragsprojekte\TIAExporter\src\Tia\PlcSoftwareExporter.cs:Zeile 76.
+2026-04-28 12:07:50.580 +02:00 [ERROR] Failed to export block PLC_1/SPT_30/APP_30_BinFilling_2_Dig: LicenseNotFoundException: Error when calling method 'Export' of type 'Siemens.Engineering.SW.Blocks.FB'.
+
+Necessary license 'STEP 7 Professional' is missing.
+2026-04-28 12:07:50.581 +02:00 [TRACE]    bei TIAExporter.Tia.TiaReflection.TryExport(Object instance, String filePath) in C:\ClaudeDev\CyberSec\Dorst\Bsp_Auftragsprojekte\TIAExporter\src\Tia\TiaReflection.cs:Zeile 101.
+   bei TIAExporter.Tia.PlcSoftwareExporter.ExportBlock(Object block, ExportState state, String plcName, String plcRoot, String groupPath, String folderName) in C:\ClaudeDev\CyberSec\Dorst\Bsp_Auftragsprojekte\TIAExporter\src\Tia\PlcSoftwareExporter.cs:Zeile 76.
+2026-04-28 12:07:50.653 +02:00 [ERROR] Failed to export block PLC_1/SPT_30/APP_30_TwPendValve: LicenseNotFoundException: Error when calling method 'Export' of type 'Siemens.Engineering.SW.Blocks.FB'.
+
+Necessary license 'STEP 7 Professional' is missing.
+2026-04-28 12:07:50.653 +02:00 [TRACE]    bei TIAExporter.Tia.TiaReflection.TryExport(Object instance, String filePath) in C:\ClaudeDev\CyberSec\Dorst\Bsp_Auftragsprojekte\TIAExporter\src\Tia\TiaReflection.cs:Zeile 101.
+   bei TIAExporter.Tia.PlcSoftwareExporter.ExportBlock(Object block, ExportState state, String plcName, String plcRoot, String groupPath, String folderName) in C:\ClaudeDev\CyberSec\Dorst\Bsp_Auftragsprojekte\TIAExporter\src\Tia\PlcSoftwareExporter.cs:Zeile 76.
+2026-04-28 12:07:50.728 +02:00 [ERROR] Failed to export block PLC_1/SPT_30/APP_30_Belt_2: LicenseNotFoundException: Error when calling method 'Export' of type 'Siemens.Engineering.SW.Blocks.FB'.
+
+Necessary license 'STEP 7 Professional' is missing.
+2026-04-28 12:07:50.729 +02:00 [TRACE]    bei TIAExporter.Tia.TiaReflection.TryExport(Object instance, String filePath) in C:\ClaudeDev\CyberSec\Dorst\Bsp_Auftragsprojekte\TIAExporter\src\Tia\TiaReflection.cs:Zeile 101.
+   bei TIAExporter.Tia.PlcSoftwareExporter.ExportBlock(Object block, ExportState state, String plcName, String plcRoot, String groupPath, String folderName) in C:\ClaudeDev\CyberSec\Dorst\Bsp_Auftragsprojekte\TIAExporter\src\Tia\PlcSoftwareExporter.cs:Zeile 76.
+2026-04-28 12:07:50.776 +02:00 [ERROR] Failed to export block PLC_1/SPT_30/APP_30_BinFilling_Sensor: LicenseNotFoundException: Error when calling method 'Export' of type 'Siemens.Engineering.SW.Blocks.FB'.
+
+Necessary license 'STEP 7 Professional' is missing.
+2026-04-28 12:07:50.777 +02:00 [TRACE]    bei TIAExporter.Tia.TiaReflection.TryExport(Object instance, String filePath) in C:\ClaudeDev\CyberSec\Dorst\Bsp_Auftragsprojekte\TIAExporter\src\Tia\TiaReflection.cs:Zeile 101.
+   bei TIAExporter.Tia.PlcSoftwareExporter.ExportBlock(Object block, ExportState state, String plcName, String plcRoot, String groupPath, String folderName) in C:\ClaudeDev\CyberSec\Dorst\Bsp_Auftragsprojekte\TIAExporter\src\Tia\PlcSoftwareExporter.cs:Zeile 76.
+2026-04-28 12:07:50.863 +02:00 [ERROR] Failed to export block PLC_1/SPT_30/APP_30_Polyfoerder: LicenseNotFoundException: Error when calling method 'Export' of type 'Siemens.Engineering.SW.Blocks.FB'.
+
+Necessary license 'STEP 7 Professional' is missing.
+2026-04-28 12:07:50.863 +02:00 [TRACE]    bei TIAExporter.Tia.TiaReflection.TryExport(Object instance, String filePath) in C:\ClaudeDev\CyberSec\Dorst\Bsp_Auftragsprojekte\TIAExporter\src\Tia\TiaReflection.cs:Zeile 101.
+   bei TIAExporter.Tia.PlcSoftwareExporter.ExportBlock(Object block, ExportState state, String plcName, String plcRoot, String groupPath, String folderName) in C:\ClaudeDev\CyberSec\Dorst\Bsp_Auftragsprojekte\TIAExporter\src\Tia\PlcSoftwareExporter.cs:Zeile 76.
+2026-04-28 12:07:50.928 +02:00 [ERROR] Failed to export block PLC_1/SPT_30/APP_30_Belt_2_DB: LicenseNotFoundException: Error when calling method 'Export' of type 'Siemens.Engineering.SW.Blocks.InstanceDB'.
+
+Necessary license 'STEP 7 Professional' is missing.
+2026-04-28 12:07:50.928 +02:00 [TRACE]    bei TIAExporter.Tia.TiaReflection.TryExport(Object instance, String filePath) in C:\ClaudeDev\CyberSec\Dorst\Bsp_Auftragsprojekte\TIAExporter\src\Tia\TiaReflection.cs:Zeile 101.
+   bei TIAExporter.Tia.PlcSoftwareExporter.ExportBlock(Object block, ExportState state, String plcName, String plcRoot, String groupPath, String folderName) in C:\ClaudeDev\CyberSec\Dorst\Bsp_Auftragsprojekte\TIAExporter\src\Tia\PlcSoftwareExporter.cs:Zeile 76.
+2026-04-28 12:07:50.977 +02:00 [ERROR] Failed to export block PLC_1/SPT_30/APP_30_BinFilling_1_DB: LicenseNotFoundException: Error when calling method 'Export' of type 'Siemens.Engineering.SW.Blocks.InstanceDB'.
+
+Necessary license 'STEP 7 Professional' is missing.
+2026-04-28 12:07:50.977 +02:00 [TRACE]    bei TIAExporter.Tia.TiaReflection.TryExport(Object instance, String filePath) in C:\ClaudeDev\CyberSec\Dorst\Bsp_Auftragsprojekte\TIAExporter\src\Tia\TiaReflection.cs:Zeile 101.
+   bei TIAExporter.Tia.PlcSoftwareExporter.ExportBlock(Object block, ExportState state, String plcName, String plcRoot, String groupPath, String folderName) in C:\ClaudeDev\CyberSec\Dorst\Bsp_Auftragsprojekte\TIAExporter\src\Tia\PlcSoftwareExporter.cs:Zeile 76.
+2026-04-28 12:07:51.059 +02:00 [ERROR] Failed to export block PLC_1/SPT_30/APP_30_BinFilling_Sensor_DB: LicenseNotFoundException: Error when calling method 'Export' of type 'Siemens.Engineering.SW.Blocks.InstanceDB'.
+
+Necessary license 'STEP 7 Professional' is missing.
+2026-04-28 12:07:51.059 +02:00 [TRACE]    bei TIAExporter.Tia.TiaReflection.TryExport(Object instance, String filePath) in C:\ClaudeDev\CyberSec\Dorst\Bsp_Auftragsprojekte\TIAExporter\src\Tia\TiaReflection.cs:Zeile 101.
+   bei TIAExporter.Tia.PlcSoftwareExporter.ExportBlock(Object block, ExportState state, String plcName, String plcRoot, String groupPath, String folderName) in C:\ClaudeDev\CyberSec\Dorst\Bsp_Auftragsprojekte\TIAExporter\src\Tia\PlcSoftwareExporter.cs:Zeile 76.
+2026-04-28 12:07:51.119 +02:00 [ERROR] Failed to export block PLC_1/SPT_30/APP_30_CoolWater_DB: LicenseNotFoundException: Error when calling method 'Export' of type 'Siemens.Engineering.SW.Blocks.InstanceDB'.
+
+Necessary license 'STEP 7 Professional' is missing.
+2026-04-28 12:07:51.119 +02:00 [TRACE]    bei TIAExporter.Tia.TiaReflection.TryExport(Object instance, String filePath) in C:\ClaudeDev\CyberSec\Dorst\Bsp_Auftragsprojekte\TIAExporter\src\Tia\TiaReflection.cs:Zeile 101.
+   bei TIAExporter.Tia.PlcSoftwareExporter.ExportBlock(Object block, ExportState state, String plcName, String plcRoot, String groupPath, String folderName) in C:\ClaudeDev\CyberSec\Dorst\Bsp_Auftragsprojekte\TIAExporter\src\Tia\PlcSoftwareExporter.cs:Zeile 76.
+2026-04-28 12:07:51.166 +02:00 [ERROR] Failed to export block PLC_1/SPT_30/APP_30_Error_DB: LicenseNotFoundException: Error when calling method 'Export' of type 'Siemens.Engineering.SW.Blocks.InstanceDB'.
+
+Necessary license 'STEP 7 Professional' is missing.
+2026-04-28 12:07:51.166 +02:00 [TRACE]    bei TIAExporter.Tia.TiaReflection.TryExport(Object instance, String filePath) in C:\ClaudeDev\CyberSec\Dorst\Bsp_Auftragsprojekte\TIAExporter\src\Tia\TiaReflection.cs:Zeile 101.
+   bei TIAExporter.Tia.PlcSoftwareExporter.ExportBlock(Object block, ExportState state, String plcName, String plcRoot, String groupPath, String folderName) in C:\ClaudeDev\CyberSec\Dorst\Bsp_Auftragsprojekte\TIAExporter\src\Tia\PlcSoftwareExporter.cs:Zeile 76.
+2026-04-28 12:07:51.214 +02:00 [ERROR] Failed to export block PLC_1/SPT_30/APP_30_FillSys_DB: LicenseNotFoundException: Error when calling method 'Export' of type 'Siemens.Engineering.SW.Blocks.InstanceDB'.
+
+Necessary license 'STEP 7 Professional' is missing.
+2026-04-28 12:07:51.215 +02:00 [TRACE]    bei TIAExporter.Tia.TiaReflection.TryExport(Object instance, String filePath) in C:\ClaudeDev\CyberSec\Dorst\Bsp_Auftragsprojekte\TIAExporter\src\Tia\TiaReflection.cs:Zeile 101.
+   bei TIAExporter.Tia.PlcSoftwareExporter.ExportBlock(Object block, ExportState state, String plcName, String plcRoot, String groupPath, String folderName) in C:\ClaudeDev\CyberSec\Dorst\Bsp_Auftragsprojekte\TIAExporter\src\Tia\PlcSoftwareExporter.cs:Zeile 76.
+2026-04-28 12:07:51.281 +02:00 [ERROR] Failed to export block PLC_1/SPT_30/APP_30_Motors_DB: LicenseNotFoundException: Error when calling method 'Export' of type 'Siemens.Engineering.SW.Blocks.InstanceDB'.
+
+Necessary license 'STEP 7 Professional' is missing.
+2026-04-28 12:07:51.281 +02:00 [TRACE]    bei TIAExporter.Tia.TiaReflection.TryExport(Object instance, String filePath) in C:\ClaudeDev\CyberSec\Dorst\Bsp_Auftragsprojekte\TIAExporter\src\Tia\TiaReflection.cs:Zeile 101.
+   bei TIAExporter.Tia.PlcSoftwareExporter.ExportBlock(Object block, ExportState state, String plcName, String plcRoot, String groupPath, String folderName) in C:\ClaudeDev\CyberSec\Dorst\Bsp_Auftragsprojekte\TIAExporter\src\Tia\PlcSoftwareExporter.cs:Zeile 76.
+2026-04-28 12:07:51.332 +02:00 [ERROR] Failed to export block PLC_1/SPT_30/APP_30_Polyfoerder_DB: LicenseNotFoundException: Error when calling method 'Export' of type 'Siemens.Engineering.SW.Blocks.InstanceDB'.
+
+Necessary license 'STEP 7 Professional' is missing.
+2026-04-28 12:07:51.332 +02:00 [TRACE]    bei TIAExporter.Tia.TiaReflection.TryExport(Object instance, String filePath) in C:\ClaudeDev\CyberSec\Dorst\Bsp_Auftragsprojekte\TIAExporter\src\Tia\TiaReflection.cs:Zeile 101.
+   bei TIAExporter.Tia.PlcSoftwareExporter.ExportBlock(Object block, ExportState state, String plcName, String plcRoot, String groupPath, String folderName) in C:\ClaudeDev\CyberSec\Dorst\Bsp_Auftragsprojekte\TIAExporter\src\Tia\PlcSoftwareExporter.cs:Zeile 76.
+2026-04-28 12:07:51.417 +02:00 [ERROR] Failed to export block PLC_1/SPT_30/APP_30_TwPendValve_DB: LicenseNotFoundException: Error when calling method 'Export' of type 'Siemens.Engineering.SW.Blocks.InstanceDB'.
+
+Necessary license 'STEP 7 Professional' is missing.
+2026-04-28 12:07:51.417 +02:00 [TRACE]    bei TIAExporter.Tia.TiaReflection.TryExport(Object instance, String filePath) in C:\ClaudeDev\CyberSec\Dorst\Bsp_Auftragsprojekte\TIAExporter\src\Tia\TiaReflection.cs:Zeile 101.
+   bei TIAExporter.Tia.PlcSoftwareExporter.ExportBlock(Object block, ExportState state, String plcName, String plcRoot, String groupPath, String folderName) in C:\ClaudeDev\CyberSec\Dorst\Bsp_Auftragsprojekte\TIAExporter\src\Tia\PlcSoftwareExporter.cs:Zeile 76.
+2026-04-28 12:07:51.478 +02:00 [ERROR] Failed to export block PLC_1/SPT_40/GlobVar_SPT_40: LicenseNotFoundException: Error when calling method 'Export' of type 'Siemens.Engineering.SW.Blocks.GlobalDB'.
+
+Necessary license 'STEP 7 Professional' is missing.
+2026-04-28 12:07:51.478 +02:00 [TRACE]    bei TIAExporter.Tia.TiaReflection.TryExport(Object instance, String filePath) in C:\ClaudeDev\CyberSec\Dorst\Bsp_Auftragsprojekte\TIAExporter\src\Tia\TiaReflection.cs:Zeile 101.
+   bei TIAExporter.Tia.PlcSoftwareExporter.ExportBlock(Object block, ExportState state, String plcName, String plcRoot, String groupPath, String folderName) in C:\ClaudeDev\CyberSec\Dorst\Bsp_Auftragsprojekte\TIAExporter\src\Tia\PlcSoftwareExporter.cs:Zeile 76.
+2026-04-28 12:07:51.563 +02:00 [ERROR] Failed to export block PLC_1/SPT_40/APP_40_Motors: LicenseNotFoundException: Error when calling method 'Export' of type 'Siemens.Engineering.SW.Blocks.FB'.
+
+Necessary license 'STEP 7 Professional' is missing.
+2026-04-28 12:07:51.563 +02:00 [TRACE]    bei TIAExporter.Tia.TiaReflection.TryExport(Object instance, String filePath) in C:\ClaudeDev\CyberSec\Dorst\Bsp_Auftragsprojekte\TIAExporter\src\Tia\TiaReflection.cs:Zeile 101.
+   bei TIAExporter.Tia.PlcSoftwareExporter.ExportBlock(Object block, ExportState state, String plcName, String plcRoot, String groupPath, String folderName) in C:\ClaudeDev\CyberSec\Dorst\Bsp_Auftragsprojekte\TIAExporter\src\Tia\PlcSoftwareExporter.cs:Zeile 76.
+2026-04-28 12:07:51.621 +02:00 [ERROR] Failed to export block PLC_1/SPT_40/APP_40_PrDeDu: LicenseNotFoundException: Error when calling method 'Export' of type 'Siemens.Engineering.SW.Blocks.FB'.
+
+Necessary license 'STEP 7 Professional' is missing.
+2026-04-28 12:07:51.621 +02:00 [TRACE]    bei TIAExporter.Tia.TiaReflection.TryExport(Object instance, String filePath) in C:\ClaudeDev\CyberSec\Dorst\Bsp_Auftragsprojekte\TIAExporter\src\Tia\TiaReflection.cs:Zeile 101.
+   bei TIAExporter.Tia.PlcSoftwareExporter.ExportBlock(Object block, ExportState state, String plcName, String plcRoot, String groupPath, String folderName) in C:\ClaudeDev\CyberSec\Dorst\Bsp_Auftragsprojekte\TIAExporter\src\Tia\PlcSoftwareExporter.cs:Zeile 76.
+2026-04-28 12:07:51.669 +02:00 [ERROR] Failed to export block PLC_1/SPT_40/APP_40_DeDuVolumen: LicenseNotFoundException: Error when calling method 'Export' of type 'Siemens.Engineering.SW.Blocks.FB'.
+
+Necessary license 'STEP 7 Professional' is missing.
+2026-04-28 12:07:51.669 +02:00 [TRACE]    bei TIAExporter.Tia.TiaReflection.TryExport(Object instance, String filePath) in C:\ClaudeDev\CyberSec\Dorst\Bsp_Auftragsprojekte\TIAExporter\src\Tia\TiaReflection.cs:Zeile 101.
+   bei TIAExporter.Tia.PlcSoftwareExporter.ExportBlock(Object block, ExportState state, String plcName, String plcRoot, String groupPath, String folderName) in C:\ClaudeDev\CyberSec\Dorst\Bsp_Auftragsprojekte\TIAExporter\src\Tia\PlcSoftwareExporter.cs:Zeile 76.
+2026-04-28 12:07:51.726 +02:00 [ERROR] Failed to export block PLC_1/SPT_40/APP_40_DustLevel: LicenseNotFoundException: Error when calling method 'Export' of type 'Siemens.Engineering.SW.Blocks.FB'.
+
+Necessary license 'STEP 7 Professional' is missing.
+2026-04-28 12:07:51.726 +02:00 [TRACE]    bei TIAExporter.Tia.TiaReflection.TryExport(Object instance, String filePath) in C:\ClaudeDev\CyberSec\Dorst\Bsp_Auftragsprojekte\TIAExporter\src\Tia\TiaReflection.cs:Zeile 101.
+   bei TIAExporter.Tia.PlcSoftwareExporter.ExportBlock(Object block, ExportState state, String plcName, String plcRoot, String groupPath, String folderName) in C:\ClaudeDev\CyberSec\Dorst\Bsp_Auftragsprojekte\TIAExporter\src\Tia\PlcSoftwareExporter.cs:Zeile 76.
+2026-04-28 12:07:51.778 +02:00 [ERROR] Failed to export block PLC_1/SPT_40/APP_40_FlyFire: LicenseNotFoundException: Error when calling method 'Export' of type 'Siemens.Engineering.SW.Blocks.FB'.
+
+Necessary license 'STEP 7 Professional' is missing.
+2026-04-28 12:07:51.778 +02:00 [TRACE]    bei TIAExporter.Tia.TiaReflection.TryExport(Object instance, String filePath) in C:\ClaudeDev\CyberSec\Dorst\Bsp_Auftragsprojekte\TIAExporter\src\Tia\TiaReflection.cs:Zeile 101.
+   bei TIAExporter.Tia.PlcSoftwareExporter.ExportBlock(Object block, ExportState state, String plcName, String plcRoot, String groupPath, String folderName) in C:\ClaudeDev\CyberSec\Dorst\Bsp_Auftragsprojekte\TIAExporter\src\Tia\PlcSoftwareExporter.cs:Zeile 76.
+2026-04-28 12:07:51.835 +02:00 [ERROR] Failed to export block PLC_1/SPT_40/APP_40_KnockValve: LicenseNotFoundException: Error when calling method 'Export' of type 'Siemens.Engineering.SW.Blocks.FB'.
+
+Necessary license 'STEP 7 Professional' is missing.
+2026-04-28 12:07:51.835 +02:00 [TRACE]    bei TIAExporter.Tia.TiaReflection.TryExport(Object instance, String filePath) in C:\ClaudeDev\CyberSec\Dorst\Bsp_Auftragsprojekte\TIAExporter\src\Tia\TiaReflection.cs:Zeile 101.
+   bei TIAExporter.Tia.PlcSoftwareExporter.ExportBlock(Object block, ExportState state, String plcName, String plcRoot, String groupPath, String folderName) in C:\ClaudeDev\CyberSec\Dorst\Bsp_Auftragsprojekte\TIAExporter\src\Tia\PlcSoftwareExporter.cs:Zeile 76.
+2026-04-28 12:07:51.889 +02:00 [ERROR] Failed to export block PLC_1/SPT_40/APP_40_Return: LicenseNotFoundException: Error when calling method 'Export' of type 'Siemens.Engineering.SW.Blocks.FB'.
+
+Necessary license 'STEP 7 Professional' is missing.
+2026-04-28 12:07:51.889 +02:00 [TRACE]    bei TIAExporter.Tia.TiaReflection.TryExport(Object instance, String filePath) in C:\ClaudeDev\CyberSec\Dorst\Bsp_Auftragsprojekte\TIAExporter\src\Tia\TiaReflection.cs:Zeile 101.
+   bei TIAExporter.Tia.PlcSoftwareExporter.ExportBlock(Object block, ExportState state, String plcName, String plcRoot, String groupPath, String folderName) in C:\ClaudeDev\CyberSec\Dorst\Bsp_Auftragsprojekte\TIAExporter\src\Tia\PlcSoftwareExporter.cs:Zeile 76.
+2026-04-28 12:07:51.950 +02:00 [ERROR] Failed to export block PLC_1/SPT_40/APP_40_FlRaCy: LicenseNotFoundException: Error when calling method 'Export' of type 'Siemens.Engineering.SW.Blocks.FB'.
+
+Necessary license 'STEP 7 Professional' is missing.
+2026-04-28 12:07:51.950 +02:00 [TRACE]    bei TIAExporter.Tia.TiaReflection.TryExport(Object instance, String filePath) in C:\ClaudeDev\CyberSec\Dorst\Bsp_Auftragsprojekte\TIAExporter\src\Tia\TiaReflection.cs:Zeile 101.
+   bei TIAExporter.Tia.PlcSoftwareExporter.ExportBlock(Object block, ExportState state, String plcName, String plcRoot, String groupPath, String folderName) in C:\ClaudeDev\CyberSec\Dorst\Bsp_Auftragsprojekte\TIAExporter\src\Tia\PlcSoftwareExporter.cs:Zeile 76.
+2026-04-28 12:07:51.997 +02:00 [ERROR] Failed to export block PLC_1/SPT_40/APP_40_DeDuVolumen_DB: LicenseNotFoundException: Error when calling method 'Export' of type 'Siemens.Engineering.SW.Blocks.InstanceDB'.
+
+Necessary license 'STEP 7 Professional' is missing.
+2026-04-28 12:07:51.997 +02:00 [TRACE]    bei TIAExporter.Tia.TiaReflection.TryExport(Object instance, String filePath) in C:\ClaudeDev\CyberSec\Dorst\Bsp_Auftragsprojekte\TIAExporter\src\Tia\TiaReflection.cs:Zeile 101.
+   bei TIAExporter.Tia.PlcSoftwareExporter.ExportBlock(Object block, ExportState state, String plcName, String plcRoot, String groupPath, String folderName) in C:\ClaudeDev\CyberSec\Dorst\Bsp_Auftragsprojekte\TIAExporter\src\Tia\PlcSoftwareExporter.cs:Zeile 76.
+2026-04-28 12:07:52.069 +02:00 [ERROR] Failed to export block PLC_1/SPT_40/APP_40_DustLevel_DB: LicenseNotFoundException: Error when calling method 'Export' of type 'Siemens.Engineering.SW.Blocks.InstanceDB'.
+
+Necessary license 'STEP 7 Professional' is missing.
+2026-04-28 12:07:52.069 +02:00 [TRACE]    bei TIAExporter.Tia.TiaReflection.TryExport(Object instance, String filePath) in C:\ClaudeDev\CyberSec\Dorst\Bsp_Auftragsprojekte\TIAExporter\src\Tia\TiaReflection.cs:Zeile 101.
+   bei TIAExporter.Tia.PlcSoftwareExporter.ExportBlock(Object block, ExportState state, String plcName, String plcRoot, String groupPath, String folderName) in C:\ClaudeDev\CyberSec\Dorst\Bsp_Auftragsprojekte\TIAExporter\src\Tia\PlcSoftwareExporter.cs:Zeile 76.
+2026-04-28 12:07:52.117 +02:00 [ERROR] Failed to export block PLC_1/SPT_40/APP_40_Error_DB: LicenseNotFoundException: Error when calling method 'Export' of type 'Siemens.Engineering.SW.Blocks.InstanceDB'.
+
+Necessary license 'STEP 7 Professional' is missing.
+2026-04-28 12:07:52.117 +02:00 [TRACE]    bei TIAExporter.Tia.TiaReflection.TryExport(Object instance, String filePath) in C:\ClaudeDev\CyberSec\Dorst\Bsp_Auftragsprojekte\TIAExporter\src\Tia\TiaReflection.cs:Zeile 101.
+   bei TIAExporter.Tia.PlcSoftwareExporter.ExportBlock(Object block, ExportState state, String plcName, String plcRoot, String groupPath, String folderName) in C:\ClaudeDev\CyberSec\Dorst\Bsp_Auftragsprojekte\TIAExporter\src\Tia\PlcSoftwareExporter.cs:Zeile 76.
+2026-04-28 12:07:52.197 +02:00 [ERROR] Failed to export block PLC_1/SPT_40/APP_40_FlRaCy_DB: LicenseNotFoundException: Error when calling method 'Export' of type 'Siemens.Engineering.SW.Blocks.InstanceDB'.
+
+Necessary license 'STEP 7 Professional' is missing.
+2026-04-28 12:07:52.197 +02:00 [TRACE]    bei TIAExporter.Tia.TiaReflection.TryExport(Object instance, String filePath) in C:\ClaudeDev\CyberSec\Dorst\Bsp_Auftragsprojekte\TIAExporter\src\Tia\TiaReflection.cs:Zeile 101.
+   bei TIAExporter.Tia.PlcSoftwareExporter.ExportBlock(Object block, ExportState state, String plcName, String plcRoot, String groupPath, String folderName) in C:\ClaudeDev\CyberSec\Dorst\Bsp_Auftragsprojekte\TIAExporter\src\Tia\PlcSoftwareExporter.cs:Zeile 76.
+2026-04-28 12:07:52.243 +02:00 [ERROR] Failed to export block PLC_1/SPT_40/APP_40_FlyFire_DB: LicenseNotFoundException: Error when calling method 'Export' of type 'Siemens.Engineering.SW.Blocks.InstanceDB'.
+
+Necessary license 'STEP 7 Professional' is missing.
+2026-04-28 12:07:52.243 +02:00 [TRACE]    bei TIAExporter.Tia.TiaReflection.TryExport(Object instance, String filePath) in C:\ClaudeDev\CyberSec\Dorst\Bsp_Auftragsprojekte\TIAExporter\src\Tia\TiaReflection.cs:Zeile 101.
+   bei TIAExporter.Tia.PlcSoftwareExporter.ExportBlock(Object block, ExportState state, String plcName, String plcRoot, String groupPath, String folderName) in C:\ClaudeDev\CyberSec\Dorst\Bsp_Auftragsprojekte\TIAExporter\src\Tia\PlcSoftwareExporter.cs:Zeile 76.
+2026-04-28 12:07:52.301 +02:00 [ERROR] Failed to export block PLC_1/SPT_40/APP_40_KnockValve_DB: LicenseNotFoundException: Error when calling method 'Export' of type 'Siemens.Engineering.SW.Blocks.InstanceDB'.
+
+Necessary license 'STEP 7 Professional' is missing.
+2026-04-28 12:07:52.301 +02:00 [TRACE]    bei TIAExporter.Tia.TiaReflection.TryExport(Object instance, String filePath) in C:\ClaudeDev\CyberSec\Dorst\Bsp_Auftragsprojekte\TIAExporter\src\Tia\TiaReflection.cs:Zeile 101.
+   bei TIAExporter.Tia.PlcSoftwareExporter.ExportBlock(Object block, ExportState state, String plcName, String plcRoot, String groupPath, String folderName) in C:\ClaudeDev\CyberSec\Dorst\Bsp_Auftragsprojekte\TIAExporter\src\Tia\PlcSoftwareExporter.cs:Zeile 76.
+2026-04-28 12:07:52.360 +02:00 [ERROR] Failed to export block PLC_1/SPT_40/APP_40_Motors_DB: LicenseNotFoundException: Error when calling method 'Export' of type 'Siemens.Engineering.SW.Blocks.InstanceDB'.
+
+Necessary license 'STEP 7 Professional' is missing.
+2026-04-28 12:07:52.361 +02:00 [TRACE]    bei TIAExporter.Tia.TiaReflection.TryExport(Object instance, String filePath) in C:\ClaudeDev\CyberSec\Dorst\Bsp_Auftragsprojekte\TIAExporter\src\Tia\TiaReflection.cs:Zeile 101.
+   bei TIAExporter.Tia.PlcSoftwareExporter.ExportBlock(Object block, ExportState state, String plcName, String plcRoot, String groupPath, String folderName) in C:\ClaudeDev\CyberSec\Dorst\Bsp_Auftragsprojekte\TIAExporter\src\Tia\PlcSoftwareExporter.cs:Zeile 76.
+2026-04-28 12:07:52.429 +02:00 [ERROR] Failed to export block PLC_1/SPT_40/APP_40_PrDeDu_DB: LicenseNotFoundException: Error when calling method 'Export' of type 'Siemens.Engineering.SW.Blocks.InstanceDB'.
+
+Necessary license 'STEP 7 Professional' is missing.
+2026-04-28 12:07:52.429 +02:00 [TRACE]    bei TIAExporter.Tia.TiaReflection.TryExport(Object instance, String filePath) in C:\ClaudeDev\CyberSec\Dorst\Bsp_Auftragsprojekte\TIAExporter\src\Tia\TiaReflection.cs:Zeile 101.
+   bei TIAExporter.Tia.PlcSoftwareExporter.ExportBlock(Object block, ExportState state, String plcName, String plcRoot, String groupPath, String folderName) in C:\ClaudeDev\CyberSec\Dorst\Bsp_Auftragsprojekte\TIAExporter\src\Tia\PlcSoftwareExporter.cs:Zeile 76.
+2026-04-28 12:07:52.507 +02:00 [ERROR] Failed to export block PLC_1/SPT_40/APP_40_Return_DB: LicenseNotFoundException: Error when calling method 'Export' of type 'Siemens.Engineering.SW.Blocks.InstanceDB'.
+
+Necessary license 'STEP 7 Professional' is missing.
+2026-04-28 12:07:52.507 +02:00 [TRACE]    bei TIAExporter.Tia.TiaReflection.TryExport(Object instance, String filePath) in C:\ClaudeDev\CyberSec\Dorst\Bsp_Auftragsprojekte\TIAExporter\src\Tia\TiaReflection.cs:Zeile 101.
+   bei TIAExporter.Tia.PlcSoftwareExporter.ExportBlock(Object block, ExportState state, String plcName, String plcRoot, String groupPath, String folderName) in C:\ClaudeDev\CyberSec\Dorst\Bsp_Auftragsprojekte\TIAExporter\src\Tia\PlcSoftwareExporter.cs:Zeile 76.
+2026-04-28 12:07:52.587 +02:00 [ERROR] Failed to export block PLC_1/SPT_40/APP_40_RotaryFeeder_DB: LicenseNotFoundException: Error when calling method 'Export' of type 'Siemens.Engineering.SW.Blocks.InstanceDB'.
+
+Necessary license 'STEP 7 Professional' is missing.
+2026-04-28 12:07:52.587 +02:00 [TRACE]    bei TIAExporter.Tia.TiaReflection.TryExport(Object instance, String filePath) in C:\ClaudeDev\CyberSec\Dorst\Bsp_Auftragsprojekte\TIAExporter\src\Tia\TiaReflection.cs:Zeile 101.
+   bei TIAExporter.Tia.PlcSoftwareExporter.ExportBlock(Object block, ExportState state, String plcName, String plcRoot, String groupPath, String folderName) in C:\ClaudeDev\CyberSec\Dorst\Bsp_Auftragsprojekte\TIAExporter\src\Tia\PlcSoftwareExporter.cs:Zeile 76.
+2026-04-28 12:07:52.650 +02:00 [ERROR] Failed to export block PLC_1/SPT_40/APP_40_SwitchFlap_DB: LicenseNotFoundException: Error when calling method 'Export' of type 'Siemens.Engineering.SW.Blocks.InstanceDB'.
+
+Necessary license 'STEP 7 Professional' is missing.
+2026-04-28 12:07:52.650 +02:00 [TRACE]    bei TIAExporter.Tia.TiaReflection.TryExport(Object instance, String filePath) in C:\ClaudeDev\CyberSec\Dorst\Bsp_Auftragsprojekte\TIAExporter\src\Tia\TiaReflection.cs:Zeile 101.
+   bei TIAExporter.Tia.PlcSoftwareExporter.ExportBlock(Object block, ExportState state, String plcName, String plcRoot, String groupPath, String folderName) in C:\ClaudeDev\CyberSec\Dorst\Bsp_Auftragsprojekte\TIAExporter\src\Tia\PlcSoftwareExporter.cs:Zeile 76.
+2026-04-28 12:07:52.729 +02:00 [ERROR] Failed to export block PLC_1/SPT_40/APP_40_MotorServo: LicenseNotFoundException: Error when calling method 'Export' of type 'Siemens.Engineering.SW.Blocks.FB'.
+
+Necessary license 'STEP 7 Professional' is missing.
+2026-04-28 12:07:52.729 +02:00 [TRACE]    bei TIAExporter.Tia.TiaReflection.TryExport(Object instance, String filePath) in C:\ClaudeDev\CyberSec\Dorst\Bsp_Auftragsprojekte\TIAExporter\src\Tia\TiaReflection.cs:Zeile 101.
+   bei TIAExporter.Tia.PlcSoftwareExporter.ExportBlock(Object block, ExportState state, String plcName, String plcRoot, String groupPath, String folderName) in C:\ClaudeDev\CyberSec\Dorst\Bsp_Auftragsprojekte\TIAExporter\src\Tia\PlcSoftwareExporter.cs:Zeile 76.
+2026-04-28 12:07:52.798 +02:00 [ERROR] Failed to export block PLC_1/SPT_40/MotorServo_ReturnFan_DB: LicenseNotFoundException: Error when calling method 'Export' of type 'Siemens.Engineering.SW.Blocks.InstanceDB'.
+
+Necessary license 'STEP 7 Professional' is missing.
+2026-04-28 12:07:52.798 +02:00 [TRACE]    bei TIAExporter.Tia.TiaReflection.TryExport(Object instance, String filePath) in C:\ClaudeDev\CyberSec\Dorst\Bsp_Auftragsprojekte\TIAExporter\src\Tia\TiaReflection.cs:Zeile 101.
+   bei TIAExporter.Tia.PlcSoftwareExporter.ExportBlock(Object block, ExportState state, String plcName, String plcRoot, String groupPath, String folderName) in C:\ClaudeDev\CyberSec\Dorst\Bsp_Auftragsprojekte\TIAExporter\src\Tia\PlcSoftwareExporter.cs:Zeile 76.
+2026-04-28 12:07:53.013 +02:00 [ERROR] Failed to export block PLC_1/SPT_40/APP_40_MotorServo_DB: LicenseNotFoundException: Error when calling method 'Export' of type 'Siemens.Engineering.SW.Blocks.InstanceDB'.
+
+Necessary license 'STEP 7 Professional' is missing.
+2026-04-28 12:07:53.014 +02:00 [TRACE]    bei TIAExporter.Tia.TiaReflection.TryExport(Object instance, String filePath) in C:\ClaudeDev\CyberSec\Dorst\Bsp_Auftragsprojekte\TIAExporter\src\Tia\TiaReflection.cs:Zeile 101.
+   bei TIAExporter.Tia.PlcSoftwareExporter.ExportBlock(Object block, ExportState state, String plcName, String plcRoot, String groupPath, String folderName) in C:\ClaudeDev\CyberSec\Dorst\Bsp_Auftragsprojekte\TIAExporter\src\Tia\PlcSoftwareExporter.cs:Zeile 76.
+2026-04-28 12:07:53.323 +02:00 [ERROR] Failed to export block PLC_1/SPT_40/APP_40_Error: LicenseNotFoundException: Error when calling method 'Export' of type 'Siemens.Engineering.SW.Blocks.FB'.
+
+Necessary license 'STEP 7 Professional' is missing.
+2026-04-28 12:07:53.323 +02:00 [TRACE]    bei TIAExporter.Tia.TiaReflection.TryExport(Object instance, String filePath) in C:\ClaudeDev\CyberSec\Dorst\Bsp_Auftragsprojekte\TIAExporter\src\Tia\TiaReflection.cs:Zeile 101.
+   bei TIAExporter.Tia.PlcSoftwareExporter.ExportBlock(Object block, ExportState state, String plcName, String plcRoot, String groupPath, String folderName) in C:\ClaudeDev\CyberSec\Dorst\Bsp_Auftragsprojekte\TIAExporter\src\Tia\PlcSoftwareExporter.cs:Zeile 76.
+2026-04-28 12:07:53.476 +02:00 [ERROR] Failed to export block PLC_1/SPT_40/APP_40_RotaryFeeder: LicenseNotFoundException: Error when calling method 'Export' of type 'Siemens.Engineering.SW.Blocks.FB'.
+
+Necessary license 'STEP 7 Professional' is missing.
+2026-04-28 12:07:53.477 +02:00 [TRACE]    bei TIAExporter.Tia.TiaReflection.TryExport(Object instance, String filePath) in C:\ClaudeDev\CyberSec\Dorst\Bsp_Auftragsprojekte\TIAExporter\src\Tia\TiaReflection.cs:Zeile 101.
+   bei TIAExporter.Tia.PlcSoftwareExporter.ExportBlock(Object block, ExportState state, String plcName, String plcRoot, String groupPath, String folderName) in C:\ClaudeDev\CyberSec\Dorst\Bsp_Auftragsprojekte\TIAExporter\src\Tia\PlcSoftwareExporter.cs:Zeile 76.
+2026-04-28 12:07:53.616 +02:00 [ERROR] Failed to export block PLC_1/SPT_40/APP_40_SwitchFlap: LicenseNotFoundException: Error when calling method 'Export' of type 'Siemens.Engineering.SW.Blocks.FB'.
+
+Necessary license 'STEP 7 Professional' is missing.
+2026-04-28 12:07:53.617 +02:00 [TRACE]    bei TIAExporter.Tia.TiaReflection.TryExport(Object instance, String filePath) in C:\ClaudeDev\CyberSec\Dorst\Bsp_Auftragsprojekte\TIAExporter\src\Tia\TiaReflection.cs:Zeile 101.
+   bei TIAExporter.Tia.PlcSoftwareExporter.ExportBlock(Object block, ExportState state, String plcName, String plcRoot, String groupPath, String folderName) in C:\ClaudeDev\CyberSec\Dorst\Bsp_Auftragsprojekte\TIAExporter\src\Tia\PlcSoftwareExporter.cs:Zeile 76.
+2026-04-28 12:07:53.710 +02:00 [ERROR] Failed to export block PLC_1/SPT_50/GlobVar_SPT_50: LicenseNotFoundException: Error when calling method 'Export' of type 'Siemens.Engineering.SW.Blocks.GlobalDB'.
+
+Necessary license 'STEP 7 Professional' is missing.
+2026-04-28 12:07:53.710 +02:00 [TRACE]    bei TIAExporter.Tia.TiaReflection.TryExport(Object instance, String filePath) in C:\ClaudeDev\CyberSec\Dorst\Bsp_Auftragsprojekte\TIAExporter\src\Tia\TiaReflection.cs:Zeile 101.
+   bei TIAExporter.Tia.PlcSoftwareExporter.ExportBlock(Object block, ExportState state, String plcName, String plcRoot, String groupPath, String folderName) in C:\ClaudeDev\CyberSec\Dorst\Bsp_Auftragsprojekte\TIAExporter\src\Tia\PlcSoftwareExporter.cs:Zeile 76.
+2026-04-28 12:07:53.789 +02:00 [ERROR] Failed to export block PLC_1/SPT_50/APP_50_DiffNachfilter: LicenseNotFoundException: Error when calling method 'Export' of type 'Siemens.Engineering.SW.Blocks.FB'.
+
+Necessary license 'STEP 7 Professional' is missing.
+2026-04-28 12:07:53.789 +02:00 [TRACE]    bei TIAExporter.Tia.TiaReflection.TryExport(Object instance, String filePath) in C:\ClaudeDev\CyberSec\Dorst\Bsp_Auftragsprojekte\TIAExporter\src\Tia\TiaReflection.cs:Zeile 101.
+   bei TIAExporter.Tia.PlcSoftwareExporter.ExportBlock(Object block, ExportState state, String plcName, String plcRoot, String groupPath, String folderName) in C:\ClaudeDev\CyberSec\Dorst\Bsp_Auftragsprojekte\TIAExporter\src\Tia\PlcSoftwareExporter.cs:Zeile 76.
+2026-04-28 12:07:53.869 +02:00 [ERROR] Failed to export block PLC_1/SPT_50/APP_50_DustLevel: LicenseNotFoundException: Error when calling method 'Export' of type 'Siemens.Engineering.SW.Blocks.FB'.
+
+Necessary license 'STEP 7 Professional' is missing.
+2026-04-28 12:07:53.869 +02:00 [TRACE]    bei TIAExporter.Tia.TiaReflection.TryExport(Object instance, String filePath) in C:\ClaudeDev\CyberSec\Dorst\Bsp_Auftragsprojekte\TIAExporter\src\Tia\TiaReflection.cs:Zeile 101.
+   bei TIAExporter.Tia.PlcSoftwareExporter.ExportBlock(Object block, ExportState state, String plcName, String plcRoot, String groupPath, String folderName) in C:\ClaudeDev\CyberSec\Dorst\Bsp_Auftragsprojekte\TIAExporter\src\Tia\PlcSoftwareExporter.cs:Zeile 76.
+2026-04-28 12:07:53.949 +02:00 [ERROR] Failed to export block PLC_1/SPT_50/APP_50_HeatExchange: LicenseNotFoundException: Error when calling method 'Export' of type 'Siemens.Engineering.SW.Blocks.FB'.
+
+Necessary license 'STEP 7 Professional' is missing.
+2026-04-28 12:07:53.950 +02:00 [TRACE]    bei TIAExporter.Tia.TiaReflection.TryExport(Object instance, String filePath) in C:\ClaudeDev\CyberSec\Dorst\Bsp_Auftragsprojekte\TIAExporter\src\Tia\TiaReflection.cs:Zeile 101.
+   bei TIAExporter.Tia.PlcSoftwareExporter.ExportBlock(Object block, ExportState state, String plcName, String plcRoot, String groupPath, String folderName) in C:\ClaudeDev\CyberSec\Dorst\Bsp_Auftragsprojekte\TIAExporter\src\Tia\PlcSoftwareExporter.cs:Zeile 76.
+2026-04-28 12:07:54.026 +02:00 [ERROR] Failed to export block PLC_1/SPT_50/APP_50_KnockValve: LicenseNotFoundException: Error when calling method 'Export' of type 'Siemens.Engineering.SW.Blocks.FB'.
+
+Necessary license 'STEP 7 Professional' is missing.
+2026-04-28 12:07:54.026 +02:00 [TRACE]    bei TIAExporter.Tia.TiaReflection.TryExport(Object instance, String filePath) in C:\ClaudeDev\CyberSec\Dorst\Bsp_Auftragsprojekte\TIAExporter\src\Tia\TiaReflection.cs:Zeile 101.
+   bei TIAExporter.Tia.PlcSoftwareExporter.ExportBlock(Object block, ExportState state, String plcName, String plcRoot, String groupPath, String folderName) in C:\ClaudeDev\CyberSec\Dorst\Bsp_Auftragsprojekte\TIAExporter\src\Tia\PlcSoftwareExporter.cs:Zeile 76.
+2026-04-28 12:07:54.120 +02:00 [ERROR] Failed to export block PLC_1/SPT_50/APP_50_MotorFeedWorm: LicenseNotFoundException: Error when calling method 'Export' of type 'Siemens.Engineering.SW.Blocks.FB'.
+
+Necessary license 'STEP 7 Professional' is missing.
+2026-04-28 12:07:54.120 +02:00 [TRACE]    bei TIAExporter.Tia.TiaReflection.TryExport(Object instance, String filePath) in C:\ClaudeDev\CyberSec\Dorst\Bsp_Auftragsprojekte\TIAExporter\src\Tia\TiaReflection.cs:Zeile 101.
+   bei TIAExporter.Tia.PlcSoftwareExporter.ExportBlock(Object block, ExportState state, String plcName, String plcRoot, String groupPath, String folderName) in C:\ClaudeDev\CyberSec\Dorst\Bsp_Auftragsprojekte\TIAExporter\src\Tia\PlcSoftwareExporter.cs:Zeile 76.
+2026-04-28 12:07:54.181 +02:00 [ERROR] Failed to export block PLC_1/SPT_50/APP_50_Prozessluft: LicenseNotFoundException: Error when calling method 'Export' of type 'Siemens.Engineering.SW.Blocks.FB'.
+
+Necessary license 'STEP 7 Professional' is missing.
+2026-04-28 12:07:54.181 +02:00 [TRACE]    bei TIAExporter.Tia.TiaReflection.TryExport(Object instance, String filePath) in C:\ClaudeDev\CyberSec\Dorst\Bsp_Auftragsprojekte\TIAExporter\src\Tia\TiaReflection.cs:Zeile 101.
+   bei TIAExporter.Tia.PlcSoftwareExporter.ExportBlock(Object block, ExportState state, String plcName, String plcRoot, String groupPath, String folderName) in C:\ClaudeDev\CyberSec\Dorst\Bsp_Auftragsprojekte\TIAExporter\src\Tia\PlcSoftwareExporter.cs:Zeile 76.
+2026-04-28 12:07:54.246 +02:00 [ERROR] Failed to export block PLC_1/SPT_50/APP_50_PoDedu: LicenseNotFoundException: Error when calling method 'Export' of type 'Siemens.Engineering.SW.Blocks.FB'.
+
+Necessary license 'STEP 7 Professional' is missing.
+2026-04-28 12:07:54.246 +02:00 [TRACE]    bei TIAExporter.Tia.TiaReflection.TryExport(Object instance, String filePath) in C:\ClaudeDev\CyberSec\Dorst\Bsp_Auftragsprojekte\TIAExporter\src\Tia\TiaReflection.cs:Zeile 101.
+   bei TIAExporter.Tia.PlcSoftwareExporter.ExportBlock(Object block, ExportState state, String plcName, String plcRoot, String groupPath, String folderName) in C:\ClaudeDev\CyberSec\Dorst\Bsp_Auftragsprojekte\TIAExporter\src\Tia\PlcSoftwareExporter.cs:Zeile 76.
+2026-04-28 12:07:54.308 +02:00 [ERROR] Failed to export block PLC_1/SPT_50/APP_50_PoDeDuVolumen: LicenseNotFoundException: Error when calling method 'Export' of type 'Siemens.Engineering.SW.Blocks.FB'.
+
+Necessary license 'STEP 7 Professional' is missing.
+2026-04-28 12:07:54.308 +02:00 [TRACE]    bei TIAExporter.Tia.TiaReflection.TryExport(Object instance, String filePath) in C:\ClaudeDev\CyberSec\Dorst\Bsp_Auftragsprojekte\TIAExporter\src\Tia\TiaReflection.cs:Zeile 101.
+   bei TIAExporter.Tia.PlcSoftwareExporter.ExportBlock(Object block, ExportState state, String plcName, String plcRoot, String groupPath, String folderName) in C:\ClaudeDev\CyberSec\Dorst\Bsp_Auftragsprojekte\TIAExporter\src\Tia\PlcSoftwareExporter.cs:Zeile 76.
+2026-04-28 12:07:54.388 +02:00 [ERROR] Failed to export block PLC_1/SPT_50/APP_50_TempEHeizung: LicenseNotFoundException: Error when calling method 'Export' of type 'Siemens.Engineering.SW.Blocks.FB'.
+
+Necessary license 'STEP 7 Professional' is missing.
+2026-04-28 12:07:54.388 +02:00 [TRACE]    bei TIAExporter.Tia.TiaReflection.TryExport(Object instance, String filePath) in C:\ClaudeDev\CyberSec\Dorst\Bsp_Auftragsprojekte\TIAExporter\src\Tia\TiaReflection.cs:Zeile 101.
+   bei TIAExporter.Tia.PlcSoftwareExporter.ExportBlock(Object block, ExportState state, String plcName, String plcRoot, String groupPath, String folderName) in C:\ClaudeDev\CyberSec\Dorst\Bsp_Auftragsprojekte\TIAExporter\src\Tia\PlcSoftwareExporter.cs:Zeile 76.
+2026-04-28 12:07:54.449 +02:00 [ERROR] Failed to export block PLC_1/SPT_50/APP_50_Unterdruckfilter: LicenseNotFoundException: Error when calling method 'Export' of type 'Siemens.Engineering.SW.Blocks.FB'.
+
+Necessary license 'STEP 7 Professional' is missing.
+2026-04-28 12:07:54.449 +02:00 [TRACE]    bei TIAExporter.Tia.TiaReflection.TryExport(Object instance, String filePath) in C:\ClaudeDev\CyberSec\Dorst\Bsp_Auftragsprojekte\TIAExporter\src\Tia\TiaReflection.cs:Zeile 101.
+   bei TIAExporter.Tia.PlcSoftwareExporter.ExportBlock(Object block, ExportState state, String plcName, String plcRoot, String groupPath, String folderName) in C:\ClaudeDev\CyberSec\Dorst\Bsp_Auftragsprojekte\TIAExporter\src\Tia\PlcSoftwareExporter.cs:Zeile 76.
+2026-04-28 12:07:54.524 +02:00 [ERROR] Failed to export block PLC_1/SPT_50/APP_50_FilterValve: LicenseNotFoundException: Error when calling method 'Export' of type 'Siemens.Engineering.SW.Blocks.FB'.
+
+Necessary license 'STEP 7 Professional' is missing.
+2026-04-28 12:07:54.524 +02:00 [TRACE]    bei TIAExporter.Tia.TiaReflection.TryExport(Object instance, String filePath) in C:\ClaudeDev\CyberSec\Dorst\Bsp_Auftragsprojekte\TIAExporter\src\Tia\TiaReflection.cs:Zeile 101.
+   bei TIAExporter.Tia.PlcSoftwareExporter.ExportBlock(Object block, ExportState state, String plcName, String plcRoot, String groupPath, String folderName) in C:\ClaudeDev\CyberSec\Dorst\Bsp_Auftragsprojekte\TIAExporter\src\Tia\PlcSoftwareExporter.cs:Zeile 76.
+2026-04-28 12:07:54.588 +02:00 [ERROR] Failed to export block PLC_1/SPT_50/APP_50_DiffNachfilter_DB: LicenseNotFoundException: Error when calling method 'Export' of type 'Siemens.Engineering.SW.Blocks.InstanceDB'.
+
+Necessary license 'STEP 7 Professional' is missing.
+2026-04-28 12:07:54.588 +02:00 [TRACE]    bei TIAExporter.Tia.TiaReflection.TryExport(Object instance, String filePath) in C:\ClaudeDev\CyberSec\Dorst\Bsp_Auftragsprojekte\TIAExporter\src\Tia\TiaReflection.cs:Zeile 101.
+   bei TIAExporter.Tia.PlcSoftwareExporter.ExportBlock(Object block, ExportState state, String plcName, String plcRoot, String groupPath, String folderName) in C:\ClaudeDev\CyberSec\Dorst\Bsp_Auftragsprojekte\TIAExporter\src\Tia\PlcSoftwareExporter.cs:Zeile 76.
+2026-04-28 12:07:54.650 +02:00 [ERROR] Failed to export block PLC_1/SPT_50/APP_50_Druckluft_DB: LicenseNotFoundException: Error when calling method 'Export' of type 'Siemens.Engineering.SW.Blocks.InstanceDB'.
+
+Necessary license 'STEP 7 Professional' is missing.
+2026-04-28 12:07:54.650 +02:00 [TRACE]    bei TIAExporter.Tia.TiaReflection.TryExport(Object instance, String filePath) in C:\ClaudeDev\CyberSec\Dorst\Bsp_Auftragsprojekte\TIAExporter\src\Tia\TiaReflection.cs:Zeile 101.
+   bei TIAExporter.Tia.PlcSoftwareExporter.ExportBlock(Object block, ExportState state, String plcName, String plcRoot, String groupPath, String folderName) in C:\ClaudeDev\CyberSec\Dorst\Bsp_Auftragsprojekte\TIAExporter\src\Tia\PlcSoftwareExporter.cs:Zeile 76.
+2026-04-28 12:07:54.714 +02:00 [ERROR] Failed to export block PLC_1/SPT_50/APP_50_DustLevel_DB: LicenseNotFoundException: Error when calling method 'Export' of type 'Siemens.Engineering.SW.Blocks.InstanceDB'.
+
+Necessary license 'STEP 7 Professional' is missing.
+2026-04-28 12:07:54.714 +02:00 [TRACE]    bei TIAExporter.Tia.TiaReflection.TryExport(Object instance, String filePath) in C:\ClaudeDev\CyberSec\Dorst\Bsp_Auftragsprojekte\TIAExporter\src\Tia\TiaReflection.cs:Zeile 101.
+   bei TIAExporter.Tia.PlcSoftwareExporter.ExportBlock(Object block, ExportState state, String plcName, String plcRoot, String groupPath, String folderName) in C:\ClaudeDev\CyberSec\Dorst\Bsp_Auftragsprojekte\TIAExporter\src\Tia\PlcSoftwareExporter.cs:Zeile 76.
+2026-04-28 12:07:54.775 +02:00 [ERROR] Failed to export block PLC_1/SPT_50/APP_50_Error_DB: LicenseNotFoundException: Error when calling method 'Export' of type 'Siemens.Engineering.SW.Blocks.InstanceDB'.
+
+Necessary license 'STEP 7 Professional' is missing.
+2026-04-28 12:07:54.775 +02:00 [TRACE]    bei TIAExporter.Tia.TiaReflection.TryExport(Object instance, String filePath) in C:\ClaudeDev\CyberSec\Dorst\Bsp_Auftragsprojekte\TIAExporter\src\Tia\TiaReflection.cs:Zeile 101.
+   bei TIAExporter.Tia.PlcSoftwareExporter.ExportBlock(Object block, ExportState state, String plcName, String plcRoot, String groupPath, String folderName) in C:\ClaudeDev\CyberSec\Dorst\Bsp_Auftragsprojekte\TIAExporter\src\Tia\PlcSoftwareExporter.cs:Zeile 76.
+2026-04-28 12:07:54.838 +02:00 [ERROR] Failed to export block PLC_1/SPT_50/APP_50_FilterValve_DB: LicenseNotFoundException: Error when calling method 'Export' of type 'Siemens.Engineering.SW.Blocks.InstanceDB'.
+
+Necessary license 'STEP 7 Professional' is missing.
+2026-04-28 12:07:54.838 +02:00 [TRACE]    bei TIAExporter.Tia.TiaReflection.TryExport(Object instance, String filePath) in C:\ClaudeDev\CyberSec\Dorst\Bsp_Auftragsprojekte\TIAExporter\src\Tia\TiaReflection.cs:Zeile 101.
+   bei TIAExporter.Tia.PlcSoftwareExporter.ExportBlock(Object block, ExportState state, String plcName, String plcRoot, String groupPath, String folderName) in C:\ClaudeDev\CyberSec\Dorst\Bsp_Auftragsprojekte\TIAExporter\src\Tia\PlcSoftwareExporter.cs:Zeile 76.
+2026-04-28 12:07:54.898 +02:00 [ERROR] Failed to export block PLC_1/SPT_50/APP_50_HeatExchange_DB: LicenseNotFoundException: Error when calling method 'Export' of type 'Siemens.Engineering.SW.Blocks.InstanceDB'.
+
+Necessary license 'STEP 7 Professional' is missing.
+2026-04-28 12:07:54.898 +02:00 [TRACE]    bei TIAExporter.Tia.TiaReflection.TryExport(Object instance, String filePath) in C:\ClaudeDev\CyberSec\Dorst\Bsp_Auftragsprojekte\TIAExporter\src\Tia\TiaReflection.cs:Zeile 101.
+   bei TIAExporter.Tia.PlcSoftwareExporter.ExportBlock(Object block, ExportState state, String plcName, String plcRoot, String groupPath, String folderName) in C:\ClaudeDev\CyberSec\Dorst\Bsp_Auftragsprojekte\TIAExporter\src\Tia\PlcSoftwareExporter.cs:Zeile 76.
+2026-04-28 12:07:54.942 +02:00 [ERROR] Failed to export block PLC_1/SPT_50/APP_50_KnockValve_DB: LicenseNotFoundException: Error when calling method 'Export' of type 'Siemens.Engineering.SW.Blocks.InstanceDB'.
+
+Necessary license 'STEP 7 Professional' is missing.
+2026-04-28 12:07:54.942 +02:00 [TRACE]    bei TIAExporter.Tia.TiaReflection.TryExport(Object instance, String filePath) in C:\ClaudeDev\CyberSec\Dorst\Bsp_Auftragsprojekte\TIAExporter\src\Tia\TiaReflection.cs:Zeile 101.
+   bei TIAExporter.Tia.PlcSoftwareExporter.ExportBlock(Object block, ExportState state, String plcName, String plcRoot, String groupPath, String folderName) in C:\ClaudeDev\CyberSec\Dorst\Bsp_Auftragsprojekte\TIAExporter\src\Tia\PlcSoftwareExporter.cs:Zeile 76.
+2026-04-28 12:07:55.025 +02:00 [ERROR] Failed to export block PLC_1/SPT_50/APP_50_MotorFeedWorm_DB: LicenseNotFoundException: Error when calling method 'Export' of type 'Siemens.Engineering.SW.Blocks.InstanceDB'.
+
+Necessary license 'STEP 7 Professional' is missing.
+2026-04-28 12:07:55.025 +02:00 [TRACE]    bei TIAExporter.Tia.TiaReflection.TryExport(Object instance, String filePath) in C:\ClaudeDev\CyberSec\Dorst\Bsp_Auftragsprojekte\TIAExporter\src\Tia\TiaReflection.cs:Zeile 101.
+   bei TIAExporter.Tia.PlcSoftwareExporter.ExportBlock(Object block, ExportState state, String plcName, String plcRoot, String groupPath, String folderName) in C:\ClaudeDev\CyberSec\Dorst\Bsp_Auftragsprojekte\TIAExporter\src\Tia\PlcSoftwareExporter.cs:Zeile 76.
+2026-04-28 12:07:55.088 +02:00 [ERROR] Failed to export block PLC_1/SPT_50/APP_50_MotorFeedWorm_DB_1: LicenseNotFoundException: Error when calling method 'Export' of type 'Siemens.Engineering.SW.Blocks.InstanceDB'.
+
+Necessary license 'STEP 7 Professional' is missing.
+2026-04-28 12:07:55.088 +02:00 [TRACE]    bei TIAExporter.Tia.TiaReflection.TryExport(Object instance, String filePath) in C:\ClaudeDev\CyberSec\Dorst\Bsp_Auftragsprojekte\TIAExporter\src\Tia\TiaReflection.cs:Zeile 101.
+   bei TIAExporter.Tia.PlcSoftwareExporter.ExportBlock(Object block, ExportState state, String plcName, String plcRoot, String groupPath, String folderName) in C:\ClaudeDev\CyberSec\Dorst\Bsp_Auftragsprojekte\TIAExporter\src\Tia\PlcSoftwareExporter.cs:Zeile 76.
+2026-04-28 12:07:55.149 +02:00 [ERROR] Failed to export block PLC_1/SPT_50/APP_50_PoDedu_DB: LicenseNotFoundException: Error when calling method 'Export' of type 'Siemens.Engineering.SW.Blocks.InstanceDB'.
+
+Necessary license 'STEP 7 Professional' is missing.
+2026-04-28 12:07:55.150 +02:00 [TRACE]    bei TIAExporter.Tia.TiaReflection.TryExport(Object instance, String filePath) in C:\ClaudeDev\CyberSec\Dorst\Bsp_Auftragsprojekte\TIAExporter\src\Tia\TiaReflection.cs:Zeile 101.
+   bei TIAExporter.Tia.PlcSoftwareExporter.ExportBlock(Object block, ExportState state, String plcName, String plcRoot, String groupPath, String folderName) in C:\ClaudeDev\CyberSec\Dorst\Bsp_Auftragsprojekte\TIAExporter\src\Tia\PlcSoftwareExporter.cs:Zeile 76.
+2026-04-28 12:07:55.211 +02:00 [ERROR] Failed to export block PLC_1/SPT_50/APP_50_PoDeDuVolumen_DB: LicenseNotFoundException: Error when calling method 'Export' of type 'Siemens.Engineering.SW.Blocks.InstanceDB'.
+
+Necessary license 'STEP 7 Professional' is missing.
+2026-04-28 12:07:55.211 +02:00 [TRACE]    bei TIAExporter.Tia.TiaReflection.TryExport(Object instance, String filePath) in C:\ClaudeDev\CyberSec\Dorst\Bsp_Auftragsprojekte\TIAExporter\src\Tia\TiaReflection.cs:Zeile 101.
+   bei TIAExporter.Tia.PlcSoftwareExporter.ExportBlock(Object block, ExportState state, String plcName, String plcRoot, String groupPath, String folderName) in C:\ClaudeDev\CyberSec\Dorst\Bsp_Auftragsprojekte\TIAExporter\src\Tia\PlcSoftwareExporter.cs:Zeile 76.
+2026-04-28 12:07:55.261 +02:00 [ERROR] Failed to export block PLC_1/SPT_50/APP_50_Prozessluft_DB: LicenseNotFoundException: Error when calling method 'Export' of type 'Siemens.Engineering.SW.Blocks.InstanceDB'.
+
+Necessary license 'STEP 7 Professional' is missing.
+2026-04-28 12:07:55.261 +02:00 [TRACE]    bei TIAExporter.Tia.TiaReflection.TryExport(Object instance, String filePath) in C:\ClaudeDev\CyberSec\Dorst\Bsp_Auftragsprojekte\TIAExporter\src\Tia\TiaReflection.cs:Zeile 101.
+   bei TIAExporter.Tia.PlcSoftwareExporter.ExportBlock(Object block, ExportState state, String plcName, String plcRoot, String groupPath, String folderName) in C:\ClaudeDev\CyberSec\Dorst\Bsp_Auftragsprojekte\TIAExporter\src\Tia\PlcSoftwareExporter.cs:Zeile 76.
+2026-04-28 12:07:55.356 +02:00 [ERROR] Failed to export block PLC_1/SPT_50/APP_50_TempEHeizung_DB: LicenseNotFoundException: Error when calling method 'Export' of type 'Siemens.Engineering.SW.Blocks.InstanceDB'.
+
+Necessary license 'STEP 7 Professional' is missing.
+2026-04-28 12:07:55.356 +02:00 [TRACE]    bei TIAExporter.Tia.TiaReflection.TryExport(Object instance, String filePath) in C:\ClaudeDev\CyberSec\Dorst\Bsp_Auftragsprojekte\TIAExporter\src\Tia\TiaReflection.cs:Zeile 101.
+   bei TIAExporter.Tia.PlcSoftwareExporter.ExportBlock(Object block, ExportState state, String plcName, String plcRoot, String groupPath, String folderName) in C:\ClaudeDev\CyberSec\Dorst\Bsp_Auftragsprojekte\TIAExporter\src\Tia\PlcSoftwareExporter.cs:Zeile 76.
+2026-04-28 12:07:55.416 +02:00 [ERROR] Failed to export block PLC_1/SPT_50/APP_50_Unterdruckfilter_DB: LicenseNotFoundException: Error when calling method 'Export' of type 'Siemens.Engineering.SW.Blocks.InstanceDB'.
+
+Necessary license 'STEP 7 Professional' is missing.
+2026-04-28 12:07:55.416 +02:00 [TRACE]    bei TIAExporter.Tia.TiaReflection.TryExport(Object instance, String filePath) in C:\ClaudeDev\CyberSec\Dorst\Bsp_Auftragsprojekte\TIAExporter\src\Tia\TiaReflection.cs:Zeile 101.
+   bei TIAExporter.Tia.PlcSoftwareExporter.ExportBlock(Object block, ExportState state, String plcName, String plcRoot, String groupPath, String folderName) in C:\ClaudeDev\CyberSec\Dorst\Bsp_Auftragsprojekte\TIAExporter\src\Tia\PlcSoftwareExporter.cs:Zeile 76.
+2026-04-28 12:07:55.479 +02:00 [ERROR] Failed to export block PLC_1/SPT_50/APP_50_RotaryFeeder: LicenseNotFoundException: Error when calling method 'Export' of type 'Siemens.Engineering.SW.Blocks.FB'.
+
+Necessary license 'STEP 7 Professional' is missing.
+2026-04-28 12:07:55.479 +02:00 [TRACE]    bei TIAExporter.Tia.TiaReflection.TryExport(Object instance, String filePath) in C:\ClaudeDev\CyberSec\Dorst\Bsp_Auftragsprojekte\TIAExporter\src\Tia\TiaReflection.cs:Zeile 101.
+   bei TIAExporter.Tia.PlcSoftwareExporter.ExportBlock(Object block, ExportState state, String plcName, String plcRoot, String groupPath, String folderName) in C:\ClaudeDev\CyberSec\Dorst\Bsp_Auftragsprojekte\TIAExporter\src\Tia\PlcSoftwareExporter.cs:Zeile 76.
+2026-04-28 12:07:55.527 +02:00 [ERROR] Failed to export block PLC_1/SPT_50/APP_50_RotaryFeeder_DB: LicenseNotFoundException: Error when calling method 'Export' of type 'Siemens.Engineering.SW.Blocks.InstanceDB'.
+
+Necessary license 'STEP 7 Professional' is missing.
+2026-04-28 12:07:55.527 +02:00 [TRACE]    bei TIAExporter.Tia.TiaReflection.TryExport(Object instance, String filePath) in C:\ClaudeDev\CyberSec\Dorst\Bsp_Auftragsprojekte\TIAExporter\src\Tia\TiaReflection.cs:Zeile 101.
+   bei TIAExporter.Tia.PlcSoftwareExporter.ExportBlock(Object block, ExportState state, String plcName, String plcRoot, String groupPath, String folderName) in C:\ClaudeDev\CyberSec\Dorst\Bsp_Auftragsprojekte\TIAExporter\src\Tia\PlcSoftwareExporter.cs:Zeile 76.
+2026-04-28 12:07:55.620 +02:00 [ERROR] Failed to export block PLC_1/SPT_50/APP_50_FilterMonitoring_DB: LicenseNotFoundException: Error when calling method 'Export' of type 'Siemens.Engineering.SW.Blocks.InstanceDB'.
+
+Necessary license 'STEP 7 Professional' is missing.
+2026-04-28 12:07:55.620 +02:00 [TRACE]    bei TIAExporter.Tia.TiaReflection.TryExport(Object instance, String filePath) in C:\ClaudeDev\CyberSec\Dorst\Bsp_Auftragsprojekte\TIAExporter\src\Tia\TiaReflection.cs:Zeile 101.
+   bei TIAExporter.Tia.PlcSoftwareExporter.ExportBlock(Object block, ExportState state, String plcName, String plcRoot, String groupPath, String folderName) in C:\ClaudeDev\CyberSec\Dorst\Bsp_Auftragsprojekte\TIAExporter\src\Tia\PlcSoftwareExporter.cs:Zeile 76.
+2026-04-28 12:07:55.674 +02:00 [ERROR] Failed to export block PLC_1/SPT_50/APP_50_MotorServo: LicenseNotFoundException: Error when calling method 'Export' of type 'Siemens.Engineering.SW.Blocks.FB'.
+
+Necessary license 'STEP 7 Professional' is missing.
+2026-04-28 12:07:55.674 +02:00 [TRACE]    bei TIAExporter.Tia.TiaReflection.TryExport(Object instance, String filePath) in C:\ClaudeDev\CyberSec\Dorst\Bsp_Auftragsprojekte\TIAExporter\src\Tia\TiaReflection.cs:Zeile 101.
+   bei TIAExporter.Tia.PlcSoftwareExporter.ExportBlock(Object block, ExportState state, String plcName, String plcRoot, String groupPath, String folderName) in C:\ClaudeDev\CyberSec\Dorst\Bsp_Auftragsprojekte\TIAExporter\src\Tia\PlcSoftwareExporter.cs:Zeile 76.
+2026-04-28 12:07:55.728 +02:00 [ERROR] Failed to export block PLC_1/SPT_50/MotorServo_MainFan_DB: LicenseNotFoundException: Error when calling method 'Export' of type 'Siemens.Engineering.SW.Blocks.InstanceDB'.
+
+Necessary license 'STEP 7 Professional' is missing.
+2026-04-28 12:07:55.729 +02:00 [TRACE]    bei TIAExporter.Tia.TiaReflection.TryExport(Object instance, String filePath) in C:\ClaudeDev\CyberSec\Dorst\Bsp_Auftragsprojekte\TIAExporter\src\Tia\TiaReflection.cs:Zeile 101.
+   bei TIAExporter.Tia.PlcSoftwareExporter.ExportBlock(Object block, ExportState state, String plcName, String plcRoot, String groupPath, String folderName) in C:\ClaudeDev\CyberSec\Dorst\Bsp_Auftragsprojekte\TIAExporter\src\Tia\PlcSoftwareExporter.cs:Zeile 76.
+2026-04-28 12:07:55.792 +02:00 [ERROR] Failed to export block PLC_1/SPT_50/APP_50_MotorServo_DB: LicenseNotFoundException: Error when calling method 'Export' of type 'Siemens.Engineering.SW.Blocks.InstanceDB'.
+
+Necessary license 'STEP 7 Professional' is missing.
+2026-04-28 12:07:55.792 +02:00 [TRACE]    bei TIAExporter.Tia.TiaReflection.TryExport(Object instance, String filePath) in C:\ClaudeDev\CyberSec\Dorst\Bsp_Auftragsprojekte\TIAExporter\src\Tia\TiaReflection.cs:Zeile 101.
+   bei TIAExporter.Tia.PlcSoftwareExporter.ExportBlock(Object block, ExportState state, String plcName, String plcRoot, String groupPath, String folderName) in C:\ClaudeDev\CyberSec\Dorst\Bsp_Auftragsprojekte\TIAExporter\src\Tia\PlcSoftwareExporter.cs:Zeile 76.
+2026-04-28 12:07:55.855 +02:00 [ERROR] Failed to export block PLC_1/SPT_50/APP_50_Druckluft: LicenseNotFoundException: Error when calling method 'Export' of type 'Siemens.Engineering.SW.Blocks.FB'.
+
+Necessary license 'STEP 7 Professional' is missing.
+2026-04-28 12:07:55.855 +02:00 [TRACE]    bei TIAExporter.Tia.TiaReflection.TryExport(Object instance, String filePath) in C:\ClaudeDev\CyberSec\Dorst\Bsp_Auftragsprojekte\TIAExporter\src\Tia\TiaReflection.cs:Zeile 101.
+   bei TIAExporter.Tia.PlcSoftwareExporter.ExportBlock(Object block, ExportState state, String plcName, String plcRoot, String groupPath, String folderName) in C:\ClaudeDev\CyberSec\Dorst\Bsp_Auftragsprojekte\TIAExporter\src\Tia\PlcSoftwareExporter.cs:Zeile 76.
+2026-04-28 12:07:55.916 +02:00 [ERROR] Failed to export block PLC_1/SPT_50/APP_50_Error: LicenseNotFoundException: Error when calling method 'Export' of type 'Siemens.Engineering.SW.Blocks.FB'.
+
+Necessary license 'STEP 7 Professional' is missing.
+2026-04-28 12:07:55.916 +02:00 [TRACE]    bei TIAExporter.Tia.TiaReflection.TryExport(Object instance, String filePath) in C:\ClaudeDev\CyberSec\Dorst\Bsp_Auftragsprojekte\TIAExporter\src\Tia\TiaReflection.cs:Zeile 101.
+   bei TIAExporter.Tia.PlcSoftwareExporter.ExportBlock(Object block, ExportState state, String plcName, String plcRoot, String groupPath, String folderName) in C:\ClaudeDev\CyberSec\Dorst\Bsp_Auftragsprojekte\TIAExporter\src\Tia\PlcSoftwareExporter.cs:Zeile 76.
+2026-04-28 12:07:55.978 +02:00 [ERROR] Failed to export block PLC_1/SPT_50/APP_50_MotorFU: LicenseNotFoundException: Error when calling method 'Export' of type 'Siemens.Engineering.SW.Blocks.FB'.
+
+Necessary license 'STEP 7 Professional' is missing.
+2026-04-28 12:07:55.978 +02:00 [TRACE]    bei TIAExporter.Tia.TiaReflection.TryExport(Object instance, String filePath) in C:\ClaudeDev\CyberSec\Dorst\Bsp_Auftragsprojekte\TIAExporter\src\Tia\TiaReflection.cs:Zeile 101.
+   bei TIAExporter.Tia.PlcSoftwareExporter.ExportBlock(Object block, ExportState state, String plcName, String plcRoot, String groupPath, String folderName) in C:\ClaudeDev\CyberSec\Dorst\Bsp_Auftragsprojekte\TIAExporter\src\Tia\PlcSoftwareExporter.cs:Zeile 76.
+2026-04-28 12:07:56.023 +02:00 [ERROR] Failed to export block PLC_1/SPT_50/APP_50_FilterMonitoring: LicenseNotFoundException: Error when calling method 'Export' of type 'Siemens.Engineering.SW.Blocks.FB'.
+
+Necessary license 'STEP 7 Professional' is missing.
+2026-04-28 12:07:56.023 +02:00 [TRACE]    bei TIAExporter.Tia.TiaReflection.TryExport(Object instance, String filePath) in C:\ClaudeDev\CyberSec\Dorst\Bsp_Auftragsprojekte\TIAExporter\src\Tia\TiaReflection.cs:Zeile 101.
+   bei TIAExporter.Tia.PlcSoftwareExporter.ExportBlock(Object block, ExportState state, String plcName, String plcRoot, String groupPath, String folderName) in C:\ClaudeDev\CyberSec\Dorst\Bsp_Auftragsprojekte\TIAExporter\src\Tia\PlcSoftwareExporter.cs:Zeile 76.
+2026-04-28 12:07:56.102 +02:00 [ERROR] Failed to export block PLC_1/SPT_50/APP_50_MotorFU_DB: LicenseNotFoundException: Error when calling method 'Export' of type 'Siemens.Engineering.SW.Blocks.InstanceDB'.
+
+Necessary license 'STEP 7 Professional' is missing.
+2026-04-28 12:07:56.102 +02:00 [TRACE]    bei TIAExporter.Tia.TiaReflection.TryExport(Object instance, String filePath) in C:\ClaudeDev\CyberSec\Dorst\Bsp_Auftragsprojekte\TIAExporter\src\Tia\TiaReflection.cs:Zeile 101.
+   bei TIAExporter.Tia.PlcSoftwareExporter.ExportBlock(Object block, ExportState state, String plcName, String plcRoot, String groupPath, String folderName) in C:\ClaudeDev\CyberSec\Dorst\Bsp_Auftragsprojekte\TIAExporter\src\Tia\PlcSoftwareExporter.cs:Zeile 76.
+2026-04-28 12:07:56.188 +02:00 [ERROR] Failed to export block PLC_1/SPT_60/GlobVar_SPT_60: LicenseNotFoundException: Error when calling method 'Export' of type 'Siemens.Engineering.SW.Blocks.GlobalDB'.
+
+Necessary license 'STEP 7 Professional' is missing.
+2026-04-28 12:07:56.188 +02:00 [TRACE]    bei TIAExporter.Tia.TiaReflection.TryExport(Object instance, String filePath) in C:\ClaudeDev\CyberSec\Dorst\Bsp_Auftragsprojekte\TIAExporter\src\Tia\TiaReflection.cs:Zeile 101.
+   bei TIAExporter.Tia.PlcSoftwareExporter.ExportBlock(Object block, ExportState state, String plcName, String plcRoot, String groupPath, String folderName) in C:\ClaudeDev\CyberSec\Dorst\Bsp_Auftragsprojekte\TIAExporter\src\Tia\PlcSoftwareExporter.cs:Zeile 76.
+2026-04-28 12:07:56.239 +02:00 [ERROR] Failed to export block PLC_1/SPT_60/APP_60_Error: LicenseNotFoundException: Error when calling method 'Export' of type 'Siemens.Engineering.SW.Blocks.FB'.
+
+Necessary license 'STEP 7 Professional' is missing.
+2026-04-28 12:07:56.239 +02:00 [TRACE]    bei TIAExporter.Tia.TiaReflection.TryExport(Object instance, String filePath) in C:\ClaudeDev\CyberSec\Dorst\Bsp_Auftragsprojekte\TIAExporter\src\Tia\TiaReflection.cs:Zeile 101.
+   bei TIAExporter.Tia.PlcSoftwareExporter.ExportBlock(Object block, ExportState state, String plcName, String plcRoot, String groupPath, String folderName) in C:\ClaudeDev\CyberSec\Dorst\Bsp_Auftragsprojekte\TIAExporter\src\Tia\PlcSoftwareExporter.cs:Zeile 76.
+2026-04-28 12:07:56.308 +02:00 [ERROR] Failed to export block PLC_1/SPT_60/APP_60_Motors: LicenseNotFoundException: Error when calling method 'Export' of type 'Siemens.Engineering.SW.Blocks.FB'.
+
+Necessary license 'STEP 7 Professional' is missing.
+2026-04-28 12:07:56.308 +02:00 [TRACE]    bei TIAExporter.Tia.TiaReflection.TryExport(Object instance, String filePath) in C:\ClaudeDev\CyberSec\Dorst\Bsp_Auftragsprojekte\TIAExporter\src\Tia\TiaReflection.cs:Zeile 101.
+   bei TIAExporter.Tia.PlcSoftwareExporter.ExportBlock(Object block, ExportState state, String plcName, String plcRoot, String groupPath, String folderName) in C:\ClaudeDev\CyberSec\Dorst\Bsp_Auftragsprojekte\TIAExporter\src\Tia\PlcSoftwareExporter.cs:Zeile 76.
+2026-04-28 12:07:56.379 +02:00 [ERROR] Failed to export block PLC_1/SPT_60/APP_60_OelTempSliPu: LicenseNotFoundException: Error when calling method 'Export' of type 'Siemens.Engineering.SW.Blocks.FB'.
+
+Necessary license 'STEP 7 Professional' is missing.
+2026-04-28 12:07:56.379 +02:00 [TRACE]    bei TIAExporter.Tia.TiaReflection.TryExport(Object instance, String filePath) in C:\ClaudeDev\CyberSec\Dorst\Bsp_Auftragsprojekte\TIAExporter\src\Tia\TiaReflection.cs:Zeile 101.
+   bei TIAExporter.Tia.PlcSoftwareExporter.ExportBlock(Object block, ExportState state, String plcName, String plcRoot, String groupPath, String folderName) in C:\ClaudeDev\CyberSec\Dorst\Bsp_Auftragsprojekte\TIAExporter\src\Tia\PlcSoftwareExporter.cs:Zeile 76.
+2026-04-28 12:07:56.429 +02:00 [ERROR] Failed to export block PLC_1/SPT_60/APP_60_SlipFe: LicenseNotFoundException: Error when calling method 'Export' of type 'Siemens.Engineering.SW.Blocks.FB'.
+
+Necessary license 'STEP 7 Professional' is missing.
+2026-04-28 12:07:56.429 +02:00 [TRACE]    bei TIAExporter.Tia.TiaReflection.TryExport(Object instance, String filePath) in C:\ClaudeDev\CyberSec\Dorst\Bsp_Auftragsprojekte\TIAExporter\src\Tia\TiaReflection.cs:Zeile 101.
+   bei TIAExporter.Tia.PlcSoftwareExporter.ExportBlock(Object block, ExportState state, String plcName, String plcRoot, String groupPath, String folderName) in C:\ClaudeDev\CyberSec\Dorst\Bsp_Auftragsprojekte\TIAExporter\src\Tia\PlcSoftwareExporter.cs:Zeile 76.
+2026-04-28 12:07:56.517 +02:00 [ERROR] Failed to export block PLC_1/SPT_60/APP_60_SlipFe2: LicenseNotFoundException: Error when calling method 'Export' of type 'Siemens.Engineering.SW.Blocks.FB'.
+
+Necessary license 'STEP 7 Professional' is missing.
+2026-04-28 12:07:56.517 +02:00 [TRACE]    bei TIAExporter.Tia.TiaReflection.TryExport(Object instance, String filePath) in C:\ClaudeDev\CyberSec\Dorst\Bsp_Auftragsprojekte\TIAExporter\src\Tia\TiaReflection.cs:Zeile 101.
+   bei TIAExporter.Tia.PlcSoftwareExporter.ExportBlock(Object block, ExportState state, String plcName, String plcRoot, String groupPath, String folderName) in C:\ClaudeDev\CyberSec\Dorst\Bsp_Auftragsprojekte\TIAExporter\src\Tia\PlcSoftwareExporter.cs:Zeile 76.
+2026-04-28 12:07:56.599 +02:00 [ERROR] Failed to export block PLC_1/SPT_60/APP_60_SlipFeCtrl: LicenseNotFoundException: Error when calling method 'Export' of type 'Siemens.Engineering.SW.Blocks.FB'.
+
+Necessary license 'STEP 7 Professional' is missing.
+2026-04-28 12:07:56.599 +02:00 [TRACE]    bei TIAExporter.Tia.TiaReflection.TryExport(Object instance, String filePath) in C:\ClaudeDev\CyberSec\Dorst\Bsp_Auftragsprojekte\TIAExporter\src\Tia\TiaReflection.cs:Zeile 101.
+   bei TIAExporter.Tia.PlcSoftwareExporter.ExportBlock(Object block, ExportState state, String plcName, String plcRoot, String groupPath, String folderName) in C:\ClaudeDev\CyberSec\Dorst\Bsp_Auftragsprojekte\TIAExporter\src\Tia\PlcSoftwareExporter.cs:Zeile 76.
+2026-04-28 12:07:56.665 +02:00 [ERROR] Failed to export block PLC_1/SPT_60/APP_60_SlipTemp: LicenseNotFoundException: Error when calling method 'Export' of type 'Siemens.Engineering.SW.Blocks.FB'.
+
+Necessary license 'STEP 7 Professional' is missing.
+2026-04-28 12:07:56.666 +02:00 [TRACE]    bei TIAExporter.Tia.TiaReflection.TryExport(Object instance, String filePath) in C:\ClaudeDev\CyberSec\Dorst\Bsp_Auftragsprojekte\TIAExporter\src\Tia\TiaReflection.cs:Zeile 101.
+   bei TIAExporter.Tia.PlcSoftwareExporter.ExportBlock(Object block, ExportState state, String plcName, String plcRoot, String groupPath, String folderName) in C:\ClaudeDev\CyberSec\Dorst\Bsp_Auftragsprojekte\TIAExporter\src\Tia\PlcSoftwareExporter.cs:Zeile 76.
+2026-04-28 12:07:56.724 +02:00 [ERROR] Failed to export block PLC_1/SPT_60/APP_60_Tank_Standard: LicenseNotFoundException: Error when calling method 'Export' of type 'Siemens.Engineering.SW.Blocks.FB'.
+
+Necessary license 'STEP 7 Professional' is missing.
+2026-04-28 12:07:56.724 +02:00 [TRACE]    bei TIAExporter.Tia.TiaReflection.TryExport(Object instance, String filePath) in C:\ClaudeDev\CyberSec\Dorst\Bsp_Auftragsprojekte\TIAExporter\src\Tia\TiaReflection.cs:Zeile 101.
+   bei TIAExporter.Tia.PlcSoftwareExporter.ExportBlock(Object block, ExportState state, String plcName, String plcRoot, String groupPath, String folderName) in C:\ClaudeDev\CyberSec\Dorst\Bsp_Auftragsprojekte\TIAExporter\src\Tia\PlcSoftwareExporter.cs:Zeile 76.
+2026-04-28 12:07:56.788 +02:00 [ERROR] Failed to export block PLC_1/SPT_60/APP_60_Viscosity: LicenseNotFoundException: Error when calling method 'Export' of type 'Siemens.Engineering.SW.Blocks.FB'.
+
+Necessary license 'STEP 7 Professional' is missing.
+2026-04-28 12:07:56.788 +02:00 [TRACE]    bei TIAExporter.Tia.TiaReflection.TryExport(Object instance, String filePath) in C:\ClaudeDev\CyberSec\Dorst\Bsp_Auftragsprojekte\TIAExporter\src\Tia\TiaReflection.cs:Zeile 101.
+   bei TIAExporter.Tia.PlcSoftwareExporter.ExportBlock(Object block, ExportState state, String plcName, String plcRoot, String groupPath, String folderName) in C:\ClaudeDev\CyberSec\Dorst\Bsp_Auftragsprojekte\TIAExporter\src\Tia\PlcSoftwareExporter.cs:Zeile 76.
+2026-04-28 12:07:56.865 +02:00 [ERROR] Failed to export block PLC_1/SPT_60/APP_60_ZSS: LicenseNotFoundException: Error when calling method 'Export' of type 'Siemens.Engineering.SW.Blocks.FB'.
+
+Necessary license 'STEP 7 Professional' is missing.
+2026-04-28 12:07:56.865 +02:00 [TRACE]    bei TIAExporter.Tia.TiaReflection.TryExport(Object instance, String filePath) in C:\ClaudeDev\CyberSec\Dorst\Bsp_Auftragsprojekte\TIAExporter\src\Tia\TiaReflection.cs:Zeile 101.
+   bei TIAExporter.Tia.PlcSoftwareExporter.ExportBlock(Object block, ExportState state, String plcName, String plcRoot, String groupPath, String folderName) in C:\ClaudeDev\CyberSec\Dorst\Bsp_Auftragsprojekte\TIAExporter\src\Tia\PlcSoftwareExporter.cs:Zeile 76.
+2026-04-28 12:07:56.922 +02:00 [ERROR] Failed to export block PLC_1/SPT_60/APP_60_OperData: LicenseNotFoundException: Error when calling method 'Export' of type 'Siemens.Engineering.SW.Blocks.FB'.
+
+Necessary license 'STEP 7 Professional' is missing.
+2026-04-28 12:07:56.922 +02:00 [TRACE]    bei TIAExporter.Tia.TiaReflection.TryExport(Object instance, String filePath) in C:\ClaudeDev\CyberSec\Dorst\Bsp_Auftragsprojekte\TIAExporter\src\Tia\TiaReflection.cs:Zeile 101.
+   bei TIAExporter.Tia.PlcSoftwareExporter.ExportBlock(Object block, ExportState state, String plcName, String plcRoot, String groupPath, String folderName) in C:\ClaudeDev\CyberSec\Dorst\Bsp_Auftragsprojekte\TIAExporter\src\Tia\PlcSoftwareExporter.cs:Zeile 76.
+2026-04-28 12:07:56.990 +02:00 [ERROR] Failed to export block PLC_1/SPT_60/APP_60_Error_DB: LicenseNotFoundException: Error when calling method 'Export' of type 'Siemens.Engineering.SW.Blocks.InstanceDB'.
+
+Necessary license 'STEP 7 Professional' is missing.
+2026-04-28 12:07:56.990 +02:00 [TRACE]    bei TIAExporter.Tia.TiaReflection.TryExport(Object instance, String filePath) in C:\ClaudeDev\CyberSec\Dorst\Bsp_Auftragsprojekte\TIAExporter\src\Tia\TiaReflection.cs:Zeile 101.
+   bei TIAExporter.Tia.PlcSoftwareExporter.ExportBlock(Object block, ExportState state, String plcName, String plcRoot, String groupPath, String folderName) in C:\ClaudeDev\CyberSec\Dorst\Bsp_Auftragsprojekte\TIAExporter\src\Tia\PlcSoftwareExporter.cs:Zeile 76.
+2026-04-28 12:07:57.043 +02:00 [ERROR] Failed to export block PLC_1/SPT_60/APP_60_Motors_DB: LicenseNotFoundException: Error when calling method 'Export' of type 'Siemens.Engineering.SW.Blocks.InstanceDB'.
+
+Necessary license 'STEP 7 Professional' is missing.
+2026-04-28 12:07:57.043 +02:00 [TRACE]    bei TIAExporter.Tia.TiaReflection.TryExport(Object instance, String filePath) in C:\ClaudeDev\CyberSec\Dorst\Bsp_Auftragsprojekte\TIAExporter\src\Tia\TiaReflection.cs:Zeile 101.
+   bei TIAExporter.Tia.PlcSoftwareExporter.ExportBlock(Object block, ExportState state, String plcName, String plcRoot, String groupPath, String folderName) in C:\ClaudeDev\CyberSec\Dorst\Bsp_Auftragsprojekte\TIAExporter\src\Tia\PlcSoftwareExporter.cs:Zeile 76.
+2026-04-28 12:07:57.130 +02:00 [ERROR] Failed to export block PLC_1/SPT_60/APP_60_OelTempSliPu_DB: LicenseNotFoundException: Error when calling method 'Export' of type 'Siemens.Engineering.SW.Blocks.InstanceDB'.
+
+Necessary license 'STEP 7 Professional' is missing.
+2026-04-28 12:07:57.130 +02:00 [TRACE]    bei TIAExporter.Tia.TiaReflection.TryExport(Object instance, String filePath) in C:\ClaudeDev\CyberSec\Dorst\Bsp_Auftragsprojekte\TIAExporter\src\Tia\TiaReflection.cs:Zeile 101.
+   bei TIAExporter.Tia.PlcSoftwareExporter.ExportBlock(Object block, ExportState state, String plcName, String plcRoot, String groupPath, String folderName) in C:\ClaudeDev\CyberSec\Dorst\Bsp_Auftragsprojekte\TIAExporter\src\Tia\PlcSoftwareExporter.cs:Zeile 76.
+2026-04-28 12:07:57.197 +02:00 [ERROR] Failed to export block PLC_1/SPT_60/APP_60_OperData_DB: LicenseNotFoundException: Error when calling method 'Export' of type 'Siemens.Engineering.SW.Blocks.InstanceDB'.
+
+Necessary license 'STEP 7 Professional' is missing.
+2026-04-28 12:07:57.197 +02:00 [TRACE]    bei TIAExporter.Tia.TiaReflection.TryExport(Object instance, String filePath) in C:\ClaudeDev\CyberSec\Dorst\Bsp_Auftragsprojekte\TIAExporter\src\Tia\TiaReflection.cs:Zeile 101.
+   bei TIAExporter.Tia.PlcSoftwareExporter.ExportBlock(Object block, ExportState state, String plcName, String plcRoot, String groupPath, String folderName) in C:\ClaudeDev\CyberSec\Dorst\Bsp_Auftragsprojekte\TIAExporter\src\Tia\PlcSoftwareExporter.cs:Zeile 76.
+2026-04-28 12:07:57.286 +02:00 [ERROR] Failed to export block PLC_1/SPT_60/APP_60_SlipFe_DB: LicenseNotFoundException: Error when calling method 'Export' of type 'Siemens.Engineering.SW.Blocks.InstanceDB'.
+
+Necessary license 'STEP 7 Professional' is missing.
+2026-04-28 12:07:57.286 +02:00 [TRACE]    bei TIAExporter.Tia.TiaReflection.TryExport(Object instance, String filePath) in C:\ClaudeDev\CyberSec\Dorst\Bsp_Auftragsprojekte\TIAExporter\src\Tia\TiaReflection.cs:Zeile 101.
+   bei TIAExporter.Tia.PlcSoftwareExporter.ExportBlock(Object block, ExportState state, String plcName, String plcRoot, String groupPath, String folderName) in C:\ClaudeDev\CyberSec\Dorst\Bsp_Auftragsprojekte\TIAExporter\src\Tia\PlcSoftwareExporter.cs:Zeile 76.
+2026-04-28 12:07:57.351 +02:00 [ERROR] Failed to export block PLC_1/SPT_60/APP_60_SlipFe2_DB: LicenseNotFoundException: Error when calling method 'Export' of type 'Siemens.Engineering.SW.Blocks.InstanceDB'.
+
+Necessary license 'STEP 7 Professional' is missing.
+2026-04-28 12:07:57.351 +02:00 [TRACE]    bei TIAExporter.Tia.TiaReflection.TryExport(Object instance, String filePath) in C:\ClaudeDev\CyberSec\Dorst\Bsp_Auftragsprojekte\TIAExporter\src\Tia\TiaReflection.cs:Zeile 101.
+   bei TIAExporter.Tia.PlcSoftwareExporter.ExportBlock(Object block, ExportState state, String plcName, String plcRoot, String groupPath, String folderName) in C:\ClaudeDev\CyberSec\Dorst\Bsp_Auftragsprojekte\TIAExporter\src\Tia\PlcSoftwareExporter.cs:Zeile 76.
+2026-04-28 12:07:57.418 +02:00 [ERROR] Failed to export block PLC_1/SPT_60/APP_60_SlipFeCtrl_DB: LicenseNotFoundException: Error when calling method 'Export' of type 'Siemens.Engineering.SW.Blocks.InstanceDB'.
+
+Necessary license 'STEP 7 Professional' is missing.
+2026-04-28 12:07:57.418 +02:00 [TRACE]    bei TIAExporter.Tia.TiaReflection.TryExport(Object instance, String filePath) in C:\ClaudeDev\CyberSec\Dorst\Bsp_Auftragsprojekte\TIAExporter\src\Tia\TiaReflection.cs:Zeile 101.
+   bei TIAExporter.Tia.PlcSoftwareExporter.ExportBlock(Object block, ExportState state, String plcName, String plcRoot, String groupPath, String folderName) in C:\ClaudeDev\CyberSec\Dorst\Bsp_Auftragsprojekte\TIAExporter\src\Tia\PlcSoftwareExporter.cs:Zeile 76.
+2026-04-28 12:07:57.472 +02:00 [ERROR] Failed to export block PLC_1/SPT_60/APP_60_SlipTemp_DB: LicenseNotFoundException: Error when calling method 'Export' of type 'Siemens.Engineering.SW.Blocks.InstanceDB'.
+
+Necessary license 'STEP 7 Professional' is missing.
+2026-04-28 12:07:57.472 +02:00 [TRACE]    bei TIAExporter.Tia.TiaReflection.TryExport(Object instance, String filePath) in C:\ClaudeDev\CyberSec\Dorst\Bsp_Auftragsprojekte\TIAExporter\src\Tia\TiaReflection.cs:Zeile 101.
+   bei TIAExporter.Tia.PlcSoftwareExporter.ExportBlock(Object block, ExportState state, String plcName, String plcRoot, String groupPath, String folderName) in C:\ClaudeDev\CyberSec\Dorst\Bsp_Auftragsprojekte\TIAExporter\src\Tia\PlcSoftwareExporter.cs:Zeile 76.
+2026-04-28 12:07:57.534 +02:00 [ERROR] Failed to export block PLC_1/SPT_60/APP_60_Tank_Standard_DB: LicenseNotFoundException: Error when calling method 'Export' of type 'Siemens.Engineering.SW.Blocks.InstanceDB'.
+
+Necessary license 'STEP 7 Professional' is missing.
+2026-04-28 12:07:57.534 +02:00 [TRACE]    bei TIAExporter.Tia.TiaReflection.TryExport(Object instance, String filePath) in C:\ClaudeDev\CyberSec\Dorst\Bsp_Auftragsprojekte\TIAExporter\src\Tia\TiaReflection.cs:Zeile 101.
+   bei TIAExporter.Tia.PlcSoftwareExporter.ExportBlock(Object block, ExportState state, String plcName, String plcRoot, String groupPath, String folderName) in C:\ClaudeDev\CyberSec\Dorst\Bsp_Auftragsprojekte\TIAExporter\src\Tia\PlcSoftwareExporter.cs:Zeile 76.
+2026-04-28 12:07:57.593 +02:00 [ERROR] Failed to export block PLC_1/SPT_60/APP_60_Viscosity_DB: LicenseNotFoundException: Error when calling method 'Export' of type 'Siemens.Engineering.SW.Blocks.InstanceDB'.
+
+Necessary license 'STEP 7 Professional' is missing.
+2026-04-28 12:07:57.593 +02:00 [TRACE]    bei TIAExporter.Tia.TiaReflection.TryExport(Object instance, String filePath) in C:\ClaudeDev\CyberSec\Dorst\Bsp_Auftragsprojekte\TIAExporter\src\Tia\TiaReflection.cs:Zeile 101.
+   bei TIAExporter.Tia.PlcSoftwareExporter.ExportBlock(Object block, ExportState state, String plcName, String plcRoot, String groupPath, String folderName) in C:\ClaudeDev\CyberSec\Dorst\Bsp_Auftragsprojekte\TIAExporter\src\Tia\PlcSoftwareExporter.cs:Zeile 76.
+2026-04-28 12:07:57.658 +02:00 [ERROR] Failed to export block PLC_1/SPT_60/APP_60_ZSS_DB: LicenseNotFoundException: Error when calling method 'Export' of type 'Siemens.Engineering.SW.Blocks.InstanceDB'.
+
+Necessary license 'STEP 7 Professional' is missing.
+2026-04-28 12:07:57.658 +02:00 [TRACE]    bei TIAExporter.Tia.TiaReflection.TryExport(Object instance, String filePath) in C:\ClaudeDev\CyberSec\Dorst\Bsp_Auftragsprojekte\TIAExporter\src\Tia\TiaReflection.cs:Zeile 101.
+   bei TIAExporter.Tia.PlcSoftwareExporter.ExportBlock(Object block, ExportState state, String plcName, String plcRoot, String groupPath, String folderName) in C:\ClaudeDev\CyberSec\Dorst\Bsp_Auftragsprojekte\TIAExporter\src\Tia\PlcSoftwareExporter.cs:Zeile 76.
+2026-04-28 12:07:57.719 +02:00 [ERROR] Failed to export block PLC_1/SPT_60/APP_60_MotorServo: LicenseNotFoundException: Error when calling method 'Export' of type 'Siemens.Engineering.SW.Blocks.FB'.
+
+Necessary license 'STEP 7 Professional' is missing.
+2026-04-28 12:07:57.721 +02:00 [TRACE]    bei TIAExporter.Tia.TiaReflection.TryExport(Object instance, String filePath) in C:\ClaudeDev\CyberSec\Dorst\Bsp_Auftragsprojekte\TIAExporter\src\Tia\TiaReflection.cs:Zeile 101.
+   bei TIAExporter.Tia.PlcSoftwareExporter.ExportBlock(Object block, ExportState state, String plcName, String plcRoot, String groupPath, String folderName) in C:\ClaudeDev\CyberSec\Dorst\Bsp_Auftragsprojekte\TIAExporter\src\Tia\PlcSoftwareExporter.cs:Zeile 76.
+2026-04-28 12:07:57.769 +02:00 [ERROR] Failed to export block PLC_1/SPT_60/MotorServo_Pump_DB: LicenseNotFoundException: Error when calling method 'Export' of type 'Siemens.Engineering.SW.Blocks.InstanceDB'.
+
+Necessary license 'STEP 7 Professional' is missing.
+2026-04-28 12:07:57.769 +02:00 [TRACE]    bei TIAExporter.Tia.TiaReflection.TryExport(Object instance, String filePath) in C:\ClaudeDev\CyberSec\Dorst\Bsp_Auftragsprojekte\TIAExporter\src\Tia\TiaReflection.cs:Zeile 101.
+   bei TIAExporter.Tia.PlcSoftwareExporter.ExportBlock(Object block, ExportState state, String plcName, String plcRoot, String groupPath, String folderName) in C:\ClaudeDev\CyberSec\Dorst\Bsp_Auftragsprojekte\TIAExporter\src\Tia\PlcSoftwareExporter.cs:Zeile 76.
+2026-04-28 12:07:57.842 +02:00 [ERROR] Failed to export block PLC_1/SPT_60/APP_60_MotorServo_DB: LicenseNotFoundException: Error when calling method 'Export' of type 'Siemens.Engineering.SW.Blocks.InstanceDB'.
+
+Necessary license 'STEP 7 Professional' is missing.
+2026-04-28 12:07:57.842 +02:00 [TRACE]    bei TIAExporter.Tia.TiaReflection.TryExport(Object instance, String filePath) in C:\ClaudeDev\CyberSec\Dorst\Bsp_Auftragsprojekte\TIAExporter\src\Tia\TiaReflection.cs:Zeile 101.
+   bei TIAExporter.Tia.PlcSoftwareExporter.ExportBlock(Object block, ExportState state, String plcName, String plcRoot, String groupPath, String folderName) in C:\ClaudeDev\CyberSec\Dorst\Bsp_Auftragsprojekte\TIAExporter\src\Tia\PlcSoftwareExporter.cs:Zeile 76.
+2026-04-28 12:07:57.906 +02:00 [ERROR] Failed to export block PLC_1/SPT_00/GlobVar_SPT_00: LicenseNotFoundException: Error when calling method 'Export' of type 'Siemens.Engineering.SW.Blocks.GlobalDB'.
+
+Necessary license 'STEP 7 Professional' is missing.
+2026-04-28 12:07:57.906 +02:00 [TRACE]    bei TIAExporter.Tia.TiaReflection.TryExport(Object instance, String filePath) in C:\ClaudeDev\CyberSec\Dorst\Bsp_Auftragsprojekte\TIAExporter\src\Tia\TiaReflection.cs:Zeile 101.
+   bei TIAExporter.Tia.PlcSoftwareExporter.ExportBlock(Object block, ExportState state, String plcName, String plcRoot, String groupPath, String folderName) in C:\ClaudeDev\CyberSec\Dorst\Bsp_Auftragsprojekte\TIAExporter\src\Tia\PlcSoftwareExporter.cs:Zeile 76.
+2026-04-28 12:07:57.967 +02:00 [ERROR] Failed to export block PLC_1/SPT_00/APP_EO_Konfig_DB: LicenseNotFoundException: Error when calling method 'Export' of type 'Siemens.Engineering.SW.Blocks.InstanceDB'.
+
+Necessary license 'STEP 7 Professional' is missing.
+2026-04-28 12:07:57.967 +02:00 [TRACE]    bei TIAExporter.Tia.TiaReflection.TryExport(Object instance, String filePath) in C:\ClaudeDev\CyberSec\Dorst\Bsp_Auftragsprojekte\TIAExporter\src\Tia\TiaReflection.cs:Zeile 101.
+   bei TIAExporter.Tia.PlcSoftwareExporter.ExportBlock(Object block, ExportState state, String plcName, String plcRoot, String groupPath, String folderName) in C:\ClaudeDev\CyberSec\Dorst\Bsp_Auftragsprojekte\TIAExporter\src\Tia\PlcSoftwareExporter.cs:Zeile 76.
+2026-04-28 12:07:58.014 +02:00 [ERROR] Failed to export block PLC_1/SPT_00/APP_00_Cycle: LicenseNotFoundException: Error when calling method 'Export' of type 'Siemens.Engineering.SW.Blocks.FB'.
+
+Necessary license 'STEP 7 Professional' is missing.
+2026-04-28 12:07:58.014 +02:00 [TRACE]    bei TIAExporter.Tia.TiaReflection.TryExport(Object instance, String filePath) in C:\ClaudeDev\CyberSec\Dorst\Bsp_Auftragsprojekte\TIAExporter\src\Tia\TiaReflection.cs:Zeile 101.
+   bei TIAExporter.Tia.PlcSoftwareExporter.ExportBlock(Object block, ExportState state, String plcName, String plcRoot, String groupPath, String folderName) in C:\ClaudeDev\CyberSec\Dorst\Bsp_Auftragsprojekte\TIAExporter\src\Tia\PlcSoftwareExporter.cs:Zeile 76.
+2026-04-28 12:07:58.067 +02:00 [ERROR] Failed to export block PLC_1/SPT_00/APP_00_ShutDown: LicenseNotFoundException: Error when calling method 'Export' of type 'Siemens.Engineering.SW.Blocks.FB'.
+
+Necessary license 'STEP 7 Professional' is missing.
+2026-04-28 12:07:58.067 +02:00 [TRACE]    bei TIAExporter.Tia.TiaReflection.TryExport(Object instance, String filePath) in C:\ClaudeDev\CyberSec\Dorst\Bsp_Auftragsprojekte\TIAExporter\src\Tia\TiaReflection.cs:Zeile 101.
+   bei TIAExporter.Tia.PlcSoftwareExporter.ExportBlock(Object block, ExportState state, String plcName, String plcRoot, String groupPath, String folderName) in C:\ClaudeDev\CyberSec\Dorst\Bsp_Auftragsprojekte\TIAExporter\src\Tia\PlcSoftwareExporter.cs:Zeile 76.
+2026-04-28 12:07:58.126 +02:00 [ERROR] Failed to export block PLC_1/SPT_00/APP_00_Start: LicenseNotFoundException: Error when calling method 'Export' of type 'Siemens.Engineering.SW.Blocks.FB'.
+
+Necessary license 'STEP 7 Professional' is missing.
+2026-04-28 12:07:58.126 +02:00 [TRACE]    bei TIAExporter.Tia.TiaReflection.TryExport(Object instance, String filePath) in C:\ClaudeDev\CyberSec\Dorst\Bsp_Auftragsprojekte\TIAExporter\src\Tia\TiaReflection.cs:Zeile 101.
+   bei TIAExporter.Tia.PlcSoftwareExporter.ExportBlock(Object block, ExportState state, String plcName, String plcRoot, String groupPath, String folderName) in C:\ClaudeDev\CyberSec\Dorst\Bsp_Auftragsprojekte\TIAExporter\src\Tia\PlcSoftwareExporter.cs:Zeile 76.
+2026-04-28 12:07:58.183 +02:00 [ERROR] Failed to export block PLC_1/SPT_00/APP_00_OperMode: LicenseNotFoundException: Error when calling method 'Export' of type 'Siemens.Engineering.SW.Blocks.FB'.
+
+Necessary license 'STEP 7 Professional' is missing.
+2026-04-28 12:07:58.183 +02:00 [TRACE]    bei TIAExporter.Tia.TiaReflection.TryExport(Object instance, String filePath) in C:\ClaudeDev\CyberSec\Dorst\Bsp_Auftragsprojekte\TIAExporter\src\Tia\TiaReflection.cs:Zeile 101.
+   bei TIAExporter.Tia.PlcSoftwareExporter.ExportBlock(Object block, ExportState state, String plcName, String plcRoot, String groupPath, String folderName) in C:\ClaudeDev\CyberSec\Dorst\Bsp_Auftragsprojekte\TIAExporter\src\Tia\PlcSoftwareExporter.cs:Zeile 76.
+2026-04-28 12:07:58.231 +02:00 [ERROR] Failed to export block PLC_1/SPT_00/APP_00_OperMode_DB: LicenseNotFoundException: Error when calling method 'Export' of type 'Siemens.Engineering.SW.Blocks.InstanceDB'.
+
+Necessary license 'STEP 7 Professional' is missing.
+2026-04-28 12:07:58.231 +02:00 [TRACE]    bei TIAExporter.Tia.TiaReflection.TryExport(Object instance, String filePath) in C:\ClaudeDev\CyberSec\Dorst\Bsp_Auftragsprojekte\TIAExporter\src\Tia\TiaReflection.cs:Zeile 101.
+   bei TIAExporter.Tia.PlcSoftwareExporter.ExportBlock(Object block, ExportState state, String plcName, String plcRoot, String groupPath, String folderName) in C:\ClaudeDev\CyberSec\Dorst\Bsp_Auftragsprojekte\TIAExporter\src\Tia\PlcSoftwareExporter.cs:Zeile 76.
+2026-04-28 12:07:58.280 +02:00 [ERROR] Failed to export block PLC_1/SPT_00/Data_Recipe_Init: LicenseNotFoundException: Error when calling method 'Export' of type 'Siemens.Engineering.SW.Blocks.FB'.
+
+Necessary license 'STEP 7 Professional' is missing.
+2026-04-28 12:07:58.280 +02:00 [TRACE]    bei TIAExporter.Tia.TiaReflection.TryExport(Object instance, String filePath) in C:\ClaudeDev\CyberSec\Dorst\Bsp_Auftragsprojekte\TIAExporter\src\Tia\TiaReflection.cs:Zeile 101.
+   bei TIAExporter.Tia.PlcSoftwareExporter.ExportBlock(Object block, ExportState state, String plcName, String plcRoot, String groupPath, String folderName) in C:\ClaudeDev\CyberSec\Dorst\Bsp_Auftragsprojekte\TIAExporter\src\Tia\PlcSoftwareExporter.cs:Zeile 76.
+2026-04-28 12:07:58.325 +02:00 [ERROR] Failed to export block PLC_1/SPT_00/Data_Recipe_Init_DB: LicenseNotFoundException: Error when calling method 'Export' of type 'Siemens.Engineering.SW.Blocks.InstanceDB'.
+
+Necessary license 'STEP 7 Professional' is missing.
+2026-04-28 12:07:58.325 +02:00 [TRACE]    bei TIAExporter.Tia.TiaReflection.TryExport(Object instance, String filePath) in C:\ClaudeDev\CyberSec\Dorst\Bsp_Auftragsprojekte\TIAExporter\src\Tia\TiaReflection.cs:Zeile 101.
+   bei TIAExporter.Tia.PlcSoftwareExporter.ExportBlock(Object block, ExportState state, String plcName, String plcRoot, String groupPath, String folderName) in C:\ClaudeDev\CyberSec\Dorst\Bsp_Auftragsprojekte\TIAExporter\src\Tia\PlcSoftwareExporter.cs:Zeile 76.
+2026-04-28 12:07:58.405 +02:00 [ERROR] Failed to export block PLC_1/SPT_00/APP_00_Failure_DB: LicenseNotFoundException: Error when calling method 'Export' of type 'Siemens.Engineering.SW.Blocks.InstanceDB'.
+
+Necessary license 'STEP 7 Professional' is missing.
+2026-04-28 12:07:58.405 +02:00 [TRACE]    bei TIAExporter.Tia.TiaReflection.TryExport(Object instance, String filePath) in C:\ClaudeDev\CyberSec\Dorst\Bsp_Auftragsprojekte\TIAExporter\src\Tia\TiaReflection.cs:Zeile 101.
+   bei TIAExporter.Tia.PlcSoftwareExporter.ExportBlock(Object block, ExportState state, String plcName, String plcRoot, String groupPath, String folderName) in C:\ClaudeDev\CyberSec\Dorst\Bsp_Auftragsprojekte\TIAExporter\src\Tia\PlcSoftwareExporter.cs:Zeile 76.
+2026-04-28 12:07:58.466 +02:00 [ERROR] Failed to export block PLC_1/SPT_00/APP_00_Start_DB: LicenseNotFoundException: Error when calling method 'Export' of type 'Siemens.Engineering.SW.Blocks.InstanceDB'.
+
+Necessary license 'STEP 7 Professional' is missing.
+2026-04-28 12:07:58.466 +02:00 [TRACE]    bei TIAExporter.Tia.TiaReflection.TryExport(Object instance, String filePath) in C:\ClaudeDev\CyberSec\Dorst\Bsp_Auftragsprojekte\TIAExporter\src\Tia\TiaReflection.cs:Zeile 101.
+   bei TIAExporter.Tia.PlcSoftwareExporter.ExportBlock(Object block, ExportState state, String plcName, String plcRoot, String groupPath, String folderName) in C:\ClaudeDev\CyberSec\Dorst\Bsp_Auftragsprojekte\TIAExporter\src\Tia\PlcSoftwareExporter.cs:Zeile 76.
+2026-04-28 12:07:58.533 +02:00 [ERROR] Failed to export block PLC_1/SPT_00/APP_00_Cycle_DB: LicenseNotFoundException: Error when calling method 'Export' of type 'Siemens.Engineering.SW.Blocks.InstanceDB'.
+
+Necessary license 'STEP 7 Professional' is missing.
+2026-04-28 12:07:58.533 +02:00 [TRACE]    bei TIAExporter.Tia.TiaReflection.TryExport(Object instance, String filePath) in C:\ClaudeDev\CyberSec\Dorst\Bsp_Auftragsprojekte\TIAExporter\src\Tia\TiaReflection.cs:Zeile 101.
+   bei TIAExporter.Tia.PlcSoftwareExporter.ExportBlock(Object block, ExportState state, String plcName, String plcRoot, String groupPath, String folderName) in C:\ClaudeDev\CyberSec\Dorst\Bsp_Auftragsprojekte\TIAExporter\src\Tia\PlcSoftwareExporter.cs:Zeile 76.
+2026-04-28 12:07:58.607 +02:00 [ERROR] Failed to export block PLC_1/SPT_00/APP_00_ShutDown_DB: LicenseNotFoundException: Error when calling method 'Export' of type 'Siemens.Engineering.SW.Blocks.InstanceDB'.
+
+Necessary license 'STEP 7 Professional' is missing.
+2026-04-28 12:07:58.607 +02:00 [TRACE]    bei TIAExporter.Tia.TiaReflection.TryExport(Object instance, String filePath) in C:\ClaudeDev\CyberSec\Dorst\Bsp_Auftragsprojekte\TIAExporter\src\Tia\TiaReflection.cs:Zeile 101.
+   bei TIAExporter.Tia.PlcSoftwareExporter.ExportBlock(Object block, ExportState state, String plcName, String plcRoot, String groupPath, String folderName) in C:\ClaudeDev\CyberSec\Dorst\Bsp_Auftragsprojekte\TIAExporter\src\Tia\PlcSoftwareExporter.cs:Zeile 76.
+2026-04-28 12:07:58.654 +02:00 [ERROR] Failed to export block PLC_1/SPT_00/Batchgenerator: LicenseNotFoundException: Error when calling method 'Export' of type 'Siemens.Engineering.SW.Blocks.FB'.
+
+Necessary license 'STEP 7 Professional' is missing.
+2026-04-28 12:07:58.654 +02:00 [TRACE]    bei TIAExporter.Tia.TiaReflection.TryExport(Object instance, String filePath) in C:\ClaudeDev\CyberSec\Dorst\Bsp_Auftragsprojekte\TIAExporter\src\Tia\TiaReflection.cs:Zeile 101.
+   bei TIAExporter.Tia.PlcSoftwareExporter.ExportBlock(Object block, ExportState state, String plcName, String plcRoot, String groupPath, String folderName) in C:\ClaudeDev\CyberSec\Dorst\Bsp_Auftragsprojekte\TIAExporter\src\Tia\PlcSoftwareExporter.cs:Zeile 76.
+2026-04-28 12:07:58.717 +02:00 [ERROR] Failed to export block PLC_1/SPT_00/Batchgenerator_DB: LicenseNotFoundException: Error when calling method 'Export' of type 'Siemens.Engineering.SW.Blocks.InstanceDB'.
+
+Necessary license 'STEP 7 Professional' is missing.
+2026-04-28 12:07:58.717 +02:00 [TRACE]    bei TIAExporter.Tia.TiaReflection.TryExport(Object instance, String filePath) in C:\ClaudeDev\CyberSec\Dorst\Bsp_Auftragsprojekte\TIAExporter\src\Tia\TiaReflection.cs:Zeile 101.
+   bei TIAExporter.Tia.PlcSoftwareExporter.ExportBlock(Object block, ExportState state, String plcName, String plcRoot, String groupPath, String folderName) in C:\ClaudeDev\CyberSec\Dorst\Bsp_Auftragsprojekte\TIAExporter\src\Tia\PlcSoftwareExporter.cs:Zeile 76.
+2026-04-28 12:07:58.779 +02:00 [ERROR] Failed to export block PLC_1/SPT_00/APP_00_Zeiten: LicenseNotFoundException: Error when calling method 'Export' of type 'Siemens.Engineering.SW.Blocks.FB'.
+
+Necessary license 'STEP 7 Professional' is missing.
+2026-04-28 12:07:58.779 +02:00 [TRACE]    bei TIAExporter.Tia.TiaReflection.TryExport(Object instance, String filePath) in C:\ClaudeDev\CyberSec\Dorst\Bsp_Auftragsprojekte\TIAExporter\src\Tia\TiaReflection.cs:Zeile 101.
+   bei TIAExporter.Tia.PlcSoftwareExporter.ExportBlock(Object block, ExportState state, String plcName, String plcRoot, String groupPath, String folderName) in C:\ClaudeDev\CyberSec\Dorst\Bsp_Auftragsprojekte\TIAExporter\src\Tia\PlcSoftwareExporter.cs:Zeile 76.
+2026-04-28 12:07:58.841 +02:00 [ERROR] Failed to export block PLC_1/SPT_00/APP_00_Zeiten_DB: LicenseNotFoundException: Error when calling method 'Export' of type 'Siemens.Engineering.SW.Blocks.InstanceDB'.
+
+Necessary license 'STEP 7 Professional' is missing.
+2026-04-28 12:07:58.841 +02:00 [TRACE]    bei TIAExporter.Tia.TiaReflection.TryExport(Object instance, String filePath) in C:\ClaudeDev\CyberSec\Dorst\Bsp_Auftragsprojekte\TIAExporter\src\Tia\TiaReflection.cs:Zeile 101.
+   bei TIAExporter.Tia.PlcSoftwareExporter.ExportBlock(Object block, ExportState state, String plcName, String plcRoot, String groupPath, String folderName) in C:\ClaudeDev\CyberSec\Dorst\Bsp_Auftragsprojekte\TIAExporter\src\Tia\PlcSoftwareExporter.cs:Zeile 76.
+2026-04-28 12:07:58.901 +02:00 [ERROR] Failed to export block PLC_1/SPT_00/APP_EO_Konfig: LicenseNotFoundException: Error when calling method 'Export' of type 'Siemens.Engineering.SW.Blocks.FB'.
+
+Necessary license 'STEP 7 Professional' is missing.
+2026-04-28 12:07:58.901 +02:00 [TRACE]    bei TIAExporter.Tia.TiaReflection.TryExport(Object instance, String filePath) in C:\ClaudeDev\CyberSec\Dorst\Bsp_Auftragsprojekte\TIAExporter\src\Tia\TiaReflection.cs:Zeile 101.
+   bei TIAExporter.Tia.PlcSoftwareExporter.ExportBlock(Object block, ExportState state, String plcName, String plcRoot, String groupPath, String folderName) in C:\ClaudeDev\CyberSec\Dorst\Bsp_Auftragsprojekte\TIAExporter\src\Tia\PlcSoftwareExporter.cs:Zeile 76.
+2026-04-28 12:07:58.966 +02:00 [ERROR] Failed to export block PLC_1/SPT_00/APP_00_Failure: LicenseNotFoundException: Error when calling method 'Export' of type 'Siemens.Engineering.SW.Blocks.FB'.
+
+Necessary license 'STEP 7 Professional' is missing.
+2026-04-28 12:07:58.966 +02:00 [TRACE]    bei TIAExporter.Tia.TiaReflection.TryExport(Object instance, String filePath) in C:\ClaudeDev\CyberSec\Dorst\Bsp_Auftragsprojekte\TIAExporter\src\Tia\TiaReflection.cs:Zeile 101.
+   bei TIAExporter.Tia.PlcSoftwareExporter.ExportBlock(Object block, ExportState state, String plcName, String plcRoot, String groupPath, String folderName) in C:\ClaudeDev\CyberSec\Dorst\Bsp_Auftragsprojekte\TIAExporter\src\Tia\PlcSoftwareExporter.cs:Zeile 76.
+2026-04-28 12:07:59.025 +02:00 [ERROR] Failed to export block PLC_1/SafetyProgramm/FOB_RTG1: LicenseNotFoundException: Error when calling method 'Export' of type 'Siemens.Engineering.SW.Blocks.OB'.
+
+Necessary license 'STEP 7 Professional' is missing.
+2026-04-28 12:07:59.025 +02:00 [TRACE]    bei TIAExporter.Tia.TiaReflection.TryExport(Object instance, String filePath) in C:\ClaudeDev\CyberSec\Dorst\Bsp_Auftragsprojekte\TIAExporter\src\Tia\TiaReflection.cs:Zeile 101.
+   bei TIAExporter.Tia.PlcSoftwareExporter.ExportBlock(Object block, ExportState state, String plcName, String plcRoot, String groupPath, String folderName) in C:\ClaudeDev\CyberSec\Dorst\Bsp_Auftragsprojekte\TIAExporter\src\Tia\PlcSoftwareExporter.cs:Zeile 76.
+2026-04-28 12:07:59.120 +02:00 [ERROR] Failed to export block PLC_1/SafetyProgramm/InputSignals: LicenseNotFoundException: Error when calling method 'Export' of type 'Siemens.Engineering.SW.Blocks.FB'.
+
+Necessary license 'STEP 7 Professional' is missing.
+2026-04-28 12:07:59.120 +02:00 [TRACE]    bei TIAExporter.Tia.TiaReflection.TryExport(Object instance, String filePath) in C:\ClaudeDev\CyberSec\Dorst\Bsp_Auftragsprojekte\TIAExporter\src\Tia\TiaReflection.cs:Zeile 101.
+   bei TIAExporter.Tia.PlcSoftwareExporter.ExportBlock(Object block, ExportState state, String plcName, String plcRoot, String groupPath, String folderName) in C:\ClaudeDev\CyberSec\Dorst\Bsp_Auftragsprojekte\TIAExporter\src\Tia\PlcSoftwareExporter.cs:Zeile 76.
+2026-04-28 12:07:59.169 +02:00 [ERROR] Failed to export block PLC_1/SafetyProgramm/Main_Safety_RTG1: LicenseNotFoundException: Error when calling method 'Export' of type 'Siemens.Engineering.SW.Blocks.FB'.
+
+Necessary license 'STEP 7 Professional' is missing.
+2026-04-28 12:07:59.169 +02:00 [TRACE]    bei TIAExporter.Tia.TiaReflection.TryExport(Object instance, String filePath) in C:\ClaudeDev\CyberSec\Dorst\Bsp_Auftragsprojekte\TIAExporter\src\Tia\TiaReflection.cs:Zeile 101.
+   bei TIAExporter.Tia.PlcSoftwareExporter.ExportBlock(Object block, ExportState state, String plcName, String plcRoot, String groupPath, String folderName) in C:\ClaudeDev\CyberSec\Dorst\Bsp_Auftragsprojekte\TIAExporter\src\Tia\PlcSoftwareExporter.cs:Zeile 76.
+2026-04-28 12:07:59.229 +02:00 [ERROR] Failed to export block PLC_1/SafetyProgramm/Main_Safety_RTG1_DB: LicenseNotFoundException: Error when calling method 'Export' of type 'Siemens.Engineering.SW.Blocks.InstanceDB'.
+
+Necessary license 'STEP 7 Professional' is missing.
+2026-04-28 12:07:59.229 +02:00 [TRACE]    bei TIAExporter.Tia.TiaReflection.TryExport(Object instance, String filePath) in C:\ClaudeDev\CyberSec\Dorst\Bsp_Auftragsprojekte\TIAExporter\src\Tia\TiaReflection.cs:Zeile 101.
+   bei TIAExporter.Tia.PlcSoftwareExporter.ExportBlock(Object block, ExportState state, String plcName, String plcRoot, String groupPath, String folderName) in C:\ClaudeDev\CyberSec\Dorst\Bsp_Auftragsprojekte\TIAExporter\src\Tia\PlcSoftwareExporter.cs:Zeile 76.
+2026-04-28 12:08:01.049 +02:00 [INFO] Exporting PLC software: HMI_RT_1
+2026-04-28 12:08:01.068 +02:00 [INFO] Scanning project library.
+2026-04-28 12:08:03.073 +02:00 [INFO] Scanning HMI devices for metadata.
+2026-04-28 12:08:03.097 +02:00 [INFO] Export finished.
+2026-04-28 12:08:03.212 +02:00 [INFO] Export teilweise erfolgreich.

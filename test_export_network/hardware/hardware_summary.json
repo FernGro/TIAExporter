@@ -1,0 +1,1789 @@
+{
+  "devices": [
+    {
+      "name": "S7-1500/ET200MP-Station_1",
+      "type_identifier": "System:Device.S71500",
+      "source_path": "S7-1500/ET200MP-Station_1"
+    },
+    {
+      "name": "HMI_1",
+      "source_path": "HMI_1"
+    },
+    {
+      "name": "SINAMICS G_1",
+      "type_identifier": "System:Device.G120C-2",
+      "source_path": "SINAMICS G_1"
+    },
+    {
+      "name": "SINAMICS G_2",
+      "type_identifier": "System:Device.G120C-2",
+      "source_path": "SINAMICS G_2"
+    },
+    {
+      "name": "SINAMICS G_3",
+      "type_identifier": "System:Device.G120C-2",
+      "source_path": "SINAMICS G_3"
+    }
+  ],
+  "hardware_modules": [
+    {
+      "device_name": "S7-1500/ET200MP-Station_1",
+      "name": "Profilschiene_0",
+      "type_identifier": "OrderNumber:6ES7 590-1***0-0AA0",
+      "order_number": "6ES7 590-1***0-0AA0",
+      "firmware_version": "",
+      "path": "S7-1500/ET200MP-Station_1/Profilschiene_0"
+    },
+    {
+      "device_name": "S7-1500/ET200MP-Station_1",
+      "name": "PLC_1",
+      "type_identifier": "OrderNumber:6ES7 516-3FP03-0AB0/V4.0",
+      "order_number": "6ES7 516-3FP03-0AB0",
+      "firmware_version": "V4.0",
+      "path": "S7-1500/ET200MP-Station_1/PLC_1"
+    },
+    {
+      "device_name": "S7-1500/ET200MP-Station_1",
+      "name": "Kartenleser/-schreiber_1",
+      "path": "S7-1500/ET200MP-Station_1/PLC_1/Kartenleser/-schreiber_1"
+    },
+    {
+      "device_name": "S7-1500/ET200MP-Station_1",
+      "name": "CPU-Display_1",
+      "path": "S7-1500/ET200MP-Station_1/PLC_1/CPU-Display_1"
+    },
+    {
+      "device_name": "S7-1500/ET200MP-Station_1",
+      "name": "OPC UA_1",
+      "path": "S7-1500/ET200MP-Station_1/PLC_1/OPC UA_1"
+    },
+    {
+      "device_name": "S7-1500/ET200MP-Station_1",
+      "name": "DP-Schnittstelle_1",
+      "path": "S7-1500/ET200MP-Station_1/PLC_1/DP-Schnittstelle_1"
+    },
+    {
+      "device_name": "S7-1500/ET200MP-Station_1",
+      "name": "PROFINET-Schnittstelle_1",
+      "path": "S7-1500/ET200MP-Station_1/PLC_1/PROFINET-Schnittstelle_1"
+    },
+    {
+      "device_name": "S7-1500/ET200MP-Station_1",
+      "name": "Port_1",
+      "path": "S7-1500/ET200MP-Station_1/PLC_1/PROFINET-Schnittstelle_1/Port_1"
+    },
+    {
+      "device_name": "S7-1500/ET200MP-Station_1",
+      "name": "Port_2",
+      "path": "S7-1500/ET200MP-Station_1/PLC_1/PROFINET-Schnittstelle_1/Port_2"
+    },
+    {
+      "device_name": "S7-1500/ET200MP-Station_1",
+      "name": "PROFINET-Schnittstelle_2",
+      "path": "S7-1500/ET200MP-Station_1/PLC_1/PROFINET-Schnittstelle_2"
+    },
+    {
+      "device_name": "S7-1500/ET200MP-Station_1",
+      "name": "Port_1",
+      "path": "S7-1500/ET200MP-Station_1/PLC_1/PROFINET-Schnittstelle_2/Port_1"
+    },
+    {
+      "device_name": "HMI_1",
+      "name": "HMI_1",
+      "type_identifier": "OrderNumber:6AV2 128-3QB06-0AXx/20.0.0.0",
+      "path": "HMI_1/HMI_1"
+    },
+    {
+      "device_name": "HMI_1",
+      "name": "HMI_1.IE_CP_1",
+      "path": "HMI_1/HMI_1.IE_CP_1"
+    },
+    {
+      "device_name": "HMI_1",
+      "name": "PROFINET Schnittstelle_1",
+      "path": "HMI_1/HMI_1.IE_CP_1/PROFINET Schnittstelle_1"
+    },
+    {
+      "device_name": "HMI_1",
+      "name": "Port_1",
+      "path": "HMI_1/HMI_1.IE_CP_1/PROFINET Schnittstelle_1/Port_1"
+    },
+    {
+      "device_name": "HMI_1",
+      "name": "Port_2",
+      "path": "HMI_1/HMI_1.IE_CP_1/PROFINET Schnittstelle_1/Port_2"
+    },
+    {
+      "device_name": "HMI_1",
+      "name": "HMI_1.IE_CP_2",
+      "path": "HMI_1/HMI_1.IE_CP_2"
+    },
+    {
+      "device_name": "HMI_1",
+      "name": "PROFINET Schnittstelle_GBit",
+      "path": "HMI_1/HMI_1.IE_CP_2/PROFINET Schnittstelle_GBit"
+    },
+    {
+      "device_name": "HMI_1",
+      "name": "Port_1",
+      "path": "HMI_1/HMI_1.IE_CP_2/PROFINET Schnittstelle_GBit/Port_1"
+    },
+    {
+      "device_name": "HMI_1",
+      "name": "HMI_RT_1",
+      "path": "HMI_1/HMI_RT_1"
+    },
+    {
+      "device_name": "SINAMICS G_1",
+      "name": "\t_0",
+      "type_identifier": "System:Rack.G120CPN-2",
+      "order_number": "",
+      "path": "SINAMICS G_1/\t_0"
+    },
+    {
+      "device_name": "SINAMICS G_1",
+      "name": "Drive_Main_Fan",
+      "type_identifier": "OrderNumber:6SL3210-1KE31-7AF1/4.7.14",
+      "order_number": "6SL3210-1KE31-7AF1",
+      "firmware_version": "4.7.14",
+      "path": "SINAMICS G_1/Drive_Main_Fan"
+    },
+    {
+      "device_name": "SINAMICS G_1",
+      "name": "PM G120C",
+      "type_identifier": "OrderNumber:6SL3210-1KE31-7AF1/-",
+      "order_number": "6SL3210-1KE31-7AF1",
+      "path": "SINAMICS G_1/Drive_Main_Fan/PM G120C"
+    },
+    {
+      "device_name": "SINAMICS G_1",
+      "name": "PROFINET-Schnittstelle",
+      "order_number": "",
+      "path": "SINAMICS G_1/Drive_Main_Fan/PROFINET-Schnittstelle"
+    },
+    {
+      "device_name": "SINAMICS G_1",
+      "name": "Port_1",
+      "path": "SINAMICS G_1/Drive_Main_Fan/PROFINET-Schnittstelle/Port_1"
+    },
+    {
+      "device_name": "SINAMICS G_1",
+      "name": "Port_2",
+      "path": "SINAMICS G_1/Drive_Main_Fan/PROFINET-Schnittstelle/Port_2"
+    },
+    {
+      "device_name": "SINAMICS G_1",
+      "name": "Drive_Main_Fan",
+      "path": "SINAMICS G_1/Drive_Main_Fan/Drive_Main_Fan"
+    },
+    {
+      "device_name": "SINAMICS G_2",
+      "name": "\t_0",
+      "type_identifier": "System:Rack.G120CPN-2",
+      "order_number": "",
+      "path": "SINAMICS G_2/\t_0"
+    },
+    {
+      "device_name": "SINAMICS G_2",
+      "name": "Powder Return",
+      "type_identifier": "OrderNumber:6SL3210-1KE17-5AF1/4.7.14",
+      "order_number": "6SL3210-1KE17-5AF1",
+      "firmware_version": "4.7.14",
+      "path": "SINAMICS G_2/Powder Return"
+    },
+    {
+      "device_name": "SINAMICS G_2",
+      "name": "PM G120C",
+      "type_identifier": "OrderNumber:6SL3210-1KE17-5AF1/-",
+      "order_number": "6SL3210-1KE17-5AF1",
+      "path": "SINAMICS G_2/Powder Return/PM G120C"
+    },
+    {
+      "device_name": "SINAMICS G_2",
+      "name": "PROFINET-Schnittstelle",
+      "order_number": "",
+      "path": "SINAMICS G_2/Powder Return/PROFINET-Schnittstelle"
+    },
+    {
+      "device_name": "SINAMICS G_2",
+      "name": "Port_1",
+      "path": "SINAMICS G_2/Powder Return/PROFINET-Schnittstelle/Port_1"
+    },
+    {
+      "device_name": "SINAMICS G_2",
+      "name": "Port_2",
+      "path": "SINAMICS G_2/Powder Return/PROFINET-Schnittstelle/Port_2"
+    },
+    {
+      "device_name": "SINAMICS G_2",
+      "name": "Powder Return",
+      "path": "SINAMICS G_2/Powder Return/Powder Return"
+    },
+    {
+      "device_name": "SINAMICS G_3",
+      "name": "\t_0",
+      "type_identifier": "System:Rack.G120CPN-2",
+      "order_number": "",
+      "path": "SINAMICS G_3/\t_0"
+    },
+    {
+      "device_name": "SINAMICS G_3",
+      "name": "Schlicker Pumpe",
+      "type_identifier": "OrderNumber:6SL3210-1KE23-2AF1/4.7.14",
+      "order_number": "6SL3210-1KE23-2AF1",
+      "firmware_version": "4.7.14",
+      "path": "SINAMICS G_3/Schlicker Pumpe"
+    },
+    {
+      "device_name": "SINAMICS G_3",
+      "name": "PM G120C",
+      "type_identifier": "OrderNumber:6SL3210-1KE23-2AF1/-",
+      "order_number": "6SL3210-1KE23-2AF1",
+      "path": "SINAMICS G_3/Schlicker Pumpe/PM G120C"
+    },
+    {
+      "device_name": "SINAMICS G_3",
+      "name": "PROFINET-Schnittstelle",
+      "order_number": "",
+      "path": "SINAMICS G_3/Schlicker Pumpe/PROFINET-Schnittstelle"
+    },
+    {
+      "device_name": "SINAMICS G_3",
+      "name": "Port_1",
+      "path": "SINAMICS G_3/Schlicker Pumpe/PROFINET-Schnittstelle/Port_1"
+    },
+    {
+      "device_name": "SINAMICS G_3",
+      "name": "Port_2",
+      "path": "SINAMICS G_3/Schlicker Pumpe/PROFINET-Schnittstelle/Port_2"
+    },
+    {
+      "device_name": "SINAMICS G_3",
+      "name": "Schlicker Pumpe",
+      "path": "SINAMICS G_3/Schlicker Pumpe/Schlicker Pumpe"
+    }
+  ],
+  "network_interfaces": [
+    {
+      "device_name": "S7-1500/ET200MP-Station_1",
+      "module_name": "DP-Schnittstelle_1",
+      "interface_name": "DP-Schnittstelle_1",
+      "interface_type": "Profibus",
+      "operating_mode": "IoController",
+      "ip_address": "2",
+      "node_names": [
+        "X3"
+      ],
+      "port_names": [],
+      "io_system_names": [],
+      "attributes": {
+        "author": "lange",
+        "comment": "",
+        "comment_m_l": "Siemens.Engineering.Contract.InstanceRepresentation`1[Siemens.Engineering.Contract.IObjectContract]",
+        "failsafe__default_fmonitoring_time_decentral": "150",
+        "interface_operating_mode": "Siemens.Engineering.Contract.EnumToClientRepresentation",
+        "interface_type": "Siemens.Engineering.Contract.EnumToClientRepresentation",
+        "label": "X3",
+        "name": "DP-Schnittstelle_1",
+        "ports": "Siemens.Engineering.Contract.InstanceRepresentation`1[Siemens.Engineering.Contract.IAssociationContract]",
+        "position_number": "33280",
+        "time_of_day_type_of_synchronization_on_dp": "2",
+        "node._x3._address": "2",
+        "node._x3._connected_subnet": null,
+        "node._x3._name": "X3",
+        "node._x3._node_id": "P1",
+        "node._x3._node_type": "Siemens.Engineering.Contract.EnumToClientRepresentation"
+      },
+      "path": "S7-1500/ET200MP-Station_1/PLC_1/DP-Schnittstelle_1"
+    },
+    {
+      "device_name": "S7-1500/ET200MP-Station_1",
+      "module_name": "PROFINET-Schnittstelle_1",
+      "interface_name": "PROFINET-Schnittstelle_1",
+      "interface_type": "Ethernet",
+      "operating_mode": "IoController",
+      "ip_address": "192.168.155.10",
+      "subnet_mask": "255.255.255.0",
+      "node_names": [
+        "X1"
+      ],
+      "port_names": [
+        "Port_1",
+        "Port_2"
+      ],
+      "io_system_names": [],
+      "attributes": {
+        "alternative_redundancy": "True",
+        "author": "lange",
+        "calculated_bandwidth_for_cyclic_io_data": "0",
+        "comment": "",
+        "comment_m_l": "Siemens.Engineering.Contract.InstanceRepresentation`1[Siemens.Engineering.Contract.IObjectContract]",
+        "d_c_p_read_only_default_setting_active": "False",
+        "device_replacement_without_exchangeable_medium": "True",
+        "diagnostics_communication_error": "False",
+        "failsafe__default_fmonitoring_time_decentral": "150",
+        "i_e_c_v22_l_l_d_p_mode": "False",
+        "interface_operating_mode": "Siemens.Engineering.Contract.EnumToClientRepresentation",
+        "interface_type": "Siemens.Engineering.Contract.EnumToClientRepresentation",
+        "is_io_controller": "True",
+        "is_io_device": "False",
+        "keep_alives_interval": "30",
+        "label": "X1",
+        "load_limitation": "True",
+        "maintain_communication_during_network_faults": "False",
+        "max_bandwidth_for_cyclic_io_data": "500000",
+        "media_redundancy_role": "Siemens.Engineering.Contract.EnumToClientRepresentation",
+        "name": "PROFINET-Schnittstelle_1",
+        "overwrite_device_names": "False",
+        "pn_send_clock": "1000000",
+        "ports": "Siemens.Engineering.Contract.InstanceRepresentation`1[Siemens.Engineering.Contract.IAssociationContract]",
+        "position_number": "32768",
+        "s_n_m_p_default_setting_active": "False",
+        "s_n_m_p_read_only_community_name_default_setting": "public",
+        "s_n_m_p_read_only_default_setting_active": "False",
+        "s_n_m_p_read_write_community_name_default_setting": "private",
+        "time_synchronization_ntp": "False",
+        "use_web_server_for_interface": "False",
+        "node._x1._address": "192.168.155.10",
+        "node._x1._connected_subnet": "Siemens.Engineering.Contract.InstanceRepresentation`1[Siemens.Engineering.Contract.IObjectContract]",
+        "node._x1._ip_protocol_selection": "Siemens.Engineering.Contract.EnumToClientRepresentation",
+        "node._x1._name": "X1",
+        "node._x1._node_id": "E1",
+        "node._x1._node_type": "Siemens.Engineering.Contract.EnumToClientRepresentation",
+        "node._x1._pn_device_name": "plc1921681510",
+        "node._x1._pn_device_name_auto_generation": "False",
+        "node._x1._pn_device_name_converted": "plc1921681510",
+        "node._x1._pn_device_name_set_directly": "False",
+        "node._x1._router_address": "192.168.155.1",
+        "node._x1._subnet_mask": "255.255.255.0",
+        "node._x1._use_ip_protocol": "True",
+        "node._x1._use_iso_protocol": "False",
+        "node._x1._use_router": "True"
+      },
+      "path": "S7-1500/ET200MP-Station_1/PLC_1/PROFINET-Schnittstelle_1"
+    },
+    {
+      "device_name": "S7-1500/ET200MP-Station_1",
+      "module_name": "PROFINET-Schnittstelle_2",
+      "interface_name": "PROFINET-Schnittstelle_2",
+      "interface_type": "Ethernet",
+      "operating_mode": "IoController",
+      "ip_address": "192.168.1.20",
+      "subnet_mask": "255.255.255.0",
+      "node_names": [
+        "X2"
+      ],
+      "port_names": [
+        "Port_1"
+      ],
+      "io_system_names": [],
+      "attributes": {
+        "author": "lange",
+        "calculated_bandwidth_for_cyclic_io_data": "0",
+        "comment": "",
+        "comment_m_l": "Siemens.Engineering.Contract.InstanceRepresentation`1[Siemens.Engineering.Contract.IObjectContract]",
+        "d_c_p_read_only_default_setting_active": "False",
+        "device_replacement_without_exchangeable_medium": "True",
+        "diagnostics_communication_error": "False",
+        "failsafe__default_fmonitoring_time_decentral": "150",
+        "i_e_c_v22_l_l_d_p_mode": "False",
+        "interface_operating_mode": "Siemens.Engineering.Contract.EnumToClientRepresentation",
+        "interface_type": "Siemens.Engineering.Contract.EnumToClientRepresentation",
+        "is_io_controller": "True",
+        "is_io_device": "False",
+        "keep_alives_interval": "30",
+        "label": "X2",
+        "load_limitation": "False",
+        "maintain_communication_during_network_faults": "False",
+        "max_bandwidth_for_cyclic_io_data": "0",
+        "name": "PROFINET-Schnittstelle_2",
+        "overwrite_device_names": "False",
+        "pn_send_clock": "1000000",
+        "ports": "Siemens.Engineering.Contract.InstanceRepresentation`1[Siemens.Engineering.Contract.IAssociationContract]",
+        "position_number": "33024",
+        "s_n_m_p_default_setting_active": "False",
+        "s_n_m_p_read_only_community_name_default_setting": "public",
+        "s_n_m_p_read_only_default_setting_active": "False",
+        "s_n_m_p_read_write_community_name_default_setting": "private",
+        "use_web_server_for_interface": "False",
+        "node._x2._address": "192.168.1.20",
+        "node._x2._connected_subnet": null,
+        "node._x2._ip_protocol_selection": "Siemens.Engineering.Contract.EnumToClientRepresentation",
+        "node._x2._name": "X2",
+        "node._x2._node_id": "E1",
+        "node._x2._node_type": "Siemens.Engineering.Contract.EnumToClientRepresentation",
+        "node._x2._pn_device_name": "plc_1.profinet-schnittstelle_2",
+        "node._x2._pn_device_name_auto_generation": "True",
+        "node._x2._pn_device_name_converted": "plcxb1.profinet-schnittstellexb25fa1",
+        "node._x2._pn_device_name_set_directly": "False",
+        "node._x2._subnet_mask": "255.255.255.0",
+        "node._x2._use_ip_protocol": "True",
+        "node._x2._use_iso_protocol": "False",
+        "node._x2._use_router": "False"
+      },
+      "path": "S7-1500/ET200MP-Station_1/PLC_1/PROFINET-Schnittstelle_2"
+    },
+    {
+      "device_name": "HMI_1",
+      "module_name": "PROFINET Schnittstelle_1",
+      "interface_name": "PROFINET Schnittstelle_1",
+      "interface_type": "Ethernet",
+      "operating_mode": "None",
+      "ip_address": "192.168.155.11",
+      "subnet_mask": "255.255.255.0",
+      "node_names": [
+        "X1"
+      ],
+      "port_names": [
+        "Siemens.Engineering.HW.Features.NetworkPort",
+        "Siemens.Engineering.HW.Features.NetworkPort"
+      ],
+      "io_system_names": [],
+      "attributes": {
+        "interface_operating_mode": "Siemens.Engineering.Contract.EnumToClientRepresentation",
+        "interface_type": "Siemens.Engineering.Contract.EnumToClientRepresentation",
+        "label": "X1",
+        "pn_send_clock": "1000000",
+        "ports": "Siemens.Engineering.Contract.InstanceRepresentation`1[Siemens.Engineering.Contract.IAssociationContract]",
+        "node._x1._address": "192.168.155.11",
+        "node._x1._connected_subnet": "Siemens.Engineering.Contract.InstanceRepresentation`1[Siemens.Engineering.Contract.IObjectContract]",
+        "node._x1._ip_protocol_selection": "Siemens.Engineering.Contract.EnumToClientRepresentation",
+        "node._x1._name": "X1",
+        "node._x1._node_id": "IE1",
+        "node._x1._node_type": "Siemens.Engineering.Contract.EnumToClientRepresentation",
+        "node._x1._pn_device_name": "hmi1921681511",
+        "node._x1._pn_device_name_auto_generation": "False",
+        "node._x1._pn_device_name_converted": "hmi1921681511",
+        "node._x1._pn_device_name_set_directly": "False",
+        "node._x1._router_address": "192.168.155.1",
+        "node._x1._subnet_mask": "255.255.255.0",
+        "node._x1._use_ip_protocol": "True",
+        "node._x1._use_iso_protocol": "False",
+        "node._x1._use_router": "True"
+      },
+      "path": "HMI_1/HMI_1.IE_CP_1/PROFINET Schnittstelle_1"
+    },
+    {
+      "device_name": "HMI_1",
+      "module_name": "PROFINET Schnittstelle_GBit",
+      "interface_name": "PROFINET Schnittstelle_GBit",
+      "interface_type": "Ethernet",
+      "operating_mode": "None",
+      "ip_address": "192.168.1.21",
+      "subnet_mask": "255.255.255.0",
+      "node_names": [
+        "X2"
+      ],
+      "port_names": [
+        "Siemens.Engineering.HW.Features.NetworkPort"
+      ],
+      "io_system_names": [],
+      "attributes": {
+        "interface_operating_mode": "Siemens.Engineering.Contract.EnumToClientRepresentation",
+        "interface_type": "Siemens.Engineering.Contract.EnumToClientRepresentation",
+        "label": "X2",
+        "ports": "Siemens.Engineering.Contract.InstanceRepresentation`1[Siemens.Engineering.Contract.IAssociationContract]",
+        "node._x2._address": "192.168.1.21",
+        "node._x2._connected_subnet": null,
+        "node._x2._ip_protocol_selection": "Siemens.Engineering.Contract.EnumToClientRepresentation",
+        "node._x2._name": "X2",
+        "node._x2._node_id": "IE1",
+        "node._x2._node_type": "Siemens.Engineering.Contract.EnumToClientRepresentation",
+        "node._x2._pn_device_name": "hmi_1.profinet schnittstelle_gbit",
+        "node._x2._pn_device_name_auto_generation": "True",
+        "node._x2._pn_device_name_converted": "hmixb1.profinetxaschnittstellexbgbit3f66",
+        "node._x2._pn_device_name_set_directly": "False",
+        "node._x2._subnet_mask": "255.255.255.0",
+        "node._x2._use_ip_protocol": "True",
+        "node._x2._use_iso_protocol": "False",
+        "node._x2._use_router": "False"
+      },
+      "path": "HMI_1/HMI_1.IE_CP_2/PROFINET Schnittstelle_GBit"
+    },
+    {
+      "device_name": "SINAMICS G_1",
+      "module_name": "PROFINET-Schnittstelle",
+      "interface_name": "PROFINET-Schnittstelle",
+      "interface_type": "Ethernet",
+      "operating_mode": "IoDevice",
+      "ip_address": "192.168.155.21",
+      "subnet_mask": "255.255.255.0",
+      "subnet_name": "PN/IE_1",
+      "node_names": [
+        "IE1"
+      ],
+      "port_names": [
+        "Port_1",
+        "Port_2"
+      ],
+      "io_system_names": [
+        "PROFINET IO-System"
+      ],
+      "attributes": {
+        "alternative_redundancy": "True",
+        "comment": "",
+        "i_e_c_v22_l_l_d_p_mode": "True",
+        "interface_operating_mode": "Siemens.Engineering.Contract.EnumToClientRepresentation",
+        "interface_type": "Siemens.Engineering.Contract.EnumToClientRepresentation",
+        "label": "X150",
+        "media_redundancy_role": "Siemens.Engineering.Contract.EnumToClientRepresentation",
+        "optional_io_device": "False",
+        "ports": "Siemens.Engineering.Contract.InstanceRepresentation`1[Siemens.Engineering.Contract.IAssociationContract]",
+        "prioritized_startup": "False",
+        "type_name": "PROFINET-Schnittstelle",
+        "node._i_e1._address": "192.168.155.21",
+        "node._i_e1._connected_subnet": "Siemens.Engineering.Contract.InstanceRepresentation`1[Siemens.Engineering.Contract.IObjectContract]",
+        "node._i_e1._ip_protocol_selection": "Siemens.Engineering.Contract.EnumToClientRepresentation",
+        "node._i_e1._name": "IE1",
+        "node._i_e1._node_id": "IE1",
+        "node._i_e1._node_type": "Siemens.Engineering.Contract.EnumToClientRepresentation",
+        "node._i_e1._pn_device_name": "drive_main_fan",
+        "node._i_e1._pn_device_name_auto_generation": "True",
+        "node._i_e1._pn_device_name_converted": "drivexbmainxbfan2798",
+        "node._i_e1._router_address": "192.168.155.1",
+        "node._i_e1._subnet_mask": "255.255.255.0",
+        "node._i_e1._sync_router_settings_with_io_controller": "True",
+        "node._i_e1._use_ip_protocol": "True",
+        "node._i_e1._use_iso_protocol": "False",
+        "node._i_e1._use_router": "True"
+      },
+      "path": "SINAMICS G_1/Drive_Main_Fan/PROFINET-Schnittstelle"
+    },
+    {
+      "device_name": "SINAMICS G_2",
+      "module_name": "PROFINET-Schnittstelle",
+      "interface_name": "PROFINET-Schnittstelle",
+      "interface_type": "Ethernet",
+      "operating_mode": "IoDevice",
+      "ip_address": "192.168.155.22",
+      "subnet_mask": "255.255.255.0",
+      "subnet_name": "PN/IE_1",
+      "node_names": [
+        "IE1"
+      ],
+      "port_names": [
+        "Port_1",
+        "Port_2"
+      ],
+      "io_system_names": [
+        "PROFINET IO-System"
+      ],
+      "attributes": {
+        "alternative_redundancy": "True",
+        "comment": "",
+        "i_e_c_v22_l_l_d_p_mode": "True",
+        "interface_operating_mode": "Siemens.Engineering.Contract.EnumToClientRepresentation",
+        "interface_type": "Siemens.Engineering.Contract.EnumToClientRepresentation",
+        "label": "X150",
+        "media_redundancy_role": "Siemens.Engineering.Contract.EnumToClientRepresentation",
+        "optional_io_device": "False",
+        "ports": "Siemens.Engineering.Contract.InstanceRepresentation`1[Siemens.Engineering.Contract.IAssociationContract]",
+        "prioritized_startup": "False",
+        "type_name": "PROFINET-Schnittstelle",
+        "node._i_e1._address": "192.168.155.22",
+        "node._i_e1._connected_subnet": "Siemens.Engineering.Contract.InstanceRepresentation`1[Siemens.Engineering.Contract.IObjectContract]",
+        "node._i_e1._ip_protocol_selection": "Siemens.Engineering.Contract.EnumToClientRepresentation",
+        "node._i_e1._name": "IE1",
+        "node._i_e1._node_id": "IE1",
+        "node._i_e1._node_type": "Siemens.Engineering.Contract.EnumToClientRepresentation",
+        "node._i_e1._pn_device_name": "drive_powder_return_fan",
+        "node._i_e1._pn_device_name_auto_generation": "False",
+        "node._i_e1._pn_device_name_converted": "drivexbpowderxbreturnxbfan5efa",
+        "node._i_e1._router_address": "192.168.155.1",
+        "node._i_e1._subnet_mask": "255.255.255.0",
+        "node._i_e1._sync_router_settings_with_io_controller": "True",
+        "node._i_e1._use_ip_protocol": "True",
+        "node._i_e1._use_iso_protocol": "False",
+        "node._i_e1._use_router": "True"
+      },
+      "path": "SINAMICS G_2/Powder Return/PROFINET-Schnittstelle"
+    },
+    {
+      "device_name": "SINAMICS G_3",
+      "module_name": "PROFINET-Schnittstelle",
+      "interface_name": "PROFINET-Schnittstelle",
+      "interface_type": "Ethernet",
+      "operating_mode": "IoDevice",
+      "ip_address": "192.168.155.23",
+      "subnet_mask": "255.255.255.0",
+      "subnet_name": "PN/IE_1",
+      "node_names": [
+        "IE1"
+      ],
+      "port_names": [
+        "Port_1",
+        "Port_2"
+      ],
+      "io_system_names": [
+        "PROFINET IO-System"
+      ],
+      "attributes": {
+        "alternative_redundancy": "True",
+        "comment": "",
+        "i_e_c_v22_l_l_d_p_mode": "True",
+        "interface_operating_mode": "Siemens.Engineering.Contract.EnumToClientRepresentation",
+        "interface_type": "Siemens.Engineering.Contract.EnumToClientRepresentation",
+        "label": "X150",
+        "media_redundancy_role": "Siemens.Engineering.Contract.EnumToClientRepresentation",
+        "optional_io_device": "False",
+        "ports": "Siemens.Engineering.Contract.InstanceRepresentation`1[Siemens.Engineering.Contract.IAssociationContract]",
+        "prioritized_startup": "False",
+        "type_name": "PROFINET-Schnittstelle",
+        "node._i_e1._address": "192.168.155.23",
+        "node._i_e1._connected_subnet": "Siemens.Engineering.Contract.InstanceRepresentation`1[Siemens.Engineering.Contract.IObjectContract]",
+        "node._i_e1._ip_protocol_selection": "Siemens.Engineering.Contract.EnumToClientRepresentation",
+        "node._i_e1._name": "IE1",
+        "node._i_e1._node_id": "IE1",
+        "node._i_e1._node_type": "Siemens.Engineering.Contract.EnumToClientRepresentation",
+        "node._i_e1._pn_device_name": "drive_slip_pump",
+        "node._i_e1._pn_device_name_auto_generation": "False",
+        "node._i_e1._pn_device_name_converted": "drivexbslipxbpump03a5",
+        "node._i_e1._router_address": "192.168.155.1",
+        "node._i_e1._subnet_mask": "255.255.255.0",
+        "node._i_e1._sync_router_settings_with_io_controller": "True",
+        "node._i_e1._use_ip_protocol": "True",
+        "node._i_e1._use_iso_protocol": "False",
+        "node._i_e1._use_router": "True"
+      },
+      "path": "SINAMICS G_3/Schlicker Pumpe/PROFINET-Schnittstelle"
+    }
+  ],
+  "network_links": [
+    {
+      "link_type": "io_connector",
+      "source_path": "SINAMICS G_1/Drive_Main_Fan/PROFINET-Schnittstelle",
+      "source_name": "PROFINET-Schnittstelle",
+      "target_name": "PROFINET IO-System",
+      "subnet_name": "PN/IE_1",
+      "io_system_name": "PROFINET IO-System"
+    },
+    {
+      "link_type": "io_device",
+      "source_path": "SINAMICS G_1/Drive_Main_Fan/PROFINET-Schnittstelle",
+      "source_name": "PROFINET-Schnittstelle",
+      "target_name": "Siemens.Engineering.HW.IoConnector",
+      "subnet_name": "PN/IE_1",
+      "io_system_name": "PROFINET IO-System"
+    },
+    {
+      "link_type": "io_device",
+      "source_path": "SINAMICS G_1/Drive_Main_Fan/PROFINET-Schnittstelle",
+      "source_name": "PROFINET-Schnittstelle",
+      "target_name": "Siemens.Engineering.HW.IoConnector",
+      "subnet_name": "PN/IE_1",
+      "io_system_name": "PROFINET IO-System"
+    },
+    {
+      "link_type": "io_device",
+      "source_path": "SINAMICS G_1/Drive_Main_Fan/PROFINET-Schnittstelle",
+      "source_name": "PROFINET-Schnittstelle",
+      "target_name": "Siemens.Engineering.HW.IoConnector",
+      "subnet_name": "PN/IE_1",
+      "io_system_name": "PROFINET IO-System"
+    },
+    {
+      "link_type": "io_device",
+      "source_path": "SINAMICS G_1/Drive_Main_Fan/PROFINET-Schnittstelle",
+      "source_name": "PROFINET-Schnittstelle",
+      "target_name": "Siemens.Engineering.HW.IoConnector",
+      "subnet_name": "PN/IE_1",
+      "io_system_name": "PROFINET IO-System"
+    },
+    {
+      "link_type": "io_connector",
+      "source_path": "SINAMICS G_2/Powder Return/PROFINET-Schnittstelle",
+      "source_name": "PROFINET-Schnittstelle",
+      "target_name": "PROFINET IO-System",
+      "subnet_name": "PN/IE_1",
+      "io_system_name": "PROFINET IO-System"
+    },
+    {
+      "link_type": "io_device",
+      "source_path": "SINAMICS G_2/Powder Return/PROFINET-Schnittstelle",
+      "source_name": "PROFINET-Schnittstelle",
+      "target_name": "Siemens.Engineering.HW.IoConnector",
+      "subnet_name": "PN/IE_1",
+      "io_system_name": "PROFINET IO-System"
+    },
+    {
+      "link_type": "io_device",
+      "source_path": "SINAMICS G_2/Powder Return/PROFINET-Schnittstelle",
+      "source_name": "PROFINET-Schnittstelle",
+      "target_name": "Siemens.Engineering.HW.IoConnector",
+      "subnet_name": "PN/IE_1",
+      "io_system_name": "PROFINET IO-System"
+    },
+    {
+      "link_type": "io_device",
+      "source_path": "SINAMICS G_2/Powder Return/PROFINET-Schnittstelle",
+      "source_name": "PROFINET-Schnittstelle",
+      "target_name": "Siemens.Engineering.HW.IoConnector",
+      "subnet_name": "PN/IE_1",
+      "io_system_name": "PROFINET IO-System"
+    },
+    {
+      "link_type": "io_device",
+      "source_path": "SINAMICS G_2/Powder Return/PROFINET-Schnittstelle",
+      "source_name": "PROFINET-Schnittstelle",
+      "target_name": "Siemens.Engineering.HW.IoConnector",
+      "subnet_name": "PN/IE_1",
+      "io_system_name": "PROFINET IO-System"
+    },
+    {
+      "link_type": "io_connector",
+      "source_path": "SINAMICS G_3/Schlicker Pumpe/PROFINET-Schnittstelle",
+      "source_name": "PROFINET-Schnittstelle",
+      "target_name": "PROFINET IO-System",
+      "subnet_name": "PN/IE_1",
+      "io_system_name": "PROFINET IO-System"
+    },
+    {
+      "link_type": "io_device",
+      "source_path": "SINAMICS G_3/Schlicker Pumpe/PROFINET-Schnittstelle",
+      "source_name": "PROFINET-Schnittstelle",
+      "target_name": "Siemens.Engineering.HW.IoConnector",
+      "subnet_name": "PN/IE_1",
+      "io_system_name": "PROFINET IO-System"
+    },
+    {
+      "link_type": "io_device",
+      "source_path": "SINAMICS G_3/Schlicker Pumpe/PROFINET-Schnittstelle",
+      "source_name": "PROFINET-Schnittstelle",
+      "target_name": "Siemens.Engineering.HW.IoConnector",
+      "subnet_name": "PN/IE_1",
+      "io_system_name": "PROFINET IO-System"
+    },
+    {
+      "link_type": "io_device",
+      "source_path": "SINAMICS G_3/Schlicker Pumpe/PROFINET-Schnittstelle",
+      "source_name": "PROFINET-Schnittstelle",
+      "target_name": "Siemens.Engineering.HW.IoConnector",
+      "subnet_name": "PN/IE_1",
+      "io_system_name": "PROFINET IO-System"
+    },
+    {
+      "link_type": "io_device",
+      "source_path": "SINAMICS G_3/Schlicker Pumpe/PROFINET-Schnittstelle",
+      "source_name": "PROFINET-Schnittstelle",
+      "target_name": "Siemens.Engineering.HW.IoConnector",
+      "subnet_name": "PN/IE_1",
+      "io_system_name": "PROFINET IO-System"
+    }
+  ],
+  "subnets": [
+    {
+      "name": "PN/IE_1",
+      "net_type": "Ethernet",
+      "io_system_names": [
+        "PROFINET IO-System"
+      ],
+      "attributes": {
+        "default_subnet": "True",
+        "io_systems": "Siemens.Engineering.Contract.InstanceRepresentation`1[Siemens.Engineering.Contract.IAssociationContract]",
+        "name": "PN/IE_1",
+        "net_type": "Siemens.Engineering.Contract.EnumToClientRepresentation",
+        "nodes": "Siemens.Engineering.Contract.InstanceRepresentation`1[Siemens.Engineering.Contract.IAssociationContract]",
+        "subnet_id": "DA3B-1",
+        "type_identifier": "System:Subnet.Ethernet"
+      }
+    }
+  ],
+  "hardware_attributes": [
+    {
+      "object_path": "S7-1500/ET200MP-Station_1/Profilschiene_0",
+      "object_type": "Siemens.Engineering.HW.DeviceItemImpl",
+      "attributes": {
+        "author": "lange",
+        "classification": "Siemens.Engineering.Contract.EnumToClientRepresentation",
+        "comment": "",
+        "comment_m_l": "Siemens.Engineering.Contract.InstanceRepresentation`1[Siemens.Engineering.Contract.IObjectContract]",
+        "container": "Siemens.Engineering.Contract.InstanceRepresentation`1[Siemens.Engineering.Contract.IObjectContract]",
+        "firmware_version": "",
+        "is_built_in": "False",
+        "is_plugged": "True",
+        "items": "Siemens.Engineering.Contract.InstanceRepresentation`1[Siemens.Engineering.Contract.IAssociationContract]",
+        "name": "Profilschiene_0",
+        "order_number": "6ES7 590-1***0-0AA0",
+        "position_number": "0",
+        "type_identifier": "OrderNumber:6ES7 590-1***0-0AA0",
+        "type_identifier_normalized": "OrderNumber:6ES7590-1***0-0AA0",
+        "type_name": "Rack"
+      }
+    },
+    {
+      "object_path": "S7-1500/ET200MP-Station_1/PLC_1",
+      "object_type": "Siemens.Engineering.HW.DeviceItemImpl",
+      "attributes": {
+        "additional_information": "",
+        "author": "lange",
+        "central_alarm_management": "True",
+        "classification": "Siemens.Engineering.Contract.EnumToClientRepresentation",
+        "clock_memory_byte": "True",
+        "clock_memory_byte_address": "5",
+        "comment": "",
+        "comment_m_l": "Siemens.Engineering.Contract.InstanceRepresentation`1[Siemens.Engineering.Contract.IObjectContract]",
+        "communication_mode": "1",
+        "configuration_control": "False",
+        "container": "Siemens.Engineering.Contract.InstanceRepresentation`1[Siemens.Engineering.Contract.IObjectContract]",
+        "cycle_communication_load": "20",
+        "cycle_enable_minimum_cycle_time": "True",
+        "cycle_maximum_cycle_time": "150",
+        "cycle_minimum_cycle_time": "1",
+        "detect_load_voltage_failure": "False",
+        "failsafe__central_f_source_address": "1",
+        "failsafe__default_fmonitoring_time_central": "150",
+        "failsafe__f_capability_activated": "True",
+        "failsafe__lower_bound_for_f_destination_addresses": "1",
+        "failsafe__upper_bound_for_f_destination_addresses": "99",
+        "firmware_version": "V4.0",
+        "host_and_domainname_active": "False",
+        "i_pv4_forwarding_active": "False",
+        "installation_date": "21.02.2022 13:23:41",
+        "is_built_in": "False",
+        "is_plugged": "True",
+        "isochronous_mode": "False",
+        "items": "Siemens.Engineering.Contract.InstanceRepresentation`1[Siemens.Engineering.Contract.IAssociationContract]",
+        "location_identifier": "",
+        "multilingual_support_advanced": "Siemens.Engineering.Contract.InstanceRepresentation`1[Siemens.Engineering.Contract.IObjectContract]",
+        "name": "PLC_1",
+        "network_faults_as_maintenance": "False",
+        "opc_ua_purchased_license": "0",
+        "order_number": "6ES7 516-3FP03-0AB0",
+        "plant_designation": "",
+        "plc_access_control_configuration": "Siemens.Engineering.Contract.EnumToClientRepresentation",
+        "plc_communication_certificate": "Siemens.Engineering.Contract.InstanceRepresentation`1[Siemens.Engineering.Contract.IObjectContract]",
+        "pn_dns_config_name_resolve": "Siemens.Engineering.Contract.EnumToClientRepresentation",
+        "pn_dns_configuration": "System.String[]",
+        "position_number": "1",
+        "pro_diag_used_licenses": "0",
+        "protection_enable_put_get_communication": "False",
+        "protection_interval_for_summarize_of_security_events": "20",
+        "protection_summarize_security_events_on_high_load": "True",
+        "protection_unit_for_summarize_of_security_events": "2",
+        "s_n_m_p_active": "True",
+        "s_n_m_p_configuration_source": "0",
+        "s_n_m_p_read_only_active": "False",
+        "s_n_m_p_read_only_community_name": "public",
+        "s_n_m_p_read_write_community_name": "private",
+        "s_n_m_p_synchronize_active": "False",
+        "send_clock": "1",
+        "short_designation": "CPU 1516F-3 PN/DP",
+        "startup_action_after_power_on": "3",
+        "startup_comparison_preset_to_actual_module": "2",
+        "startup_configuration_timeout": "60000",
+        "suppress_deactivating_system_diagnostics_alarms": "False",
+        "sys_log_auto_accept_client": "False",
+        "sys_log_client_certificate_id": "0",
+        "sys_log_trusted_certificate_ids": "",
+        "system_memory_byte": "True",
+        "system_memory_byte_address": "1",
+        "system_power_supply_external": "1",
+        "time_of_day_activate_daylight_saving_time": "True",
+        "time_of_day_daylight_saving_time_offset": "60",
+        "time_of_day_daylight_saving_time_start_hour": "2",
+        "time_of_day_daylight_saving_time_start_month": "3",
+        "time_of_day_daylight_saving_time_start_week": "5",
+        "time_of_day_daylight_saving_time_start_weekday": "1",
+        "time_of_day_local_time_zone": "24",
+        "time_of_day_standard_time_start_hour": "3",
+        "time_of_day_standard_time_start_month": "10",
+        "time_of_day_standard_time_start_week": "5",
+        "time_of_day_standard_time_start_weekday": "1",
+        "time_synchronization_ntp_v2": "0",
+        "type_identifier": "OrderNumber:6ES7 516-3FP03-0AB0/V4.0",
+        "type_identifier_normalized": "OrderNumber:6ES7516-3FP03-0AB0/V4.0",
+        "type_name": "CPU 1516F-3 PN/DP",
+        "use_fixed_system_diagnostics_alarm_ids": "False",
+        "webserver_activate": "False"
+      }
+    },
+    {
+      "object_path": "S7-1500/ET200MP-Station_1/PLC_1/Kartenleser/-schreiber_1",
+      "object_type": "Siemens.Engineering.HW.DeviceItemImpl",
+      "attributes": {
+        "classification": "Siemens.Engineering.Contract.EnumToClientRepresentation",
+        "container": "Siemens.Engineering.Contract.InstanceRepresentation`1[Siemens.Engineering.Contract.IObjectContract]",
+        "diagnostics_aging_simatic_memory_card": "False",
+        "is_built_in": "True",
+        "is_plugged": "True",
+        "items": "Siemens.Engineering.Contract.InstanceRepresentation`1[Siemens.Engineering.Contract.IAssociationContract]",
+        "name": "Kartenleser/-schreiber_1",
+        "pn_subslot_number": "4",
+        "position_number": "4",
+        "type_identifier": null,
+        "type_identifier_normalized": null
+      }
+    },
+    {
+      "object_path": "S7-1500/ET200MP-Station_1/PLC_1/CPU-Display_1",
+      "object_type": "Siemens.Engineering.HW.DeviceItemImpl",
+      "attributes": {
+        "classification": "Siemens.Engineering.Contract.EnumToClientRepresentation",
+        "container": "Siemens.Engineering.Contract.InstanceRepresentation`1[Siemens.Engineering.Contract.IObjectContract]",
+        "display_default_language": "0",
+        "display_protection": "False",
+        "display_time_to_energy_saving_mode": "900",
+        "display_time_to_standby_mode": "1800",
+        "display_update_interval": "5",
+        "display_write_access": "True",
+        "is_built_in": "True",
+        "is_plugged": "True",
+        "items": "Siemens.Engineering.Contract.InstanceRepresentation`1[Siemens.Engineering.Contract.IAssociationContract]",
+        "name": "CPU-Display_1",
+        "pn_subslot_number": "3",
+        "position_number": "3",
+        "type_identifier": null,
+        "type_identifier_normalized": null
+      }
+    },
+    {
+      "object_path": "S7-1500/ET200MP-Station_1/PLC_1/OPC UA_1",
+      "object_type": "Siemens.Engineering.HW.DeviceItemImpl",
+      "attributes": {
+        "classification": "Siemens.Engineering.Contract.EnumToClientRepresentation",
+        "container": "Siemens.Engineering.Contract.InstanceRepresentation`1[Siemens.Engineering.Contract.IObjectContract]",
+        "is_built_in": "True",
+        "is_plugged": "True",
+        "items": "Siemens.Engineering.Contract.InstanceRepresentation`1[Siemens.Engineering.Contract.IAssociationContract]",
+        "name": "OPC UA_1",
+        "opc_ua_application_name": "SIMATIC.S7-1500.OPC-UA.Application:PLC_1",
+        "opc_ua_client": "False",
+        "opc_ua_export_array_members": "True",
+        "opc_ua_server": "False",
+        "opc_ua_server_certificate": null,
+        "pn_subslot_number": "254",
+        "position_number": "254",
+        "type_identifier": null,
+        "type_identifier_normalized": null
+      }
+    },
+    {
+      "object_path": "S7-1500/ET200MP-Station_1/PLC_1/DP-Schnittstelle_1",
+      "object_type": "Siemens.Engineering.HW.DeviceItemImpl",
+      "attributes": {
+        "author": "lange",
+        "classification": "Siemens.Engineering.Contract.EnumToClientRepresentation",
+        "comment": "",
+        "comment_m_l": "Siemens.Engineering.Contract.InstanceRepresentation`1[Siemens.Engineering.Contract.IObjectContract]",
+        "container": "Siemens.Engineering.Contract.InstanceRepresentation`1[Siemens.Engineering.Contract.IObjectContract]",
+        "failsafe__default_fmonitoring_time_decentral": "150",
+        "interface_operating_mode": "Siemens.Engineering.Contract.EnumToClientRepresentation",
+        "interface_type": "Siemens.Engineering.Contract.EnumToClientRepresentation",
+        "is_built_in": "True",
+        "is_plugged": "True",
+        "items": "Siemens.Engineering.Contract.InstanceRepresentation`1[Siemens.Engineering.Contract.IAssociationContract]",
+        "label": "X3",
+        "name": "DP-Schnittstelle_1",
+        "pn_subslot_number": "33280",
+        "position_number": "33280",
+        "time_of_day_type_of_synchronization_on_dp": "2",
+        "type_identifier": null,
+        "type_identifier_normalized": null
+      }
+    },
+    {
+      "object_path": "S7-1500/ET200MP-Station_1/PLC_1/PROFINET-Schnittstelle_1",
+      "object_type": "Siemens.Engineering.HW.DeviceItemImpl",
+      "attributes": {
+        "alternative_redundancy": "True",
+        "author": "lange",
+        "calculated_bandwidth_for_cyclic_io_data": "0",
+        "classification": "Siemens.Engineering.Contract.EnumToClientRepresentation",
+        "comment": "",
+        "comment_m_l": "Siemens.Engineering.Contract.InstanceRepresentation`1[Siemens.Engineering.Contract.IObjectContract]",
+        "container": "Siemens.Engineering.Contract.InstanceRepresentation`1[Siemens.Engineering.Contract.IObjectContract]",
+        "d_c_p_read_only_default_setting_active": "False",
+        "device_replacement_without_exchangeable_medium": "True",
+        "diagnostics_communication_error": "False",
+        "failsafe__default_fmonitoring_time_decentral": "150",
+        "i_e_c_v22_l_l_d_p_mode": "False",
+        "interface_operating_mode": "Siemens.Engineering.Contract.EnumToClientRepresentation",
+        "interface_type": "Siemens.Engineering.Contract.EnumToClientRepresentation",
+        "is_built_in": "True",
+        "is_io_controller": "True",
+        "is_io_device": "False",
+        "is_plugged": "True",
+        "items": "Siemens.Engineering.Contract.InstanceRepresentation`1[Siemens.Engineering.Contract.IAssociationContract]",
+        "keep_alives_interval": "30",
+        "label": "X1",
+        "load_limitation": "True",
+        "maintain_communication_during_network_faults": "False",
+        "max_bandwidth_for_cyclic_io_data": "500000",
+        "media_redundancy_role": "Siemens.Engineering.Contract.EnumToClientRepresentation",
+        "name": "PROFINET-Schnittstelle_1",
+        "overwrite_device_names": "False",
+        "pn_send_clock": "1000000",
+        "pn_subslot_number": "32768",
+        "position_number": "32768",
+        "s_n_m_p_default_setting_active": "False",
+        "s_n_m_p_read_only_community_name_default_setting": "public",
+        "s_n_m_p_read_only_default_setting_active": "False",
+        "s_n_m_p_read_write_community_name_default_setting": "private",
+        "time_synchronization_ntp": "False",
+        "type_identifier": null,
+        "type_identifier_normalized": null,
+        "use_web_server_for_interface": "False"
+      }
+    },
+    {
+      "object_path": "S7-1500/ET200MP-Station_1/PLC_1/PROFINET-Schnittstelle_1/Port_1",
+      "object_type": "Siemens.Engineering.HW.DeviceItemImpl",
+      "attributes": {
+        "alternative_partner_ports": "False",
+        "author": "lange",
+        "cable_name": "Siemens.Engineering.Contract.EnumToClientRepresentation",
+        "classification": "Siemens.Engineering.Contract.EnumToClientRepresentation",
+        "comment": "",
+        "comment_m_l": "Siemens.Engineering.Contract.InstanceRepresentation`1[Siemens.Engineering.Contract.IObjectContract]",
+        "container": "Siemens.Engineering.Contract.InstanceRepresentation`1[Siemens.Engineering.Contract.IObjectContract]",
+        "end_of_detection_of_accessible_devices": "False",
+        "end_of_sync_domain": "False",
+        "end_of_topology_discovery": "False",
+        "is_built_in": "True",
+        "is_plugged": "True",
+        "items": "Siemens.Engineering.Contract.InstanceRepresentation`1[Siemens.Engineering.Contract.IAssociationContract]",
+        "label": "P1R",
+        "medium_attachment_type": "Siemens.Engineering.Contract.EnumToClientRepresentation",
+        "name": "Port_1",
+        "pn_subslot_number": "32769",
+        "port_activation": "True",
+        "port_monitoring": "False",
+        "position_number": "32769",
+        "transmission_rate_and_duplex": "Siemens.Engineering.Contract.EnumToClientRepresentation",
+        "transmission_rate_auto_negotiation": "True",
+        "type_identifier": null,
+        "type_identifier_normalized": null
+      }
+    },
+    {
+      "object_path": "S7-1500/ET200MP-Station_1/PLC_1/PROFINET-Schnittstelle_1/Port_2",
+      "object_type": "Siemens.Engineering.HW.DeviceItemImpl",
+      "attributes": {
+        "alternative_partner_ports": "False",
+        "author": "lange",
+        "cable_name": "Siemens.Engineering.Contract.EnumToClientRepresentation",
+        "classification": "Siemens.Engineering.Contract.EnumToClientRepresentation",
+        "comment": "",
+        "comment_m_l": "Siemens.Engineering.Contract.InstanceRepresentation`1[Siemens.Engineering.Contract.IObjectContract]",
+        "container": "Siemens.Engineering.Contract.InstanceRepresentation`1[Siemens.Engineering.Contract.IObjectContract]",
+        "end_of_detection_of_accessible_devices": "False",
+        "end_of_sync_domain": "False",
+        "end_of_topology_discovery": "False",
+        "is_built_in": "True",
+        "is_plugged": "True",
+        "items": "Siemens.Engineering.Contract.InstanceRepresentation`1[Siemens.Engineering.Contract.IAssociationContract]",
+        "label": "P2R",
+        "medium_attachment_type": "Siemens.Engineering.Contract.EnumToClientRepresentation",
+        "name": "Port_2",
+        "pn_subslot_number": "32770",
+        "port_activation": "True",
+        "port_monitoring": "False",
+        "position_number": "32770",
+        "transmission_rate_and_duplex": "Siemens.Engineering.Contract.EnumToClientRepresentation",
+        "transmission_rate_auto_negotiation": "True",
+        "type_identifier": null,
+        "type_identifier_normalized": null
+      }
+    },
+    {
+      "object_path": "S7-1500/ET200MP-Station_1/PLC_1/PROFINET-Schnittstelle_2",
+      "object_type": "Siemens.Engineering.HW.DeviceItemImpl",
+      "attributes": {
+        "author": "lange",
+        "calculated_bandwidth_for_cyclic_io_data": "0",
+        "classification": "Siemens.Engineering.Contract.EnumToClientRepresentation",
+        "comment": "",
+        "comment_m_l": "Siemens.Engineering.Contract.InstanceRepresentation`1[Siemens.Engineering.Contract.IObjectContract]",
+        "container": "Siemens.Engineering.Contract.InstanceRepresentation`1[Siemens.Engineering.Contract.IObjectContract]",
+        "d_c_p_read_only_default_setting_active": "False",
+        "device_replacement_without_exchangeable_medium": "True",
+        "diagnostics_communication_error": "False",
+        "failsafe__default_fmonitoring_time_decentral": "150",
+        "i_e_c_v22_l_l_d_p_mode": "False",
+        "interface_operating_mode": "Siemens.Engineering.Contract.EnumToClientRepresentation",
+        "interface_type": "Siemens.Engineering.Contract.EnumToClientRepresentation",
+        "is_built_in": "True",
+        "is_io_controller": "True",
+        "is_io_device": "False",
+        "is_plugged": "True",
+        "items": "Siemens.Engineering.Contract.InstanceRepresentation`1[Siemens.Engineering.Contract.IAssociationContract]",
+        "keep_alives_interval": "30",
+        "label": "X2",
+        "load_limitation": "False",
+        "maintain_communication_during_network_faults": "False",
+        "max_bandwidth_for_cyclic_io_data": "0",
+        "name": "PROFINET-Schnittstelle_2",
+        "overwrite_device_names": "False",
+        "pn_send_clock": "1000000",
+        "pn_subslot_number": "33024",
+        "position_number": "33024",
+        "s_n_m_p_default_setting_active": "False",
+        "s_n_m_p_read_only_community_name_default_setting": "public",
+        "s_n_m_p_read_only_default_setting_active": "False",
+        "s_n_m_p_read_write_community_name_default_setting": "private",
+        "type_identifier": null,
+        "type_identifier_normalized": null,
+        "use_web_server_for_interface": "False"
+      }
+    },
+    {
+      "object_path": "S7-1500/ET200MP-Station_1/PLC_1/PROFINET-Schnittstelle_2/Port_1",
+      "object_type": "Siemens.Engineering.HW.DeviceItemImpl",
+      "attributes": {
+        "alternative_partner_ports": "False",
+        "author": "lange",
+        "cable_name": "Siemens.Engineering.Contract.EnumToClientRepresentation",
+        "classification": "Siemens.Engineering.Contract.EnumToClientRepresentation",
+        "comment": "",
+        "comment_m_l": "Siemens.Engineering.Contract.InstanceRepresentation`1[Siemens.Engineering.Contract.IObjectContract]",
+        "container": "Siemens.Engineering.Contract.InstanceRepresentation`1[Siemens.Engineering.Contract.IObjectContract]",
+        "end_of_detection_of_accessible_devices": "False",
+        "end_of_topology_discovery": "False",
+        "is_built_in": "True",
+        "is_plugged": "True",
+        "items": "Siemens.Engineering.Contract.InstanceRepresentation`1[Siemens.Engineering.Contract.IAssociationContract]",
+        "label": "P1",
+        "medium_attachment_type": "Siemens.Engineering.Contract.EnumToClientRepresentation",
+        "name": "Port_1",
+        "pn_subslot_number": "33025",
+        "port_activation": "True",
+        "port_monitoring": "False",
+        "position_number": "33025",
+        "transmission_rate_and_duplex": "Siemens.Engineering.Contract.EnumToClientRepresentation",
+        "transmission_rate_auto_negotiation": "True",
+        "type_identifier": null,
+        "type_identifier_normalized": null
+      }
+    },
+    {
+      "object_path": "HMI_1/HMI_1",
+      "object_type": "Siemens.Engineering.HW.DeviceItemImpl",
+      "attributes": {
+        "classification": "Siemens.Engineering.Contract.EnumToClientRepresentation",
+        "container": "Siemens.Engineering.Contract.InstanceRepresentation`1[Siemens.Engineering.Contract.IObjectContract]",
+        "is_built_in": "False",
+        "is_plugged": "True",
+        "items": "Siemens.Engineering.Contract.InstanceRepresentation`1[Siemens.Engineering.Contract.IAssociationContract]",
+        "name": "HMI_1",
+        "position_number": "0",
+        "type_identifier": "OrderNumber:6AV2 128-3QB06-0AXx/20.0.0.0",
+        "type_identifier_normalized": "OrderNumber:6AV2128-3QB06-0AX*/20.0.0.0"
+      }
+    },
+    {
+      "object_path": "HMI_1/HMI_1.IE_CP_1",
+      "object_type": "Siemens.Engineering.HW.DeviceItemImpl",
+      "attributes": {
+        "classification": "Siemens.Engineering.Contract.EnumToClientRepresentation",
+        "container": "Siemens.Engineering.Contract.InstanceRepresentation`1[Siemens.Engineering.Contract.IObjectContract]",
+        "is_built_in": "False",
+        "is_plugged": "True",
+        "items": "Siemens.Engineering.Contract.InstanceRepresentation`1[Siemens.Engineering.Contract.IAssociationContract]",
+        "name": "HMI_1.IE_CP_1",
+        "position_number": "5",
+        "type_identifier": null,
+        "type_identifier_normalized": null
+      }
+    },
+    {
+      "object_path": "HMI_1/HMI_1.IE_CP_1/PROFINET Schnittstelle_1",
+      "object_type": "Siemens.Engineering.HW.DeviceItemImpl",
+      "attributes": {
+        "classification": "Siemens.Engineering.Contract.EnumToClientRepresentation",
+        "container": "Siemens.Engineering.Contract.InstanceRepresentation`1[Siemens.Engineering.Contract.IObjectContract]",
+        "interface_operating_mode": "Siemens.Engineering.Contract.EnumToClientRepresentation",
+        "interface_type": "Siemens.Engineering.Contract.EnumToClientRepresentation",
+        "is_built_in": "True",
+        "is_plugged": "True",
+        "items": "Siemens.Engineering.Contract.InstanceRepresentation`1[Siemens.Engineering.Contract.IAssociationContract]",
+        "label": "X1",
+        "name": "PROFINET Schnittstelle_1",
+        "pn_send_clock": "1000000",
+        "pn_subslot_number": "32768",
+        "position_number": "1",
+        "type_identifier": null,
+        "type_identifier_normalized": null
+      }
+    },
+    {
+      "object_path": "HMI_1/HMI_1.IE_CP_1/PROFINET Schnittstelle_1/Port_1",
+      "object_type": "Siemens.Engineering.HW.DeviceItemImpl",
+      "attributes": {
+        "cable_name": "Siemens.Engineering.Contract.EnumToClientRepresentation",
+        "classification": "Siemens.Engineering.Contract.EnumToClientRepresentation",
+        "container": "Siemens.Engineering.Contract.InstanceRepresentation`1[Siemens.Engineering.Contract.IObjectContract]",
+        "end_of_detection_of_accessible_devices": "False",
+        "end_of_topology_discovery": "False",
+        "is_built_in": "True",
+        "is_plugged": "True",
+        "items": "Siemens.Engineering.Contract.InstanceRepresentation`1[Siemens.Engineering.Contract.IAssociationContract]",
+        "label": "P1R",
+        "medium_attachment_type": "Siemens.Engineering.Contract.EnumToClientRepresentation",
+        "name": "Port_1",
+        "pn_subslot_number": "32769",
+        "port_activation": "True",
+        "position_number": "1",
+        "transmission_rate_and_duplex": "Siemens.Engineering.Contract.EnumToClientRepresentation",
+        "transmission_rate_auto_negotiation": "True",
+        "type_identifier": null,
+        "type_identifier_normalized": null
+      }
+    },
+    {
+      "object_path": "HMI_1/HMI_1.IE_CP_1/PROFINET Schnittstelle_1/Port_2",
+      "object_type": "Siemens.Engineering.HW.DeviceItemImpl",
+      "attributes": {
+        "cable_name": "Siemens.Engineering.Contract.EnumToClientRepresentation",
+        "classification": "Siemens.Engineering.Contract.EnumToClientRepresentation",
+        "container": "Siemens.Engineering.Contract.InstanceRepresentation`1[Siemens.Engineering.Contract.IObjectContract]",
+        "end_of_detection_of_accessible_devices": "False",
+        "end_of_topology_discovery": "False",
+        "is_built_in": "True",
+        "is_plugged": "True",
+        "items": "Siemens.Engineering.Contract.InstanceRepresentation`1[Siemens.Engineering.Contract.IAssociationContract]",
+        "label": "P2R",
+        "medium_attachment_type": "Siemens.Engineering.Contract.EnumToClientRepresentation",
+        "name": "Port_2",
+        "pn_subslot_number": "32770",
+        "port_activation": "True",
+        "position_number": "2",
+        "transmission_rate_and_duplex": "Siemens.Engineering.Contract.EnumToClientRepresentation",
+        "transmission_rate_auto_negotiation": "True",
+        "type_identifier": null,
+        "type_identifier_normalized": null
+      }
+    },
+    {
+      "object_path": "HMI_1/HMI_1.IE_CP_2",
+      "object_type": "Siemens.Engineering.HW.DeviceItemImpl",
+      "attributes": {
+        "classification": "Siemens.Engineering.Contract.EnumToClientRepresentation",
+        "container": "Siemens.Engineering.Contract.InstanceRepresentation`1[Siemens.Engineering.Contract.IObjectContract]",
+        "is_built_in": "False",
+        "is_plugged": "True",
+        "items": "Siemens.Engineering.Contract.InstanceRepresentation`1[Siemens.Engineering.Contract.IAssociationContract]",
+        "name": "HMI_1.IE_CP_2",
+        "position_number": "6",
+        "type_identifier": null,
+        "type_identifier_normalized": null
+      }
+    },
+    {
+      "object_path": "HMI_1/HMI_1.IE_CP_2/PROFINET Schnittstelle_GBit",
+      "object_type": "Siemens.Engineering.HW.DeviceItemImpl",
+      "attributes": {
+        "classification": "Siemens.Engineering.Contract.EnumToClientRepresentation",
+        "container": "Siemens.Engineering.Contract.InstanceRepresentation`1[Siemens.Engineering.Contract.IObjectContract]",
+        "interface_operating_mode": "Siemens.Engineering.Contract.EnumToClientRepresentation",
+        "interface_type": "Siemens.Engineering.Contract.EnumToClientRepresentation",
+        "is_built_in": "True",
+        "is_plugged": "True",
+        "items": "Siemens.Engineering.Contract.InstanceRepresentation`1[Siemens.Engineering.Contract.IAssociationContract]",
+        "label": "X2",
+        "name": "PROFINET Schnittstelle_GBit",
+        "pn_subslot_number": "33024",
+        "position_number": "1",
+        "type_identifier": null,
+        "type_identifier_normalized": null
+      }
+    },
+    {
+      "object_path": "HMI_1/HMI_1.IE_CP_2/PROFINET Schnittstelle_GBit/Port_1",
+      "object_type": "Siemens.Engineering.HW.DeviceItemImpl",
+      "attributes": {
+        "cable_name": "Siemens.Engineering.Contract.EnumToClientRepresentation",
+        "classification": "Siemens.Engineering.Contract.EnumToClientRepresentation",
+        "container": "Siemens.Engineering.Contract.InstanceRepresentation`1[Siemens.Engineering.Contract.IObjectContract]",
+        "is_built_in": "True",
+        "is_plugged": "True",
+        "items": "Siemens.Engineering.Contract.InstanceRepresentation`1[Siemens.Engineering.Contract.IAssociationContract]",
+        "label": "P1",
+        "medium_attachment_type": "Siemens.Engineering.Contract.EnumToClientRepresentation",
+        "name": "Port_1",
+        "pn_subslot_number": "33025",
+        "port_activation": "True",
+        "position_number": "1",
+        "transmission_rate_and_duplex": "Siemens.Engineering.Contract.EnumToClientRepresentation",
+        "transmission_rate_auto_negotiation": "True",
+        "type_identifier": null,
+        "type_identifier_normalized": null
+      }
+    },
+    {
+      "object_path": "HMI_1/HMI_RT_1",
+      "object_type": "Siemens.Engineering.HW.DeviceItemImpl",
+      "attributes": {
+        "classification": "Siemens.Engineering.Contract.EnumToClientRepresentation",
+        "container": "Siemens.Engineering.Contract.InstanceRepresentation`1[Siemens.Engineering.Contract.IObjectContract]",
+        "is_built_in": "False",
+        "is_plugged": "True",
+        "items": "Siemens.Engineering.Contract.InstanceRepresentation`1[Siemens.Engineering.Contract.IAssociationContract]",
+        "name": "HMI_RT_1",
+        "position_number": "1",
+        "type_identifier": null,
+        "type_identifier_normalized": null
+      }
+    },
+    {
+      "object_path": "SINAMICS G_1/\t_0",
+      "object_type": "Siemens.Engineering.HW.DeviceItemImpl",
+      "attributes": {
+        "author": "lange",
+        "classification": "Siemens.Engineering.Contract.EnumToClientRepresentation",
+        "comment": "",
+        "container": "Siemens.Engineering.Contract.InstanceRepresentation`1[Siemens.Engineering.Contract.IObjectContract]",
+        "is_built_in": "False",
+        "is_plugged": "True",
+        "items": "Siemens.Engineering.Contract.InstanceRepresentation`1[Siemens.Engineering.Contract.IAssociationContract]",
+        "name": "\t_0",
+        "position_number": "0",
+        "type_identifier": "System:Rack.G120CPN-2",
+        "type_identifier_normalized": "System:Rack.G120CPN-2",
+        "type_name": "\t"
+      }
+    },
+    {
+      "object_path": "SINAMICS G_1/Drive_Main_Fan",
+      "object_type": "Siemens.Engineering.HW.DeviceItemImpl",
+      "attributes": {
+        "author": "lange",
+        "classification": "Siemens.Engineering.Contract.EnumToClientRepresentation",
+        "comment": "",
+        "container": "Siemens.Engineering.Contract.InstanceRepresentation`1[Siemens.Engineering.Contract.IObjectContract]",
+        "is_built_in": "False",
+        "is_plugged": "True",
+        "items": "Siemens.Engineering.Contract.InstanceRepresentation`1[Siemens.Engineering.Contract.IAssociationContract]",
+        "name": "Drive_Main_Fan",
+        "position_number": "0",
+        "type_identifier": "OrderNumber:6SL3210-1KE31-7AF1/4.7.14",
+        "type_identifier_normalized": "OrderNumber:6SL3210-1KE31-7AF1/4.7.14",
+        "type_name": "G120C PN"
+      }
+    },
+    {
+      "object_path": "SINAMICS G_1/Drive_Main_Fan/PM G120C",
+      "object_type": "Siemens.Engineering.HW.DeviceItemImpl",
+      "attributes": {
+        "author": "lange",
+        "classification": "Siemens.Engineering.Contract.EnumToClientRepresentation",
+        "comment": "",
+        "container": "Siemens.Engineering.Contract.InstanceRepresentation`1[Siemens.Engineering.Contract.IObjectContract]",
+        "is_built_in": "True",
+        "is_plugged": "True",
+        "items": "Siemens.Engineering.Contract.InstanceRepresentation`1[Siemens.Engineering.Contract.IAssociationContract]",
+        "name": "PM G120C",
+        "position_number": "3",
+        "type_identifier": "OrderNumber:6SL3210-1KE31-7AF1/-",
+        "type_identifier_normalized": "OrderNumber:6SL3210-1KE31-7AF1/-",
+        "type_name": "PM G120C"
+      }
+    },
+    {
+      "object_path": "SINAMICS G_1/Drive_Main_Fan/PROFINET-Schnittstelle",
+      "object_type": "Siemens.Engineering.HW.DeviceItemImpl",
+      "attributes": {
+        "alternative_redundancy": "True",
+        "classification": "Siemens.Engineering.Contract.EnumToClientRepresentation",
+        "comment": "",
+        "container": "Siemens.Engineering.Contract.InstanceRepresentation`1[Siemens.Engineering.Contract.IObjectContract]",
+        "i_e_c_v22_l_l_d_p_mode": "True",
+        "interface_operating_mode": "Siemens.Engineering.Contract.EnumToClientRepresentation",
+        "interface_type": "Siemens.Engineering.Contract.EnumToClientRepresentation",
+        "is_built_in": "True",
+        "is_plugged": "True",
+        "items": "Siemens.Engineering.Contract.InstanceRepresentation`1[Siemens.Engineering.Contract.IAssociationContract]",
+        "label": "X150",
+        "media_redundancy_role": "Siemens.Engineering.Contract.EnumToClientRepresentation",
+        "name": "PROFINET-Schnittstelle",
+        "optional_io_device": "False",
+        "pn_subslot_number": "32768",
+        "position_number": "1",
+        "prioritized_startup": "False",
+        "type_identifier": null,
+        "type_identifier_normalized": null,
+        "type_name": "PROFINET-Schnittstelle"
+      }
+    },
+    {
+      "object_path": "SINAMICS G_1/Drive_Main_Fan/PROFINET-Schnittstelle/Port_1",
+      "object_type": "Siemens.Engineering.HW.DeviceItemImpl",
+      "attributes": {
+        "cable_name": "Siemens.Engineering.Contract.EnumToClientRepresentation",
+        "classification": "Siemens.Engineering.Contract.EnumToClientRepresentation",
+        "comment": "",
+        "container": "Siemens.Engineering.Contract.InstanceRepresentation`1[Siemens.Engineering.Contract.IObjectContract]",
+        "end_of_sync_domain": "False",
+        "is_built_in": "True",
+        "is_plugged": "True",
+        "items": "Siemens.Engineering.Contract.InstanceRepresentation`1[Siemens.Engineering.Contract.IAssociationContract]",
+        "label": "P1 R",
+        "medium_attachment_type": "Siemens.Engineering.Contract.EnumToClientRepresentation",
+        "name": "Port_1",
+        "pn_subslot_number": "32769",
+        "port_activation": "True",
+        "port_monitoring": "False",
+        "position_number": "1",
+        "transmission_rate_and_duplex": "Siemens.Engineering.Contract.EnumToClientRepresentation",
+        "transmission_rate_auto_negotiation": "True",
+        "type_identifier": null,
+        "type_identifier_normalized": null,
+        "type_name": "Port"
+      }
+    },
+    {
+      "object_path": "SINAMICS G_1/Drive_Main_Fan/PROFINET-Schnittstelle/Port_2",
+      "object_type": "Siemens.Engineering.HW.DeviceItemImpl",
+      "attributes": {
+        "cable_name": "Siemens.Engineering.Contract.EnumToClientRepresentation",
+        "classification": "Siemens.Engineering.Contract.EnumToClientRepresentation",
+        "comment": "",
+        "container": "Siemens.Engineering.Contract.InstanceRepresentation`1[Siemens.Engineering.Contract.IObjectContract]",
+        "end_of_sync_domain": "False",
+        "is_built_in": "True",
+        "is_plugged": "True",
+        "items": "Siemens.Engineering.Contract.InstanceRepresentation`1[Siemens.Engineering.Contract.IAssociationContract]",
+        "label": "P2 R",
+        "medium_attachment_type": "Siemens.Engineering.Contract.EnumToClientRepresentation",
+        "name": "Port_2",
+        "pn_subslot_number": "32770",
+        "port_activation": "True",
+        "port_monitoring": "False",
+        "position_number": "2",
+        "transmission_rate_and_duplex": "Siemens.Engineering.Contract.EnumToClientRepresentation",
+        "transmission_rate_auto_negotiation": "True",
+        "type_identifier": null,
+        "type_identifier_normalized": null,
+        "type_name": "Port"
+      }
+    },
+    {
+      "object_path": "SINAMICS G_1/Drive_Main_Fan/Drive_Main_Fan",
+      "object_type": "Siemens.Engineering.HW.DeviceItemImpl",
+      "attributes": {
+        "classification": "Siemens.Engineering.Contract.EnumToClientRepresentation",
+        "container": "Siemens.Engineering.Contract.InstanceRepresentation`1[Siemens.Engineering.Contract.IObjectContract]",
+        "is_built_in": "True",
+        "is_plugged": "True",
+        "items": "Siemens.Engineering.Contract.InstanceRepresentation`1[Siemens.Engineering.Contract.IAssociationContract]",
+        "name": "Drive_Main_Fan",
+        "pn_subslot_number": "1",
+        "position_number": "0",
+        "type_identifier": null,
+        "type_identifier_normalized": null,
+        "type_name": "[PN_G120_SubHead_TypeName]"
+      }
+    },
+    {
+      "object_path": "SINAMICS G_2/\t_0",
+      "object_type": "Siemens.Engineering.HW.DeviceItemImpl",
+      "attributes": {
+        "author": "lange",
+        "classification": "Siemens.Engineering.Contract.EnumToClientRepresentation",
+        "comment": "",
+        "container": "Siemens.Engineering.Contract.InstanceRepresentation`1[Siemens.Engineering.Contract.IObjectContract]",
+        "is_built_in": "False",
+        "is_plugged": "True",
+        "items": "Siemens.Engineering.Contract.InstanceRepresentation`1[Siemens.Engineering.Contract.IAssociationContract]",
+        "name": "\t_0",
+        "position_number": "0",
+        "type_identifier": "System:Rack.G120CPN-2",
+        "type_identifier_normalized": "System:Rack.G120CPN-2",
+        "type_name": "\t"
+      }
+    },
+    {
+      "object_path": "SINAMICS G_2/Powder Return",
+      "object_type": "Siemens.Engineering.HW.DeviceItemImpl",
+      "attributes": {
+        "author": "lange",
+        "classification": "Siemens.Engineering.Contract.EnumToClientRepresentation",
+        "comment": "",
+        "container": "Siemens.Engineering.Contract.InstanceRepresentation`1[Siemens.Engineering.Contract.IObjectContract]",
+        "is_built_in": "False",
+        "is_plugged": "True",
+        "items": "Siemens.Engineering.Contract.InstanceRepresentation`1[Siemens.Engineering.Contract.IAssociationContract]",
+        "name": "Powder Return",
+        "position_number": "0",
+        "type_identifier": "OrderNumber:6SL3210-1KE17-5AF1/4.7.14",
+        "type_identifier_normalized": "OrderNumber:6SL3210-1KE17-5AF1/4.7.14",
+        "type_name": "G120C PN"
+      }
+    },
+    {
+      "object_path": "SINAMICS G_2/Powder Return/PM G120C",
+      "object_type": "Siemens.Engineering.HW.DeviceItemImpl",
+      "attributes": {
+        "author": "lange",
+        "classification": "Siemens.Engineering.Contract.EnumToClientRepresentation",
+        "comment": "",
+        "container": "Siemens.Engineering.Contract.InstanceRepresentation`1[Siemens.Engineering.Contract.IObjectContract]",
+        "is_built_in": "True",
+        "is_plugged": "True",
+        "items": "Siemens.Engineering.Contract.InstanceRepresentation`1[Siemens.Engineering.Contract.IAssociationContract]",
+        "name": "PM G120C",
+        "position_number": "3",
+        "type_identifier": "OrderNumber:6SL3210-1KE17-5AF1/-",
+        "type_identifier_normalized": "OrderNumber:6SL3210-1KE17-5AF1/-",
+        "type_name": "PM G120C"
+      }
+    },
+    {
+      "object_path": "SINAMICS G_2/Powder Return/PROFINET-Schnittstelle",
+      "object_type": "Siemens.Engineering.HW.DeviceItemImpl",
+      "attributes": {
+        "alternative_redundancy": "True",
+        "classification": "Siemens.Engineering.Contract.EnumToClientRepresentation",
+        "comment": "",
+        "container": "Siemens.Engineering.Contract.InstanceRepresentation`1[Siemens.Engineering.Contract.IObjectContract]",
+        "i_e_c_v22_l_l_d_p_mode": "True",
+        "interface_operating_mode": "Siemens.Engineering.Contract.EnumToClientRepresentation",
+        "interface_type": "Siemens.Engineering.Contract.EnumToClientRepresentation",
+        "is_built_in": "True",
+        "is_plugged": "True",
+        "items": "Siemens.Engineering.Contract.InstanceRepresentation`1[Siemens.Engineering.Contract.IAssociationContract]",
+        "label": "X150",
+        "media_redundancy_role": "Siemens.Engineering.Contract.EnumToClientRepresentation",
+        "name": "PROFINET-Schnittstelle",
+        "optional_io_device": "False",
+        "pn_subslot_number": "32768",
+        "position_number": "1",
+        "prioritized_startup": "False",
+        "type_identifier": null,
+        "type_identifier_normalized": null,
+        "type_name": "PROFINET-Schnittstelle"
+      }
+    },
+    {
+      "object_path": "SINAMICS G_2/Powder Return/PROFINET-Schnittstelle/Port_1",
+      "object_type": "Siemens.Engineering.HW.DeviceItemImpl",
+      "attributes": {
+        "cable_name": "Siemens.Engineering.Contract.EnumToClientRepresentation",
+        "classification": "Siemens.Engineering.Contract.EnumToClientRepresentation",
+        "comment": "",
+        "container": "Siemens.Engineering.Contract.InstanceRepresentation`1[Siemens.Engineering.Contract.IObjectContract]",
+        "end_of_sync_domain": "False",
+        "is_built_in": "True",
+        "is_plugged": "True",
+        "items": "Siemens.Engineering.Contract.InstanceRepresentation`1[Siemens.Engineering.Contract.IAssociationContract]",
+        "label": "P1 R",
+        "medium_attachment_type": "Siemens.Engineering.Contract.EnumToClientRepresentation",
+        "name": "Port_1",
+        "pn_subslot_number": "32769",
+        "port_activation": "True",
+        "port_monitoring": "False",
+        "position_number": "1",
+        "transmission_rate_and_duplex": "Siemens.Engineering.Contract.EnumToClientRepresentation",
+        "transmission_rate_auto_negotiation": "True",
+        "type_identifier": null,
+        "type_identifier_normalized": null,
+        "type_name": "Port"
+      }
+    },
+    {
+      "object_path": "SINAMICS G_2/Powder Return/PROFINET-Schnittstelle/Port_2",
+      "object_type": "Siemens.Engineering.HW.DeviceItemImpl",
+      "attributes": {
+        "cable_name": "Siemens.Engineering.Contract.EnumToClientRepresentation",
+        "classification": "Siemens.Engineering.Contract.EnumToClientRepresentation",
+        "comment": "",
+        "container": "Siemens.Engineering.Contract.InstanceRepresentation`1[Siemens.Engineering.Contract.IObjectContract]",
+        "end_of_sync_domain": "False",
+        "is_built_in": "True",
+        "is_plugged": "True",
+        "items": "Siemens.Engineering.Contract.InstanceRepresentation`1[Siemens.Engineering.Contract.IAssociationContract]",
+        "label": "P2 R",
+        "medium_attachment_type": "Siemens.Engineering.Contract.EnumToClientRepresentation",
+        "name": "Port_2",
+        "pn_subslot_number": "32770",
+        "port_activation": "True",
+        "port_monitoring": "False",
+        "position_number": "2",
+        "transmission_rate_and_duplex": "Siemens.Engineering.Contract.EnumToClientRepresentation",
+        "transmission_rate_auto_negotiation": "True",
+        "type_identifier": null,
+        "type_identifier_normalized": null,
+        "type_name": "Port"
+      }
+    },
+    {
+      "object_path": "SINAMICS G_2/Powder Return/Powder Return",
+      "object_type": "Siemens.Engineering.HW.DeviceItemImpl",
+      "attributes": {
+        "classification": "Siemens.Engineering.Contract.EnumToClientRepresentation",
+        "container": "Siemens.Engineering.Contract.InstanceRepresentation`1[Siemens.Engineering.Contract.IObjectContract]",
+        "is_built_in": "True",
+        "is_plugged": "True",
+        "items": "Siemens.Engineering.Contract.InstanceRepresentation`1[Siemens.Engineering.Contract.IAssociationContract]",
+        "name": "Powder Return",
+        "pn_subslot_number": "1",
+        "position_number": "0",
+        "type_identifier": null,
+        "type_identifier_normalized": null,
+        "type_name": "[PN_G120_SubHead_TypeName]"
+      }
+    },
+    {
+      "object_path": "SINAMICS G_3/\t_0",
+      "object_type": "Siemens.Engineering.HW.DeviceItemImpl",
+      "attributes": {
+        "author": "lange",
+        "classification": "Siemens.Engineering.Contract.EnumToClientRepresentation",
+        "comment": "",
+        "container": "Siemens.Engineering.Contract.InstanceRepresentation`1[Siemens.Engineering.Contract.IObjectContract]",
+        "is_built_in": "False",
+        "is_plugged": "True",
+        "items": "Siemens.Engineering.Contract.InstanceRepresentation`1[Siemens.Engineering.Contract.IAssociationContract]",
+        "name": "\t_0",
+        "position_number": "0",
+        "type_identifier": "System:Rack.G120CPN-2",
+        "type_identifier_normalized": "System:Rack.G120CPN-2",
+        "type_name": "\t"
+      }
+    },
+    {
+      "object_path": "SINAMICS G_3/Schlicker Pumpe",
+      "object_type": "Siemens.Engineering.HW.DeviceItemImpl",
+      "attributes": {
+        "author": "lange",
+        "classification": "Siemens.Engineering.Contract.EnumToClientRepresentation",
+        "comment": "",
+        "container": "Siemens.Engineering.Contract.InstanceRepresentation`1[Siemens.Engineering.Contract.IObjectContract]",
+        "is_built_in": "False",
+        "is_plugged": "True",
+        "items": "Siemens.Engineering.Contract.InstanceRepresentation`1[Siemens.Engineering.Contract.IAssociationContract]",
+        "name": "Schlicker Pumpe",
+        "position_number": "0",
+        "type_identifier": "OrderNumber:6SL3210-1KE23-2AF1/4.7.14",
+        "type_identifier_normalized": "OrderNumber:6SL3210-1KE23-2AF1/4.7.14",
+        "type_name": "G120C PN"
+      }
+    },
+    {
+      "object_path": "SINAMICS G_3/Schlicker Pumpe/PM G120C",
+      "object_type": "Siemens.Engineering.HW.DeviceItemImpl",
+      "attributes": {
+        "author": "lange",
+        "classification": "Siemens.Engineering.Contract.EnumToClientRepresentation",
+        "comment": "",
+        "container": "Siemens.Engineering.Contract.InstanceRepresentation`1[Siemens.Engineering.Contract.IObjectContract]",
+        "is_built_in": "True",
+        "is_plugged": "True",
+        "items": "Siemens.Engineering.Contract.InstanceRepresentation`1[Siemens.Engineering.Contract.IAssociationContract]",
+        "name": "PM G120C",
+        "position_number": "3",
+        "type_identifier": "OrderNumber:6SL3210-1KE23-2AF1/-",
+        "type_identifier_normalized": "OrderNumber:6SL3210-1KE23-2AF1/-",
+        "type_name": "PM G120C"
+      }
+    },
+    {
+      "object_path": "SINAMICS G_3/Schlicker Pumpe/PROFINET-Schnittstelle",
+      "object_type": "Siemens.Engineering.HW.DeviceItemImpl",
+      "attributes": {
+        "alternative_redundancy": "True",
+        "classification": "Siemens.Engineering.Contract.EnumToClientRepresentation",
+        "comment": "",
+        "container": "Siemens.Engineering.Contract.InstanceRepresentation`1[Siemens.Engineering.Contract.IObjectContract]",
+        "i_e_c_v22_l_l_d_p_mode": "True",
+        "interface_operating_mode": "Siemens.Engineering.Contract.EnumToClientRepresentation",
+        "interface_type": "Siemens.Engineering.Contract.EnumToClientRepresentation",
+        "is_built_in": "True",
+        "is_plugged": "True",
+        "items": "Siemens.Engineering.Contract.InstanceRepresentation`1[Siemens.Engineering.Contract.IAssociationContract]",
+        "label": "X150",
+        "media_redundancy_role": "Siemens.Engineering.Contract.EnumToClientRepresentation",
+        "name": "PROFINET-Schnittstelle",
+        "optional_io_device": "False",
+        "pn_subslot_number": "32768",
+        "position_number": "1",
+        "prioritized_startup": "False",
+        "type_identifier": null,
+        "type_identifier_normalized": null,
+        "type_name": "PROFINET-Schnittstelle"
+      }
+    },
+    {
+      "object_path": "SINAMICS G_3/Schlicker Pumpe/PROFINET-Schnittstelle/Port_1",
+      "object_type": "Siemens.Engineering.HW.DeviceItemImpl",
+      "attributes": {
+        "cable_name": "Siemens.Engineering.Contract.EnumToClientRepresentation",
+        "classification": "Siemens.Engineering.Contract.EnumToClientRepresentation",
+        "comment": "",
+        "container": "Siemens.Engineering.Contract.InstanceRepresentation`1[Siemens.Engineering.Contract.IObjectContract]",
+        "end_of_sync_domain": "False",
+        "is_built_in": "True",
+        "is_plugged": "True",
+        "items": "Siemens.Engineering.Contract.InstanceRepresentation`1[Siemens.Engineering.Contract.IAssociationContract]",
+        "label": "P1 R",
+        "medium_attachment_type": "Siemens.Engineering.Contract.EnumToClientRepresentation",
+        "name": "Port_1",
+        "pn_subslot_number": "32769",
+        "port_activation": "True",
+        "port_monitoring": "False",
+        "position_number": "1",
+        "transmission_rate_and_duplex": "Siemens.Engineering.Contract.EnumToClientRepresentation",
+        "transmission_rate_auto_negotiation": "True",
+        "type_identifier": null,
+        "type_identifier_normalized": null,
+        "type_name": "Port"
+      }
+    },
+    {
+      "object_path": "SINAMICS G_3/Schlicker Pumpe/PROFINET-Schnittstelle/Port_2",
+      "object_type": "Siemens.Engineering.HW.DeviceItemImpl",
+      "attributes": {
+        "cable_name": "Siemens.Engineering.Contract.EnumToClientRepresentation",
+        "classification": "Siemens.Engineering.Contract.EnumToClientRepresentation",
+        "comment": "",
+        "container": "Siemens.Engineering.Contract.InstanceRepresentation`1[Siemens.Engineering.Contract.IObjectContract]",
+        "end_of_sync_domain": "False",
+        "is_built_in": "True",
+        "is_plugged": "True",
+        "items": "Siemens.Engineering.Contract.InstanceRepresentation`1[Siemens.Engineering.Contract.IAssociationContract]",
+        "label": "P2 R",
+        "medium_attachment_type": "Siemens.Engineering.Contract.EnumToClientRepresentation",
+        "name": "Port_2",
+        "pn_subslot_number": "32770",
+        "port_activation": "True",
+        "port_monitoring": "False",
+        "position_number": "2",
+        "transmission_rate_and_duplex": "Siemens.Engineering.Contract.EnumToClientRepresentation",
+        "transmission_rate_auto_negotiation": "True",
+        "type_identifier": null,
+        "type_identifier_normalized": null,
+        "type_name": "Port"
+      }
+    },
+    {
+      "object_path": "SINAMICS G_3/Schlicker Pumpe/Schlicker Pumpe",
+      "object_type": "Siemens.Engineering.HW.DeviceItemImpl",
+      "attributes": {
+        "classification": "Siemens.Engineering.Contract.EnumToClientRepresentation",
+        "container": "Siemens.Engineering.Contract.InstanceRepresentation`1[Siemens.Engineering.Contract.IObjectContract]",
+        "is_built_in": "True",
+        "is_plugged": "True",
+        "items": "Siemens.Engineering.Contract.InstanceRepresentation`1[Siemens.Engineering.Contract.IAssociationContract]",
+        "name": "Schlicker Pumpe",
+        "pn_subslot_number": "1",
+        "position_number": "0",
+        "type_identifier": null,
+        "type_identifier_normalized": null,
+        "type_name": "[PN_G120_SubHead_TypeName]"
+      }
+    }
+  ],
+  "controllers": [
+    {
+      "plc_name": "PLC_1",
+      "device_name": "S7-1500/ET200MP-Station_1",
+      "device_item_name": "PLC_1",
+      "source_path": "S7-1500/ET200MP-Station_1/PLC_1"
+    },
+    {
+      "plc_name": "HMI_RT_1",
+      "device_name": "HMI_1",
+      "device_item_name": "HMI_RT_1",
+      "source_path": "HMI_1/HMI_RT_1"
+    }
+  ]
+}

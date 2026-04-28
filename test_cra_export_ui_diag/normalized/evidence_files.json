@@ -1,0 +1,464 @@
+[
+  {
+    "relative_path": "diagnostics/block_export_failures.json",
+    "file_type": "json",
+    "sha256": "a5338d955b09046ec0b16f3a9625b7955c763aae07dc722e474e6078745f932f",
+    "size_bytes": 4,
+    "created_at": "2026-04-28T11:29:47.6443100+00:00",
+    "source_object": "diagnostics/block_export_failures.json",
+    "source_category": "diagnostic",
+    "export_success": true,
+    "evidence_level": "diagnostic",
+    "used_for_cra_categories": [
+      "Evidence / hashes"
+    ]
+  },
+  {
+    "relative_path": "diagnostics/capability_matrix.json",
+    "file_type": "json",
+    "sha256": "e293f76b5f5498aac6e08f15cfc1c09266f700d722e6c2465c5b26571b95f65a",
+    "size_bytes": 1483,
+    "created_at": "2026-04-28T11:29:47.6453093+00:00",
+    "source_object": "diagnostics/capability_matrix.json",
+    "source_category": "diagnostic",
+    "export_success": true,
+    "evidence_level": "diagnostic",
+    "used_for_cra_categories": [
+      "Evidence / hashes"
+    ]
+  },
+  {
+    "relative_path": "diagnostics/export_errors.json",
+    "file_type": "json",
+    "sha256": "45171aa2a58085cac017a3a7c250aecc575e325b2eaf3352e7f631c7d9090416",
+    "size_bytes": 1291,
+    "created_at": "2026-04-28T11:29:47.6433105+00:00",
+    "source_object": "diagnostics/export_errors.json",
+    "source_category": "diagnostic",
+    "export_success": true,
+    "evidence_level": "diagnostic",
+    "used_for_cra_categories": [
+      "Evidence / hashes"
+    ]
+  },
+  {
+    "relative_path": "diagnostics/library_export_failures.json",
+    "file_type": "json",
+    "sha256": "a5338d955b09046ec0b16f3a9625b7955c763aae07dc722e474e6078745f932f",
+    "size_bytes": 4,
+    "created_at": "2026-04-28T11:29:47.6453093+00:00",
+    "source_object": "diagnostics/library_export_failures.json",
+    "source_category": "diagnostic",
+    "export_success": true,
+    "evidence_level": "diagnostic",
+    "used_for_cra_categories": [
+      "Evidence / hashes",
+      "Library inventory"
+    ]
+  },
+  {
+    "relative_path": "diagnostics/openness_environment.json",
+    "file_type": "json",
+    "sha256": "a613795492f4093e58fc5bd18a3cced30375c57bb0c9fd6c95d5f6fa5299dcae",
+    "size_bytes": 1382,
+    "created_at": "2026-04-28T11:29:47.6443100+00:00",
+    "source_object": "diagnostics/openness_environment.json",
+    "source_category": "diagnostic",
+    "export_success": true,
+    "evidence_level": "diagnostic",
+    "used_for_cra_categories": [
+      "Evidence / hashes"
+    ]
+  },
+  {
+    "relative_path": "manifest.json",
+    "file_type": "json",
+    "sha256": "e3ea8f2ba024ee3cfa72ef646994f6c1bf7b7664b132cf6be46cb87f81bcd121",
+    "size_bytes": 2332,
+    "created_at": "2026-04-28T11:29:47.6247956+00:00",
+    "source_object": "manifest.json",
+    "source_category": "export",
+    "export_success": true,
+    "evidence_level": "raw_export",
+    "used_for_cra_categories": [
+      "Evidence / hashes"
+    ]
+  },
+  {
+    "relative_path": "normalized/asset_inventory.json",
+    "file_type": "json",
+    "sha256": "a5338d955b09046ec0b16f3a9625b7955c763aae07dc722e474e6078745f932f",
+    "size_bytes": 4,
+    "created_at": "2026-04-28T11:29:47.6333100+00:00",
+    "source_object": "normalized/asset_inventory.json",
+    "source_category": "normalized",
+    "export_success": true,
+    "evidence_level": "normalized_json",
+    "used_for_cra_categories": [
+      "Evidence / hashes",
+      "Asset inventory"
+    ]
+  },
+  {
+    "relative_path": "normalized/controllers.json",
+    "file_type": "json",
+    "sha256": "a5338d955b09046ec0b16f3a9625b7955c763aae07dc722e474e6078745f932f",
+    "size_bytes": 4,
+    "created_at": "2026-04-28T11:29:47.6273106+00:00",
+    "source_object": "normalized/controllers.json",
+    "source_category": "normalized",
+    "export_success": true,
+    "evidence_level": "normalized_json",
+    "used_for_cra_categories": [
+      "Evidence / hashes"
+    ]
+  },
+  {
+    "relative_path": "normalized/cra_gap_analysis.json",
+    "file_type": "json",
+    "sha256": "63da460c2b69388daca7fcc220d1ae4dc66492367c1be413e90215e5e778a4c8",
+    "size_bytes": 4419,
+    "created_at": "2026-04-28T11:29:47.6383080+00:00",
+    "source_object": "normalized/cra_gap_analysis.json",
+    "source_category": "normalized",
+    "export_success": true,
+    "evidence_level": "normalized_json",
+    "used_for_cra_categories": [
+      "Evidence / hashes"
+    ]
+  },
+  {
+    "relative_path": "normalized/devices.json",
+    "file_type": "json",
+    "sha256": "a5338d955b09046ec0b16f3a9625b7955c763aae07dc722e474e6078745f932f",
+    "size_bytes": 4,
+    "created_at": "2026-04-28T11:29:47.6263030+00:00",
+    "source_object": "normalized/devices.json",
+    "source_category": "normalized",
+    "export_success": true,
+    "evidence_level": "normalized_json",
+    "used_for_cra_categories": [
+      "Evidence / hashes"
+    ]
+  },
+  {
+    "relative_path": "normalized/drive_inventory.json",
+    "file_type": "json",
+    "sha256": "a5338d955b09046ec0b16f3a9625b7955c763aae07dc722e474e6078745f932f",
+    "size_bytes": 4,
+    "created_at": "2026-04-28T11:29:47.6373092+00:00",
+    "source_object": "normalized/drive_inventory.json",
+    "source_category": "normalized",
+    "export_success": true,
+    "evidence_level": "normalized_json",
+    "used_for_cra_categories": [
+      "Evidence / hashes",
+      "Drive inventory"
+    ]
+  },
+  {
+    "relative_path": "normalized/export_quality_score.json",
+    "file_type": "json",
+    "sha256": "9527e92924eaf13eb1f3a53df8f069b35a2709b730a3ed203d4d4e3c1a5cbfd9",
+    "size_bytes": 1598,
+    "created_at": "2026-04-28T11:29:47.6393142+00:00",
+    "source_object": "normalized/export_quality_score.json",
+    "source_category": "normalized",
+    "export_success": true,
+    "evidence_level": "normalized_json",
+    "used_for_cra_categories": [
+      "Evidence / hashes"
+    ]
+  },
+  {
+    "relative_path": "normalized/export_report.json",
+    "file_type": "json",
+    "sha256": "537e0c2fa0ae70d820dc061ef219239813c01445d9a349688f7cfc8ae3153880",
+    "size_bytes": 792,
+    "created_at": "2026-04-28T11:29:47.6413106+00:00",
+    "source_object": "normalized/export_report.json",
+    "source_category": "normalized",
+    "export_success": true,
+    "evidence_level": "normalized_json",
+    "used_for_cra_categories": [
+      "Evidence / hashes"
+    ]
+  },
+  {
+    "relative_path": "normalized/firmware_inventory.json",
+    "file_type": "json",
+    "sha256": "a5338d955b09046ec0b16f3a9625b7955c763aae07dc722e474e6078745f932f",
+    "size_bytes": 4,
+    "created_at": "2026-04-28T11:29:47.6333100+00:00",
+    "source_object": "normalized/firmware_inventory.json",
+    "source_category": "normalized",
+    "export_success": true,
+    "evidence_level": "normalized_json",
+    "used_for_cra_categories": [
+      "Evidence / hashes",
+      "Firmware inventory"
+    ]
+  },
+  {
+    "relative_path": "normalized/hardware_attributes.json",
+    "file_type": "json",
+    "sha256": "a5338d955b09046ec0b16f3a9625b7955c763aae07dc722e474e6078745f932f",
+    "size_bytes": 4,
+    "created_at": "2026-04-28T11:29:47.6304402+00:00",
+    "source_object": "normalized/hardware_attributes.json",
+    "source_category": "normalized",
+    "export_success": true,
+    "evidence_level": "normalized_json",
+    "used_for_cra_categories": [
+      "Evidence / hashes",
+      "Asset inventory"
+    ]
+  },
+  {
+    "relative_path": "normalized/hardware_modules.json",
+    "file_type": "json",
+    "sha256": "a5338d955b09046ec0b16f3a9625b7955c763aae07dc722e474e6078745f932f",
+    "size_bytes": 4,
+    "created_at": "2026-04-28T11:29:47.6283108+00:00",
+    "source_object": "normalized/hardware_modules.json",
+    "source_category": "normalized",
+    "export_success": true,
+    "evidence_level": "normalized_json",
+    "used_for_cra_categories": [
+      "Evidence / hashes",
+      "Asset inventory"
+    ]
+  },
+  {
+    "relative_path": "normalized/hmi_inventory.json",
+    "file_type": "json",
+    "sha256": "a5338d955b09046ec0b16f3a9625b7955c763aae07dc722e474e6078745f932f",
+    "size_bytes": 4,
+    "created_at": "2026-04-28T11:29:47.6373092+00:00",
+    "source_object": "normalized/hmi_inventory.json",
+    "source_category": "normalized",
+    "export_success": true,
+    "evidence_level": "normalized_json",
+    "used_for_cra_categories": [
+      "Evidence / hashes",
+      "HMI inventory"
+    ]
+  },
+  {
+    "relative_path": "normalized/libraries.json",
+    "file_type": "json",
+    "sha256": "a5338d955b09046ec0b16f3a9625b7955c763aae07dc722e474e6078745f932f",
+    "size_bytes": 4,
+    "created_at": "2026-04-28T11:29:47.6323102+00:00",
+    "source_object": "normalized/libraries.json",
+    "source_category": "normalized",
+    "export_success": true,
+    "evidence_level": "normalized_json",
+    "used_for_cra_categories": [
+      "Evidence / hashes"
+    ]
+  },
+  {
+    "relative_path": "normalized/library_dependency_gaps.json",
+    "file_type": "json",
+    "sha256": "a5338d955b09046ec0b16f3a9625b7955c763aae07dc722e474e6078745f932f",
+    "size_bytes": 4,
+    "created_at": "2026-04-28T11:29:47.6353087+00:00",
+    "source_object": "normalized/library_dependency_gaps.json",
+    "source_category": "normalized",
+    "export_success": true,
+    "evidence_level": "normalized_json",
+    "used_for_cra_categories": [
+      "Evidence / hashes",
+      "Library inventory"
+    ]
+  },
+  {
+    "relative_path": "normalized/library_inventory.json",
+    "file_type": "json",
+    "sha256": "a5338d955b09046ec0b16f3a9625b7955c763aae07dc722e474e6078745f932f",
+    "size_bytes": 4,
+    "created_at": "2026-04-28T11:29:47.6343089+00:00",
+    "source_object": "normalized/library_inventory.json",
+    "source_category": "normalized",
+    "export_success": true,
+    "evidence_level": "normalized_json",
+    "used_for_cra_categories": [
+      "Evidence / hashes",
+      "Library inventory"
+    ]
+  },
+  {
+    "relative_path": "normalized/network_interfaces.json",
+    "file_type": "json",
+    "sha256": "a5338d955b09046ec0b16f3a9625b7955c763aae07dc722e474e6078745f932f",
+    "size_bytes": 4,
+    "created_at": "2026-04-28T11:29:47.6283108+00:00",
+    "source_object": "normalized/network_interfaces.json",
+    "source_category": "normalized",
+    "export_success": true,
+    "evidence_level": "normalized_json",
+    "used_for_cra_categories": [
+      "Evidence / hashes"
+    ]
+  },
+  {
+    "relative_path": "normalized/network_links.json",
+    "file_type": "json",
+    "sha256": "a5338d955b09046ec0b16f3a9625b7955c763aae07dc722e474e6078745f932f",
+    "size_bytes": 4,
+    "created_at": "2026-04-28T11:29:47.6293093+00:00",
+    "source_object": "normalized/network_links.json",
+    "source_category": "normalized",
+    "export_success": true,
+    "evidence_level": "normalized_json",
+    "used_for_cra_categories": [
+      "Evidence / hashes"
+    ]
+  },
+  {
+    "relative_path": "normalized/project.json",
+    "file_type": "json",
+    "sha256": "796c16d1fef9663df063c66cd3eea6030e37bd712fdcebc06981dfae8972a46f",
+    "size_bytes": 275,
+    "created_at": "2026-04-28T11:29:47.6263030+00:00",
+    "source_object": "normalized/project.json",
+    "source_category": "normalized",
+    "export_success": true,
+    "evidence_level": "normalized_json",
+    "used_for_cra_categories": [
+      "Evidence / hashes"
+    ]
+  },
+  {
+    "relative_path": "normalized/safety_inventory.json",
+    "file_type": "json",
+    "sha256": "731b77496a9a4878528506c846f974f235ad227e264065210f53a3820ec07bf8",
+    "size_bytes": 173,
+    "created_at": "2026-04-28T11:29:47.6353087+00:00",
+    "source_object": "normalized/safety_inventory.json",
+    "source_category": "normalized",
+    "export_success": true,
+    "evidence_level": "normalized_json",
+    "used_for_cra_categories": [
+      "Evidence / hashes",
+      "Safety inventory"
+    ]
+  },
+  {
+    "relative_path": "normalized/security_configuration.json",
+    "file_type": "json",
+    "sha256": "f1f49b618d58a57a1c73076f9ebf851d85dfbf8da0ae382bf5557b6a745a5084",
+    "size_bytes": 59,
+    "created_at": "2026-04-28T11:29:47.6363103+00:00",
+    "source_object": "normalized/security_configuration.json",
+    "source_category": "normalized",
+    "export_success": true,
+    "evidence_level": "normalized_json",
+    "used_for_cra_categories": [
+      "Evidence / hashes",
+      "Security configuration"
+    ]
+  },
+  {
+    "relative_path": "normalized/security_findings.json",
+    "file_type": "json",
+    "sha256": "67c62760766da53d88e00410cfb389e8a5376f9aee15ae9ee6157d15b35eaace",
+    "size_bytes": 526,
+    "created_at": "2026-04-28T11:29:47.6373092+00:00",
+    "source_object": "normalized/security_findings.json",
+    "source_category": "normalized",
+    "export_success": true,
+    "evidence_level": "normalized_json",
+    "used_for_cra_categories": [
+      "Evidence / hashes",
+      "Security configuration"
+    ]
+  },
+  {
+    "relative_path": "normalized/software_blocks.json",
+    "file_type": "json",
+    "sha256": "a5338d955b09046ec0b16f3a9625b7955c763aae07dc722e474e6078745f932f",
+    "size_bytes": 4,
+    "created_at": "2026-04-28T11:29:47.6313094+00:00",
+    "source_object": "normalized/software_blocks.json",
+    "source_category": "normalized",
+    "export_success": true,
+    "evidence_level": "normalized_json",
+    "used_for_cra_categories": [
+      "Evidence / hashes",
+      "Software block inventory"
+    ]
+  },
+  {
+    "relative_path": "normalized/software_inventory.json",
+    "file_type": "json",
+    "sha256": "a5338d955b09046ec0b16f3a9625b7955c763aae07dc722e474e6078745f932f",
+    "size_bytes": 4,
+    "created_at": "2026-04-28T11:29:47.6343089+00:00",
+    "source_object": "normalized/software_inventory.json",
+    "source_category": "normalized",
+    "export_success": true,
+    "evidence_level": "normalized_json",
+    "used_for_cra_categories": [
+      "Evidence / hashes",
+      "Software block inventory"
+    ]
+  },
+  {
+    "relative_path": "normalized/subnets.json",
+    "file_type": "json",
+    "sha256": "a5338d955b09046ec0b16f3a9625b7955c763aae07dc722e474e6078745f932f",
+    "size_bytes": 4,
+    "created_at": "2026-04-28T11:29:47.6304402+00:00",
+    "source_object": "normalized/subnets.json",
+    "source_category": "normalized",
+    "export_success": true,
+    "evidence_level": "normalized_json",
+    "used_for_cra_categories": [
+      "Evidence / hashes"
+    ]
+  },
+  {
+    "relative_path": "normalized/tag_tables.json",
+    "file_type": "json",
+    "sha256": "a5338d955b09046ec0b16f3a9625b7955c763aae07dc722e474e6078745f932f",
+    "size_bytes": 4,
+    "created_at": "2026-04-28T11:29:47.6313094+00:00",
+    "source_object": "normalized/tag_tables.json",
+    "source_category": "normalized",
+    "export_success": true,
+    "evidence_level": "normalized_json",
+    "used_for_cra_categories": [
+      "Evidence / hashes"
+    ]
+  },
+  {
+    "relative_path": "README_EXPORT_LIMITATIONS.md",
+    "file_type": "md",
+    "sha256": "99586d4425fef0c289c45bfd30709bb007dad4c1bcfcd730a0772252d0037155",
+    "size_bytes": 735,
+    "created_at": "2026-04-28T11:29:47.6097590+00:00",
+    "source_object": "README_EXPORT_LIMITATIONS.md",
+    "source_category": "export",
+    "export_success": true,
+    "evidence_level": "report",
+    "used_for_cra_categories": [
+      "Evidence / hashes"
+    ]
+  },
+  {
+    "relative_path": "reports/CRA_EXPORT_READINESS.md",
+    "file_type": "md",
+    "sha256": "9e04351289e28512637f75766825f367485c9601c87edea7d44d2fe4318db889",
+    "size_bytes": 3457,
+    "created_at": "2026-04-28T11:29:47.6473268+00:00",
+    "source_object": "reports/CRA_EXPORT_READINESS.md",
+    "source_category": "report",
+    "export_success": true,
+    "evidence_level": "report",
+    "used_for_cra_categories": [
+      "Evidence / hashes"
+    ]
+  }
+]

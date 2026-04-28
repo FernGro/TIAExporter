@@ -1,0 +1,14 @@
+[
+  {
+    "plc_name": "PLC_1",
+    "device_name": "S7-1500/ET200MP-Station_1",
+    "device_item_name": "PLC_1",
+    "source_path": "S7-1500/ET200MP-Station_1/PLC_1"
+  },
+  {
+    "plc_name": "HMI_RT_1",
+    "device_name": "HMI_1",
+    "device_item_name": "HMI_RT_1",
+    "source_path": "HMI_1/HMI_RT_1"
+  }
+]

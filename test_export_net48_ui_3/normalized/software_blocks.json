@@ -1,0 +1,2125 @@
+[
+  {
+    "plc_name": "PLC_1",
+    "block_name": "PID_TempController",
+    "block_type": "LAD",
+    "block_number": "30",
+    "language": "LAD",
+    "group_path": "",
+    "export_success": false,
+    "cra_metadata": {}
+  },
+  {
+    "plc_name": "PLC_1",
+    "block_name": "PID-StepController",
+    "block_type": "LAD",
+    "block_number": "123",
+    "language": "LAD",
+    "group_path": "",
+    "export_success": false,
+    "cra_metadata": {}
+  },
+  {
+    "plc_name": "PLC_1",
+    "block_name": "MC-Interpolator",
+    "block_type": "LAD",
+    "block_number": "92",
+    "language": "LAD",
+    "group_path": "",
+    "export_success": false,
+    "cra_metadata": {}
+  },
+  {
+    "plc_name": "PLC_1",
+    "block_name": "MC-Servo",
+    "block_type": "LAD",
+    "block_number": "91",
+    "language": "LAD",
+    "group_path": "",
+    "export_success": false,
+    "cra_metadata": {}
+  },
+  {
+    "plc_name": "PLC_1",
+    "block_name": "Servo",
+    "block_type": "LAD",
+    "block_number": "83",
+    "language": "LAD",
+    "group_path": "",
+    "export_success": false,
+    "cra_metadata": {}
+  },
+  {
+    "plc_name": "PLC_1",
+    "block_name": "Main",
+    "block_type": "LAD",
+    "block_number": "1",
+    "language": "LAD",
+    "group_path": "",
+    "export_success": false,
+    "cra_metadata": {}
+  },
+  {
+    "plc_name": "PLC_1",
+    "block_name": "Konfiguration",
+    "block_type": "DB",
+    "block_number": "10",
+    "language": "DB",
+    "group_path": "Datenbausteine",
+    "export_success": false,
+    "cra_metadata": {}
+  },
+  {
+    "plc_name": "PLC_1",
+    "block_name": "Daten_Diag_backup",
+    "block_type": "DB",
+    "block_number": "11",
+    "language": "DB",
+    "group_path": "Datenbausteine",
+    "export_success": false,
+    "cra_metadata": {}
+  },
+  {
+    "plc_name": "PLC_1",
+    "block_name": "Daten_SPT_INI_10",
+    "block_type": "DB",
+    "block_number": "7",
+    "language": "DB",
+    "group_path": "Datenbausteine",
+    "export_success": false,
+    "cra_metadata": {}
+  },
+  {
+    "plc_name": "PLC_1",
+    "block_name": "GlobVar_PLC_BASE",
+    "block_type": "DB",
+    "block_number": "14",
+    "language": "DB",
+    "group_path": "Datenbausteine",
+    "export_success": false,
+    "cra_metadata": {}
+  },
+  {
+    "plc_name": "PLC_1",
+    "block_name": "Daten_SPT_INI_20",
+    "block_type": "DB",
+    "block_number": "29",
+    "language": "DB",
+    "group_path": "Datenbausteine",
+    "export_success": false,
+    "cra_metadata": {}
+  },
+  {
+    "plc_name": "PLC_1",
+    "block_name": "Daten_SPT_INI_30",
+    "block_type": "DB",
+    "block_number": "35",
+    "language": "DB",
+    "group_path": "Datenbausteine",
+    "export_success": false,
+    "cra_metadata": {}
+  },
+  {
+    "plc_name": "PLC_1",
+    "block_name": "Daten_SPT_INI_40",
+    "block_type": "DB",
+    "block_number": "36",
+    "language": "DB",
+    "group_path": "Datenbausteine",
+    "export_success": false,
+    "cra_metadata": {}
+  },
+  {
+    "plc_name": "PLC_1",
+    "block_name": "Daten_SPT_INI_50",
+    "block_type": "DB",
+    "block_number": "37",
+    "language": "DB",
+    "group_path": "Datenbausteine",
+    "export_success": false,
+    "cra_metadata": {}
+  },
+  {
+    "plc_name": "PLC_1",
+    "block_name": "Daten_SPT_INI_60",
+    "block_type": "DB",
+    "block_number": "38",
+    "language": "DB",
+    "group_path": "Datenbausteine",
+    "export_success": false,
+    "cra_metadata": {}
+  },
+  {
+    "plc_name": "PLC_1",
+    "block_name": "Daten_Recipe_HMI",
+    "block_type": "DB",
+    "block_number": "136",
+    "language": "DB",
+    "group_path": "Datenbausteine",
+    "export_success": false,
+    "cra_metadata": {}
+  },
+  {
+    "plc_name": "PLC_1",
+    "block_name": "Scaling",
+    "block_type": "SCL",
+    "block_number": "1",
+    "language": "SCL",
+    "group_path": "Standardbausteine",
+    "export_success": false,
+    "cra_metadata": {}
+  },
+  {
+    "plc_name": "PLC_1",
+    "block_name": "SensorScaleMonitoring",
+    "block_type": "SCL",
+    "block_number": "2",
+    "language": "SCL",
+    "group_path": "Standardbausteine",
+    "export_success": false,
+    "cra_metadata": {}
+  },
+  {
+    "plc_name": "PLC_1",
+    "block_name": "Motor_FC",
+    "block_type": "SCL",
+    "block_number": "3",
+    "language": "SCL",
+    "group_path": "Standardbausteine",
+    "export_success": false,
+    "cra_metadata": {}
+  },
+  {
+    "plc_name": "PLC_1",
+    "block_name": "Fail_FC",
+    "block_type": "LAD",
+    "block_number": "4",
+    "language": "LAD",
+    "group_path": "Standardbausteine",
+    "export_success": false,
+    "cra_metadata": {}
+  },
+  {
+    "plc_name": "PLC_1",
+    "block_name": "Motor_OnOff_FC",
+    "block_type": "LAD",
+    "block_number": "5",
+    "language": "LAD",
+    "group_path": "Standardbausteine",
+    "export_success": false,
+    "cra_metadata": {}
+  },
+  {
+    "plc_name": "PLC_1",
+    "block_name": "MotorStatus_FC",
+    "block_type": "LAD",
+    "block_number": "6",
+    "language": "LAD",
+    "group_path": "Standardbausteine",
+    "export_success": false,
+    "cra_metadata": {}
+  },
+  {
+    "plc_name": "PLC_1",
+    "block_name": "Warning_Monitoring",
+    "block_type": "LAD",
+    "block_number": "7",
+    "language": "LAD",
+    "group_path": "Standardbausteine",
+    "export_success": false,
+    "cra_metadata": {}
+  },
+  {
+    "plc_name": "PLC_1",
+    "block_name": "Timer_On_Off",
+    "block_type": "LAD",
+    "block_number": "8",
+    "language": "LAD",
+    "group_path": "Standardbausteine",
+    "export_success": false,
+    "cra_metadata": {}
+  },
+  {
+    "plc_name": "PLC_1",
+    "block_name": "Fail_FB",
+    "block_type": "LAD",
+    "block_number": "69",
+    "language": "LAD",
+    "group_path": "Standardbausteine",
+    "export_success": false,
+    "cra_metadata": {}
+  },
+  {
+    "plc_name": "PLC_1",
+    "block_name": "ScalingMonitoring",
+    "block_type": "LAD",
+    "block_number": "70",
+    "language": "LAD",
+    "group_path": "Standardbausteine",
+    "export_success": false,
+    "cra_metadata": {}
+  },
+  {
+    "plc_name": "PLC_1",
+    "block_name": "Motor_OnOff_FB",
+    "block_type": "LAD",
+    "block_number": "71",
+    "language": "LAD",
+    "group_path": "Standardbausteine",
+    "export_success": false,
+    "cra_metadata": {}
+  },
+  {
+    "plc_name": "PLC_1",
+    "block_name": "SensorData",
+    "block_type": "LAD",
+    "block_number": "9",
+    "language": "LAD",
+    "group_path": "Standardbausteine",
+    "export_success": false,
+    "cra_metadata": {}
+  },
+  {
+    "plc_name": "PLC_1",
+    "block_name": "Timer_On_Off_FB",
+    "block_type": "LAD",
+    "block_number": "72",
+    "language": "LAD",
+    "group_path": "Standardbausteine",
+    "export_success": false,
+    "cra_metadata": {}
+  },
+  {
+    "plc_name": "PLC_1",
+    "block_name": "GlobVar_SPT_10",
+    "block_type": "DB",
+    "block_number": "1",
+    "language": "DB",
+    "group_path": "SPT_10",
+    "export_success": false,
+    "cra_metadata": {}
+  },
+  {
+    "plc_name": "PLC_1",
+    "block_name": "APP_10_Heater_Volumen",
+    "block_type": "LAD",
+    "block_number": "8",
+    "language": "LAD",
+    "group_path": "SPT_10",
+    "export_success": false,
+    "cra_metadata": {}
+  },
+  {
+    "plc_name": "PLC_1",
+    "block_name": "APP_10_Hot_Air",
+    "block_type": "LAD",
+    "block_number": "9",
+    "language": "LAD",
+    "group_path": "SPT_10",
+    "export_success": false,
+    "cra_metadata": {}
+  },
+  {
+    "plc_name": "PLC_1",
+    "block_name": "APP_10_DiffPressure_Filter_Heating",
+    "block_type": "LAD",
+    "block_number": "10",
+    "language": "LAD",
+    "group_path": "SPT_10",
+    "export_success": false,
+    "cra_metadata": {}
+  },
+  {
+    "plc_name": "PLC_1",
+    "block_name": "APP_10_InLetTemp_Heating",
+    "block_type": "LAD",
+    "block_number": "11",
+    "language": "LAD",
+    "group_path": "SPT_10",
+    "export_success": false,
+    "cra_metadata": {}
+  },
+  {
+    "plc_name": "PLC_1",
+    "block_name": "APP_10_Gas_Rate_Analog",
+    "block_type": "LAD",
+    "block_number": "12",
+    "language": "LAD",
+    "group_path": "SPT_10",
+    "export_success": false,
+    "cra_metadata": {}
+  },
+  {
+    "plc_name": "PLC_1",
+    "block_name": "APP_10_Deli_Motor_Control",
+    "block_type": "LAD",
+    "block_number": "13",
+    "language": "LAD",
+    "group_path": "SPT_10",
+    "export_success": false,
+    "cra_metadata": {}
+  },
+  {
+    "plc_name": "PLC_1",
+    "block_name": "APP_10_Deli_Motor_Control_DB",
+    "block_type": "DB",
+    "block_number": "22",
+    "language": "DB",
+    "group_path": "SPT_10",
+    "export_success": false,
+    "cra_metadata": {}
+  },
+  {
+    "plc_name": "PLC_1",
+    "block_name": "APP_10_DiffPressure_Filter_Heating_DB",
+    "block_type": "DB",
+    "block_number": "21",
+    "language": "DB",
+    "group_path": "SPT_10",
+    "export_success": false,
+    "cra_metadata": {}
+  },
+  {
+    "plc_name": "PLC_1",
+    "block_name": "APP_10_Gas_Rate_Analog_DB",
+    "block_type": "DB",
+    "block_number": "24",
+    "language": "DB",
+    "group_path": "SPT_10",
+    "export_success": false,
+    "cra_metadata": {}
+  },
+  {
+    "plc_name": "PLC_1",
+    "block_name": "APP_10_Heater_Volumen_DB",
+    "block_type": "DB",
+    "block_number": "23",
+    "language": "DB",
+    "group_path": "SPT_10",
+    "export_success": false,
+    "cra_metadata": {}
+  },
+  {
+    "plc_name": "PLC_1",
+    "block_name": "APP_10_Hot_Air_DB",
+    "block_type": "DB",
+    "block_number": "20",
+    "language": "DB",
+    "group_path": "SPT_10",
+    "export_success": false,
+    "cra_metadata": {}
+  },
+  {
+    "plc_name": "PLC_1",
+    "block_name": "APP_10_InLetTemp_Heating_DB",
+    "block_type": "DB",
+    "block_number": "25",
+    "language": "DB",
+    "group_path": "SPT_10",
+    "export_success": false,
+    "cra_metadata": {}
+  },
+  {
+    "plc_name": "PLC_1",
+    "block_name": "APP_10_Heater",
+    "block_type": "LAD",
+    "block_number": "2",
+    "language": "LAD",
+    "group_path": "SPT_10",
+    "export_success": false,
+    "cra_metadata": {}
+  },
+  {
+    "plc_name": "PLC_1",
+    "block_name": "APP_10_Heater_DB",
+    "block_type": "DB",
+    "block_number": "26",
+    "language": "DB",
+    "group_path": "SPT_10",
+    "export_success": false,
+    "cra_metadata": {}
+  },
+  {
+    "plc_name": "PLC_1",
+    "block_name": "APP_10_Error",
+    "block_type": "LAD",
+    "block_number": "3",
+    "language": "LAD",
+    "group_path": "SPT_10",
+    "export_success": false,
+    "cra_metadata": {}
+  },
+  {
+    "plc_name": "PLC_1",
+    "block_name": "APP_10_Error_DB",
+    "block_type": "DB",
+    "block_number": "27",
+    "language": "DB",
+    "group_path": "SPT_10",
+    "export_success": false,
+    "cra_metadata": {}
+  },
+  {
+    "plc_name": "PLC_1",
+    "block_name": "APP_10_Heater_D20",
+    "block_type": "LAD",
+    "block_number": "75",
+    "language": "LAD",
+    "group_path": "SPT_10",
+    "export_success": false,
+    "cra_metadata": {}
+  },
+  {
+    "plc_name": "PLC_1",
+    "block_name": "GlobVar_SPT_20",
+    "block_type": "DB",
+    "block_number": "2",
+    "language": "DB",
+    "group_path": "SPT_20",
+    "export_success": false,
+    "cra_metadata": {}
+  },
+  {
+    "plc_name": "PLC_1",
+    "block_name": "APP_20_Pressure_Tower",
+    "block_type": "LAD",
+    "block_number": "4",
+    "language": "LAD",
+    "group_path": "SPT_20",
+    "export_success": false,
+    "cra_metadata": {}
+  },
+  {
+    "plc_name": "PLC_1",
+    "block_name": "APP_20_Temperature_Tower",
+    "block_type": "LAD",
+    "block_number": "5",
+    "language": "LAD",
+    "group_path": "SPT_20",
+    "export_success": false,
+    "cra_metadata": {}
+  },
+  {
+    "plc_name": "PLC_1",
+    "block_name": "APP_20_Error",
+    "block_type": "LAD",
+    "block_number": "6",
+    "language": "LAD",
+    "group_path": "SPT_20",
+    "export_success": false,
+    "cra_metadata": {}
+  },
+  {
+    "plc_name": "PLC_1",
+    "block_name": "APP_20_Lamp",
+    "block_type": "LAD",
+    "block_number": "7",
+    "language": "LAD",
+    "group_path": "SPT_20",
+    "export_success": false,
+    "cra_metadata": {}
+  },
+  {
+    "plc_name": "PLC_1",
+    "block_name": "APP_20_DoorContr",
+    "block_type": "LAD",
+    "block_number": "14",
+    "language": "LAD",
+    "group_path": "SPT_20",
+    "export_success": false,
+    "cra_metadata": {}
+  },
+  {
+    "plc_name": "PLC_1",
+    "block_name": "APP_20_KnockValve1",
+    "block_type": "LAD",
+    "block_number": "15",
+    "language": "LAD",
+    "group_path": "SPT_20",
+    "export_success": false,
+    "cra_metadata": {}
+  },
+  {
+    "plc_name": "PLC_1",
+    "block_name": "APP_20_KnockValve1_DB",
+    "block_type": "DB",
+    "block_number": "33",
+    "language": "DB",
+    "group_path": "SPT_20",
+    "export_success": false,
+    "cra_metadata": {}
+  },
+  {
+    "plc_name": "PLC_1",
+    "block_name": "APP_20_KnockValve2",
+    "block_type": "LAD",
+    "block_number": "16",
+    "language": "LAD",
+    "group_path": "SPT_20",
+    "export_success": false,
+    "cra_metadata": {}
+  },
+  {
+    "plc_name": "PLC_1",
+    "block_name": "APP_20_ExtClean",
+    "block_type": "LAD",
+    "block_number": "61",
+    "language": "LAD",
+    "group_path": "SPT_20",
+    "export_success": false,
+    "cra_metadata": {}
+  },
+  {
+    "plc_name": "PLC_1",
+    "block_name": "APP_20_DoorContr_DB",
+    "block_type": "DB",
+    "block_number": "84",
+    "language": "DB",
+    "group_path": "SPT_20",
+    "export_success": false,
+    "cra_metadata": {}
+  },
+  {
+    "plc_name": "PLC_1",
+    "block_name": "APP_20_Error_DB",
+    "block_type": "DB",
+    "block_number": "96",
+    "language": "DB",
+    "group_path": "SPT_20",
+    "export_success": false,
+    "cra_metadata": {}
+  },
+  {
+    "plc_name": "PLC_1",
+    "block_name": "APP_20_ExtClean_DB",
+    "block_type": "DB",
+    "block_number": "97",
+    "language": "DB",
+    "group_path": "SPT_20",
+    "export_success": false,
+    "cra_metadata": {}
+  },
+  {
+    "plc_name": "PLC_1",
+    "block_name": "APP_20_KnockValve2_DB",
+    "block_type": "DB",
+    "block_number": "98",
+    "language": "DB",
+    "group_path": "SPT_20",
+    "export_success": false,
+    "cra_metadata": {}
+  },
+  {
+    "plc_name": "PLC_1",
+    "block_name": "APP_20_Lamp_DB",
+    "block_type": "DB",
+    "block_number": "99",
+    "language": "DB",
+    "group_path": "SPT_20",
+    "export_success": false,
+    "cra_metadata": {}
+  },
+  {
+    "plc_name": "PLC_1",
+    "block_name": "APP_20_Pressure_Tower_DB",
+    "block_type": "DB",
+    "block_number": "100",
+    "language": "DB",
+    "group_path": "SPT_20",
+    "export_success": false,
+    "cra_metadata": {}
+  },
+  {
+    "plc_name": "PLC_1",
+    "block_name": "APP_20_Temperature_Tower_DB",
+    "block_type": "DB",
+    "block_number": "101",
+    "language": "DB",
+    "group_path": "SPT_20",
+    "export_success": false,
+    "cra_metadata": {}
+  },
+  {
+    "plc_name": "PLC_1",
+    "block_name": "APP_10_Heater_D20_DB",
+    "block_type": "DB",
+    "block_number": "147",
+    "language": "DB",
+    "group_path": "SPT_20",
+    "export_success": false,
+    "cra_metadata": {}
+  },
+  {
+    "plc_name": "PLC_1",
+    "block_name": "GlobVar_SPT_30",
+    "block_type": "DB",
+    "block_number": "3",
+    "language": "DB",
+    "group_path": "SPT_30",
+    "export_success": false,
+    "cra_metadata": {}
+  },
+  {
+    "plc_name": "PLC_1",
+    "block_name": "APP_30_Motors",
+    "block_type": "LAD",
+    "block_number": "17",
+    "language": "LAD",
+    "group_path": "SPT_30",
+    "export_success": false,
+    "cra_metadata": {}
+  },
+  {
+    "plc_name": "PLC_1",
+    "block_name": "APP_30_Error",
+    "block_type": "LAD",
+    "block_number": "18",
+    "language": "LAD",
+    "group_path": "SPT_30",
+    "export_success": false,
+    "cra_metadata": {}
+  },
+  {
+    "plc_name": "PLC_1",
+    "block_name": "APP_30_FillSys",
+    "block_type": "LAD",
+    "block_number": "19",
+    "language": "LAD",
+    "group_path": "SPT_30",
+    "export_success": false,
+    "cra_metadata": {}
+  },
+  {
+    "plc_name": "PLC_1",
+    "block_name": "APP_30_CoolWater",
+    "block_type": "LAD",
+    "block_number": "20",
+    "language": "LAD",
+    "group_path": "SPT_30",
+    "export_success": false,
+    "cra_metadata": {}
+  },
+  {
+    "plc_name": "PLC_1",
+    "block_name": "APP_30_BinFilling_1",
+    "block_type": "LAD",
+    "block_number": "21",
+    "language": "LAD",
+    "group_path": "SPT_30",
+    "export_success": false,
+    "cra_metadata": {}
+  },
+  {
+    "plc_name": "PLC_1",
+    "block_name": "APP_30_BinFilling_1_Dig",
+    "block_type": "LAD",
+    "block_number": "22",
+    "language": "LAD",
+    "group_path": "SPT_30",
+    "export_success": false,
+    "cra_metadata": {}
+  },
+  {
+    "plc_name": "PLC_1",
+    "block_name": "APP_30_BinFilling_2_Dig",
+    "block_type": "LAD",
+    "block_number": "24",
+    "language": "LAD",
+    "group_path": "SPT_30",
+    "export_success": false,
+    "cra_metadata": {}
+  },
+  {
+    "plc_name": "PLC_1",
+    "block_name": "APP_30_TwPendValve",
+    "block_type": "LAD",
+    "block_number": "23",
+    "language": "LAD",
+    "group_path": "SPT_30",
+    "export_success": false,
+    "cra_metadata": {}
+  },
+  {
+    "plc_name": "PLC_1",
+    "block_name": "APP_30_Belt_2",
+    "block_type": "LAD",
+    "block_number": "62",
+    "language": "LAD",
+    "group_path": "SPT_30",
+    "export_success": false,
+    "cra_metadata": {}
+  },
+  {
+    "plc_name": "PLC_1",
+    "block_name": "APP_30_BinFilling_Sensor",
+    "block_type": "LAD",
+    "block_number": "63",
+    "language": "LAD",
+    "group_path": "SPT_30",
+    "export_success": false,
+    "cra_metadata": {}
+  },
+  {
+    "plc_name": "PLC_1",
+    "block_name": "APP_30_Polyfoerder",
+    "block_type": "LAD",
+    "block_number": "66",
+    "language": "LAD",
+    "group_path": "SPT_30",
+    "export_success": false,
+    "cra_metadata": {}
+  },
+  {
+    "plc_name": "PLC_1",
+    "block_name": "APP_30_Belt_2_DB",
+    "block_type": "DB",
+    "block_number": "102",
+    "language": "DB",
+    "group_path": "SPT_30",
+    "export_success": false,
+    "cra_metadata": {}
+  },
+  {
+    "plc_name": "PLC_1",
+    "block_name": "APP_30_BinFilling_1_DB",
+    "block_type": "DB",
+    "block_number": "103",
+    "language": "DB",
+    "group_path": "SPT_30",
+    "export_success": false,
+    "cra_metadata": {}
+  },
+  {
+    "plc_name": "PLC_1",
+    "block_name": "APP_30_BinFilling_Sensor_DB",
+    "block_type": "DB",
+    "block_number": "104",
+    "language": "DB",
+    "group_path": "SPT_30",
+    "export_success": false,
+    "cra_metadata": {}
+  },
+  {
+    "plc_name": "PLC_1",
+    "block_name": "APP_30_CoolWater_DB",
+    "block_type": "DB",
+    "block_number": "105",
+    "language": "DB",
+    "group_path": "SPT_30",
+    "export_success": false,
+    "cra_metadata": {}
+  },
+  {
+    "plc_name": "PLC_1",
+    "block_name": "APP_30_Error_DB",
+    "block_type": "DB",
+    "block_number": "106",
+    "language": "DB",
+    "group_path": "SPT_30",
+    "export_success": false,
+    "cra_metadata": {}
+  },
+  {
+    "plc_name": "PLC_1",
+    "block_name": "APP_30_FillSys_DB",
+    "block_type": "DB",
+    "block_number": "107",
+    "language": "DB",
+    "group_path": "SPT_30",
+    "export_success": false,
+    "cra_metadata": {}
+  },
+  {
+    "plc_name": "PLC_1",
+    "block_name": "APP_30_Motors_DB",
+    "block_type": "DB",
+    "block_number": "108",
+    "language": "DB",
+    "group_path": "SPT_30",
+    "export_success": false,
+    "cra_metadata": {}
+  },
+  {
+    "plc_name": "PLC_1",
+    "block_name": "APP_30_Polyfoerder_DB",
+    "block_type": "DB",
+    "block_number": "109",
+    "language": "DB",
+    "group_path": "SPT_30",
+    "export_success": false,
+    "cra_metadata": {}
+  },
+  {
+    "plc_name": "PLC_1",
+    "block_name": "APP_30_TwPendValve_DB",
+    "block_type": "DB",
+    "block_number": "144",
+    "language": "DB",
+    "group_path": "SPT_30",
+    "export_success": false,
+    "cra_metadata": {}
+  },
+  {
+    "plc_name": "PLC_1",
+    "block_name": "GlobVar_SPT_40",
+    "block_type": "DB",
+    "block_number": "4",
+    "language": "DB",
+    "group_path": "SPT_40",
+    "export_success": false,
+    "cra_metadata": {}
+  },
+  {
+    "plc_name": "PLC_1",
+    "block_name": "APP_40_Motors",
+    "block_type": "LAD",
+    "block_number": "26",
+    "language": "LAD",
+    "group_path": "SPT_40",
+    "export_success": false,
+    "cra_metadata": {}
+  },
+  {
+    "plc_name": "PLC_1",
+    "block_name": "APP_40_PrDeDu",
+    "block_type": "LAD",
+    "block_number": "27",
+    "language": "LAD",
+    "group_path": "SPT_40",
+    "export_success": false,
+    "cra_metadata": {}
+  },
+  {
+    "plc_name": "PLC_1",
+    "block_name": "APP_40_DeDuVolumen",
+    "block_type": "LAD",
+    "block_number": "28",
+    "language": "LAD",
+    "group_path": "SPT_40",
+    "export_success": false,
+    "cra_metadata": {}
+  },
+  {
+    "plc_name": "PLC_1",
+    "block_name": "APP_40_DustLevel",
+    "block_type": "LAD",
+    "block_number": "29",
+    "language": "LAD",
+    "group_path": "SPT_40",
+    "export_success": false,
+    "cra_metadata": {}
+  },
+  {
+    "plc_name": "PLC_1",
+    "block_name": "APP_40_FlyFire",
+    "block_type": "LAD",
+    "block_number": "30",
+    "language": "LAD",
+    "group_path": "SPT_40",
+    "export_success": false,
+    "cra_metadata": {}
+  },
+  {
+    "plc_name": "PLC_1",
+    "block_name": "APP_40_KnockValve",
+    "block_type": "LAD",
+    "block_number": "31",
+    "language": "LAD",
+    "group_path": "SPT_40",
+    "export_success": false,
+    "cra_metadata": {}
+  },
+  {
+    "plc_name": "PLC_1",
+    "block_name": "APP_40_Return",
+    "block_type": "LAD",
+    "block_number": "33",
+    "language": "LAD",
+    "group_path": "SPT_40",
+    "export_success": false,
+    "cra_metadata": {}
+  },
+  {
+    "plc_name": "PLC_1",
+    "block_name": "APP_40_FlRaCy",
+    "block_type": "LAD",
+    "block_number": "64",
+    "language": "LAD",
+    "group_path": "SPT_40",
+    "export_success": false,
+    "cra_metadata": {}
+  },
+  {
+    "plc_name": "PLC_1",
+    "block_name": "APP_40_DeDuVolumen_DB",
+    "block_type": "DB",
+    "block_number": "110",
+    "language": "DB",
+    "group_path": "SPT_40",
+    "export_success": false,
+    "cra_metadata": {}
+  },
+  {
+    "plc_name": "PLC_1",
+    "block_name": "APP_40_DustLevel_DB",
+    "block_type": "DB",
+    "block_number": "111",
+    "language": "DB",
+    "group_path": "SPT_40",
+    "export_success": false,
+    "cra_metadata": {}
+  },
+  {
+    "plc_name": "PLC_1",
+    "block_name": "APP_40_Error_DB",
+    "block_type": "DB",
+    "block_number": "112",
+    "language": "DB",
+    "group_path": "SPT_40",
+    "export_success": false,
+    "cra_metadata": {}
+  },
+  {
+    "plc_name": "PLC_1",
+    "block_name": "APP_40_FlRaCy_DB",
+    "block_type": "DB",
+    "block_number": "113",
+    "language": "DB",
+    "group_path": "SPT_40",
+    "export_success": false,
+    "cra_metadata": {}
+  },
+  {
+    "plc_name": "PLC_1",
+    "block_name": "APP_40_FlyFire_DB",
+    "block_type": "DB",
+    "block_number": "114",
+    "language": "DB",
+    "group_path": "SPT_40",
+    "export_success": false,
+    "cra_metadata": {}
+  },
+  {
+    "plc_name": "PLC_1",
+    "block_name": "APP_40_KnockValve_DB",
+    "block_type": "DB",
+    "block_number": "115",
+    "language": "DB",
+    "group_path": "SPT_40",
+    "export_success": false,
+    "cra_metadata": {}
+  },
+  {
+    "plc_name": "PLC_1",
+    "block_name": "APP_40_Motors_DB",
+    "block_type": "DB",
+    "block_number": "116",
+    "language": "DB",
+    "group_path": "SPT_40",
+    "export_success": false,
+    "cra_metadata": {}
+  },
+  {
+    "plc_name": "PLC_1",
+    "block_name": "APP_40_PrDeDu_DB",
+    "block_type": "DB",
+    "block_number": "117",
+    "language": "DB",
+    "group_path": "SPT_40",
+    "export_success": false,
+    "cra_metadata": {}
+  },
+  {
+    "plc_name": "PLC_1",
+    "block_name": "APP_40_Return_DB",
+    "block_type": "DB",
+    "block_number": "118",
+    "language": "DB",
+    "group_path": "SPT_40",
+    "export_success": false,
+    "cra_metadata": {}
+  },
+  {
+    "plc_name": "PLC_1",
+    "block_name": "APP_40_RotaryFeeder_DB",
+    "block_type": "DB",
+    "block_number": "119",
+    "language": "DB",
+    "group_path": "SPT_40",
+    "export_success": false,
+    "cra_metadata": {}
+  },
+  {
+    "plc_name": "PLC_1",
+    "block_name": "APP_40_SwitchFlap_DB",
+    "block_type": "DB",
+    "block_number": "157",
+    "language": "DB",
+    "group_path": "SPT_40",
+    "export_success": false,
+    "cra_metadata": {}
+  },
+  {
+    "plc_name": "PLC_1",
+    "block_name": "APP_40_MotorServo",
+    "block_type": "LAD",
+    "block_number": "85",
+    "language": "LAD",
+    "group_path": "SPT_40",
+    "export_success": false,
+    "cra_metadata": {}
+  },
+  {
+    "plc_name": "PLC_1",
+    "block_name": "MotorServo_ReturnFan_DB",
+    "block_type": "DB",
+    "block_number": "160",
+    "language": "DB",
+    "group_path": "SPT_40",
+    "export_success": false,
+    "cra_metadata": {}
+  },
+  {
+    "plc_name": "PLC_1",
+    "block_name": "APP_40_MotorServo_DB",
+    "block_type": "DB",
+    "block_number": "161",
+    "language": "DB",
+    "group_path": "SPT_40",
+    "export_success": false,
+    "cra_metadata": {}
+  },
+  {
+    "plc_name": "PLC_1",
+    "block_name": "APP_40_Error",
+    "block_type": "LAD",
+    "block_number": "25",
+    "language": "LAD",
+    "group_path": "SPT_40",
+    "export_success": false,
+    "cra_metadata": {}
+  },
+  {
+    "plc_name": "PLC_1",
+    "block_name": "APP_40_RotaryFeeder",
+    "block_type": "LAD",
+    "block_number": "32",
+    "language": "LAD",
+    "group_path": "SPT_40",
+    "export_success": false,
+    "cra_metadata": {}
+  },
+  {
+    "plc_name": "PLC_1",
+    "block_name": "APP_40_SwitchFlap",
+    "block_type": "LAD",
+    "block_number": "80",
+    "language": "LAD",
+    "group_path": "SPT_40",
+    "export_success": false,
+    "cra_metadata": {}
+  },
+  {
+    "plc_name": "PLC_1",
+    "block_name": "GlobVar_SPT_50",
+    "block_type": "DB",
+    "block_number": "5",
+    "language": "DB",
+    "group_path": "SPT_50",
+    "export_success": false,
+    "cra_metadata": {}
+  },
+  {
+    "plc_name": "PLC_1",
+    "block_name": "APP_50_DiffNachfilter",
+    "block_type": "LAD",
+    "block_number": "34",
+    "language": "LAD",
+    "group_path": "SPT_50",
+    "export_success": false,
+    "cra_metadata": {}
+  },
+  {
+    "plc_name": "PLC_1",
+    "block_name": "APP_50_DustLevel",
+    "block_type": "LAD",
+    "block_number": "36",
+    "language": "LAD",
+    "group_path": "SPT_50",
+    "export_success": false,
+    "cra_metadata": {}
+  },
+  {
+    "plc_name": "PLC_1",
+    "block_name": "APP_50_HeatExchange",
+    "block_type": "LAD",
+    "block_number": "38",
+    "language": "LAD",
+    "group_path": "SPT_50",
+    "export_success": false,
+    "cra_metadata": {}
+  },
+  {
+    "plc_name": "PLC_1",
+    "block_name": "APP_50_KnockValve",
+    "block_type": "LAD",
+    "block_number": "39",
+    "language": "LAD",
+    "group_path": "SPT_50",
+    "export_success": false,
+    "cra_metadata": {}
+  },
+  {
+    "plc_name": "PLC_1",
+    "block_name": "APP_50_MotorFeedWorm",
+    "block_type": "LAD",
+    "block_number": "40",
+    "language": "LAD",
+    "group_path": "SPT_50",
+    "export_success": false,
+    "cra_metadata": {}
+  },
+  {
+    "plc_name": "PLC_1",
+    "block_name": "APP_50_Prozessluft",
+    "block_type": "LAD",
+    "block_number": "41",
+    "language": "LAD",
+    "group_path": "SPT_50",
+    "export_success": false,
+    "cra_metadata": {}
+  },
+  {
+    "plc_name": "PLC_1",
+    "block_name": "APP_50_PoDedu",
+    "block_type": "LAD",
+    "block_number": "43",
+    "language": "LAD",
+    "group_path": "SPT_50",
+    "export_success": false,
+    "cra_metadata": {}
+  },
+  {
+    "plc_name": "PLC_1",
+    "block_name": "APP_50_PoDeDuVolumen",
+    "block_type": "LAD",
+    "block_number": "44",
+    "language": "LAD",
+    "group_path": "SPT_50",
+    "export_success": false,
+    "cra_metadata": {}
+  },
+  {
+    "plc_name": "PLC_1",
+    "block_name": "APP_50_TempEHeizung",
+    "block_type": "LAD",
+    "block_number": "45",
+    "language": "LAD",
+    "group_path": "SPT_50",
+    "export_success": false,
+    "cra_metadata": {}
+  },
+  {
+    "plc_name": "PLC_1",
+    "block_name": "APP_50_Unterdruckfilter",
+    "block_type": "LAD",
+    "block_number": "46",
+    "language": "LAD",
+    "group_path": "SPT_50",
+    "export_success": false,
+    "cra_metadata": {}
+  },
+  {
+    "plc_name": "PLC_1",
+    "block_name": "APP_50_FilterValve",
+    "block_type": "LAD",
+    "block_number": "67",
+    "language": "LAD",
+    "group_path": "SPT_50",
+    "export_success": false,
+    "cra_metadata": {}
+  },
+  {
+    "plc_name": "PLC_1",
+    "block_name": "APP_50_DiffNachfilter_DB",
+    "block_type": "DB",
+    "block_number": "120",
+    "language": "DB",
+    "group_path": "SPT_50",
+    "export_success": false,
+    "cra_metadata": {}
+  },
+  {
+    "plc_name": "PLC_1",
+    "block_name": "APP_50_Druckluft_DB",
+    "block_type": "DB",
+    "block_number": "121",
+    "language": "DB",
+    "group_path": "SPT_50",
+    "export_success": false,
+    "cra_metadata": {}
+  },
+  {
+    "plc_name": "PLC_1",
+    "block_name": "APP_50_DustLevel_DB",
+    "block_type": "DB",
+    "block_number": "122",
+    "language": "DB",
+    "group_path": "SPT_50",
+    "export_success": false,
+    "cra_metadata": {}
+  },
+  {
+    "plc_name": "PLC_1",
+    "block_name": "APP_50_Error_DB",
+    "block_type": "DB",
+    "block_number": "123",
+    "language": "DB",
+    "group_path": "SPT_50",
+    "export_success": false,
+    "cra_metadata": {}
+  },
+  {
+    "plc_name": "PLC_1",
+    "block_name": "APP_50_FilterValve_DB",
+    "block_type": "DB",
+    "block_number": "124",
+    "language": "DB",
+    "group_path": "SPT_50",
+    "export_success": false,
+    "cra_metadata": {}
+  },
+  {
+    "plc_name": "PLC_1",
+    "block_name": "APP_50_HeatExchange_DB",
+    "block_type": "DB",
+    "block_number": "125",
+    "language": "DB",
+    "group_path": "SPT_50",
+    "export_success": false,
+    "cra_metadata": {}
+  },
+  {
+    "plc_name": "PLC_1",
+    "block_name": "APP_50_KnockValve_DB",
+    "block_type": "DB",
+    "block_number": "126",
+    "language": "DB",
+    "group_path": "SPT_50",
+    "export_success": false,
+    "cra_metadata": {}
+  },
+  {
+    "plc_name": "PLC_1",
+    "block_name": "APP_50_MotorFeedWorm_DB",
+    "block_type": "DB",
+    "block_number": "127",
+    "language": "DB",
+    "group_path": "SPT_50",
+    "export_success": false,
+    "cra_metadata": {}
+  },
+  {
+    "plc_name": "PLC_1",
+    "block_name": "APP_50_MotorFeedWorm_DB_1",
+    "block_type": "DB",
+    "block_number": "128",
+    "language": "DB",
+    "group_path": "SPT_50",
+    "export_success": false,
+    "cra_metadata": {}
+  },
+  {
+    "plc_name": "PLC_1",
+    "block_name": "APP_50_PoDedu_DB",
+    "block_type": "DB",
+    "block_number": "130",
+    "language": "DB",
+    "group_path": "SPT_50",
+    "export_success": false,
+    "cra_metadata": {}
+  },
+  {
+    "plc_name": "PLC_1",
+    "block_name": "APP_50_PoDeDuVolumen_DB",
+    "block_type": "DB",
+    "block_number": "131",
+    "language": "DB",
+    "group_path": "SPT_50",
+    "export_success": false,
+    "cra_metadata": {}
+  },
+  {
+    "plc_name": "PLC_1",
+    "block_name": "APP_50_Prozessluft_DB",
+    "block_type": "DB",
+    "block_number": "132",
+    "language": "DB",
+    "group_path": "SPT_50",
+    "export_success": false,
+    "cra_metadata": {}
+  },
+  {
+    "plc_name": "PLC_1",
+    "block_name": "APP_50_TempEHeizung_DB",
+    "block_type": "DB",
+    "block_number": "133",
+    "language": "DB",
+    "group_path": "SPT_50",
+    "export_success": false,
+    "cra_metadata": {}
+  },
+  {
+    "plc_name": "PLC_1",
+    "block_name": "APP_50_Unterdruckfilter_DB",
+    "block_type": "DB",
+    "block_number": "134",
+    "language": "DB",
+    "group_path": "SPT_50",
+    "export_success": false,
+    "cra_metadata": {}
+  },
+  {
+    "plc_name": "PLC_1",
+    "block_name": "APP_50_RotaryFeeder",
+    "block_type": "LAD",
+    "block_number": "78",
+    "language": "LAD",
+    "group_path": "SPT_50",
+    "export_success": false,
+    "cra_metadata": {}
+  },
+  {
+    "plc_name": "PLC_1",
+    "block_name": "APP_50_RotaryFeeder_DB",
+    "block_type": "DB",
+    "block_number": "155",
+    "language": "DB",
+    "group_path": "SPT_50",
+    "export_success": false,
+    "cra_metadata": {}
+  },
+  {
+    "plc_name": "PLC_1",
+    "block_name": "APP_50_FilterMonitoring_DB",
+    "block_type": "DB",
+    "block_number": "156",
+    "language": "DB",
+    "group_path": "SPT_50",
+    "export_success": false,
+    "cra_metadata": {}
+  },
+  {
+    "plc_name": "PLC_1",
+    "block_name": "APP_50_MotorServo",
+    "block_type": "LAD",
+    "block_number": "82",
+    "language": "LAD",
+    "group_path": "SPT_50",
+    "export_success": false,
+    "cra_metadata": {}
+  },
+  {
+    "plc_name": "PLC_1",
+    "block_name": "MotorServo_MainFan_DB",
+    "block_type": "DB",
+    "block_number": "158",
+    "language": "DB",
+    "group_path": "SPT_50",
+    "export_success": false,
+    "cra_metadata": {}
+  },
+  {
+    "plc_name": "PLC_1",
+    "block_name": "APP_50_MotorServo_DB",
+    "block_type": "DB",
+    "block_number": "162",
+    "language": "DB",
+    "group_path": "SPT_50",
+    "export_success": false,
+    "cra_metadata": {}
+  },
+  {
+    "plc_name": "PLC_1",
+    "block_name": "APP_50_Druckluft",
+    "block_type": "LAD",
+    "block_number": "35",
+    "language": "LAD",
+    "group_path": "SPT_50",
+    "export_success": false,
+    "cra_metadata": {}
+  },
+  {
+    "plc_name": "PLC_1",
+    "block_name": "APP_50_Error",
+    "block_type": "LAD",
+    "block_number": "37",
+    "language": "LAD",
+    "group_path": "SPT_50",
+    "export_success": false,
+    "cra_metadata": {}
+  },
+  {
+    "plc_name": "PLC_1",
+    "block_name": "APP_50_MotorFU",
+    "block_type": "LAD",
+    "block_number": "42",
+    "language": "LAD",
+    "group_path": "SPT_50",
+    "export_success": false,
+    "cra_metadata": {}
+  },
+  {
+    "plc_name": "PLC_1",
+    "block_name": "APP_50_FilterMonitoring",
+    "block_type": "LAD",
+    "block_number": "79",
+    "language": "LAD",
+    "group_path": "SPT_50",
+    "export_success": false,
+    "cra_metadata": {}
+  },
+  {
+    "plc_name": "PLC_1",
+    "block_name": "APP_50_MotorFU_DB",
+    "block_type": "DB",
+    "block_number": "129",
+    "language": "DB",
+    "group_path": "SPT_50",
+    "export_success": false,
+    "cra_metadata": {}
+  },
+  {
+    "plc_name": "PLC_1",
+    "block_name": "GlobVar_SPT_60",
+    "block_type": "DB",
+    "block_number": "6",
+    "language": "DB",
+    "group_path": "SPT_60",
+    "export_success": false,
+    "cra_metadata": {}
+  },
+  {
+    "plc_name": "PLC_1",
+    "block_name": "APP_60_Error",
+    "block_type": "LAD",
+    "block_number": "47",
+    "language": "LAD",
+    "group_path": "SPT_60",
+    "export_success": false,
+    "cra_metadata": {}
+  },
+  {
+    "plc_name": "PLC_1",
+    "block_name": "APP_60_Motors",
+    "block_type": "LAD",
+    "block_number": "48",
+    "language": "LAD",
+    "group_path": "SPT_60",
+    "export_success": false,
+    "cra_metadata": {}
+  },
+  {
+    "plc_name": "PLC_1",
+    "block_name": "APP_60_OelTempSliPu",
+    "block_type": "LAD",
+    "block_number": "49",
+    "language": "LAD",
+    "group_path": "SPT_60",
+    "export_success": false,
+    "cra_metadata": {}
+  },
+  {
+    "plc_name": "PLC_1",
+    "block_name": "APP_60_SlipFe",
+    "block_type": "LAD",
+    "block_number": "50",
+    "language": "LAD",
+    "group_path": "SPT_60",
+    "export_success": false,
+    "cra_metadata": {}
+  },
+  {
+    "plc_name": "PLC_1",
+    "block_name": "APP_60_SlipFe2",
+    "block_type": "LAD",
+    "block_number": "51",
+    "language": "LAD",
+    "group_path": "SPT_60",
+    "export_success": false,
+    "cra_metadata": {}
+  },
+  {
+    "plc_name": "PLC_1",
+    "block_name": "APP_60_SlipFeCtrl",
+    "block_type": "LAD",
+    "block_number": "52",
+    "language": "LAD",
+    "group_path": "SPT_60",
+    "export_success": false,
+    "cra_metadata": {}
+  },
+  {
+    "plc_name": "PLC_1",
+    "block_name": "APP_60_SlipTemp",
+    "block_type": "LAD",
+    "block_number": "53",
+    "language": "LAD",
+    "group_path": "SPT_60",
+    "export_success": false,
+    "cra_metadata": {}
+  },
+  {
+    "plc_name": "PLC_1",
+    "block_name": "APP_60_Tank_Standard",
+    "block_type": "LAD",
+    "block_number": "54",
+    "language": "LAD",
+    "group_path": "SPT_60",
+    "export_success": false,
+    "cra_metadata": {}
+  },
+  {
+    "plc_name": "PLC_1",
+    "block_name": "APP_60_Viscosity",
+    "block_type": "LAD",
+    "block_number": "55",
+    "language": "LAD",
+    "group_path": "SPT_60",
+    "export_success": false,
+    "cra_metadata": {}
+  },
+  {
+    "plc_name": "PLC_1",
+    "block_name": "APP_60_ZSS",
+    "block_type": "LAD",
+    "block_number": "65",
+    "language": "LAD",
+    "group_path": "SPT_60",
+    "export_success": false,
+    "cra_metadata": {}
+  },
+  {
+    "plc_name": "PLC_1",
+    "block_name": "APP_60_OperData",
+    "block_type": "LAD",
+    "block_number": "68",
+    "language": "LAD",
+    "group_path": "SPT_60",
+    "export_success": false,
+    "cra_metadata": {}
+  },
+  {
+    "plc_name": "PLC_1",
+    "block_name": "APP_60_Error_DB",
+    "block_type": "DB",
+    "block_number": "85",
+    "language": "DB",
+    "group_path": "SPT_60",
+    "export_success": false,
+    "cra_metadata": {}
+  },
+  {
+    "plc_name": "PLC_1",
+    "block_name": "APP_60_Motors_DB",
+    "block_type": "DB",
+    "block_number": "86",
+    "language": "DB",
+    "group_path": "SPT_60",
+    "export_success": false,
+    "cra_metadata": {}
+  },
+  {
+    "plc_name": "PLC_1",
+    "block_name": "APP_60_OelTempSliPu_DB",
+    "block_type": "DB",
+    "block_number": "87",
+    "language": "DB",
+    "group_path": "SPT_60",
+    "export_success": false,
+    "cra_metadata": {}
+  },
+  {
+    "plc_name": "PLC_1",
+    "block_name": "APP_60_OperData_DB",
+    "block_type": "DB",
+    "block_number": "88",
+    "language": "DB",
+    "group_path": "SPT_60",
+    "export_success": false,
+    "cra_metadata": {}
+  },
+  {
+    "plc_name": "PLC_1",
+    "block_name": "APP_60_SlipFe_DB",
+    "block_type": "DB",
+    "block_number": "89",
+    "language": "DB",
+    "group_path": "SPT_60",
+    "export_success": false,
+    "cra_metadata": {}
+  },
+  {
+    "plc_name": "PLC_1",
+    "block_name": "APP_60_SlipFe2_DB",
+    "block_type": "DB",
+    "block_number": "90",
+    "language": "DB",
+    "group_path": "SPT_60",
+    "export_success": false,
+    "cra_metadata": {}
+  },
+  {
+    "plc_name": "PLC_1",
+    "block_name": "APP_60_SlipFeCtrl_DB",
+    "block_type": "DB",
+    "block_number": "91",
+    "language": "DB",
+    "group_path": "SPT_60",
+    "export_success": false,
+    "cra_metadata": {}
+  },
+  {
+    "plc_name": "PLC_1",
+    "block_name": "APP_60_SlipTemp_DB",
+    "block_type": "DB",
+    "block_number": "92",
+    "language": "DB",
+    "group_path": "SPT_60",
+    "export_success": false,
+    "cra_metadata": {}
+  },
+  {
+    "plc_name": "PLC_1",
+    "block_name": "APP_60_Tank_Standard_DB",
+    "block_type": "DB",
+    "block_number": "93",
+    "language": "DB",
+    "group_path": "SPT_60",
+    "export_success": false,
+    "cra_metadata": {}
+  },
+  {
+    "plc_name": "PLC_1",
+    "block_name": "APP_60_Viscosity_DB",
+    "block_type": "DB",
+    "block_number": "94",
+    "language": "DB",
+    "group_path": "SPT_60",
+    "export_success": false,
+    "cra_metadata": {}
+  },
+  {
+    "plc_name": "PLC_1",
+    "block_name": "APP_60_ZSS_DB",
+    "block_type": "DB",
+    "block_number": "95",
+    "language": "DB",
+    "group_path": "SPT_60",
+    "export_success": false,
+    "cra_metadata": {}
+  },
+  {
+    "plc_name": "PLC_1",
+    "block_name": "APP_60_MotorServo",
+    "block_type": "LAD",
+    "block_number": "84",
+    "language": "LAD",
+    "group_path": "SPT_60",
+    "export_success": false,
+    "cra_metadata": {}
+  },
+  {
+    "plc_name": "PLC_1",
+    "block_name": "MotorServo_Pump_DB",
+    "block_type": "DB",
+    "block_number": "159",
+    "language": "DB",
+    "group_path": "SPT_60",
+    "export_success": false,
+    "cra_metadata": {}
+  },
+  {
+    "plc_name": "PLC_1",
+    "block_name": "APP_60_MotorServo_DB",
+    "block_type": "DB",
+    "block_number": "163",
+    "language": "DB",
+    "group_path": "SPT_60",
+    "export_success": false,
+    "cra_metadata": {}
+  },
+  {
+    "plc_name": "PLC_1",
+    "block_name": "GlobVar_SPT_00",
+    "block_type": "DB",
+    "block_number": "15",
+    "language": "DB",
+    "group_path": "SPT_00",
+    "export_success": false,
+    "cra_metadata": {}
+  },
+  {
+    "plc_name": "PLC_1",
+    "block_name": "APP_EO_Konfig_DB",
+    "block_type": "DB",
+    "block_number": "8",
+    "language": "DB",
+    "group_path": "SPT_00",
+    "export_success": false,
+    "cra_metadata": {}
+  },
+  {
+    "plc_name": "PLC_1",
+    "block_name": "APP_00_Cycle",
+    "block_type": "LAD",
+    "block_number": "57",
+    "language": "LAD",
+    "group_path": "SPT_00",
+    "export_success": false,
+    "cra_metadata": {}
+  },
+  {
+    "plc_name": "PLC_1",
+    "block_name": "APP_00_ShutDown",
+    "block_type": "LAD",
+    "block_number": "58",
+    "language": "LAD",
+    "group_path": "SPT_00",
+    "export_success": false,
+    "cra_metadata": {}
+  },
+  {
+    "plc_name": "PLC_1",
+    "block_name": "APP_00_Start",
+    "block_type": "LAD",
+    "block_number": "59",
+    "language": "LAD",
+    "group_path": "SPT_00",
+    "export_success": false,
+    "cra_metadata": {}
+  },
+  {
+    "plc_name": "PLC_1",
+    "block_name": "APP_00_OperMode",
+    "block_type": "LAD",
+    "block_number": "60",
+    "language": "LAD",
+    "group_path": "SPT_00",
+    "export_success": false,
+    "cra_metadata": {}
+  },
+  {
+    "plc_name": "PLC_1",
+    "block_name": "APP_00_OperMode_DB",
+    "block_type": "DB",
+    "block_number": "83",
+    "language": "DB",
+    "group_path": "SPT_00",
+    "export_success": false,
+    "cra_metadata": {}
+  },
+  {
+    "plc_name": "PLC_1",
+    "block_name": "Data_Recipe_Init",
+    "block_type": "LAD",
+    "block_number": "73",
+    "language": "LAD",
+    "group_path": "SPT_00",
+    "export_success": false,
+    "cra_metadata": {}
+  },
+  {
+    "plc_name": "PLC_1",
+    "block_name": "Data_Recipe_Init_DB",
+    "block_type": "DB",
+    "block_number": "137",
+    "language": "DB",
+    "group_path": "SPT_00",
+    "export_success": false,
+    "cra_metadata": {}
+  },
+  {
+    "plc_name": "PLC_1",
+    "block_name": "APP_00_Failure_DB",
+    "block_type": "DB",
+    "block_number": "138",
+    "language": "DB",
+    "group_path": "SPT_00",
+    "export_success": false,
+    "cra_metadata": {}
+  },
+  {
+    "plc_name": "PLC_1",
+    "block_name": "APP_00_Start_DB",
+    "block_type": "DB",
+    "block_number": "139",
+    "language": "DB",
+    "group_path": "SPT_00",
+    "export_success": false,
+    "cra_metadata": {}
+  },
+  {
+    "plc_name": "PLC_1",
+    "block_name": "APP_00_Cycle_DB",
+    "block_type": "DB",
+    "block_number": "140",
+    "language": "DB",
+    "group_path": "SPT_00",
+    "export_success": false,
+    "cra_metadata": {}
+  },
+  {
+    "plc_name": "PLC_1",
+    "block_name": "APP_00_ShutDown_DB",
+    "block_type": "DB",
+    "block_number": "141",
+    "language": "DB",
+    "group_path": "SPT_00",
+    "export_success": false,
+    "cra_metadata": {}
+  },
+  {
+    "plc_name": "PLC_1",
+    "block_name": "Batchgenerator",
+    "block_type": "LAD",
+    "block_number": "128",
+    "language": "LAD",
+    "group_path": "SPT_00",
+    "export_success": false,
+    "cra_metadata": {}
+  },
+  {
+    "plc_name": "PLC_1",
+    "block_name": "Batchgenerator_DB",
+    "block_type": "DB",
+    "block_number": "146",
+    "language": "DB",
+    "group_path": "SPT_00",
+    "export_success": false,
+    "cra_metadata": {}
+  },
+  {
+    "plc_name": "PLC_1",
+    "block_name": "APP_00_Zeiten",
+    "block_type": "LAD",
+    "block_number": "74",
+    "language": "LAD",
+    "group_path": "SPT_00",
+    "export_success": false,
+    "cra_metadata": {}
+  },
+  {
+    "plc_name": "PLC_1",
+    "block_name": "APP_00_Zeiten_DB",
+    "block_type": "DB",
+    "block_number": "145",
+    "language": "DB",
+    "group_path": "SPT_00",
+    "export_success": false,
+    "cra_metadata": {}
+  },
+  {
+    "plc_name": "PLC_1",
+    "block_name": "APP_EO_Konfig",
+    "block_type": "SCL",
+    "block_number": "1",
+    "language": "SCL",
+    "group_path": "SPT_00",
+    "export_success": false,
+    "cra_metadata": {}
+  },
+  {
+    "plc_name": "PLC_1",
+    "block_name": "APP_00_Failure",
+    "block_type": "LAD",
+    "block_number": "56",
+    "language": "LAD",
+    "group_path": "SPT_00",
+    "export_success": false,
+    "cra_metadata": {}
+  },
+  {
+    "plc_name": "PLC_1",
+    "block_name": "FOB_RTG1",
+    "block_type": "SCL",
+    "block_number": "124",
+    "language": "SCL",
+    "group_path": "SafetyProgramm",
+    "export_success": false,
+    "cra_metadata": {}
+  },
+  {
+    "plc_name": "PLC_1",
+    "block_name": "InputSignals",
+    "block_type": "F_LAD",
+    "block_number": "81",
+    "language": "F_LAD",
+    "group_path": "SafetyProgramm",
+    "export_success": false,
+    "cra_metadata": {}
+  },
+  {
+    "plc_name": "PLC_1",
+    "block_name": "Main_Safety_RTG1",
+    "block_type": "F_LAD",
+    "block_number": "76",
+    "language": "F_LAD",
+    "group_path": "SafetyProgramm",
+    "export_success": false,
+    "cra_metadata": {}
+  },
+  {
+    "plc_name": "PLC_1",
+    "block_name": "Main_Safety_RTG1_DB",
+    "block_type": "F_DB",
+    "block_number": "151",
+    "language": "F_DB",
+    "group_path": "SafetyProgramm",
+    "export_success": false,
+    "cra_metadata": {}
+  },
+  {
+    "plc_name": "PLC_1",
+    "block_name": "REZEPT_VisuDaten",
+    "block_type": "PlcStruct",
+    "block_number": "4",
+    "group_path": "Rezept",
+    "export_file": "software/PLC_1/udts/Rezept/REZEPT_VisuDaten.xml",
+    "hash_sha256": "3db2f3eb435f133a35bed884f574d6533d1a4ac4256e245f25b11cc7c6d01e8b",
+    "export_success": true,
+    "cra_metadata": {}
+  },
+  {
+    "plc_name": "PLC_1",
+    "block_name": "PressenparameterVisu",
+    "block_type": "PlcStruct",
+    "block_number": "3",
+    "group_path": "Rezept",
+    "export_file": "software/PLC_1/udts/Rezept/PressenparameterVisu.xml",
+    "hash_sha256": "f7ac24a579106f83818fcccbc19b0fbb8a2324f820a2a95e5ee951642264608e",
+    "export_success": true,
+    "cra_metadata": {}
+  },
+  {
+    "plc_name": "PLC_1",
+    "block_name": "KonfigurationProzess",
+    "block_type": "PlcStruct",
+    "block_number": "6",
+    "group_path": "Rezept",
+    "export_file": "software/PLC_1/udts/Rezept/KonfigurationProzess.xml",
+    "hash_sha256": "2c075bf33aa9782f3223f9c699e8d39707c5821995d50f0338e7d27e791c112a",
+    "export_success": true,
+    "cra_metadata": {}
+  },
+  {
+    "plc_name": "PLC_1",
+    "block_name": "Daten_SPT_10",
+    "block_type": "PlcStruct",
+    "block_number": "8",
+    "group_path": "Rezept",
+    "export_file": "software/PLC_1/udts/Rezept/Daten_SPT_10.xml",
+    "hash_sha256": "954bab61df7172bbb7253710f25632fea982a19ba2e42d295a8829e45cfe19b0",
+    "export_success": true,
+    "cra_metadata": {}
+  },
+  {
+    "plc_name": "PLC_1",
+    "block_name": "Daten_SPT_20",
+    "block_type": "PlcStruct",
+    "block_number": "9",
+    "group_path": "Rezept",
+    "export_file": "software/PLC_1/udts/Rezept/Daten_SPT_20.xml",
+    "hash_sha256": "5e91fbd177a548f25edc671597e46f256d357ea2cfbaef043c1006300cb9cb34",
+    "export_success": true,
+    "cra_metadata": {}
+  },
+  {
+    "plc_name": "PLC_1",
+    "block_name": "Daten_SPT_30",
+    "block_type": "PlcStruct",
+    "block_number": "10",
+    "group_path": "Rezept",
+    "export_file": "software/PLC_1/udts/Rezept/Daten_SPT_30.xml",
+    "hash_sha256": "04105d42bc736907613607b8ac33c0d89558eaf821d36cb5cfdf3fa94c3d0b5a",
+    "export_success": true,
+    "cra_metadata": {}
+  },
+  {
+    "plc_name": "PLC_1",
+    "block_name": "Daten_SPT_40",
+    "block_type": "PlcStruct",
+    "block_number": "11",
+    "group_path": "Rezept",
+    "export_file": "software/PLC_1/udts/Rezept/Daten_SPT_40.xml",
+    "hash_sha256": "90a822f31848e05719a18d94f353981744f67c69b38da3ce8b1e38e27157b370",
+    "export_success": true,
+    "cra_metadata": {}
+  },
+  {
+    "plc_name": "PLC_1",
+    "block_name": "Daten_SPT_50",
+    "block_type": "PlcStruct",
+    "block_number": "12",
+    "group_path": "Rezept",
+    "export_file": "software/PLC_1/udts/Rezept/Daten_SPT_50.xml",
+    "hash_sha256": "61b465af8e229200052fd8368b29ec602feacd095e40e91d2990a10841b2baf6",
+    "export_success": true,
+    "cra_metadata": {}
+  },
+  {
+    "plc_name": "PLC_1",
+    "block_name": "Daten_SPT_60",
+    "block_type": "PlcStruct",
+    "block_number": "13",
+    "group_path": "Rezept",
+    "export_file": "software/PLC_1/udts/Rezept/Daten_SPT_60.xml",
+    "hash_sha256": "4c9a40f8aa4f96691d73a3dcf7a78fd000f7f0795bdef14d5b1e61a211bc2e50",
+    "export_success": true,
+    "cra_metadata": {}
+  },
+  {
+    "plc_name": "PLC_1",
+    "block_name": "DIAG_Druckmessumformer",
+    "block_type": "PlcStruct",
+    "block_number": "1",
+    "group_path": "Diagnose",
+    "export_file": "software/PLC_1/udts/Diagnose/DIAG_Druckmessumformer.xml",
+    "hash_sha256": "b43caca7b7d66d728019dbb7dd96586c2b50a795f96188bcc121236c7bb14e5e",
+    "export_success": true,
+    "cra_metadata": {}
+  },
+  {
+    "plc_name": "PLC_1",
+    "block_name": "DIAG_Proportionalventil",
+    "block_type": "PlcStruct",
+    "block_number": "2",
+    "group_path": "Diagnose",
+    "export_file": "software/PLC_1/udts/Diagnose/DIAG_Proportionalventil.xml",
+    "hash_sha256": "a5302917e5c171c9cdbf69fc4d00ab7ae5ade0326d6409cc188d363888f989cc",
+    "export_success": true,
+    "cra_metadata": {}
+  },
+  {
+    "plc_name": "PLC_1",
+    "block_name": "Diag_EinAusVentile",
+    "block_type": "PlcStruct",
+    "block_number": "5",
+    "group_path": "Diagnose",
+    "export_file": "software/PLC_1/udts/Diagnose/Diag_EinAusVentile.xml",
+    "hash_sha256": "cec0024f3f7b4af8b2fd3e50b161100f80bc42ec5a9866460991e8326ba11a08",
+    "export_success": true,
+    "cra_metadata": {}
+  },
+  {
+    "plc_name": "PLC_1",
+    "block_name": "DIAG_Tempmessumformer",
+    "block_type": "PlcStruct",
+    "block_number": "7",
+    "group_path": "Diagnose",
+    "export_file": "software/PLC_1/udts/Diagnose/DIAG_Tempmessumformer.xml",
+    "hash_sha256": "5e0b607315a7f4035039a0405cd9248da172595f8c73eb7d108a8feb7a428f74",
+    "export_success": true,
+    "cra_metadata": {}
+  }
+]

@@ -1,0 +1,16 @@
+[
+  {
+    "severity": "MEDIUM",
+    "finding": "No syslog setting found",
+    "evidence": "No syslog-related CPU attribute was exported.",
+    "required_action": "Verify logging configuration manually.",
+    "category": "CMDB/CRA review finding"
+  },
+  {
+    "severity": "LOW",
+    "finding": "No NTP/time synchronization setting found",
+    "evidence": "No time-sync CPU attribute was exported.",
+    "required_action": "Verify time synchronization manually.",
+    "category": "CMDB/CRA review finding"
+  }
+]

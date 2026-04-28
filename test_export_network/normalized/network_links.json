@@ -1,0 +1,122 @@
+[
+  {
+    "link_type": "io_connector",
+    "source_path": "SINAMICS G_1/Drive_Main_Fan/PROFINET-Schnittstelle",
+    "source_name": "PROFINET-Schnittstelle",
+    "target_name": "PROFINET IO-System",
+    "subnet_name": "PN/IE_1",
+    "io_system_name": "PROFINET IO-System"
+  },
+  {
+    "link_type": "io_device",
+    "source_path": "SINAMICS G_1/Drive_Main_Fan/PROFINET-Schnittstelle",
+    "source_name": "PROFINET-Schnittstelle",
+    "target_name": "Siemens.Engineering.HW.IoConnector",
+    "subnet_name": "PN/IE_1",
+    "io_system_name": "PROFINET IO-System"
+  },
+  {
+    "link_type": "io_device",
+    "source_path": "SINAMICS G_1/Drive_Main_Fan/PROFINET-Schnittstelle",
+    "source_name": "PROFINET-Schnittstelle",
+    "target_name": "Siemens.Engineering.HW.IoConnector",
+    "subnet_name": "PN/IE_1",
+    "io_system_name": "PROFINET IO-System"
+  },
+  {
+    "link_type": "io_device",
+    "source_path": "SINAMICS G_1/Drive_Main_Fan/PROFINET-Schnittstelle",
+    "source_name": "PROFINET-Schnittstelle",
+    "target_name": "Siemens.Engineering.HW.IoConnector",
+    "subnet_name": "PN/IE_1",
+    "io_system_name": "PROFINET IO-System"
+  },
+  {
+    "link_type": "io_device",
+    "source_path": "SINAMICS G_1/Drive_Main_Fan/PROFINET-Schnittstelle",
+    "source_name": "PROFINET-Schnittstelle",
+    "target_name": "Siemens.Engineering.HW.IoConnector",
+    "subnet_name": "PN/IE_1",
+    "io_system_name": "PROFINET IO-System"
+  },
+  {
+    "link_type": "io_connector",
+    "source_path": "SINAMICS G_2/Powder Return/PROFINET-Schnittstelle",
+    "source_name": "PROFINET-Schnittstelle",
+    "target_name": "PROFINET IO-System",
+    "subnet_name": "PN/IE_1",
+    "io_system_name": "PROFINET IO-System"
+  },
+  {
+    "link_type": "io_device",
+    "source_path": "SINAMICS G_2/Powder Return/PROFINET-Schnittstelle",
+    "source_name": "PROFINET-Schnittstelle",
+    "target_name": "Siemens.Engineering.HW.IoConnector",
+    "subnet_name": "PN/IE_1",
+    "io_system_name": "PROFINET IO-System"
+  },
+  {
+    "link_type": "io_device",
+    "source_path": "SINAMICS G_2/Powder Return/PROFINET-Schnittstelle",
+    "source_name": "PROFINET-Schnittstelle",
+    "target_name": "Siemens.Engineering.HW.IoConnector",
+    "subnet_name": "PN/IE_1",
+    "io_system_name": "PROFINET IO-System"
+  },
+  {
+    "link_type": "io_device",
+    "source_path": "SINAMICS G_2/Powder Return/PROFINET-Schnittstelle",
+    "source_name": "PROFINET-Schnittstelle",
+    "target_name": "Siemens.Engineering.HW.IoConnector",
+    "subnet_name": "PN/IE_1",
+    "io_system_name": "PROFINET IO-System"
+  },
+  {
+    "link_type": "io_device",
+    "source_path": "SINAMICS G_2/Powder Return/PROFINET-Schnittstelle",
+    "source_name": "PROFINET-Schnittstelle",
+    "target_name": "Siemens.Engineering.HW.IoConnector",
+    "subnet_name": "PN/IE_1",
+    "io_system_name": "PROFINET IO-System"
+  },
+  {
+    "link_type": "io_connector",
+    "source_path": "SINAMICS G_3/Schlicker Pumpe/PROFINET-Schnittstelle",
+    "source_name": "PROFINET-Schnittstelle",
+    "target_name": "PROFINET IO-System",
+    "subnet_name": "PN/IE_1",
+    "io_system_name": "PROFINET IO-System"
+  },
+  {
+    "link_type": "io_device",
+    "source_path": "SINAMICS G_3/Schlicker Pumpe/PROFINET-Schnittstelle",
+    "source_name": "PROFINET-Schnittstelle",
+    "target_name": "Siemens.Engineering.HW.IoConnector",
+    "subnet_name": "PN/IE_1",
+    "io_system_name": "PROFINET IO-System"
+  },
+  {
+    "link_type": "io_device",
+    "source_path": "SINAMICS G_3/Schlicker Pumpe/PROFINET-Schnittstelle",
+    "source_name": "PROFINET-Schnittstelle",
+    "target_name": "Siemens.Engineering.HW.IoConnector",
+    "subnet_name": "PN/IE_1",
+    "io_system_name": "PROFINET IO-System"
+  },
+  {
+    "link_type": "io_device",
+    "source_path": "SINAMICS G_3/Schlicker Pumpe/PROFINET-Schnittstelle",
+    "source_name": "PROFINET-Schnittstelle",
+    "target_name": "Siemens.Engineering.HW.IoConnector",
+    "subnet_name": "PN/IE_1",
+    "io_system_name": "PROFINET IO-System"
+  },
+  {
+    "link_type": "io_device",
+    "source_path": "SINAMICS G_3/Schlicker Pumpe/PROFINET-Schnittstelle",
+    "source_name": "PROFINET-Schnittstelle",
+    "target_name": "Siemens.Engineering.HW.IoConnector",
+    "subnet_name": "PN/IE_1",
+    "io_system_name": "PROFINET IO-System"
+  }
+]

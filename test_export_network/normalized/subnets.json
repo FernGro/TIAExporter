@@ -1,0 +1,18 @@
+[
+  {
+    "name": "PN/IE_1",
+    "net_type": "Ethernet",
+    "io_system_names": [
+      "PROFINET IO-System"
+    ],
+    "attributes": {
+      "default_subnet": "True",
+      "io_systems": "Siemens.Engineering.Contract.InstanceRepresentation`1[Siemens.Engineering.Contract.IAssociationContract]",
+      "name": "PN/IE_1",
+      "net_type": "Siemens.Engineering.Contract.EnumToClientRepresentation",
+      "nodes": "Siemens.Engineering.Contract.InstanceRepresentation`1[Siemens.Engineering.Contract.IAssociationContract]",
+      "subnet_id": "DA3B-1",
+      "type_identifier": "System:Subnet.Ethernet"
+    }
+  }
+]

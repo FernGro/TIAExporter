@@ -1,0 +1,155 @@
+[
+  {
+    "relative_path": "software/PLC_1/udts/Rezept/REZEPT_VisuDaten.xml",
+    "file_type": "xml",
+    "sha256": "824fd047bccc104c46cf356cb4e0cc1f77fb45f5a3bc45ec227ea00c8bbff352",
+    "size_bytes": 60180,
+    "created_at": "2026-04-28T10:07:59.2802151+00:00",
+    "source_object": "PLC_1/Rezept/REZEPT_VisuDaten",
+    "export_success": true
+  },
+  {
+    "relative_path": "software/PLC_1/udts/Rezept/PressenparameterVisu.xml",
+    "file_type": "xml",
+    "sha256": "3b29516b92cd80d213aaf120bcd0c3a1e994778be284698ec6e970fd596135ae",
+    "size_bytes": 36336,
+    "created_at": "2026-04-28T10:07:59.3979124+00:00",
+    "source_object": "PLC_1/Rezept/PressenparameterVisu",
+    "export_success": true
+  },
+  {
+    "relative_path": "software/PLC_1/udts/Rezept/KonfigurationProzess.xml",
+    "file_type": "xml",
+    "sha256": "47a1487ef35b010776b5b487b7da3b51a70066bd3fe1e90e3c2282b45164f503",
+    "size_bytes": 26903,
+    "created_at": "2026-04-28T10:07:59.4576619+00:00",
+    "source_object": "PLC_1/Rezept/KonfigurationProzess",
+    "export_success": true
+  },
+  {
+    "relative_path": "software/PLC_1/udts/Rezept/Daten_SPT_10.xml",
+    "file_type": "xml",
+    "sha256": "59471608b0a6685272df911a55069895b73bff084e03c63bd8b02966a594ba5f",
+    "size_bytes": 47162,
+    "created_at": "2026-04-28T10:07:59.5012317+00:00",
+    "source_object": "PLC_1/Rezept/Daten_SPT_10",
+    "export_success": true
+  },
+  {
+    "relative_path": "software/PLC_1/udts/Rezept/Daten_SPT_20.xml",
+    "file_type": "xml",
+    "sha256": "518ea844ee7e7b909e009cc73d9833686743d48e9b017515cfe882e5ffd0bec4",
+    "size_bytes": 29884,
+    "created_at": "2026-04-28T10:07:59.5420840+00:00",
+    "source_object": "PLC_1/Rezept/Daten_SPT_20",
+    "export_success": true
+  },
+  {
+    "relative_path": "software/PLC_1/udts/Rezept/Daten_SPT_30.xml",
+    "file_type": "xml",
+    "sha256": "2ba50e65131e381a327b41073c75b89191ae8042a31e5f5b9d1747b54a8ce5aa",
+    "size_bytes": 45929,
+    "created_at": "2026-04-28T10:07:59.5858655+00:00",
+    "source_object": "PLC_1/Rezept/Daten_SPT_30",
+    "export_success": true
+  },
+  {
+    "relative_path": "software/PLC_1/udts/Rezept/Daten_SPT_40.xml",
+    "file_type": "xml",
+    "sha256": "fe70c855790e116b64d5f19990cde6cfa190c70def5bbf3ac417e079b3b720a3",
+    "size_bytes": 31650,
+    "created_at": "2026-04-28T10:07:59.6242749+00:00",
+    "source_object": "PLC_1/Rezept/Daten_SPT_40",
+    "export_success": true
+  },
+  {
+    "relative_path": "software/PLC_1/udts/Rezept/Daten_SPT_50.xml",
+    "file_type": "xml",
+    "sha256": "0f57671a2ccb122fd624d688117fad0fa20f7a2611552f45dd1c98922fc87c5d",
+    "size_bytes": 88289,
+    "created_at": "2026-04-28T10:07:59.6638705+00:00",
+    "source_object": "PLC_1/Rezept/Daten_SPT_50",
+    "export_success": true
+  },
+  {
+    "relative_path": "software/PLC_1/udts/Rezept/Daten_SPT_60.xml",
+    "file_type": "xml",
+    "sha256": "b1639240e3658abb2370ef23d848ac2ccf17e936779afb9499933fcbfcdf0aed",
+    "size_bytes": 120001,
+    "created_at": "2026-04-28T10:07:59.7022437+00:00",
+    "source_object": "PLC_1/Rezept/Daten_SPT_60",
+    "export_success": true
+  },
+  {
+    "relative_path": "software/PLC_1/udts/Diagnose/DIAG_Druckmessumformer.xml",
+    "file_type": "xml",
+    "sha256": "05335b65509da0f216af909fb2f88dd58b4066bd5599a7c9def700947e98eb7d",
+    "size_bytes": 7365,
+    "created_at": "2026-04-28T10:07:59.7689064+00:00",
+    "source_object": "PLC_1/Diagnose/DIAG_Druckmessumformer",
+    "export_success": true
+  },
+  {
+    "relative_path": "software/PLC_1/udts/Diagnose/DIAG_Proportionalventil.xml",
+    "file_type": "xml",
+    "sha256": "c25373d0f8e3a495daa9f0214c8a1a2a31fc6b5b3431ef12dc67ff3350c9c822",
+    "size_bytes": 8632,
+    "created_at": "2026-04-28T10:07:59.8076752+00:00",
+    "source_object": "PLC_1/Diagnose/DIAG_Proportionalventil",
+    "export_success": true
+  },
+  {
+    "relative_path": "software/PLC_1/udts/Diagnose/Diag_EinAusVentile.xml",
+    "file_type": "xml",
+    "sha256": "a1188aff9119aa59b0642685e6e551a16ea3dc129ca52c1044128fb7f81d539c",
+    "size_bytes": 8028,
+    "created_at": "2026-04-28T10:07:59.8406774+00:00",
+    "source_object": "PLC_1/Diagnose/Diag_EinAusVentile",
+    "export_success": true
+  },
+  {
+    "relative_path": "software/PLC_1/udts/Diagnose/DIAG_Tempmessumformer.xml",
+    "file_type": "xml",
+    "sha256": "c9c8e5a3045f59838d3e7bf81b489907935f5b860397a8046eee08e7117d4889",
+    "size_bytes": 7307,
+    "created_at": "2026-04-28T10:07:59.8747130+00:00",
+    "source_object": "PLC_1/Diagnose/DIAG_Tempmessumformer",
+    "export_success": true
+  },
+  {
+    "relative_path": "software/PLC_1/tag_tables/Standard-Variablentabelle.xml",
+    "file_type": "xml",
+    "sha256": "d8e0f5173c96c605d4d7b10118ddb45a60e8febdfbdd098f07184031735666de",
+    "size_bytes": 42543,
+    "created_at": "2026-04-28T10:07:59.9193002+00:00",
+    "source_object": "PLC_1//Standard-Variablentabelle",
+    "export_success": true
+  },
+  {
+    "relative_path": "software/PLC_1/tag_tables/testIBN.xml",
+    "file_type": "xml",
+    "sha256": "64306d8822f706c244e14882e0aa2f5ed5f7d5f6500f1d512003e484ec4d7d68",
+    "size_bytes": 3622,
+    "created_at": "2026-04-28T10:07:59.9821340+00:00",
+    "source_object": "PLC_1//testIBN",
+    "export_success": true
+  },
+  {
+    "relative_path": "software/PLC_1/tag_tables/GlobVar_PLC_IO.xml",
+    "file_type": "xml",
+    "sha256": "40a27baf7754ca3348020c9275a1f82c25f9ee8aa13fa95199866822e81ca520",
+    "size_bytes": 617592,
+    "created_at": "2026-04-28T10:08:00.0449564+00:00",
+    "source_object": "PLC_1//GlobVar_PLC_IO",
+    "export_success": true
+  },
+  {
+    "relative_path": "software/PLC_1/tag_tables/GlobVar_PLC_IO_PRG.xml",
+    "file_type": "xml",
+    "sha256": "bd206ce7b30f97bbd90fb4b4293bcd0e821f7c21bbf53f6287dd4335335d482f",
+    "size_bytes": 587428,
+    "created_at": "2026-04-28T10:08:00.5974466+00:00",
+    "source_object": "PLC_1//GlobVar_PLC_IO_PRG",
+    "export_success": true
+  }
+]

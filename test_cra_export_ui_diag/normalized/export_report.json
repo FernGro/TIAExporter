@@ -1,0 +1,25 @@
+{
+  "status": "failed",
+  "error_count": 1,
+  "warning_count": 0,
+  "missing_cra_metadata": 0,
+  "counts": {
+    "devices": 0,
+    "device_items": 0,
+    "plc_blocks": 0,
+    "tag_tables": 0,
+    "udts": 0,
+    "dbs": 0,
+    "hardware_exports": 0,
+    "network_links": 0,
+    "subnets": 0,
+    "library_items": 0,
+    "evidence_files": 32
+  },
+  "limitations": [
+    "CRA readiness is an engineering export quality assessment and not a legal compliance statement.",
+    "Hardware, HMI and library details depend on the installed TIA Openness API and project object model.",
+    "Complete dependency chains for project libraries are not guaranteed by TIA Openness.",
+    "Some objects may only be represented as normalized metadata if XML export is unsupported."
+  ]
+}

@@ -1,0 +1,81 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v8.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v8.0": {
+      "TIAExporter/1.0.0": {
+        "dependencies": {
+          "Siemens.Engineering.ClientAdapter.Interfaces": "20.0.0.0",
+          "Siemens.Engineering.Contract": "20.0.0.0",
+          "Siemens.Engineering": "20.0.0.0",
+          "Siemens.Engineering.Hmi": "20.0.0.0"
+        },
+        "runtime": {
+          "TIAExporter.dll": {}
+        }
+      },
+      "Siemens.Engineering.ClientAdapter.Interfaces/20.0.0.0": {
+        "runtime": {
+          "Siemens.Engineering.ClientAdapter.Interfaces.dll": {
+            "assemblyVersion": "20.0.0.0",
+            "fileVersion": "2000.0.9501.1"
+          }
+        }
+      },
+      "Siemens.Engineering.Contract/20.0.0.0": {
+        "runtime": {
+          "Siemens.Engineering.Contract.dll": {
+            "assemblyVersion": "20.0.0.0",
+            "fileVersion": "2000.0.9501.1"
+          }
+        }
+      },
+      "Siemens.Engineering/20.0.0.0": {
+        "runtime": {
+          "Siemens.Engineering.dll": {
+            "assemblyVersion": "20.0.0.0",
+            "fileVersion": "2000.0.9501.1"
+          }
+        }
+      },
+      "Siemens.Engineering.Hmi/20.0.0.0": {
+        "runtime": {
+          "Siemens.Engineering.Hmi.dll": {
+            "assemblyVersion": "20.0.0.0",
+            "fileVersion": "2000.0.9501.1"
+          }
+        }
+      }
+    }
+  },
+  "libraries": {
+    "TIAExporter/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Siemens.Engineering.ClientAdapter.Interfaces/20.0.0.0": {
+      "type": "reference",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Siemens.Engineering.Contract/20.0.0.0": {
+      "type": "reference",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Siemens.Engineering/20.0.0.0": {
+      "type": "reference",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Siemens.Engineering.Hmi/20.0.0.0": {
+      "type": "reference",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

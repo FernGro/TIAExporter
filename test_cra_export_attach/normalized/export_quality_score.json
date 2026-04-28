@@ -1,0 +1,38 @@
+{
+  "score": 11,
+  "category_scores": {
+    "Asset inventory": 0,
+    "Firmware inventory": 0,
+    "Network inventory": 0,
+    "Software inventory": 0,
+    "Library inventory": 0,
+    "Security configuration": 0,
+    "Safety inventory": 10,
+    "Evidence/hashing": 0,
+    "HMI/Drive coverage": 1
+  },
+  "category_maximums": {
+    "Asset inventory": 15,
+    "Firmware inventory": 10,
+    "Network inventory": 10,
+    "Software inventory": 20,
+    "Library inventory": 10,
+    "Security configuration": 10,
+    "Safety inventory": 10,
+    "Evidence/hashing": 10,
+    "HMI/Drive coverage": 5
+  },
+  "rationale": [
+    "Asset inventory: MISSING - Missing assets reduce CMDB coverage.",
+    "Firmware inventory: MISSING - Vulnerability lookup readiness is reduced.",
+    "Network inventory: MISSING - Network zoning/import coverage may be incomplete.",
+    "Software block inventory: MISSING - Software components cannot be fully analyzed or hashed.",
+    "Library inventory: MISSING - Library provenance/dependency evidence is incomplete.",
+    "HMI inventory: MISSING - HMI attack surface may be underrepresented.",
+    "Security configuration: MISSING - Security posture cannot be fully reviewed from export.",
+    "Evidence / hashes: MISSING - Audit evidence chain is incomplete.",
+    "Vulnerability lookup readiness: MISSING - Automated vulnerability matching may miss assets.",
+    "SBOM readiness: MISSING - TIA does not expose complete npm/pip-style dependencies.",
+    "Manual review required: PARTIAL - Manual engineering review remains required."
+  ]
+}

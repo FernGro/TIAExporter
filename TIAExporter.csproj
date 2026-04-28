@@ -1,0 +1,45 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net48</TargetFramework>
+    <UseWindowsForms>true</UseWindowsForms>
+    <PlatformTarget>x64</PlatformTarget>
+    <LangVersion>latest</LangVersion>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <AssemblyName>TIAExporter</AssemblyName>
+    <ApplicationManifest>app.manifest</ApplicationManifest>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="bin\**" />
+    <Compile Remove="obj\**" />
+    <Compile Remove="obj_net48\**" />
+    <Compile Remove="test_export\**" />
+    <None Remove="bin\**" />
+    <None Remove="obj\**" />
+    <None Remove="obj_net48\**" />
+    <None Remove="test_export\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="Siemens.Engineering">
+      <HintPath>C:\Program Files\Siemens\Automation\Portal V20\PublicAPI\V20\Siemens.Engineering.dll</HintPath>
+      <Private>true</Private>
+    </Reference>
+    <Reference Include="Siemens.Engineering.Hmi">
+      <HintPath>C:\Program Files\Siemens\Automation\Portal V20\PublicAPI\V20\Siemens.Engineering.Hmi.dll</HintPath>
+      <Private>true</Private>
+    </Reference>
+    <Reference Include="Siemens.Engineering.Contract">
+      <HintPath>C:\Program Files\Siemens\Automation\Portal V20\Bin\PublicAPI\Siemens.Engineering.Contract.dll</HintPath>
+      <Private>true</Private>
+    </Reference>
+    <Reference Include="Siemens.Engineering.ClientAdapter.Interfaces">
+      <HintPath>C:\Program Files\Siemens\Automation\Portal V20\Bin\PublicAPI\Siemens.Engineering.ClientAdapter.Interfaces.dll</HintPath>
+      <Private>true</Private>
+    </Reference>
+  </ItemGroup>
+
+</Project>
