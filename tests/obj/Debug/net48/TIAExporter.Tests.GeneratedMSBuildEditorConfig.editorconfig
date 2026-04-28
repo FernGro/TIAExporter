@@ -1,0 +1,5 @@
+is_global = true
+build_property.RootNamespace = TIAExporter.Tests
+build_property.ProjectDir = C:\ClaudeDev\CyberSec\Dorst\Bsp_Auftragsprojekte\TIAExporter\tests\
+build_property.EnableComHosting = 
+build_property.EnableGeneratedComInterfaceComImportInterop = 

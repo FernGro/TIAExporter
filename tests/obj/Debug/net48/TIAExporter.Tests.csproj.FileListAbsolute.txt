@@ -1,0 +1,16 @@
+C:\ClaudeDev\CyberSec\Dorst\Bsp_Auftragsprojekte\TIAExporter\obj_test_check\TIAExporter.Tests.exe.config
+C:\ClaudeDev\CyberSec\Dorst\Bsp_Auftragsprojekte\TIAExporter\obj_test_check\TIAExporter.Tests.exe
+C:\ClaudeDev\CyberSec\Dorst\Bsp_Auftragsprojekte\TIAExporter\obj_test_check\TIAExporter.Tests.pdb
+C:\ClaudeDev\CyberSec\Dorst\Bsp_Auftragsprojekte\TIAExporter\tests\obj\Debug\net48\TIAExporter.Tests.csproj.AssemblyReference.cache
+C:\ClaudeDev\CyberSec\Dorst\Bsp_Auftragsprojekte\TIAExporter\tests\obj\Debug\net48\TIAExporter.Tests.GeneratedMSBuildEditorConfig.editorconfig
+C:\ClaudeDev\CyberSec\Dorst\Bsp_Auftragsprojekte\TIAExporter\tests\obj\Debug\net48\TIAExporter.Tests.AssemblyInfoInputs.cache
+C:\ClaudeDev\CyberSec\Dorst\Bsp_Auftragsprojekte\TIAExporter\tests\obj\Debug\net48\TIAExporter.Tests.AssemblyInfo.cs
+C:\ClaudeDev\CyberSec\Dorst\Bsp_Auftragsprojekte\TIAExporter\tests\obj\Debug\net48\TIAExporter.Tests.csproj.CoreCompileInputs.cache
+C:\ClaudeDev\CyberSec\Dorst\Bsp_Auftragsprojekte\TIAExporter\tests\obj\Debug\net48\TIAExporter.Tests.exe
+C:\ClaudeDev\CyberSec\Dorst\Bsp_Auftragsprojekte\TIAExporter\tests\obj\Debug\net48\TIAExporter.Tests.pdb
+C:\ClaudeDev\CyberSec\Dorst\Bsp_Auftragsprojekte\TIAExporter\tests\bin\Debug\net48\TIAExporter.Tests.exe.config
+C:\ClaudeDev\CyberSec\Dorst\Bsp_Auftragsprojekte\TIAExporter\tests\bin\Debug\net48\TIAExporter.Tests.exe
+C:\ClaudeDev\CyberSec\Dorst\Bsp_Auftragsprojekte\TIAExporter\tests\bin\Debug\net48\TIAExporter.Tests.pdb
+C:\ClaudeDev\CyberSec\Dorst\Bsp_Auftragsprojekte\TIAExporter\obj_build_final\TIAExporter.Tests.exe.config
+C:\ClaudeDev\CyberSec\Dorst\Bsp_Auftragsprojekte\TIAExporter\obj_build_final\TIAExporter.Tests.exe
+C:\ClaudeDev\CyberSec\Dorst\Bsp_Auftragsprojekte\TIAExporter\obj_build_final\TIAExporter.Tests.pdb

@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "4s9dEB1F0Zs=",
+  "success": true,
+  "projectFilePath": "C:\\ClaudeDev\\CyberSec\\Dorst\\Bsp_Auftragsprojekte\\TIAExporter\\tests\\TIAExporter.Tests.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\grossklc\\.nuget\\packages\\microsoft.netframework.referenceassemblies\\1.0.3\\microsoft.netframework.referenceassemblies.1.0.3.nupkg.sha512",
+    "C:\\Users\\grossklc\\.nuget\\packages\\microsoft.netframework.referenceassemblies.net48\\1.0.3\\microsoft.netframework.referenceassemblies.net48.1.0.3.nupkg.sha512"
+  ],
+  "logs": []
+}

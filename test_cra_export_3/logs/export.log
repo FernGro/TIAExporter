@@ -1,6 +1,0 @@
-2026-04-28 12:51:54.732 +02:00 [INFO] Starting export.
-2026-04-28 12:51:54.733 +02:00 [INFO] Project: C:\ClaudeDev\CyberSec\Dorst\Bsp_Auftragsprojekte\TIA_Sprühtrockner\SPT_V1_0_20251210\SPT_V1_0_20251210.ap20
-2026-04-28 12:51:54.733 +02:00 [INFO] Output:  C:\ClaudeDev\CyberSec\Dorst\Bsp_Auftragsprojekte\TIAExporter\test_cra_export_3
-2026-04-28 12:51:54.793 +02:00 [INFO] Starting TIA Portal (WithoutUserInterface).
-2026-04-28 12:51:57.637 +02:00 [WARN] Starting TIA Portal headless failed: NonRecoverableException: Connection to TiaPortal failed.
-2026-04-28 12:51:57.637 +02:00 [WARN] Retrying with TIA user interface because some engineering stations reject headless Openness startup while a Portal process is already active.
