@@ -1,0 +1,18 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net48</TargetFramework>
+    <LangVersion>latest</LangVersion>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <AssemblyName>TIAExporter.Tests</AssemblyName>
+    <!-- Share source directly — no Siemens.dll dependency required -->
+  </PropertyGroup>
+
+  <ItemGroup>
+    <!-- Include only the pure-logic helpers under test; no Siemens references needed -->
+    <Compile Include="../src/Tia/LicenseExceptionHelper.cs" />
+  </ItemGroup>
+
+</Project>

@@ -34,26 +34,61 @@ internal sealed class CraPostProcessor
 
         var detectedProducts = DetectTiaProducts();
         var windowsUser = $"{Environment.UserDomainName}\\{Environment.UserName}";
+
+        var tiaInstalled = DetectTiaPortalInstalled(detectedProducts);
+        var tiaInstallPath = DetectTiaPortalInstallPath();
+        var step7ProfInstalled = DetectStep7ProfessionalInstalled(detectedProducts);
+        var step7SafetyInstalled = DetectStep7SafetyInstalled(detectedProducts, assemblies);
+        var winCcInstalled = DetectWinCcInstalled(detectedProducts, assemblies);
+        var winCcUnifiedInstalled = DetectWinCcUnifiedInstalled(detectedProducts, assemblies);
+        var startdriveInstalled = DetectStartdriveInstalled(detectedProducts, assemblies);
+        var almInstallPath = DetectAlmInstallPath();
+
+        // License status comes from the actual export attempt; ALM COM is not invoked
+        bool? licenseAvailable = state.LicenseBlockingFailureDetected
+            ? false
+            : state.SoftwareBlocks.Any(x => x.ExportSuccess == true)
+                ? true
+                : null;
+
         var env = new OpennessEnvironmentDiagnostic
         {
             OsVersion = Environment.OSVersion.VersionString,
             DotNetVersion = Environment.Version.ToString(),
             TiaPortalVersion = state.TiaPortalVersion,
+            TiaPortalInstalled = tiaInstalled,
+            TiaPortalInstallPath = tiaInstallPath,
+            OpennessApiAvailable = !string.IsNullOrWhiteSpace(dllPath),
             SiemensEngineeringDllPath = dllPath,
             SiemensEngineeringDllVersion = assembly.GetName().Version?.ToString(),
             SiemensEngineeringAssemblies = assemblies,
+            Step7ProfessionalSoftwareInstalled = step7ProfInstalled,
+            Step7SafetySoftwareInstalled = step7SafetyInstalled,
+            WinCcSoftwareInstalled = winCcInstalled,
+            WinCcUnifiedSoftwareInstalled = winCcUnifiedInstalled,
+            StartdriveSoftwareInstalled = startdriveInstalled,
+            AlmInstallPath = almInstallPath,
+            AlmLicenseCheckSupported = false,
+            Step7ProfessionalLicenseAvailableForOpenness = licenseAvailable,
             DetectedTiaProducts = detectedProducts,
-            Step7Present = ContainsAny(detectedProducts, "STEP 7", "Step7", "Portal"),
-            WinCcPresent = ContainsAny(detectedProducts, "WinCC") || assemblies.Any(x => x.IndexOf(".Hmi", StringComparison.OrdinalIgnoreCase) >= 0),
-            StartdrivePresent = ContainsAny(detectedProducts, "Startdrive", "Start Drive"),
-            SafetyPresent = ContainsAny(detectedProducts, "Safety", "Failsafe"),
-            UnifiedAssembliesPresent = assemblies.Any(x => x.IndexOf("Unified", StringComparison.OrdinalIgnoreCase) >= 0),
             WindowsUser = windowsUser,
             UserInSiemensOpennessGroup = TryCheckOpennessGroup(),
             ProjectPath = state.ProjectPath,
             ProjectVersion = Path.GetExtension(state.ProjectPath).TrimStart('.').ToUpperInvariant(),
             ExporterVersion = state.ExporterVersion
         };
+
+        env.DiagnosticNotes.Add("TIA Portal software installation and ALM license availability are checked independently.");
+        env.DiagnosticNotes.Add("Step7ProfessionalSoftwareInstalled=true means TIA Portal V17+ was found in the registry (STEP 7 Professional is bundled). It does NOT guarantee ALM license availability.");
+        env.DiagnosticNotes.Add("Step7ProfessionalLicenseAvailableForOpenness is derived from the Openness block export result, not from an ALM query.");
+        env.DiagnosticNotes.Add("AlmLicenseCheckSupported=false: ALM COM API is not invoked; license availability is inferred from export attempt outcome.");
+
+        if (state.LicenseBlockingFailureDetected)
+        {
+            env.DiagnosticNotes.Add(
+                $"Openness block export reported license '{state.MissingLicenseName}' as not usable for this exporter process/session. " +
+                "This can happen even when TIA shows a license as installed. Check ALM availability for the same Windows user, floating-license occupancy, license server reachability, and version match.");
+        }
 
         if (string.IsNullOrWhiteSpace(dllPath))
         {
@@ -68,16 +103,127 @@ internal sealed class CraPostProcessor
         state.OpennessEnvironment = env;
     }
 
+    private static bool? DetectTiaPortalInstalled(List<string> products)
+    {
+        return products.Any(p => System.Text.RegularExpressions.Regex.IsMatch(p, @"_InstalledSW/TIAP\d+", System.Text.RegularExpressions.RegexOptions.IgnoreCase))
+            ? true : null;
+    }
+
+    private static string? DetectTiaPortalInstallPath()
+    {
+        foreach (var basePath in new[] { @"SOFTWARE\Siemens\Automation\_InstalledSW", @"SOFTWARE\WOW6432Node\Siemens\Automation\_InstalledSW" })
+        {
+            using var baseKey = Try(() => Registry.LocalMachine.OpenSubKey(basePath));
+            if (baseKey == null) continue;
+            foreach (var subName in baseKey.GetSubKeyNames().Where(n => System.Text.RegularExpressions.Regex.IsMatch(n, @"^TIAP\d+$", System.Text.RegularExpressions.RegexOptions.IgnoreCase)).OrderByDescending(x => x))
+            {
+                using var key = Try(() => baseKey.OpenSubKey(subName));
+                if (key == null) continue;
+                foreach (var valueName in new[] { "InstallPath", "Location", "Path", "InstallDir" })
+                {
+                    var path = Try(() => key.GetValue(valueName) as string);
+                    if (!string.IsNullOrWhiteSpace(path)) return path;
+                }
+            }
+        }
+
+        return null;
+    }
+
+    private static bool? DetectStep7ProfessionalInstalled(List<string> products)
+    {
+        // STEP 7 Professional is bundled with TIA Portal V17+; TIAP17–TIAP25+ means it is installed
+        return products.Any(p => System.Text.RegularExpressions.Regex.IsMatch(p, @"_InstalledSW/TIAP(1[7-9]|2\d)", System.Text.RegularExpressions.RegexOptions.IgnoreCase))
+            ? true : null;
+    }
+
+    private static bool? DetectStep7SafetyInstalled(List<string> products, List<string> assemblies)
+    {
+        return ContainsAny(products, "Safety", "S7Safety", "Failsafe") || assemblies.Any(x => x.IndexOf("Safety", StringComparison.OrdinalIgnoreCase) >= 0)
+            ? true : null;
+    }
+
+    private static bool? DetectWinCcInstalled(List<string> products, List<string> assemblies)
+    {
+        return ContainsAny(products, "WinCC", "HMIRTM", "HVWebApp") || assemblies.Any(x => x.Equals("Siemens.Engineering.Hmi.dll", StringComparison.OrdinalIgnoreCase) || x.IndexOf(".Hmi.", StringComparison.OrdinalIgnoreCase) >= 0)
+            ? true : null;
+    }
+
+    private static bool? DetectWinCcUnifiedInstalled(List<string> products, List<string> assemblies)
+    {
+        return ContainsAny(products, "Unified", "WinCC_Unified") || assemblies.Any(x => x.IndexOf("Unified", StringComparison.OrdinalIgnoreCase) >= 0)
+            ? true : null;
+    }
+
+    private static bool? DetectStartdriveInstalled(List<string> products, List<string> assemblies)
+    {
+        return ContainsAny(products, "Startdrive", "Start Drive") || assemblies.Any(x => x.IndexOf("Startdrive", StringComparison.OrdinalIgnoreCase) >= 0)
+            ? true : null;
+    }
+
+    private static string? DetectAlmInstallPath()
+    {
+        foreach (var regPath in new[] {
+            @"SOFTWARE\Siemens\Automation License Manager",
+            @"SOFTWARE\WOW6432Node\Siemens\Automation License Manager",
+            @"SOFTWARE\Siemens\ALM" })
+        {
+            using var key = Try(() => Registry.LocalMachine.OpenSubKey(regPath));
+            if (key == null) continue;
+            foreach (var valueName in new[] { "InstallPath", "Location", "Path", "InstallDir" })
+            {
+                var path = Try(() => key.GetValue(valueName) as string);
+                if (!string.IsNullOrWhiteSpace(path)) return path;
+            }
+        }
+
+        return null;
+    }
+
     private static void BuildCapabilityMatrix(ExportState state)
     {
+        var env = state.OpennessEnvironment;
         state.CapabilityMatrix.Clear();
-        AddCapability(state, "PLC_BLOCK_XML_EXPORT", true, state.SoftwareBlocks.Any(x => x.CanExportXml == true), "software_blocks.json export status", "Software inventory incomplete");
-        AddCapability(state, "PLC_TAG_TABLE_EXPORT", true, state.TagTables.Any(x => x.ExportSuccess), "tag_tables.json export status", "PLC tags incomplete");
-        AddCapability(state, "UDT_EXPORT", true, state.SoftwareBlocks.Any(x => string.Equals(x.BlockType, "UDT", StringComparison.OrdinalIgnoreCase) && x.ExportSuccess), "UDT entries in software_blocks.json", "Data type inventory incomplete");
-        AddCapability(state, "HMI_EXPORT", false, state.HmiInventory.Count > 0 ? true : state.OpennessEnvironment.WinCcPresent, "WinCC assemblies and HMI inventory", "HMI inventory incomplete");
-        AddCapability(state, "STARTDRIVE_EXPORT", false, state.OpennessEnvironment.StartdrivePresent, "TIA product registry scan", "Drive parameter inventory incomplete");
-        AddCapability(state, "LIBRARY_TYPE_EXPORT", true, state.Libraries.Any(x => x.ExportStatus == "full_xml" || x.ExportStatus == "document_only"), "libraries.json export status", "Library inventory incomplete");
-        AddCapability(state, "SAFETY_BLOCK_EXPORT", false, state.SoftwareBlocks.Any(x => x.IsSafetyRelated && x.ExportSuccess) ? true : state.OpennessEnvironment.SafetyPresent, "Safety assemblies/products and block export status", "Safety software inventory incomplete");
+        AddCapability(state, "TIA_PORTAL_INSTALLED", true, env.TiaPortalInstalled,
+            "TIA product registry scan (_InstalledSW/TIAPxx)",
+            "TIA Portal not found; Openness API cannot operate.",
+            "TIA Portal V17+ detected in Windows registry.");
+        AddCapability(state, "OPENNESS_API_AVAILABLE", true, env.OpennessApiAvailable ? true : null,
+            "Siemens.Engineering.dll presence and load",
+            "Openness API DLL missing; no export possible.",
+            "Siemens.Engineering.dll loaded successfully.");
+        AddCapability(state, "STEP7_PROFESSIONAL_SOFTWARE_INSTALLED", true, env.Step7ProfessionalSoftwareInstalled,
+            "TIA Portal V17+ registry presence (STEP 7 Professional is bundled)",
+            "STEP 7 Professional software not detected; block export will fail.",
+            "STEP 7 Professional is bundled with TIA Portal V17+; registry presence is sufficient evidence.");
+        AddCapability(state, "STEP7_PROFESSIONAL_LICENSE_AVAILABLE_FOR_OPENNESS", true, env.Step7ProfessionalLicenseAvailableForOpenness,
+            "Openness block export attempt result (LicenseNotFoundException detection)",
+            "ALM license not usable by this exporter process: block XML export may be blocked.",
+            "Inferred from export outcome. null=not yet tested. false=LicenseNotFoundException thrown. true=at least one block exported.");
+        AddCapability(state, "PLC_BLOCK_XML_EXPORT", true, state.SoftwareBlocks.Any(x => x.CanExportXml == true),
+            "software_blocks.json export status",
+            "Software inventory incomplete.");
+        AddCapability(state, "PLC_BLOCK_DOCUMENT_EXPORT", false, state.SoftwareBlocks.Any(x => x.FallbackExportUsed == true),
+            "software_blocks.json document fallback status",
+            "Document fallback not available; some blocks may lack exported content.");
+        AddCapability(state, "PLC_TAG_TABLE_EXPORT", true, state.TagTables.Any(x => x.ExportSuccess),
+            "tag_tables.json export status",
+            "PLC tags incomplete.");
+        AddCapability(state, "UDT_EXPORT", true, state.SoftwareBlocks.Any(x => string.Equals(x.BlockType, "UDT", StringComparison.OrdinalIgnoreCase) && x.ExportSuccess),
+            "UDT entries in software_blocks.json",
+            "Data type inventory incomplete.");
+        AddCapability(state, "HMI_EXPORT", false, state.HmiInventory.Count > 0 ? true : env.WinCcSoftwareInstalled,
+            "WinCC assemblies and HMI inventory",
+            "HMI inventory incomplete.");
+        AddCapability(state, "STARTDRIVE_EXPORT", false, env.StartdriveSoftwareInstalled,
+            "TIA product registry scan",
+            "Drive parameter inventory incomplete.");
+        AddCapability(state, "LIBRARY_TYPE_EXPORT", true, state.Libraries.Any(x => x.ExportStatus == "full_xml" || x.ExportStatus == "document_only"),
+            "libraries.json export status",
+            "Library inventory incomplete.");
+        AddCapability(state, "SAFETY_BLOCK_EXPORT", false, state.SoftwareBlocks.Any(x => x.IsSafetyRelated && x.ExportSuccess) ? true : env.Step7SafetySoftwareInstalled,
+            "Safety assemblies/products and block export status",
+            "Safety software inventory incomplete.");
     }
 
     private static void BuildAssetAndFirmwareInventory(ExportState state)
@@ -160,7 +306,12 @@ internal sealed class CraPostProcessor
                 ExportFile = block.ExportFile,
                 DocumentFile = block.DocumentFile,
                 HashSha256 = block.HashSha256,
-                ExportStatus = block.EvidenceStatus == "full_xml" ? "full_xml" : block.EvidenceStatus == "document_only" ? "document_only" : block.ExportSuccess ? "metadata_only" : "failed",
+                ExportStatus = block.EvidenceStatus == "full_xml" ? "full_xml"
+                    : block.EvidenceStatus == "document_only" ? "document_only"
+                    : block.EvidenceStatus == "license_unavailable" ? "license_unavailable"
+                    : block.EvidenceStatus == "skipped_license_missing" ? "license_unavailable"
+                    : block.ExportSuccess ? "metadata_only" : "failed",
+                MissingLicense = block.MissingLicense,
                 CraMetadata = block.CraMetadata,
                 EvidenceFiles = evidence,
                 RiskRelevanceGuess = Guess(text, "Safety", "OPC", "TCP", "UDP", "HMI", "Recipe", "Rezept", "Diag") ? "elevated_review" : "standard_review",
@@ -419,6 +570,22 @@ internal sealed class CraPostProcessor
     {
         state.Limitations.Add("CRA readiness is an engineering-data quality assessment; it is not a legal compliance certification.");
         state.Limitations.Add("TIA Openness coverage depends on installed TIA modules, project licenses, protection state and object model availability.");
+
+        if (state.LicenseBlockingFailureDetected)
+        {
+            var licenseName = state.MissingLicenseName ?? "STEP 7 Professional";
+            state.Limitations.Add(
+                $"PLC block XML export was blocked because Openness reported license '{licenseName}' as not usable. " +
+                $"{state.LicenseBlockingAffectedBlockCount} block(s) could not be exported. " +
+                "Software inventory is metadata-only for affected blocks; SHA-256 hashes and full SBOM readiness require re-export when Openness can use the license.");
+            var action = $"Verify Automation License Manager (ALM) makes a TIA Portal '{licenseName}' license available to the same Windows user/session used by the exporter. " +
+                "Check floating-license occupancy, license server connection, version match, and stale TIA Portal processes; then re-run the exporter.";
+            if (!state.RequiredManualActions.Contains(action))
+            {
+                state.RequiredManualActions.Add(action);
+            }
+        }
+
         foreach (var gap in state.CraGapAnalysis.Where(x => x.Severity == "HIGH"))
         {
             if (!state.RequiredManualActions.Contains(gap.RequiredAction))
@@ -428,9 +595,9 @@ internal sealed class CraPostProcessor
         }
     }
 
-    private static void AddCapability(ExportState state, string capability, bool required, bool? available, string evidence, string impact)
+    private static void AddCapability(ExportState state, string capability, bool required, bool? available, string evidence, string impact, string? description = null)
     {
-        state.CapabilityMatrix.Add(new CapabilityEntry { Capability = capability, Required = required, Available = available, Evidence = evidence, ImpactIfMissing = impact });
+        state.CapabilityMatrix.Add(new CapabilityEntry { Capability = capability, Required = required, Available = available, Evidence = evidence, ImpactIfMissing = impact, Description = description });
     }
 
     private static void AddGap(ExportState state, string category, string status, string evidence, List<string> missing, string impact, string requiredAction, string severity)

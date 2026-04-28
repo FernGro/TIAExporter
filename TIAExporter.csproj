@@ -16,11 +16,19 @@
     <Compile Remove="bin\**" />
     <Compile Remove="obj\**" />
     <Compile Remove="obj_net48\**" />
+    <Compile Remove="tests\**" />
     <Compile Remove="test_export\**" />
     <None Remove="bin\**" />
     <None Remove="obj\**" />
     <None Remove="obj_net48\**" />
+    <None Remove="tests\**" />
     <None Remove="test_export\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <AssemblyAttribute Include="System.Runtime.CompilerServices.InternalsVisibleTo">
+      <_Parameter1>TIAExporter.Tests</_Parameter1>
+    </AssemblyAttribute>
   </ItemGroup>
 
   <ItemGroup>

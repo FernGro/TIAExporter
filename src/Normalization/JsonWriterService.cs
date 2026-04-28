@@ -97,6 +97,31 @@ internal sealed class JsonWriterService
             x.CraMetadata.CraRelevant == null &&
             x.CraMetadata.SafetyRelevant == null);
 
+        var affectedCategories = new List<string>();
+        if (state.LicenseBlockingFailureDetected)
+        {
+            affectedCategories.Add("PLC_BLOCK_XML_EXPORT");
+            affectedCategories.Add("SBOM_READINESS");
+            if (state.SoftwareBlocks.Any(x => x.IsSafetyRelated && !x.ExportSuccess)) affectedCategories.Add("SAFETY_BLOCK_EXPORT");
+        }
+
+        var manualActions = new List<string>(state.RequiredManualActions);
+        if (state.LicenseBlockingFailureDetected)
+        {
+            var licenseAction = $"Verify that Automation License Manager makes TIA Portal '{state.MissingLicenseName ?? "STEP 7 Professional"}' available to the exporter user/session, then re-run the exporter.";
+            if (!manualActions.Contains(licenseAction)) manualActions.Insert(0, licenseAction);
+        }
+
+        string? licenseSummary = null;
+        if (state.LicenseBlockingFailureDetected)
+        {
+            licenseSummary =
+                $"Siemens Openness reported license '{state.MissingLicenseName}' as not usable during PLC block export. " +
+                $"{state.LicenseBlockingAffectedBlockCount} block export attempt(s) were affected. " +
+                "Software inventory is metadata-only for affected blocks. " +
+                "Note: TIA Portal software installation, TIA GUI license display, and ALM availability to this exporter process are separate checks.";
+        }
+
         return new ExportReport
         {
             Status = state.ExportSuccess ? (state.Errors.Count == 0 ? "successful" : "partially_successful") : "failed",
@@ -104,6 +129,11 @@ internal sealed class JsonWriterService
             WarningCount = state.Warnings.Count,
             MissingCraMetadata = missing,
             Counts = state.Counts,
+            LicenseBlockingFailureDetected = state.LicenseBlockingFailureDetected,
+            MissingLicenseName = state.MissingLicenseName,
+            LicenseDiagnosticSummary = licenseSummary,
+            AffectedExportCategories = affectedCategories,
+            ManualActions = manualActions,
             Limitations =
             [
                 "CRA readiness is an engineering export quality assessment and not a legal compliance statement.",

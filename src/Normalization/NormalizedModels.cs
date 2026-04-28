@@ -42,6 +42,10 @@ internal sealed class ExportState
     public ExportQualityScore ExportQualityScore { get; set; } = new();
     public List<string> Limitations { get; } = [];
     public List<string> RequiredManualActions { get; } = [];
+    public bool LicenseBlockingFailureDetected { get; set; }
+    public string? MissingLicenseName { get; set; }
+    public string? FirstLicenseErrorMessage { get; set; }
+    public int LicenseBlockingAffectedBlockCount { get; set; }
     public Dictionary<string, int> Counts { get; } = new(StringComparer.OrdinalIgnoreCase);
 }
 
@@ -120,6 +124,7 @@ internal sealed class NormalizedSoftwareBlock
     public string? ExportErrorType { get; set; }
     public string? ExportErrorMessage { get; set; }
     public string? ExportErrorStackShort { get; set; }
+    public string? MissingLicense { get; set; }
     public string? SuspectedReason { get; set; }
     public string? RequiredAction { get; set; }
     public bool? IsConsistent { get; set; }
@@ -234,28 +239,55 @@ internal sealed class CapabilityEntry
     public bool? Available { get; set; }
     public string Evidence { get; set; } = "";
     public string ImpactIfMissing { get; set; } = "";
+    public string? Description { get; set; }
 }
 
 internal sealed class OpennessEnvironmentDiagnostic
 {
+    // OS / runtime
     public string? OsVersion { get; set; }
     public string? DotNetVersion { get; set; }
     public string? TiaPortalVersion { get; set; }
+    // TIA Portal installation (software)
+    public bool? TiaPortalInstalled { get; set; }
+    public string? TiaPortalInstallPath { get; set; }
+    // Openness API
+    public bool OpennessApiAvailable { get; set; }
     public string? SiemensEngineeringDllPath { get; set; }
     public string? SiemensEngineeringDllVersion { get; set; }
     public List<string> SiemensEngineeringAssemblies { get; set; } = [];
+    // Software component installation (separate from license)
+    public bool? Step7ProfessionalSoftwareInstalled { get; set; }
+    public bool? Step7SafetySoftwareInstalled { get; set; }
+    public bool? WinCcSoftwareInstalled { get; set; }
+    public bool? WinCcUnifiedSoftwareInstalled { get; set; }
+    public bool? StartdriveSoftwareInstalled { get; set; }
+    // Automation License Manager
+    public string? AlmInstallPath { get; set; }
+    public bool AlmLicenseCheckSupported { get; set; }
+    public List<AlmLicenseEntry> AlmDetectedLicenses { get; set; } = [];
+    // License availability (determined from export attempt result)
+    public bool? Step7ProfessionalLicenseAvailableForOpenness { get; set; }
+    // Registry scan (raw)
     public List<string> DetectedTiaProducts { get; set; } = [];
-    public bool? Step7Present { get; set; }
-    public bool? WinCcPresent { get; set; }
-    public bool? StartdrivePresent { get; set; }
-    public bool? SafetyPresent { get; set; }
-    public bool? UnifiedAssembliesPresent { get; set; }
+    // User / project
     public string? WindowsUser { get; set; }
     public bool? UserInSiemensOpennessGroup { get; set; }
     public string? ProjectPath { get; set; }
     public string? ProjectVersion { get; set; }
     public string? ExporterVersion { get; set; }
+    public List<string> DiagnosticNotes { get; set; } = [];
     public List<string> Warnings { get; set; } = [];
+}
+
+internal sealed class AlmLicenseEntry
+{
+    public string? Family { get; set; }
+    public string? Product { get; set; }
+    public string? Version { get; set; }
+    public string? LicenseType { get; set; }
+    public string? Validity { get; set; }
+    public string? RawSource { get; set; }
 }
 
 internal sealed class AssetInventoryItem
@@ -317,6 +349,7 @@ internal sealed class SoftwareInventoryItem
     public List<string> EvidenceFiles { get; set; } = [];
     public string RiskRelevanceGuess { get; set; } = "review";
     public bool ReviewRequired { get; set; } = true;
+    public string? MissingLicense { get; set; }
 }
 
 internal sealed class LibraryInventoryItem
@@ -447,5 +480,10 @@ internal sealed class ExportReport
     public int WarningCount { get; set; }
     public int MissingCraMetadata { get; set; }
     public Dictionary<string, int> Counts { get; set; } = [];
+    public bool LicenseBlockingFailureDetected { get; set; }
+    public string? MissingLicenseName { get; set; }
+    public string? LicenseDiagnosticSummary { get; set; }
+    public List<string> AffectedExportCategories { get; set; } = [];
+    public List<string> ManualActions { get; set; } = [];
     public List<string> Limitations { get; set; } = [];
 }

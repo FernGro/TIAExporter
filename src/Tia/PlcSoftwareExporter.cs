@@ -84,7 +84,8 @@ internal sealed class PlcSoftwareExporter
             if (!TiaReflection.TryExportWithOptions(block, filePath, out var xmlError, out var optionUsed))
             {
                 normalized.CanExportXml = xmlError == null ? false : null;
-                if (state.Settings.IncludeDocuments)
+                // Skip document fallback for this block when XML failed due to a license exception.
+                if (state.Settings.IncludeDocuments && !IsLicenseMissingException(xmlError))
                 {
                     TryDocumentFallback(block, state, plcName, plcRoot, groupPath, name, normalized, xmlError);
                 }
@@ -111,39 +112,84 @@ internal sealed class PlcSoftwareExporter
         }
         catch (Exception ex)
         {
-            var message = $"Failed to export block {plcName}/{groupPath}/{name}";
-            logger.Error(message, ex);
-            var reason = SuspectReason(ex, normalized);
-            var action = RequiredAction(normalized);
-            state.Errors.Add($"{message}: {ex.GetType().Name}: {ex.Message}");
-            normalized.ExportSuccess = false;
-            normalized.ExportErrorType = ex.GetType().Name;
-            normalized.ExportErrorMessage = ex.Message;
-            normalized.ExportErrorStackShort = ShortStack(ex);
-            normalized.SuspectedReason = reason;
-            normalized.RequiredAction = action;
-            normalized.EvidenceStatus = "metadata_only";
-            var failure = new BlockExportFailure
+            if (IsLicenseMissingException(ex))
             {
-                Category = "PLC_BLOCK_EXPORT",
-                Context = $"{plcName}/{groupPath}/{name}",
-                PlcName = plcName,
-                BlockName = name,
-                BlockType = type,
-                GroupPath = groupPath,
-                ErrorType = ex.GetType().Name,
-                ErrorMessage = ex.Message,
-                StackShort = ShortStack(ex),
-                SuspectedReason = reason,
-                RequiredAction = action,
-                IsProtected = normalized.IsProtected,
-                IsSafetyRelated = normalized.IsSafetyRelated
-            };
-            state.BlockExportFailures.Add(failure);
-            state.ExportErrors.Add(failure);
+                HandleLicenseException(ex, normalized, state, plcName, groupPath, name, type);
+            }
+            else
+            {
+                var message = $"Failed to export block {plcName}/{groupPath}/{name}";
+                logger.Error(message, ex);
+                var reason = SuspectReason(ex, normalized);
+                var action = RequiredAction(normalized);
+                state.Errors.Add($"{message}: {ex.GetType().Name}: {ex.Message}");
+                normalized.ExportSuccess = false;
+                normalized.ExportErrorType = ex.GetType().Name;
+                normalized.ExportErrorMessage = ex.Message;
+                normalized.ExportErrorStackShort = ShortStack(ex);
+                normalized.SuspectedReason = reason;
+                normalized.RequiredAction = action;
+                normalized.EvidenceStatus = "metadata_only";
+                var failure = new BlockExportFailure
+                {
+                    Category = "PLC_BLOCK_EXPORT",
+                    Context = $"{plcName}/{groupPath}/{name}",
+                    PlcName = plcName,
+                    BlockName = name,
+                    BlockType = type,
+                    GroupPath = groupPath,
+                    ErrorType = ex.GetType().Name,
+                    ErrorMessage = ex.Message,
+                    StackShort = ShortStack(ex),
+                    SuspectedReason = reason,
+                    RequiredAction = action,
+                    IsProtected = normalized.IsProtected,
+                    IsSafetyRelated = normalized.IsSafetyRelated
+                };
+                state.BlockExportFailures.Add(failure);
+                state.ExportErrors.Add(failure);
+            }
         }
 
         state.SoftwareBlocks.Add(normalized);
+    }
+
+    private void HandleLicenseException(Exception ex, NormalizedSoftwareBlock normalized, ExportState state, string plcName, string groupPath, string name, string? type)
+    {
+        var missingLicense = ExtractMissingLicenseName(ex);
+        if (!state.LicenseBlockingFailureDetected)
+        {
+            state.LicenseBlockingFailureDetected = true;
+            state.MissingLicenseName = missingLicense;
+            state.FirstLicenseErrorMessage = TruncateMessage(ex.Message, 300);
+            logger.Error($"Siemens Openness reports license '{missingLicense}' is not usable during PLC block export. Block: {plcName}/{groupPath}/{name}", ex);
+            logger.Info("Note: TIA may show a license as installed while Openness cannot use it in this exporter process/session.");
+            logger.Info("The exporter will continue with later blocks because license failures can be object-type or feature specific.");
+            state.Errors.Add($"License-related block export failure: Siemens Openness reports license '{missingLicense}' is not usable by this exporter process. Verify ALM availability for the same Windows user/session.");
+            state.BlockExportFailures.Add(new BlockExportFailure
+            {
+                Category = "PLC_BLOCK_EXPORT_LICENSE",
+                Context = $"{plcName}/{groupPath}/{name}",
+                PlcName = plcName,
+                BlockName = normalized.BlockName,
+                BlockType = type,
+                GroupPath = groupPath,
+                ErrorType = ex.GetType().Name,
+                ErrorMessage = TruncateMessage(ex.Message, 300),
+                StackShort = ShortStack(ex),
+                SuspectedReason = LicenseSuspectReason(missingLicense),
+                RequiredAction = LicenseRequiredAction(missingLicense),
+                IsProtected = normalized.IsProtected,
+                IsSafetyRelated = normalized.IsSafetyRelated
+            });
+            state.ExportErrors.Add(state.BlockExportFailures[state.BlockExportFailures.Count - 1]);
+        }
+        else
+        {
+            logger.Warn($"License-related block export failure ('{missingLicense}'): {plcName}/{groupPath}/{name}");
+        }
+        ApplyLicenseSkippedState(normalized, missingLicense, TruncateMessage(ex.Message, 300));
+        state.LicenseBlockingAffectedBlockCount++;
     }
 
     private void TryDocumentFallback(object block, ExportState state, string plcName, string plcRoot, string groupPath, string name, NormalizedSoftwareBlock normalized, Exception? xmlError)
@@ -255,6 +301,11 @@ internal sealed class PlcSoftwareExporter
 
     private static string SuspectReason(Exception ex, NormalizedSoftwareBlock block)
     {
+        if (IsLicenseMissingException(ex))
+        {
+            return LicenseSuspectReason(ExtractMissingLicenseName(ex));
+        }
+
         var text = ex.ToString();
         if (block.IsProtected == true || text.IndexOf("protect", StringComparison.OrdinalIgnoreCase) >= 0 || text.IndexOf("know", StringComparison.OrdinalIgnoreCase) >= 0)
         {
@@ -303,4 +354,25 @@ internal sealed class PlcSoftwareExporter
 
         return string.Join(Environment.NewLine, ex.StackTrace.Split([Environment.NewLine], StringSplitOptions.None).Take(5));
     }
+
+    private static bool IsLicenseMissingException(Exception? ex) => LicenseExceptionHelper.IsLicenseMissingException(ex);
+
+    private static string ExtractMissingLicenseName(Exception ex) => LicenseExceptionHelper.ExtractMissingLicenseName(ex);
+
+    private static void ApplyLicenseSkippedState(NormalizedSoftwareBlock normalized, string? missingLicense, string? errorMessage)
+    {
+        normalized.ExportSuccess = false;
+        normalized.EvidenceStatus = "license_unavailable";
+        normalized.MissingLicense = missingLicense;
+        normalized.ExportErrorType = "LicenseNotFoundException";
+        normalized.ExportErrorMessage = errorMessage;
+        normalized.SuspectedReason = LicenseExceptionHelper.LicenseSuspectReason(missingLicense);
+        normalized.RequiredAction = LicenseExceptionHelper.LicenseRequiredAction(missingLicense);
+    }
+
+    private static string LicenseSuspectReason(string? licenseName) => LicenseExceptionHelper.LicenseSuspectReason(licenseName);
+
+    private static string LicenseRequiredAction(string? licenseName) => LicenseExceptionHelper.LicenseRequiredAction(licenseName);
+
+    private static string TruncateMessage(string message, int maxLength) => LicenseExceptionHelper.TruncateMessage(message, maxLength);
 }

@@ -185,7 +185,10 @@ internal static class TiaReflection
         }
 
         Directory.CreateDirectory(Path.GetDirectoryName(filePath)!);
-        foreach (ExportOptions option in Enum.GetValues(typeof(ExportOptions)))
+        Exception? firstError = null;
+        Exception? firstLicenseError = null;
+        Exception? firstNonLicenseError = null;
+        foreach (var option in GetExportOptionsInPreferredOrder())
         {
             try
             {
@@ -196,14 +199,53 @@ internal static class TiaReflection
             catch (TargetInvocationException ex) when (ex.InnerException != null)
             {
                 lastError = ex.InnerException;
+                firstError ??= lastError;
+                if (LicenseExceptionHelper.IsLicenseMissingException(lastError))
+                {
+                    firstLicenseError ??= lastError;
+                }
+                else
+                {
+                    firstNonLicenseError ??= lastError;
+                }
             }
             catch (Exception ex)
             {
                 lastError = ex;
+                firstError ??= lastError;
+                if (LicenseExceptionHelper.IsLicenseMissingException(lastError))
+                {
+                    firstLicenseError ??= lastError;
+                }
+                else
+                {
+                    firstNonLicenseError ??= lastError;
+                }
             }
         }
 
+        lastError = firstNonLicenseError ?? firstLicenseError ?? firstError ?? lastError;
         return false;
+    }
+
+    private static IEnumerable<ExportOptions> GetExportOptionsInPreferredOrder()
+    {
+        var values = Enum.GetValues(typeof(ExportOptions)).Cast<ExportOptions>().ToList();
+        foreach (var preferredName in new[] { "WithDefaults", "None" })
+        {
+            var index = values.FindIndex(x => string.Equals(x.ToString(), preferredName, StringComparison.OrdinalIgnoreCase));
+            if (index >= 0)
+            {
+                var preferred = values[index];
+                values.RemoveAt(index);
+                yield return preferred;
+            }
+        }
+
+        foreach (var value in values)
+        {
+            yield return value;
+        }
     }
 
     public static bool TryExportWithOptions(object instance, string filePath, out Exception? lastError)
