@@ -707,9 +707,18 @@ internal sealed class CraPostProcessor
     private static bool Guess(string text, params string[] needles) => needles.Any(x => text.IndexOf(x, StringComparison.OrdinalIgnoreCase) >= 0);
     private static bool IsTrue(string value) => value.Equals("true", StringComparison.OrdinalIgnoreCase) || value.Equals("1", StringComparison.OrdinalIgnoreCase) || value.Equals("yes", StringComparison.OrdinalIgnoreCase) || value.Equals("enabled", StringComparison.OrdinalIgnoreCase) || value.Equals("active", StringComparison.OrdinalIgnoreCase);
     private static bool IsDrive(string text) => Guess(text, "SINAMICS", "G120", "S120", "Drive", "Antrieb", "6SL");
-    private static bool IsHmi(string text) => Guess(text, "HMI", "WinCC", "Unified", "Panel", "RT_");
+    // "RT_" intentionally excluded: it appears in PROFINET real-time class designations (e.g. "PN-Port [RT_1]") causing false positives.
+    private static bool IsHmi(string text) => Guess(text, "HMI", "WinCC", "Unified", "Panel");
     private static bool IsSafetyText(string text) => Guess(text, "Safety", "Failsafe", "F-CPU", "F_CPU", "F-LAD", "F_", "NotHalt", "Emergency", "Schutz");
-    private static string GuessAssetType(string text) => IsDrive(text) ? "drive" : IsHmi(text) ? "hmi" : Guess(text, "CPU", "PLC") ? "controller" : Guess(text, "PN", "PROFINET", "Interface") ? "network_interface" : "module";
+    private static string GuessAssetType(string text) =>
+        IsDrive(text) ? "drive" :
+        IsHmi(text) ? "hmi" :
+        Guess(text, "CPU", "PLC") ? "controller" :
+        Guess(text, "PN", "PROFINET", "Interface", "Port") ? "network_device" :
+        Guess(text, "CP 1", "CP 3", "CM 1", "IE Switch", "SCALANCE", " Switch") ? "communication_module" :
+        Guess(text, " PS ", " PM ", "Power Supply") ? "power_supply" :
+        Guess(text, "DI ", "DO ", "AI ", "AO ", "SM 1", "SM 3", " IM ", " BM ") ? "io_module" :
+        "unknown";
     private static string? GuessProductFamily(string text) => Guess(text, "S7-1500", "151", "CPU") ? "SIMATIC S7" : IsDrive(text) ? "SINAMICS" : IsHmi(text) ? "SIMATIC HMI" : null;
     private static string? NormalizeOrderNumber(string? orderNumber) => string.IsNullOrWhiteSpace(orderNumber) ? null : new string(orderNumber.Where(ch => !char.IsWhiteSpace(ch)).ToArray()).ToUpperInvariant();
     private static string? ParentPath(string path) => path.Contains("/") ? path.Substring(0, path.LastIndexOf("/", StringComparison.Ordinal)) : null;

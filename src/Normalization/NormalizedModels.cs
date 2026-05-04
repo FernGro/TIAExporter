@@ -235,6 +235,7 @@ internal sealed class LibraryExportFailure : ExportErrorDiagnostic
     public string? Version { get; set; }
     public string Kind { get; set; } = "";
     public string? Path { get; set; }
+    public string FailureClass { get; set; } = "";
 }
 
 internal sealed class CapabilityEntry

@@ -50,8 +50,11 @@ internal sealed class JsonWriterService
         Write(Path.Combine(state.ExportRoot, "diagnostics", "block_export_failures.json"), state.BlockExportFailures);
         Write(Path.Combine(state.ExportRoot, "diagnostics", "library_export_failures.json"), state.LibraryExportFailures);
         Write(Path.Combine(state.ExportRoot, "diagnostics", "capability_matrix.json"), state.CapabilityMatrix);
-        WriteReadinessReport(Path.Combine(state.ExportRoot, "reports", "CRA_EXPORT_READINESS.md"), state);
         RefreshEvidenceIndex(state);
+        // Sync the evidence gap entry so ReadinessReport and CMDB show the same hashed-file count.
+        var evGap = state.CraGapAnalysis.FirstOrDefault(x => x.Category == "Evidence / hashes");
+        if (evGap != null) evGap.Evidence = $"{state.EvidenceFiles.Count} evidence files hashed";
+        WriteReadinessReport(Path.Combine(state.ExportRoot, "reports", "CRA_EXPORT_READINESS.md"), state);
         Write(Path.Combine(normalized, "evidence_files.json"), state.EvidenceFiles);
         Write(Path.Combine(normalized, "export_report.json"), BuildReport(state));
         try

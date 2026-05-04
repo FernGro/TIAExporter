@@ -142,6 +142,7 @@ internal sealed class LibraryExporter
                 SuspectedReason = normalized.SuspectedReason,
                 RequiredAction = normalized.RequiredAction
             };
+            failure.FailureClass = CmdbCraImportGenerator.ClassifyLibraryFailure(failure);
             state.LibraryExportFailures.Add(failure);
             state.ExportErrors.Add(failure);
         }

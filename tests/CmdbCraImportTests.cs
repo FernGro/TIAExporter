@@ -23,6 +23,9 @@ internal static class CmdbCraImportTests
         TestValidatorDetectsDuplicateAssetIds();
         TestValidatorRequiresNotALegalCompliance();
         TestMacAndSerialPropagation();
+        TestInvalidIpFiltered();
+        TestPortNotClassifiedAsHmi();
+        TestAssetTypeModuleNotUsed();
         Console.WriteLine("[PASS] All CmdbCraImport tests passed.");
     }
 
@@ -284,6 +287,71 @@ internal static class CmdbCraImportTests
         var import = new CmdbCraImportGenerator().Build(state);
         AssertEqual("1", import.Assets[0].MacAddresses.Count.ToString(), nameof(TestMacAndSerialPropagation) + "_mac_count");
         AssertEqual("S-12345", import.Assets[0].SerialNumber!, nameof(TestMacAndSerialPropagation) + "_serial");
+    }
+
+    private static void TestInvalidIpFiltered()
+    {
+        var state = MakeBasicState();
+        state.AssetInventory.Add(new AssetInventoryItem
+        {
+            AssetId = "a1",
+            DeviceItemName = "PLC_1",
+            Path = "Devices/PLC_1"
+        });
+        state.NetworkInterfaces.Add(new NormalizedNetworkInterface
+        {
+            Path = "Devices/PLC_1",
+            IpAddress = "2",
+            DeviceName = "PLC_1",
+            ModuleName = "PN-Interface"
+        });
+        state.NetworkInterfaces.Add(new NormalizedNetworkInterface
+        {
+            Path = "Devices/PLC_1",
+            IpAddress = "192.168.1.1",
+            DeviceName = "PLC_1",
+            ModuleName = "PN-Interface"
+        });
+        var import = new CmdbCraImportGenerator().Build(state);
+        var asset = import.Assets[0];
+        Assert(!asset.IpAddresses.Contains("2"), nameof(TestInvalidIpFiltered) + "_no_invalid");
+        Assert(asset.IpAddresses.Contains("192.168.1.1"), nameof(TestInvalidIpFiltered) + "_valid_kept");
+        Assert(asset.DataQuality.Notes.Any(n => n.Contains("2")), nameof(TestInvalidIpFiltered) + "_noted");
+    }
+
+    private static void TestPortNotClassifiedAsHmi()
+    {
+        // Ports with IsHmi=false must not produce asset_type="hmi"
+        var state = MakeBasicState();
+        state.AssetInventory.Add(new AssetInventoryItem
+        {
+            AssetId = "port1",
+            DeviceItemName = "Port_1",
+            Path = "Devices/PLC_1/Port_1",
+            IsHmi = false,
+            IsNetworkInterface = true
+        });
+        state.AssetInventory.Add(new AssetInventoryItem
+        {
+            AssetId = "hmi1",
+            DeviceItemName = "HMI_RT_1",
+            Path = "Devices/HMI_RT_1",
+            IsHmi = true
+        });
+        var import = new CmdbCraImportGenerator().Build(state);
+        var port = import.Assets.First(x => x.AssetId == "port1");
+        var hmi = import.Assets.First(x => x.AssetId == "hmi1");
+        Assert(port.AssetType != "hmi", nameof(TestPortNotClassifiedAsHmi) + "_port_not_hmi");
+        AssertEqual("hmi", hmi.AssetType, nameof(TestPortNotClassifiedAsHmi) + "_hmi_is_hmi");
+    }
+
+    private static void TestAssetTypeModuleNotUsed()
+    {
+        // The generator must not emit asset_type="module" — that type is obsolete
+        var state = MakeBasicState();
+        state.AssetInventory.Add(new AssetInventoryItem { AssetId = "x1", DeviceItemName = "X", AssetType = "module", Path = "p1" });
+        var import = new CmdbCraImportGenerator().Build(state);
+        Assert(import.Assets.All(x => x.AssetType != "module"), nameof(TestAssetTypeModuleNotUsed));
     }
 
     private static void Assert(bool condition, string testName)

@@ -143,7 +143,8 @@ internal sealed class CmdbCraImportGenerator
                     asset.Path.StartsWith(x.Path, StringComparison.OrdinalIgnoreCase))
                 .ToList();
 
-            var ipAddresses = network.Select(x => x.IpAddress).Where(x => !string.IsNullOrWhiteSpace(x)).Distinct().Cast<string>().ToList();
+            var invalidIps = network.Select(x => x.IpAddress).Where(x => !string.IsNullOrWhiteSpace(x) && !IsValidIpAddress(x!)).Distinct().Cast<string>().ToList();
+            var ipAddresses = network.Select(x => x.IpAddress).Where(x => !string.IsNullOrWhiteSpace(x) && IsValidIpAddress(x!)).Distinct().Cast<string>().ToList();
             var profinet = network.SelectMany(x => x.NodeNames).FirstOrDefault();
             var subnet = network.Select(x => x.SubnetName).FirstOrDefault(x => !string.IsNullOrWhiteSpace(x));
 
@@ -159,6 +160,7 @@ internal sealed class CmdbCraImportGenerator
             var manualReview = asset.IsHmi || asset.IsDrive || asset.IsSafetyRelated || missingFields.Count > 0;
 
             var notes = new List<string>();
+            if (invalidIps.Count > 0) notes.Add($"Filtered non-IP values from ip_addresses: {string.Join(", ", invalidIps)}");
             if (asset.IsHmi) notes.Add("HMI asset: tags/screens not exported via Openness in current run.");
             if (asset.IsDrive) notes.Add("Drive asset: parameter export depends on Startdrive Openness support.");
             if (asset.IsSafetyRelated) notes.Add("Safety-related asset: requires manual safety review.");
@@ -615,7 +617,7 @@ internal sealed class CmdbCraImportGenerator
         "required": ["asset_id", "asset_type", "asset_name", "data_quality"],
         "properties": {
           "asset_id": { "type": "string" },
-          "asset_type": { "type": "string", "enum": ["controller", "hmi", "drive", "io_module", "network_device", "software_component", "library", "safety_component", "module", "unknown"] },
+          "asset_type": { "type": "string", "enum": ["controller", "hmi", "drive", "io_module", "communication_module", "power_supply", "network_device", "software_component", "library", "safety_component", "unknown"] },
           "asset_name": { "type": "string" },
           "data_quality": { "$ref": "#/definitions/data_quality" }
         }
@@ -728,7 +730,7 @@ The following are intentionally **not** automated and must be reviewed by an eng
         if (asset.IsDrive) return "drive";
         if (asset.IsNetworkInterface) return "network_device";
         if (asset.IsSafetyRelated) return "safety_component";
-        return string.IsNullOrWhiteSpace(asset.AssetType) ? "unknown" : asset.AssetType;
+        return string.IsNullOrWhiteSpace(asset.AssetType) || asset.AssetType == "module" ? "unknown" : asset.AssetType;
     }
 
     private static string MapComponentType(string? type)
@@ -780,7 +782,11 @@ The following are intentionally **not** automated and must be reviewed by an eng
         return lookup.TryGetValue(normalized, out var f) ? new List<string> { $"{f.RelativePath}#sha256:{f.Sha256}" } : new List<string> { normalized };
     }
 
-    private static string ClassifyLibraryFailure(LibraryExportFailure fail)
+    // Bare integers like "2" are technically parseable as IPv4 by .NET (0.0.0.2) but are not real network addresses.
+    private static bool IsValidIpAddress(string value) =>
+        System.Net.IPAddress.TryParse(value, out _) && (value.Contains('.') || value.Contains(':'));
+
+    internal static string ClassifyLibraryFailure(LibraryExportFailure fail)
     {
         var msg = $"{fail.ErrorType} {fail.ErrorMessage}".ToLowerInvariant();
         if (msg.Contains("license")) return "missing_license_or_module";
