@@ -64,7 +64,11 @@ internal sealed class ExportSettingsSnapshot
 
 internal sealed record NormalizedDevice(string Name, string? TypeIdentifier, string? OrderNumber, string? FirmwareVersion, string SourcePath);
 internal sealed record NormalizedController(string PlcName, string DeviceName, string DeviceItemName, string SourcePath);
-internal sealed record NormalizedHardwareModule(string DeviceName, string Name, string? TypeIdentifier, string? OrderNumber, string? FirmwareVersion, string Path);
+internal sealed record NormalizedHardwareModule(string DeviceName, string Name, string? TypeIdentifier, string? OrderNumber, string? FirmwareVersion, string Path)
+{
+    public string? SerialNumber { get; init; }
+    public string? MacAddress { get; init; }
+}
 internal sealed class NormalizedNetworkInterface
 {
     public string DeviceName { get; set; } = "";
@@ -78,6 +82,7 @@ internal sealed class NormalizedNetworkInterface
     public List<string> NodeNames { get; set; } = [];
     public List<string> PortNames { get; set; } = [];
     public List<string> IoSystemNames { get; set; } = [];
+    public List<string> MacAddresses { get; set; } = [];
     public Dictionary<string, string?> Attributes { get; set; } = new(StringComparer.OrdinalIgnoreCase);
     public string Path { get; set; } = "";
 }
@@ -306,6 +311,8 @@ internal sealed class AssetInventoryItem
     public string Path { get; set; } = "";
     public string? ParentPath { get; set; }
     public List<string> NetworkInterfaces { get; set; } = [];
+    public List<string> MacAddresses { get; set; } = [];
+    public string? SerialNumber { get; set; }
     public bool IsController { get; set; }
     public bool IsDrive { get; set; }
     public bool IsHmi { get; set; }
@@ -413,6 +420,12 @@ internal sealed class HmiInventoryItem
     public string ExportStatus { get; set; } = "metadata_only";
     public List<string> Limitations { get; set; } = [];
     public string? RequiredAction { get; set; }
+    public int? ScreenCount { get; set; }
+    public int? TagCount { get; set; }
+    public int? ConnectionCount { get; set; }
+    public int? AlarmCount { get; set; }
+    public List<string> ScreenNames { get; set; } = [];
+    public List<string> ConnectionNames { get; set; } = [];
 }
 
 internal sealed class DriveInventoryItem
@@ -428,6 +441,9 @@ internal sealed class DriveInventoryItem
     public string? TelegramParameterInfo { get; set; }
     public string ExportStatus { get; set; } = "metadata_only";
     public List<string> Limitations { get; set; } = [];
+    public int? ParameterSetCount { get; set; }
+    public List<string> ParameterSetNames { get; set; } = [];
+    public Dictionary<string, string?> KnownParameters { get; set; } = new(StringComparer.OrdinalIgnoreCase);
 }
 
 internal sealed class CraGapAnalysisItem

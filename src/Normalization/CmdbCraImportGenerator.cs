@@ -31,15 +31,80 @@ internal sealed class CmdbCraImportGenerator
     {
         var normalizedDir = Path.Combine(state.ExportRoot, "normalized");
         var reportsDir = Path.Combine(state.ExportRoot, "reports");
+        var diagnosticsDir = Path.Combine(state.ExportRoot, "diagnostics");
         Directory.CreateDirectory(normalizedDir);
         Directory.CreateDirectory(reportsDir);
+        Directory.CreateDirectory(diagnosticsDir);
 
         var import = Build(state);
         jsonWriter(Path.Combine(normalizedDir, "cmdb_cra_import.json"), import);
         File.WriteAllText(Path.Combine(normalizedDir, "cmdb_cra_import.schema.json"), BuildSchemaJson(), new UTF8Encoding(false));
         File.WriteAllText(Path.Combine(normalizedDir, "cmdb_cra_import.csv"), BuildAssetCsv(import), new UTF8Encoding(false));
         File.WriteAllText(Path.Combine(reportsDir, "CMDB_CRA_IMPORT_README.md"), BuildReadme(), new UTF8Encoding(false));
+
+        var validation = Validate(import);
+        jsonWriter(Path.Combine(diagnosticsDir, "cmdb_cra_import_validation.json"), validation);
     }
+
+    public static CmdbValidationResult Validate(CmdbCraImport import)
+    {
+        var errors = new List<string>();
+        var warnings = new List<string>();
+
+        if (string.IsNullOrEmpty(import.SchemaVersion)) errors.Add("schema_version is required");
+        if (import.ExportMetadata == null) errors.Add("export_metadata is required");
+        else
+        {
+            if (string.IsNullOrEmpty(import.ExportMetadata.ExportId)) errors.Add("export_metadata.export_id is required");
+            if (string.IsNullOrEmpty(import.ExportMetadata.ProjectName)) errors.Add("export_metadata.project_name is required");
+            if (string.IsNullOrEmpty(import.ExportMetadata.ExporterVersion)) errors.Add("export_metadata.exporter_version is required");
+        }
+
+        var assetIds = new HashSet<string>(StringComparer.Ordinal);
+        for (var i = 0; i < import.Assets.Count; i++)
+        {
+            var a = import.Assets[i];
+            if (string.IsNullOrEmpty(a.AssetId)) errors.Add($"assets[{i}].asset_id is required");
+            else if (!assetIds.Add(a.AssetId)) errors.Add($"assets[{i}].asset_id '{a.AssetId}' is not unique");
+            if (string.IsNullOrEmpty(a.AssetName)) errors.Add($"assets[{i}].asset_name is required");
+            if (string.IsNullOrEmpty(a.AssetType)) errors.Add($"assets[{i}].asset_type is required");
+            if (a.DataQuality == null) errors.Add($"assets[{i}].data_quality is required");
+            else if (!IsValidCompleteness(a.DataQuality.Completeness)) errors.Add($"assets[{i}].data_quality.completeness invalid: {a.DataQuality.Completeness}");
+        }
+
+        var componentIds = new HashSet<string>(StringComparer.Ordinal);
+        for (var i = 0; i < import.SoftwareComponents.Count; i++)
+        {
+            var s = import.SoftwareComponents[i];
+            if (string.IsNullOrEmpty(s.ComponentId)) errors.Add($"software_components[{i}].component_id is required");
+            else if (!componentIds.Add(s.ComponentId)) warnings.Add($"software_components[{i}].component_id '{s.ComponentId}' is not unique (may be acceptable for library duplicates)");
+            if (string.IsNullOrEmpty(s.Name)) errors.Add($"software_components[{i}].name is required");
+            if (s.DataQuality != null && !IsValidCompleteness(s.DataQuality.Completeness)) errors.Add($"software_components[{i}].data_quality.completeness invalid");
+        }
+
+        if (import.CraReadiness == null) errors.Add("cra_readiness is required");
+        else
+        {
+            if (!import.CraReadiness.NotALegalComplianceStatement) errors.Add("cra_readiness.not_a_legal_compliance_statement must be true");
+            if (import.CraReadiness.OverallStatus is not ("complete" or "partial" or "insufficient")) errors.Add($"cra_readiness.overall_status invalid: {import.CraReadiness.OverallStatus}");
+        }
+
+        if (import.Evidence?.CoverageSummary != null && import.Evidence.CoverageSummary.MissingOrUnhashed > 0)
+        {
+            warnings.Add($"evidence.coverage_summary reports {import.Evidence.CoverageSummary.MissingOrUnhashed} missing or unhashed expected files.");
+        }
+
+        return new CmdbValidationResult
+        {
+            SchemaVersion = SchemaVersion,
+            Valid = errors.Count == 0,
+            Errors = errors,
+            Warnings = warnings,
+            CheckedAt = DateTimeOffset.Now
+        };
+    }
+
+    private static bool IsValidCompleteness(string value) => value is "complete" or "partial" or "missing";
 
     private static CmdbExportMetadata BuildMetadata(ExportState state) => new()
     {
@@ -113,6 +178,8 @@ internal sealed class CmdbCraImportGenerator
                 HardwareIdentifier = asset.TypeIdentifier,
                 FirmwareVersion = asset.FirmwareVersion,
                 IpAddresses = ipAddresses,
+                MacAddresses = asset.MacAddresses,
+                SerialNumber = asset.SerialNumber,
                 ProfinetName = profinet,
                 NetworkInterfaces = asset.NetworkInterfaces,
                 Subnet = subnet,
@@ -978,4 +1045,13 @@ internal sealed class CmdbGap
     public string Severity { get; set; } = "";
     public string Impact { get; set; } = "";
     public string RequiredAction { get; set; } = "";
+}
+
+internal sealed class CmdbValidationResult
+{
+    public string SchemaVersion { get; set; } = "";
+    public bool Valid { get; set; }
+    public List<string> Errors { get; set; } = new();
+    public List<string> Warnings { get; set; } = new();
+    public DateTimeOffset CheckedAt { get; set; }
 }

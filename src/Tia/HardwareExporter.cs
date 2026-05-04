@@ -67,7 +67,11 @@ internal sealed class HardwareExporter
             TiaReflection.GetString(item, "TypeIdentifier", "TypeName"),
             TiaReflection.GetString(item, "OrderNumber", "ArticleNumber"),
             TiaReflection.GetString(item, "FirmwareVersion"),
-            path));
+            path)
+        {
+            SerialNumber = TiaReflection.GetString(item, "SerialNumber", "Serialnumber", "FactorySerialNumber"),
+            MacAddress = TiaReflection.GetString(item, "MacAddress", "MACAddress", "InterfaceMacAddress")
+        });
 
         var attributes = TiaReflection.GetReadableAttributes(item);
         if (attributes.Count > 0)
@@ -158,9 +162,18 @@ internal sealed class HardwareExporter
             normalized.NodeNames.Add(nodeName);
             normalized.IpAddress ??= TiaReflection.GetString(node, "Address", "IPAddress", "IpAddress");
             normalized.SubnetMask ??= TiaReflection.GetString(node, "SubnetMask");
+            var mac = TiaReflection.GetString(node, "MacAddress", "MACAddress");
+            if (!string.IsNullOrWhiteSpace(mac) && !normalized.MacAddresses.Contains(mac!))
+            {
+                normalized.MacAddresses.Add(mac!);
+            }
             foreach (var pair in TiaReflection.GetReadableAttributes(node))
             {
                 normalized.Attributes[$"node.{nodeName}.{pair.Key}"] = pair.Value;
+                if (pair.Key.IndexOf("mac", StringComparison.OrdinalIgnoreCase) >= 0 && !string.IsNullOrWhiteSpace(pair.Value) && !normalized.MacAddresses.Contains(pair.Value!))
+                {
+                    normalized.MacAddresses.Add(pair.Value!);
+                }
             }
         }
     }

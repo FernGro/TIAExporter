@@ -238,6 +238,12 @@ internal sealed class CraPostProcessor
                 .Select(x => x.InterfaceName ?? x.ModuleName)
                 .Distinct(StringComparer.OrdinalIgnoreCase)
                 .ToList();
+            var macs = state.NetworkInterfaces.Where(x => x.Path.StartsWith(module.Path, StringComparison.OrdinalIgnoreCase) || module.Path.StartsWith(x.Path, StringComparison.OrdinalIgnoreCase))
+                .SelectMany(x => x.MacAddresses).Distinct(StringComparer.OrdinalIgnoreCase).ToList();
+            if (!string.IsNullOrWhiteSpace(module.MacAddress) && !macs.Contains(module.MacAddress!, StringComparer.OrdinalIgnoreCase))
+            {
+                macs.Add(module.MacAddress!);
+            }
             var item = new AssetInventoryItem
             {
                 AssetId = StableHash($"{state.ProjectName}|{module.Path}|{module.OrderNumber}|{module.TypeIdentifier}"),
@@ -253,6 +259,8 @@ internal sealed class CraPostProcessor
                 Path = module.Path,
                 ParentPath = ParentPath(module.Path),
                 NetworkInterfaces = networkInterfaces,
+                MacAddresses = macs,
+                SerialNumber = module.SerialNumber,
                 IsController = state.Controllers.Any(x => string.Equals(x.SourcePath, module.Path, StringComparison.OrdinalIgnoreCase)),
                 IsDrive = IsDrive(text),
                 IsHmi = IsHmi(text),
@@ -481,7 +489,7 @@ internal sealed class CraPostProcessor
         foreach (var asset in state.AssetInventory.Where(x => x.IsDrive && state.Settings.IncludeDrives))
         {
             var network = state.NetworkInterfaces.FirstOrDefault(x => asset.Path.StartsWith(x.Path, StringComparison.OrdinalIgnoreCase) || x.Path.StartsWith(asset.Path, StringComparison.OrdinalIgnoreCase));
-            state.DriveInventory.Add(new DriveInventoryItem
+            var drive = new DriveInventoryItem
             {
                 Name = asset.DeviceItemName,
                 OrderNumber = asset.OrderNumber,
@@ -492,8 +500,49 @@ internal sealed class CraPostProcessor
                 ProfinetDeviceName = network?.NodeNames.FirstOrDefault(),
                 IoSystem = network?.IoSystemNames.FirstOrDefault(),
                 Limitations = ["SINAMICS/Startdrive parameter export depends on installed Startdrive Openness support."]
-            });
+            };
+
+            var driveAttrs = state.HardwareAttributes.Where(x => x.ObjectPath.StartsWith(asset.Path, StringComparison.OrdinalIgnoreCase) || asset.Path.StartsWith(x.ObjectPath, StringComparison.OrdinalIgnoreCase)).ToList();
+            foreach (var snapshot in driveAttrs)
+            {
+                foreach (var pair in snapshot.Attributes)
+                {
+                    if (IsDriveParameterKey(pair.Key))
+                    {
+                        drive.KnownParameters[pair.Key] = pair.Value;
+                    }
+                    if (pair.Key.IndexOf("Telegram", StringComparison.OrdinalIgnoreCase) >= 0)
+                    {
+                        drive.TelegramParameterInfo ??= pair.Value;
+                    }
+                    if (pair.Key.IndexOf("ParameterSet", StringComparison.OrdinalIgnoreCase) >= 0 && !string.IsNullOrWhiteSpace(pair.Value))
+                    {
+                        if (!drive.ParameterSetNames.Contains(pair.Value!)) drive.ParameterSetNames.Add(pair.Value!);
+                    }
+                }
+            }
+
+            if (drive.ParameterSetNames.Count > 0)
+            {
+                drive.ParameterSetCount = drive.ParameterSetNames.Count;
+            }
+            if (drive.KnownParameters.Count > 0 || drive.ParameterSetNames.Count > 0)
+            {
+                drive.ExportStatus = "metadata_with_parameters";
+            }
+
+            state.DriveInventory.Add(drive);
         }
+    }
+
+    private static bool IsDriveParameterKey(string key)
+    {
+        return key.StartsWith("p", StringComparison.OrdinalIgnoreCase) && key.Length > 1 && char.IsDigit(key[1])
+               || key.StartsWith("r", StringComparison.OrdinalIgnoreCase) && key.Length > 1 && char.IsDigit(key[1])
+               || key.IndexOf("Telegram", StringComparison.OrdinalIgnoreCase) >= 0
+               || key.IndexOf("MotorType", StringComparison.OrdinalIgnoreCase) >= 0
+               || key.IndexOf("RatedCurrent", StringComparison.OrdinalIgnoreCase) >= 0
+               || key.IndexOf("RatedPower", StringComparison.OrdinalIgnoreCase) >= 0;
     }
 
     private static void BuildGapAnalysis(ExportState state)

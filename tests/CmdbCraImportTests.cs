@@ -18,6 +18,11 @@ internal static class CmdbCraImportTests
         TestSoftwareComponentMissingHash();
         TestEvidenceCoverageSummary();
         TestNotALegalComplianceStatement();
+        TestValidatorAcceptsValidImport();
+        TestValidatorRejectsMissingExportId();
+        TestValidatorDetectsDuplicateAssetIds();
+        TestValidatorRequiresNotALegalCompliance();
+        TestMacAndSerialPropagation();
         Console.WriteLine("[PASS] All CmdbCraImport tests passed.");
     }
 
@@ -219,6 +224,66 @@ internal static class CmdbCraImportTests
         var state = MakeBasicState();
         var import = new CmdbCraImportGenerator().Build(state);
         Assert(import.CraReadiness.NotALegalComplianceStatement, nameof(TestNotALegalComplianceStatement));
+    }
+
+    private static void TestValidatorAcceptsValidImport()
+    {
+        var state = MakeBasicState();
+        state.AssetInventory.Add(new AssetInventoryItem { AssetId = "a1", DeviceItemName = "X", Path = "p", OrderNumber = "6ES7", FirmwareVersion = "V1.0" });
+        var import = new CmdbCraImportGenerator().Build(state);
+        var v = CmdbCraImportGenerator.Validate(import);
+        Assert(v.Valid, nameof(TestValidatorAcceptsValidImport) + "_valid:" + string.Join(";", v.Errors));
+        AssertEqual("0", v.Errors.Count.ToString(), nameof(TestValidatorAcceptsValidImport) + "_no_errors");
+    }
+
+    private static void TestValidatorRejectsMissingExportId()
+    {
+        var import = new CmdbCraImport();
+        import.ExportMetadata.ExportId = "";
+        var v = CmdbCraImportGenerator.Validate(import);
+        Assert(!v.Valid, nameof(TestValidatorRejectsMissingExportId));
+        Assert(v.Errors.Any(e => e.Contains("export_id")), nameof(TestValidatorRejectsMissingExportId) + "_msg");
+    }
+
+    private static void TestValidatorDetectsDuplicateAssetIds()
+    {
+        var import = new CmdbCraImport
+        {
+            ExportMetadata = { ExportId = "e1", ProjectName = "p", ExporterVersion = "1.0.0" }
+        };
+        import.Assets.Add(new CmdbAsset { AssetId = "dup", AssetName = "A", AssetType = "controller", DataQuality = new CmdbDataQuality { Completeness = "complete", Confidence = "high" } });
+        import.Assets.Add(new CmdbAsset { AssetId = "dup", AssetName = "B", AssetType = "controller", DataQuality = new CmdbDataQuality { Completeness = "complete", Confidence = "high" } });
+        var v = CmdbCraImportGenerator.Validate(import);
+        Assert(!v.Valid, nameof(TestValidatorDetectsDuplicateAssetIds));
+        Assert(v.Errors.Any(e => e.Contains("not unique")), nameof(TestValidatorDetectsDuplicateAssetIds) + "_msg");
+    }
+
+    private static void TestValidatorRequiresNotALegalCompliance()
+    {
+        var import = new CmdbCraImport
+        {
+            ExportMetadata = { ExportId = "e1", ProjectName = "p", ExporterVersion = "1.0.0" }
+        };
+        import.CraReadiness.NotALegalComplianceStatement = false;
+        var v = CmdbCraImportGenerator.Validate(import);
+        Assert(!v.Valid, nameof(TestValidatorRequiresNotALegalCompliance));
+        Assert(v.Errors.Any(e => e.Contains("not_a_legal_compliance_statement")), nameof(TestValidatorRequiresNotALegalCompliance) + "_msg");
+    }
+
+    private static void TestMacAndSerialPropagation()
+    {
+        var state = MakeBasicState();
+        state.AssetInventory.Add(new AssetInventoryItem
+        {
+            AssetId = "a1",
+            DeviceItemName = "PLC_1",
+            Path = "Devices/PLC_1",
+            MacAddresses = new List<string> { "00-1B-1B-AA-BB-CC" },
+            SerialNumber = "S-12345"
+        });
+        var import = new CmdbCraImportGenerator().Build(state);
+        AssertEqual("1", import.Assets[0].MacAddresses.Count.ToString(), nameof(TestMacAndSerialPropagation) + "_mac_count");
+        AssertEqual("S-12345", import.Assets[0].SerialNumber!, nameof(TestMacAndSerialPropagation) + "_serial");
     }
 
     private static void Assert(bool condition, string testName)

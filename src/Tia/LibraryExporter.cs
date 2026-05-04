@@ -76,6 +76,16 @@ internal sealed class LibraryExporter
 
         try
         {
+            // LibraryType objects often do not expose Export() themselves; instead each LibraryTypeVersion is exportable.
+            // Try the item first; if no Export(FileInfo,ExportOptions) exists, fall through to Versions retry below.
+            var hasDirectExport = item.GetType().GetMethod("Export", new[] { typeof(FileInfo), typeof(Siemens.Engineering.ExportOptions) }) != null;
+            Exception? versionsError = null;
+            if (!hasDirectExport && TryExportLibraryTypeVersions(item, filePath, state, kind, path, name, normalized, out versionsError))
+            {
+                state.Libraries.Add(normalized);
+                return;
+            }
+
             if (TiaReflection.TryExportWithOptions(item, filePath, out var xmlError, out _))
             {
                 var evidence = hasher.HashFile(state.ExportRoot, filePath, $"{kind}/{path}/{name}", true, "library", "raw_export",
@@ -137,6 +147,48 @@ internal sealed class LibraryExporter
         }
 
         state.Libraries.Add(normalized);
+    }
+
+    private bool TryExportLibraryTypeVersions(object item, string filePath, ExportState state, string kind, string path, string name, NormalizedLibraryItem normalized, out Exception? lastError)
+    {
+        lastError = null;
+        var versions = TiaReflection.GetValue(item, "Versions");
+        if (versions == null)
+        {
+            return false;
+        }
+
+        var any = false;
+        var index = 0;
+        foreach (var version in TiaReflection.Enumerate(versions))
+        {
+            index++;
+            var versionLabel = TiaReflection.GetString(version, "VersionNumber", "Version") ?? $"v{index}";
+            var versionFolder = Path.GetDirectoryName(filePath)!;
+            var versionFile = FileNameSanitizer.UniquePath(versionFolder, $"{FileNameSanitizer.Sanitize(name)}_{FileNameSanitizer.Sanitize(versionLabel)}.xml");
+            try
+            {
+                if (TiaReflection.TryExportWithOptions(version, versionFile, out var error, out _))
+                {
+                    var evidence = hasher.HashFile(state.ExportRoot, versionFile, $"{kind}/{path}/{name}@{versionLabel}", true, "library", "raw_export",
+                        ["Library inventory", "Evidence / hashes", "SBOM readiness"]);
+                    state.EvidenceFiles.Add(evidence);
+                    normalized.ExportFile ??= evidence.RelativePath;
+                    normalized.ExportSuccess = true;
+                    normalized.ExportStatus = "full_xml";
+                    any = true;
+                }
+                else if (error != null)
+                {
+                    lastError = error;
+                }
+            }
+            catch (Exception ex)
+            {
+                lastError = ex;
+            }
+        }
+        return any;
     }
 
     private static string? ShortStack(Exception ex)
