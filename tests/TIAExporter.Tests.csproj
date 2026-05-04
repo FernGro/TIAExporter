@@ -13,6 +13,9 @@
   <ItemGroup>
     <!-- Include only the pure-logic helpers under test; no Siemens references needed -->
     <Compile Include="../src/Tia/LicenseExceptionHelper.cs" />
+    <Compile Include="../src/Compatibility/IsExternalInit.cs" />
+    <Compile Include="../src/Normalization/NormalizedModels.cs" />
+    <Compile Include="../src/Normalization/CmdbCraImportGenerator.cs" />
   </ItemGroup>
 
 </Project>

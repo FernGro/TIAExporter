@@ -54,6 +54,14 @@ internal sealed class JsonWriterService
         RefreshEvidenceIndex(state);
         Write(Path.Combine(normalized, "evidence_files.json"), state.EvidenceFiles);
         Write(Path.Combine(normalized, "export_report.json"), BuildReport(state));
+        try
+        {
+            new CmdbCraImportGenerator().WriteAll(state, (p, v) => Write(p, v));
+        }
+        catch (Exception ex)
+        {
+            state.Warnings.Add($"CMDB/CRA consolidated import generation failed: {ex.GetType().Name}: {ex.Message}");
+        }
         Write(Path.Combine(state.ExportRoot, "manifest.json"), BuildManifest(state));
     }
 
