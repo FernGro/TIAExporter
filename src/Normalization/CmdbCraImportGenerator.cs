@@ -695,7 +695,27 @@ This file is an **engineering export quality artifact**. It does not certify leg
 | `normalized/cmdb_cra_import.json` | Canonical, machine-readable consolidated export. |
 | `normalized/cmdb_cra_import.schema.json` | JSON Schema for the canonical file (Draft-07). |
 | `normalized/cmdb_cra_import.csv` | Flat per-asset view for spreadsheet review. |
+| `diagnostics/cmdb_cra_import_validation.json` | Structural validation result (errors, warnings, checked_at). |
 | `reports/CMDB_CRA_IMPORT_README.md` | This documentation. |
+
+## Asset types
+
+| asset_type | Meaning |
+| --- | --- |
+| `controller` | S7 PLC / CPU |
+| `hmi` | HMI panel device (TP, KTP, OP …) |
+| `hmi_runtime` | WinCC Runtime software container inside an HMI device (HMI_RT_N) |
+| `drive` | SINAMICS / frequency converter |
+| `io_module` | Digital/analog I/O module (SM, DI, DO, AI, AO …) |
+| `communication_module` | CP, CM, IE switch, SCALANCE, HMI IE_CP … |
+| `power_supply` | PS, PM modules |
+| `network_device` | PROFINET interface, PN port, network-capable item |
+| `safety_component` | Any device flagged as safety-related |
+| `software_component` | Logical software item (not from hardware scan) |
+| `library` | Project library item |
+| `unknown` | Not identified by available heuristics |
+
+HMI child items follow `parent_asset_id` back to the HMI panel. `hmi_runtime` and `communication_module` children of an HMI device are **not** classified as `hmi`.
 
 ## CMDB Import Logic (suggested)
 
@@ -704,7 +724,7 @@ This file is an **engineering export quality artifact**. It does not certify leg
 3. For each entry in `assets`:
    - Use `asset_id` as the stable CMDB CI primary key (deterministic SHA-256 prefix derived from project name, asset path, order number and type identifier).
    - Use `parent_asset_id` for hierarchical CI relationships.
-   - Map `asset_type` to your CMDB CI class.
+   - Map `asset_type` to your CMDB CI class (see table above).
    - Use `vulnerability_lookup_keys` for CVE lookup automation (vendor + order number, vendor + product name, etc.).
 4. For each entry in `software_components`:
    - Use `component_id` as a stable software-CI key.
@@ -712,6 +732,33 @@ This file is an **engineering export quality artifact**. It does not certify leg
    - Use `hash_sha256` as the integrity reference.
 5. Use `evidence.evidence_files[].sha256` to verify file integrity at import time.
 6. Treat `cra_readiness.blocking_gaps` as items that must be reviewed before the CMDB record is considered authoritative.
+
+## Evidence coverage fields
+
+`evidence.coverage_summary` explains how many key artifacts are covered:
+
+| Field | Meaning |
+| --- | --- |
+| `required_expected` | Explicitly-tracked CRA artifacts: blocks with export files + library exports + assets |
+| `required_hashed` | Of those, how many have a SHA-256 in the evidence set |
+| `missing_required` | `required_expected − required_hashed` — gaps that need attention |
+| `additional_hashed` | Other hashed files not in the required set (normalized JSON, reports, schema …) |
+| `total_hashed` | `required_hashed + additional_hashed` (may exceed `required_expected` — this is expected and normal) |
+
+`total_hashed > required_expected` is **not an error**. It means additional supporting files (configuration JSON, reports, etc.) were also hashed, providing a broader audit trail.
+
+## Library failure classification
+
+`diagnostics/library_export_failures.json` includes a `failure_class` field per failure:
+
+| failure_class | Meaning |
+| --- | --- |
+| `missing_license_or_module` | TIA license or Openness module not available |
+| `protected_library` | Library item is know-how protected |
+| `unsupported_export_type` | Export API not supported for this item type |
+| `path_or_name_issue` | Path or name caused the export to fail |
+| `api_limitation` | Known Openness API limitation |
+| `unknown_exception` | Unclassified error (see error_message) |
 
 ## Field stability
 
@@ -729,12 +776,13 @@ The following are intentionally **not** automated and must be reviewed by an eng
 
 ## Recommended import process
 
-1. Validate `cmdb_cra_import.json` against `cmdb_cra_import.schema.json`.
-2. Verify `evidence.coverage_summary.missing_or_unhashed == 0` or document the gap.
-3. Resolve all `cra_readiness.blocking_gaps` or accept them with documented justification.
-4. Import assets, software_components, network, security and safety sections into CMDB.
-5. Hand HIGH-severity findings to security and safety reviewers before treating the CI as authoritative.
-6. Re-export and re-import after any project change; `asset_id` and `component_id` stay stable for unchanged objects.
+1. Open `diagnostics/cmdb_cra_import_validation.json` and check `valid == true`.
+2. Verify `evidence.coverage_summary.missing_required == 0` or document the gap.
+3. Note: `total_hashed > required_expected` is normal — see coverage fields table above.
+4. Resolve all `cra_readiness.blocking_gaps` or accept them with documented justification.
+5. Import assets, software_components, network, security and safety sections into CMDB.
+6. Hand HIGH-severity findings to security and safety reviewers before treating the CI as authoritative.
+7. Re-export and re-import after any project change; `asset_id` and `component_id` stay stable for unchanged objects.
 """;
     }
 
