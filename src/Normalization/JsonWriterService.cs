@@ -50,13 +50,7 @@ internal sealed class JsonWriterService
         Write(Path.Combine(state.ExportRoot, "diagnostics", "block_export_failures.json"), state.BlockExportFailures);
         Write(Path.Combine(state.ExportRoot, "diagnostics", "library_export_failures.json"), state.LibraryExportFailures);
         Write(Path.Combine(state.ExportRoot, "diagnostics", "capability_matrix.json"), state.CapabilityMatrix);
-        RefreshEvidenceIndex(state);
-        // Sync the evidence gap entry so ReadinessReport and CMDB show the same hashed-file count.
-        var evGap = state.CraGapAnalysis.FirstOrDefault(x => x.Category == "Evidence / hashes");
-        if (evGap != null) evGap.Evidence = $"{state.EvidenceFiles.Count} evidence files hashed";
-        WriteReadinessReport(Path.Combine(state.ExportRoot, "reports", "CRA_EXPORT_READINESS.md"), state);
-        Write(Path.Combine(normalized, "evidence_files.json"), state.EvidenceFiles);
-        Write(Path.Combine(normalized, "export_report.json"), BuildReport(state));
+        // Write CMDB before evidence refresh so the validation JSON is picked up by the scan below.
         try
         {
             new CmdbCraImportGenerator().WriteAll(state, (p, v) => Write(p, v));
@@ -65,6 +59,13 @@ internal sealed class JsonWriterService
         {
             state.Warnings.Add($"CMDB/CRA consolidated import generation failed: {ex.GetType().Name}: {ex.Message}");
         }
+        RefreshEvidenceIndex(state);
+        // Sync the evidence gap entry so ReadinessReport shows the post-scan count.
+        var evGap = state.CraGapAnalysis.FirstOrDefault(x => x.Category == "Evidence / hashes");
+        if (evGap != null) evGap.Evidence = $"{state.EvidenceFiles.Count} evidence files hashed";
+        WriteReadinessReport(Path.Combine(state.ExportRoot, "reports", "CRA_EXPORT_READINESS.md"), state);
+        Write(Path.Combine(normalized, "evidence_files.json"), state.EvidenceFiles);
+        Write(Path.Combine(normalized, "export_report.json"), BuildReport(state));
         Write(Path.Combine(state.ExportRoot, "manifest.json"), BuildManifest(state));
     }
 

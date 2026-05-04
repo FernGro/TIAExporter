@@ -707,15 +707,20 @@ internal sealed class CraPostProcessor
     private static bool Guess(string text, params string[] needles) => needles.Any(x => text.IndexOf(x, StringComparison.OrdinalIgnoreCase) >= 0);
     private static bool IsTrue(string value) => value.Equals("true", StringComparison.OrdinalIgnoreCase) || value.Equals("1", StringComparison.OrdinalIgnoreCase) || value.Equals("yes", StringComparison.OrdinalIgnoreCase) || value.Equals("enabled", StringComparison.OrdinalIgnoreCase) || value.Equals("active", StringComparison.OrdinalIgnoreCase);
     private static bool IsDrive(string text) => Guess(text, "SINAMICS", "G120", "S120", "Drive", "Antrieb", "6SL");
-    // "RT_" intentionally excluded: it appears in PROFINET real-time class designations (e.g. "PN-Port [RT_1]") causing false positives.
-    private static bool IsHmi(string text) => Guess(text, "HMI", "WinCC", "Unified", "Panel");
+    // HMI IE_CP modules have TypeIdentifier containing "HMI IE" — exclude them from the HMI heuristic.
+    private static bool IsHmi(string text) =>
+        Guess(text, "HMI", "WinCC", "Unified", "Panel") &&
+        !Guess(text, "HMI IE", "IE_CP", "IECP");
+    // HMI_RT_N is the WinCC Runtime software container inside an HMI device — distinct from the hardware panel.
+    private static bool IsHmiRuntime(string text) => Guess(text, "HMI_RT", "WinCC RT", "WinCC_RT", "HMI RT");
     private static bool IsSafetyText(string text) => Guess(text, "Safety", "Failsafe", "F-CPU", "F_CPU", "F-LAD", "F_", "NotHalt", "Emergency", "Schutz");
     private static string GuessAssetType(string text) =>
         IsDrive(text) ? "drive" :
+        IsHmiRuntime(text) ? "hmi_runtime" :
         IsHmi(text) ? "hmi" :
         Guess(text, "CPU", "PLC") ? "controller" :
         Guess(text, "PN", "PROFINET", "Interface", "Port") ? "network_device" :
-        Guess(text, "CP 1", "CP 3", "CM 1", "IE Switch", "SCALANCE", " Switch") ? "communication_module" :
+        Guess(text, "CP 1", "CP 3", "CM 1", "IE Switch", "SCALANCE", " Switch", "HMI IE") ? "communication_module" :
         Guess(text, " PS ", " PM ", "Power Supply") ? "power_supply" :
         Guess(text, "DI ", "DO ", "AI ", "AO ", "SM 1", "SM 3", " IM ", " BM ") ? "io_module" :
         "unknown";

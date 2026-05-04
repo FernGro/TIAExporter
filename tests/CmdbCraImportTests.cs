@@ -26,6 +26,9 @@ internal static class CmdbCraImportTests
         TestInvalidIpFiltered();
         TestPortNotClassifiedAsHmi();
         TestAssetTypeModuleNotUsed();
+        TestHmiChildInterfacesNotHmi();
+        TestHmiRuntimeType();
+        TestEvidenceCoverageSemantics();
         Console.WriteLine("[PASS] All CmdbCraImport tests passed.");
     }
 
@@ -352,6 +355,87 @@ internal static class CmdbCraImportTests
         state.AssetInventory.Add(new AssetInventoryItem { AssetId = "x1", DeviceItemName = "X", AssetType = "module", Path = "p1" });
         var import = new CmdbCraImportGenerator().Build(state);
         Assert(import.Assets.All(x => x.AssetType != "module"), nameof(TestAssetTypeModuleNotUsed));
+    }
+
+    private static void TestHmiChildInterfacesNotHmi()
+    {
+        var state = MakeBasicState();
+        // HMI panel device
+        state.AssetInventory.Add(new AssetInventoryItem
+        {
+            AssetId = "hmi1", DeviceItemName = "HMI_1", Path = "Devices/HMI_1",
+            IsHmi = true, AssetType = "hmi"
+        });
+        // IE CP communication module inside HMI device — IsHmi must be false after fix
+        state.AssetInventory.Add(new AssetInventoryItem
+        {
+            AssetId = "iecp1", DeviceItemName = "IE_CP_1", Path = "Devices/HMI_1/IE_CP_1",
+            ParentPath = "Devices/HMI_1",
+            IsHmi = false, AssetType = "communication_module"
+        });
+
+        var import = new CmdbCraImportGenerator().Build(state);
+        var hmi = import.Assets.First(x => x.AssetId == "hmi1");
+        var cp = import.Assets.First(x => x.AssetId == "iecp1");
+
+        AssertEqual("hmi", hmi.AssetType, nameof(TestHmiChildInterfacesNotHmi) + "_hmi1_type");
+        Assert(cp.AssetType != "hmi", nameof(TestHmiChildInterfacesNotHmi) + "_cp_not_hmi");
+        AssertEqual("communication_module", cp.AssetType, nameof(TestHmiChildInterfacesNotHmi) + "_cp_type");
+        AssertEqual(hmi.AssetId, cp.ParentAssetId!, nameof(TestHmiChildInterfacesNotHmi) + "_cp_parent");
+    }
+
+    private static void TestHmiRuntimeType()
+    {
+        var state = MakeBasicState();
+        state.AssetInventory.Add(new AssetInventoryItem
+        {
+            AssetId = "rt1", DeviceItemName = "HMI_RT_1", Path = "Devices/HMI_1/HMI_RT_1",
+            ParentPath = "Devices/HMI_1",
+            IsHmi = true, AssetType = "hmi_runtime"
+        });
+        state.AssetInventory.Add(new AssetInventoryItem
+        {
+            AssetId = "hmi1", DeviceItemName = "HMI_1", Path = "Devices/HMI_1",
+            IsHmi = true, AssetType = "hmi"
+        });
+
+        var import = new CmdbCraImportGenerator().Build(state);
+        var rt = import.Assets.First(x => x.AssetId == "rt1");
+        var hmi = import.Assets.First(x => x.AssetId == "hmi1");
+
+        AssertEqual("hmi_runtime", rt.AssetType, nameof(TestHmiRuntimeType) + "_runtime_type");
+        AssertEqual("hmi", hmi.AssetType, nameof(TestHmiRuntimeType) + "_hmi_type");
+        AssertEqual(hmi.AssetId, rt.ParentAssetId!, nameof(TestHmiRuntimeType) + "_parent");
+    }
+
+    private static void TestEvidenceCoverageSemantics()
+    {
+        var state = MakeBasicState();
+        state.AssetInventory.Add(new AssetInventoryItem { AssetId = "a1", DeviceItemName = "PLC_1", Path = "p" });
+        state.SoftwareInventory.Add(new SoftwareInventoryItem
+        {
+            ComponentId = "c1", PlcName = "PLC_1", ComponentName = "FB1",
+            ExportFile = "normalized/blocks/PLC_1/FB1.xml", ExportStatus = "full_xml"
+        });
+        // Two extra files that should count as additional_hashed (not in required set)
+        state.EvidenceFiles.Add(new EvidenceFile { RelativePath = "normalized/blocks/PLC_1/FB1.xml", Sha256 = "aabb" });
+        state.EvidenceFiles.Add(new EvidenceFile { RelativePath = "normalized/devices.json", Sha256 = "ccdd" });
+        state.EvidenceFiles.Add(new EvidenceFile { RelativePath = "normalized/extra.json", Sha256 = "eeff" });
+
+        var import = new CmdbCraImportGenerator().Build(state);
+        var cov = import.Evidence.CoverageSummary;
+
+        // total_hashed = all hashed files = 3
+        AssertEqual("3", cov.TotalHashed.ToString(), nameof(TestEvidenceCoverageSemantics) + "_total");
+        // required_expected = 1 block + 0 libs + 1 asset = 2
+        AssertEqual("2", cov.RequiredExpected.ToString(), nameof(TestEvidenceCoverageSemantics) + "_req_expected");
+        // additional_hashed must make sense: total_hashed >= required_hashed
+        Assert(cov.TotalHashed >= cov.RequiredHashed, nameof(TestEvidenceCoverageSemantics) + "_total_ge_required");
+        // additional_hashed = total - file-based required_hashed (files only, not assets)
+        Assert(cov.AdditionalHashed >= 0, nameof(TestEvidenceCoverageSemantics) + "_additional_nonneg");
+        // backward compat
+        AssertEqual(cov.RequiredExpected.ToString(), cov.TotalExpected.ToString(), nameof(TestEvidenceCoverageSemantics) + "_compat");
+        AssertEqual(cov.MissingRequired.ToString(), cov.MissingOrUnhashed.ToString(), nameof(TestEvidenceCoverageSemantics) + "_compat_missing");
     }
 
     private static void Assert(bool condition, string testName)

@@ -89,9 +89,9 @@ internal sealed class CmdbCraImportGenerator
             if (import.CraReadiness.OverallStatus is not ("complete" or "partial" or "insufficient")) errors.Add($"cra_readiness.overall_status invalid: {import.CraReadiness.OverallStatus}");
         }
 
-        if (import.Evidence?.CoverageSummary != null && import.Evidence.CoverageSummary.MissingOrUnhashed > 0)
+        if (import.Evidence?.CoverageSummary != null && import.Evidence.CoverageSummary.MissingRequired > 0)
         {
-            warnings.Add($"evidence.coverage_summary reports {import.Evidence.CoverageSummary.MissingOrUnhashed} missing or unhashed expected files.");
+            warnings.Add($"evidence.coverage_summary: {import.Evidence.CoverageSummary.MissingRequired} required artifacts lack SHA-256 coverage. additional_hashed={import.Evidence.CoverageSummary.AdditionalHashed} other files are hashed but are not in the required set.");
         }
 
         return new CmdbValidationResult
@@ -462,15 +462,30 @@ internal sealed class CmdbCraImportGenerator
                 SourceCategory = f.SourceCategory
             });
         }
-        var expected = state.SoftwareInventory.Count(x => !string.IsNullOrWhiteSpace(x.ExportFile))
-                       + state.LibraryInventory.Count(x => !string.IsNullOrWhiteSpace(x.ExportFile))
-                       + state.AssetInventory.Count;
-        var hashed = state.EvidenceFiles.Count(x => !string.IsNullOrWhiteSpace(x.Sha256));
+        // required_expected: explicitly-tracked key artifacts for CRA review
+        var requiredExpected = state.SoftwareInventory.Count(x => !string.IsNullOrWhiteSpace(x.ExportFile))
+                               + state.LibraryInventory.Count(x => !string.IsNullOrWhiteSpace(x.ExportFile))
+                               + state.AssetInventory.Count;
+        // Which of those required paths actually appear (with SHA-256) in the evidence set
+        var requiredPaths = new HashSet<string>(
+            state.SoftwareInventory.Where(x => !string.IsNullOrWhiteSpace(x.ExportFile)).Select(x => x.ExportFile!.Replace('\\', '/'))
+            .Concat(state.LibraryInventory.Where(x => !string.IsNullOrWhiteSpace(x.ExportFile)).Select(x => x.ExportFile!.Replace('\\', '/'))),
+            StringComparer.OrdinalIgnoreCase);
+        var requiredHashed = state.EvidenceFiles.Count(x => !string.IsNullOrWhiteSpace(x.Sha256) && requiredPaths.Contains(x.RelativePath.Replace('\\', '/')));
+        // Assets are metadata-only; count them as covered (no specific file to hash)
+        requiredHashed += state.AssetInventory.Count;
+        var totalHashed = state.EvidenceFiles.Count(x => !string.IsNullOrWhiteSpace(x.Sha256));
+        var additionalHashed = Math.Max(0, totalHashed - (requiredHashed - state.AssetInventory.Count));
+        var missingRequired = Math.Max(0, requiredExpected - requiredHashed);
         ev.CoverageSummary = new CmdbEvidenceCoverage
         {
-            TotalExpected = expected,
-            TotalHashed = hashed,
-            MissingOrUnhashed = Math.Max(0, expected - hashed)
+            RequiredExpected = requiredExpected,
+            RequiredHashed = requiredHashed,
+            AdditionalHashed = additionalHashed,
+            TotalHashed = totalHashed,
+            MissingRequired = missingRequired,
+            TotalExpected = requiredExpected,      // backward compat
+            MissingOrUnhashed = missingRequired    // backward compat
         };
         return ev;
     }
@@ -617,7 +632,7 @@ internal sealed class CmdbCraImportGenerator
         "required": ["asset_id", "asset_type", "asset_name", "data_quality"],
         "properties": {
           "asset_id": { "type": "string" },
-          "asset_type": { "type": "string", "enum": ["controller", "hmi", "drive", "io_module", "communication_module", "power_supply", "network_device", "software_component", "library", "safety_component", "unknown"] },
+          "asset_type": { "type": "string", "enum": ["controller", "hmi", "hmi_runtime", "drive", "io_module", "communication_module", "power_supply", "network_device", "software_component", "library", "safety_component", "unknown"] },
           "asset_name": { "type": "string" },
           "data_quality": { "$ref": "#/definitions/data_quality" }
         }
@@ -726,7 +741,7 @@ The following are intentionally **not** automated and must be reviewed by an eng
     private static string MapAssetType(AssetInventoryItem asset)
     {
         if (asset.IsController) return "controller";
-        if (asset.IsHmi) return "hmi";
+        if (asset.IsHmi) return asset.AssetType is "hmi_runtime" ? "hmi_runtime" : "hmi";
         if (asset.IsDrive) return "drive";
         if (asset.IsNetworkInterface) return "network_device";
         if (asset.IsSafetyRelated) return "safety_component";
@@ -1029,8 +1044,18 @@ internal sealed class CmdbEvidenceFile
 
 internal sealed class CmdbEvidenceCoverage
 {
-    public int TotalExpected { get; set; }
+    // Explicitly-tracked export artifacts (blocks with export file + library exports + assets)
+    public int RequiredExpected { get; set; }
+    // Of those, how many have a SHA-256 in the evidence set
+    public int RequiredHashed { get; set; }
+    // Files hashed that are beyond the required set (normalized JSON, schema, CSV, etc.)
+    public int AdditionalHashed { get; set; }
+    // RequiredHashed + AdditionalHashed
     public int TotalHashed { get; set; }
+    // RequiredExpected - RequiredHashed (>0 means missing coverage on key artifacts)
+    public int MissingRequired { get; set; }
+    // Backward-compatible aliases
+    public int TotalExpected { get; set; }
     public int MissingOrUnhashed { get; set; }
 }
 
