@@ -1,5 +1,6 @@
 using TIAExporter.App;
 using TIAExporter.Logging;
+using TIAExporter.Tia;
 
 namespace TIAExporter.Gui;
 
@@ -129,7 +130,7 @@ internal sealed class MainForm : Form
         {
             using var dialog = new OpenFileDialog
             {
-                Filter = "TIA Projekte (*.ap20;*.ap19;*.ap18;*.ap17;*.ap16;*.ap15)|*.ap20;*.ap19;*.ap18;*.ap17;*.ap16;*.ap15|Alle Dateien (*.*)|*.*",
+                Filter = TiaProjectFileTypes.ProjectDialogFilter,
                 CheckFileExists = true
             };
             if (dialog.ShowDialog(this) == DialogResult.OK)

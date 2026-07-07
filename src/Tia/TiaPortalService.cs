@@ -6,6 +6,7 @@ namespace TIAExporter.Tia;
 internal sealed class TiaPortalService : IDisposable
 {
     private readonly ExportLogger logger;
+    private readonly List<string> archiveRetrieveDirectories = [];
     private TiaPortal? tiaPortal;
 
     public TiaPortalService(ExportLogger logger)
@@ -15,15 +16,19 @@ internal sealed class TiaPortalService : IDisposable
 
     public TiaPortal Portal => tiaPortal ?? throw new InvalidOperationException("TIA Portal is not started.");
 
-    public Project OpenProject(string projectPath, bool headless)
+    public Project OpenProject(string projectPath, bool headless, string archiveRetrieveRoot)
     {
-        var attached = TryAttachToOpenProject(projectPath);
-        if (attached != null)
+        var isArchive = TiaProjectFileTypes.IsArchive(projectPath);
+        if (!isArchive)
         {
-            return attached;
+            var attachedProject = TryAttachToOpenProject(projectPath);
+            if (attachedProject != null)
+            {
+                return attachedProject;
+            }
         }
 
-        attached = TryAttachToAnyPortalAndOpen(projectPath);
+        var attached = TryAttachToAnyPortalAndOpen(projectPath, archiveRetrieveRoot);
         if (attached != null)
         {
             return attached;
@@ -37,13 +42,23 @@ internal sealed class TiaPortalService : IDisposable
         catch (Exception ex)
         {
             logger.Warn($"Starting TIA Portal failed: {ex.GetType().Name}: {ex.Message}");
-            attached = TryAttachToAnyPortalAndOpen(projectPath);
+            attached = TryAttachToAnyPortalAndOpen(projectPath, archiveRetrieveRoot);
             if (attached != null)
             {
                 return attached;
             }
 
             throw;
+        }
+
+        return OpenOrRetrieveProject(projectPath, archiveRetrieveRoot);
+    }
+
+    private Project OpenOrRetrieveProject(string projectPath, string archiveRetrieveRoot)
+    {
+        if (TiaProjectFileTypes.IsArchive(projectPath))
+        {
+            return RetrieveArchivedProject(projectPath, archiveRetrieveRoot);
         }
 
         logger.Info($"Opening project: {projectPath}");
@@ -75,6 +90,8 @@ internal sealed class TiaPortalService : IDisposable
         {
             logger.Warn($"Failed to dispose TIA Portal cleanly: {ex.Message}");
         }
+
+        CleanupArchiveRetrieveDirectories();
     }
 
     private Project AttachToOpenProject(string projectPath)
@@ -119,26 +136,30 @@ internal sealed class TiaPortalService : IDisposable
         return null;
     }
 
-    private Project? TryAttachToAnyPortalAndOpen(string projectPath)
+    private Project? TryAttachToAnyPortalAndOpen(string projectPath, string archiveRetrieveRoot)
     {
+        var isArchive = TiaProjectFileTypes.IsArchive(projectPath);
         foreach (var process in GetTiaProcesses())
         {
             try
             {
                 logger.Info($"Trying to attach to running TIA Portal process {process.Id}.");
                 tiaPortal = process.Attach();
-                foreach (var project in tiaPortal.Projects)
+                if (!isArchive)
                 {
-                    var path = TiaReflection.GetString(project, "Path");
-                    if (path != null && PathsEqual(path, projectPath))
+                    foreach (var project in tiaPortal.Projects)
                     {
-                        logger.Info($"Project is already open in attached TIA Portal process {process.Id}.");
-                        return project;
+                        var path = TiaReflection.GetString(project, "Path");
+                        if (path != null && PathsEqual(path, projectPath))
+                        {
+                            logger.Info($"Project is already open in attached TIA Portal process {process.Id}.");
+                            return project;
+                        }
                     }
                 }
 
-                logger.Info($"Opening project in attached TIA Portal process {process.Id}: {projectPath}");
-                return tiaPortal.Projects.Open(new FileInfo(projectPath));
+                logger.Info($"{(isArchive ? "Retrieving archive" : "Opening project")} in attached TIA Portal process {process.Id}: {projectPath}");
+                return OpenOrRetrieveProject(projectPath, archiveRetrieveRoot);
             }
             catch (Exception ex)
             {
@@ -156,6 +177,69 @@ internal sealed class TiaPortalService : IDisposable
         }
 
         return null;
+    }
+
+    private Project RetrieveArchivedProject(string archivePath, string archiveRetrieveRoot)
+    {
+        var archiveVersion = TiaProjectFileTypes.GetVersionFromExtension(archivePath);
+        var tiaVersion = GetTiaMajorVersion();
+        var retrieveWithUpgrade = archiveVersion.HasValue && tiaVersion.HasValue && archiveVersion.Value < tiaVersion.Value;
+        var targetDirectory = CreateArchiveRetrieveDirectory(archiveRetrieveRoot, archivePath, retrieveWithUpgrade ? "upgrade" : null);
+
+        logger.Info($"Retrieving archived project: {archivePath}");
+        logger.Info($"Retrieve target: {targetDirectory.FullName}");
+        if (retrieveWithUpgrade)
+        {
+            logger.Warn($"Archive version V{archiveVersion} is older than TIA Openness V{tiaVersion}. Retrieving with upgrade into a short temporary work folder.");
+        }
+
+        try
+        {
+            return retrieveWithUpgrade
+                ? Portal.Projects.RetrieveWithUpgrade(new FileInfo(archivePath), targetDirectory)
+                : Portal.Projects.Retrieve(new FileInfo(archivePath), targetDirectory);
+        }
+        catch (Exception ex) when (!retrieveWithUpgrade && IsUpgradeRequiredError(ex))
+        {
+            logger.Warn($"Archive retrieve requires an upgrade: {ex.GetType().Name}: {ex.Message}");
+            var upgradeTarget = CreateArchiveRetrieveDirectory(archiveRetrieveRoot, archivePath, "upgrade_retry");
+            logger.Info($"Retrying archive retrieve with upgrade. Retrieve target: {upgradeTarget.FullName}");
+            return Portal.Projects.RetrieveWithUpgrade(new FileInfo(archivePath), upgradeTarget);
+        }
+    }
+
+    private DirectoryInfo CreateArchiveRetrieveDirectory(string archiveRetrieveRoot, string archivePath, string? suffix)
+    {
+        Directory.CreateDirectory(archiveRetrieveRoot);
+        var mode = string.IsNullOrWhiteSpace(suffix) ? "n" : FileNameSanitizer.Sanitize(suffix).Substring(0, 1).ToLowerInvariant();
+        var folderName = $"r_{mode}_{Guid.NewGuid():N}".Substring(0, 14);
+        var candidate = Path.Combine(archiveRetrieveRoot, folderName);
+        if (Directory.Exists(candidate) && Directory.EnumerateFileSystemEntries(candidate).Any())
+        {
+            candidate = Path.Combine(archiveRetrieveRoot, $"r_{Guid.NewGuid():N}".Substring(0, 14));
+        }
+
+        Directory.CreateDirectory(candidate);
+        archiveRetrieveDirectories.Add(candidate);
+        return new DirectoryInfo(candidate);
+    }
+
+    private void CleanupArchiveRetrieveDirectories()
+    {
+        foreach (var directory in archiveRetrieveDirectories.Distinct(StringComparer.OrdinalIgnoreCase))
+        {
+            try
+            {
+                if (Directory.Exists(directory))
+                {
+                    Directory.Delete(directory, true);
+                }
+            }
+            catch (Exception ex)
+            {
+                logger.Warn($"Could not remove temporary archive retrieve folder '{directory}': {ex.Message}");
+            }
+        }
     }
 
     private void StartPortal(TiaPortalMode mode)
@@ -182,6 +266,22 @@ internal sealed class TiaPortalService : IDisposable
         var text = ex.ToString();
         return text.IndexOf("bereits", StringComparison.OrdinalIgnoreCase) >= 0 ||
                text.IndexOf("already", StringComparison.OrdinalIgnoreCase) >= 0;
+    }
+
+    private static bool IsUpgradeRequiredError(Exception ex)
+    {
+        var text = ex.ToString();
+        return text.IndexOf("upgrade", StringComparison.OrdinalIgnoreCase) >= 0 ||
+               text.IndexOf("update", StringComparison.OrdinalIgnoreCase) >= 0 ||
+               text.IndexOf("hochruest", StringComparison.OrdinalIgnoreCase) >= 0 ||
+               text.IndexOf("hochrüst", StringComparison.OrdinalIgnoreCase) >= 0 ||
+               text.IndexOf("aktualis", StringComparison.OrdinalIgnoreCase) >= 0;
+    }
+
+    private static int? GetTiaMajorVersion()
+    {
+        var major = typeof(TiaPortal).Assembly.GetName().Version?.Major;
+        return major > 0 ? major : null;
     }
 
     private static bool PathsEqual(string left, string right)

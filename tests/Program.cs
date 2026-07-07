@@ -8,6 +8,9 @@ var failed = false;
 try { LicenseExceptionHelperTests.Run(); }
 catch (Exception ex) { Console.Error.WriteLine(ex.Message); failed = true; }
 
+try { TiaProjectFileTypesTests.Run(); }
+catch (Exception ex) { Console.Error.WriteLine(ex.Message); failed = true; }
+
 try { CmdbCraImportTests.Run(); }
 catch (Exception ex) { Console.Error.WriteLine(ex.Message); failed = true; }
 

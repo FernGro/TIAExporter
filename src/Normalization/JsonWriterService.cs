@@ -3,6 +3,7 @@ using System.Globalization;
 using System.Reflection;
 using System.Security.Cryptography;
 using System.Text;
+using TIAExporter.Tia;
 
 namespace TIAExporter.Normalization;
 
@@ -91,7 +92,11 @@ internal sealed class JsonWriterService
         ExportCounts = state.Counts,
         CraReadinessSummary = $"Score {state.ExportQualityScore.Score}/100; HIGH gaps: {state.CraGapAnalysis.Count(x => x.Severity == "HIGH")}",
         OutputFiles = Directory.Exists(state.ExportRoot)
-            ? Directory.EnumerateFiles(state.ExportRoot, "*", SearchOption.AllDirectories).Select(x => GetRelativePath(state.ExportRoot, x).Replace('\\', '/')).OrderBy(x => x).ToList()
+            ? Directory.EnumerateFiles(state.ExportRoot, "*", SearchOption.AllDirectories)
+                .Where(x => !IsInternalWorkFile(state.ExportRoot, x))
+                .Select(x => GetRelativePath(state.ExportRoot, x).Replace('\\', '/'))
+                .OrderBy(x => x)
+                .ToList()
             : [],
         Limitations = state.Limitations,
         RequiredManualActions = state.RequiredManualActions,
@@ -212,6 +217,7 @@ internal sealed class JsonWriterService
 
         foreach (var file in Directory.EnumerateFiles(state.ExportRoot, "*", SearchOption.AllDirectories)
                      .Where(x => !x.EndsWith(Path.Combine("logs", "export.log"), StringComparison.OrdinalIgnoreCase))
+                     .Where(x => !IsInternalWorkFile(state.ExportRoot, x))
                      .OrderBy(x => x, StringComparer.OrdinalIgnoreCase))
         {
             var relative = GetRelativePath(state.ExportRoot, file).Replace('\\', '/');
@@ -270,6 +276,12 @@ internal sealed class JsonWriterService
     }
 
     private static bool Has(string value, string needle) => value.IndexOf(needle, StringComparison.OrdinalIgnoreCase) >= 0;
+
+    private static bool IsInternalWorkFile(string exportRoot, string path)
+    {
+        var relative = GetRelativePath(exportRoot, path).Replace('\\', '/');
+        return relative.StartsWith(TiaProjectFileTypes.ArchiveRetrieveFolderName + "/", StringComparison.OrdinalIgnoreCase);
+    }
 
     private static string GetRelativePath(string root, string path)
     {

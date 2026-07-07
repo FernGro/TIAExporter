@@ -16,6 +16,8 @@ The project targets `net48`, WinForms and x64 because Siemens TIA Portal Opennes
 bin\Debug\net48\TIAExporter.exe --project "C:\Path\Project.ap20" --out "C:\TIA_Export" --headless false
 ```
 
+`--project` accepts TIA Portal project files (`.ap15` ... `.ap20`) and project archives (`.zap15` ... `.zap20`). Archives are retrieved into a short temporary work folder to avoid Windows path-length failures; older archives such as `.zap17` are retrieved with upgrade when required by the installed TIA Openness version.
+
 Supported options:
 
 - `--diagnostics-only true|false`

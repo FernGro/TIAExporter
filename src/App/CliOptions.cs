@@ -1,3 +1,5 @@
+using TIAExporter.Tia;
+
 namespace TIAExporter.App;
 
 internal sealed class CliOptions
@@ -16,7 +18,7 @@ internal sealed class CliOptions
     public bool ShowHelp { get; private init; }
 
     public static string HelpText =>
-        """
+        $"""
         TIAExporter
 
         GUI:
@@ -26,7 +28,7 @@ internal sealed class CliOptions
           TIAExporter.exe --project "C:\Path\Project.ap20" --out "C:\TIA_Export" [options]
 
         Options:
-          --project                 TIA Portal project file (*.ap20, *.ap19, *.ap18, *.ap17, *.ap16, *.ap15)
+          --project                 {TiaProjectFileTypes.HelpDescription}
           --out                     Export target directory
           --headless                true starts TIA without UI. Default: false
           --diagnostics-only        Only create diagnostics and high-level metadata where possible. Default: false

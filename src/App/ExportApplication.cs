@@ -30,7 +30,10 @@ internal sealed class ExportApplication
             logger.Info($"Output:  {state.ExportRoot}");
 
             using var tia = new TiaPortalService(logger);
-            var project = tia.OpenProject(settings.ProjectPath, settings.Headless);
+            var project = tia.OpenProject(
+                settings.ProjectPath,
+                settings.Headless,
+                TiaProjectFileTypes.GetShortArchiveRetrieveRoot());
             state.TiaPortalVersion = tia.GetVersion();
             state.ProjectName = GetProjectName(project, settings.ProjectPath);
 
@@ -142,8 +145,7 @@ internal sealed class ExportApplication
         }
 
         var extension = Path.GetExtension(settings.ProjectPath);
-        var supported = new[] { ".ap20", ".ap19", ".ap18", ".ap17", ".ap16", ".ap15" };
-        if (!supported.Contains(extension, StringComparer.OrdinalIgnoreCase))
+        if (!TiaProjectFileTypes.IsSupported(settings.ProjectPath))
         {
             throw new ArgumentException($"Unsupported project extension: {extension}");
         }
